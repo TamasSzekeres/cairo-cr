@@ -1,0 +1,10 @@
+name: cairo-cr
+version: 0.1.0
+
+authors:
+  - Tamás Szekeres <szektam2@gmail.com>
+
+description: |
+  Cairo bindinds for Crystal language.
+
+license: MIT
