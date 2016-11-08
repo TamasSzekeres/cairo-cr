@@ -7,4 +7,7 @@ authors:
 description: |
   Cairo bindinds for Crystal language.
 
+dependencies:
+  github: TamasSzekeres/x11-cr
+
 license: MIT
