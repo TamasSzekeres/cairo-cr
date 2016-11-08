@@ -10,7 +10,7 @@ require "./cairo"
     lib Cairo
       fun xlib_surface_create = cairo_xlib_surface_create(
         dpy : X::PDisplay,
-        drawable : X::Drawable,
+        drawable : Drawable,
         visual : X::PVisual,
         width : Int32,
         height : Int32
@@ -18,7 +18,7 @@ require "./cairo"
 
       fun xlib_surface_create_for_bitmap = cairo_xlib_surface_create_for_bitmap(
         dpy : X::PDisplay,
-        bitmap : X::Pixmap,
+        bitmap : Pixmap,
         screen : X::PScreen,
         width : Int32,
         height : Int32
@@ -32,18 +32,18 @@ require "./cairo"
 
       fun xlib_surface_set_drawable = cairo_xlib_surface_set_drawable(
         surface : PSurfaceT,
-        drawable : X::Drawable,
+        drawable : Drawable,
         width : Int32,
         height : Int32
       ) : Void
 
       fun xlib_surface_get_display = cairo_xlib_surface_get_display(
         surface : PSurfaceT
-      ) X::PDisplay
+      ) : X::PDisplay
 
       fun xlib_surface_get_drawable = cairo_xlib_surface_get_drawable(
         surface : PSurfaceT
-      ) : X::Drawable
+      ) : Drawable
 
       fun xlib_surface_get_screen = cairo_xlib_surface_get_screen(
         surface : PSurfaceT

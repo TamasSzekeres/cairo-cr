@@ -123,7 +123,7 @@ module CairoCr
     # closire, data, length -> status
     alias ReadFuncT = Void*, UInt8*, Int32 -> StatusT
 
-    struct RectangleIntT {
+    struct RectangleIntT
       x, y : Int32
       width, height : Int32
     end
@@ -258,7 +258,7 @@ module CairoCr
       antialias : AntialiasT
     ) : Void
 
-    enum FillRuleT {
+    enum FillRuleT
       WINDING,
       EVEN_ODD
     end
@@ -741,7 +741,7 @@ module CairoCr
     ) : HintStyleT
 
     fun font_options_set_hint_metrics = cairo_font_options_set_hint_metrics(
-      *options : PFontOptionsT,
+      options : PFontOptionsT,
       hint_metrics : HintMetricsT
     ) : Void
 
@@ -1008,7 +1008,7 @@ module CairoCr
     ) : FontSlantT
 
     fun toy_font_face_get_weight = cairo_toy_font_face_get_weight(
-      font_face_t *font_face : PFontFaceT
+      font_face : PFontFaceT
     ) : FontWeightT
 
     # User fonts
@@ -1453,8 +1453,8 @@ module CairoCr
     {% if HAS_PNG_FUNCTIONS %}
 
       fun surface_write_to_png = cairo_surface_write_to_png(
-        cairo_surface_t	*surface : PSurfaceT,
-        const char		*filename : UInt8*
+        surface : PSurfaceT,
+        filename : UInt8*
       ) : StatusT
 
       fun surface_write_to_png_stream = cairo_surface_write_to_png_stream(
@@ -1466,8 +1466,8 @@ module CairoCr
     {% end %}
 
     fun surface_get_user_data = cairo_surface_get_user_data(
-      cairo_surface_t		 *surface : PSurfaceT,
-      const cairo_user_data_key_t *key : PUserDataKeyT
+      surface : PSurfaceT,
+      key : PUserDataKeyT
     ) : Void*
 
     fun surface_set_user_data = cairo_surface_set_user_data(
@@ -1617,7 +1617,7 @@ module CairoCr
       surface : PSurfaceT
     ) : Int32
 
-    {% if CAIRO_HAS_PNG_FUNCTIONS %}
+    {% if HAS_PNG_FUNCTIONS %}
 
       fun image_surface_create_from_png = cairo_image_surface_create_from_png(
         filename : UInt8*
@@ -1962,7 +1962,8 @@ module CairoCr
       r1 : Float64*
     ) : StatusT
 
-    fun mesh_pattern_get_patch_count = cairo_mesh_pattern_get_patch_count (cairo_pattern_t *pattern,
+    fun mesh_pattern_get_patch_count = cairo_mesh_pattern_get_patch_count(
+      pattern : PPatternT,
       count : UInt32*
     ) : StatusT
 
@@ -2105,12 +2106,12 @@ module CairoCr
     ) : StatusT
 
     fun region_get_extents = cairo_region_get_extents(
-      region : PRegionT
+      region : PRegionT,
       extents : RectangleIntT*
     ) : Void
 
     fun region_num_rectangles = cairo_region_num_rectangles(
-      const cairo_region_t *region : PRegionT
+      region : PRegionT
     ) : Int32
 
     fun region_get_rectangle = cairo_region_get_rectangle(
