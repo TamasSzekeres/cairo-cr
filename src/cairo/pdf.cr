@@ -43,6 +43,6 @@ require "./cairo"
       ) : Void
     end # lib Cairo
   end # module CairoCr
-{% else %} # CairoCr::HAS_XLIB_SURFACE
+{% else %} # CairoCr::HAS_PDF_SURFACE
   puts "Cairo was not compiled with support for the pdf backend"
-{% end %} # CairoCr::HAS_XLIB_SURFACE
+{% end %} # CairoCr::HAS_PDF_SURFACE
