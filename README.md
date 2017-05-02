@@ -1,6 +1,6 @@
 # cairo-cr
 
-Cairo bindinds for Crystal language.
+Cairo bindings for Crystal language.
 
 ## Installation
 
