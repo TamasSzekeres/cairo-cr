@@ -1,2 +1,2 @@
 require "spec"
-require "../src/cairo-cr"
+require "../src/cairo"

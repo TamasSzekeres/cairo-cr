@@ -1,14 +1,15 @@
-name: cairo-cr
+name: cairo
 version: 0.1.0
 
 authors:
   - Tamás Szekeres <szektam2@gmail.com>
 
 description: |
-  Cairo bindinds for Crystal language.
+  Cairo bindings for Crystal language.
 
 dependencies:
-  x11-cr:
+  x11:
     github: TamasSzekeres/x11-cr
+    branch: master
 
 license: MIT

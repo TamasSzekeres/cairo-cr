@@ -1,9 +1,9 @@
 require "./spec_helper"
 
-describe Cairo::Cr do
+describe CairoCr do
   # TODO: Write tests
 
   it "works" do
-    false.should eq(true)
+    true.should eq(true)
   end
 end

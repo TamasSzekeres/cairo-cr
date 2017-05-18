@@ -1,7 +1,7 @@
 require "./cairo"
 
 {% if CairoCr::HAS_XLIB_SURFACE %}
-  require "./x11-cr/*"
+  require "x11"
 
   module CairoCr
     include X11;
