@@ -1,6 +1,6 @@
 # cairo-cr
 
-Cairo bindings for Crystal language.
+[Cairo](https://cairographics.org/) bindings for Crystal language.
 
 [![Build Status](https://travis-ci.org/TamasSzekeres/cairo-cr.svg?branch=master)](https://travis-ci.org/TamasSzekeres/cairo-cr)
 [![Dependency Status](https://shards.rocks/badge/github/TamasSzekeres/cairo-cr/status.svg)](https://shards.rocks/github/TamasSzekeres/cairo-cr)
@@ -29,6 +29,8 @@ Then run in terminal:
 ```bash
 crystal deps
 ```
+
+See also: [x11-cr](https://github.com/TamasSzekeres/x11-cr)
 
 ## Usage
 
