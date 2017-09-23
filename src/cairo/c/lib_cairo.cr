@@ -137,12 +137,12 @@ module Cairo::C
 
     fun get_reference_count = cairo_get_reference_count(cr:  PCairoT) : UInt32
 
-    fun get_user_date = cairo_get_user_data(
+    fun get_user_data = cairo_get_user_data(
       cr : PCairoT,
       key : PUserDataKeyT
     ) : Void*
 
-    fun set_user_date = cairo_set_user_data(
+    fun set_user_data = cairo_set_user_data(
       cr : PCairoT,
       key : PUserDataKeyT,
       user_data : Void*,
@@ -534,7 +534,7 @@ module Cairo::C
     ) : BoolT
 
     # Rectangular extents
-    fun stroke_extets = cairo_stroke_extents(
+    fun stroke_extents = cairo_stroke_extents(
       cr : PCairoT,
       x1 : Float64*,
       y1 : Float64*,
@@ -687,7 +687,7 @@ module Cairo::C
     fun font_options_create = cairo_font_options_create(
     ) : PFontOptionsT
 
-    fun font_optinos_copy = cairo_font_options_copy(
+    fun font_options_copy = cairo_font_options_copy(
       original : PFontOptionsT
     ) : PFontOptionsT
 
