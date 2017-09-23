@@ -1,5 +1,5 @@
-module CairoCr
-  VERSION = "0.1.0"
+module Cairo
+  VERSION = "0.2.0"
 
   CAIRO_VERSION_MAJOR = 1
   CAIRO_VERSION_MINOR = 14

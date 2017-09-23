@@ -1,9 +1,9 @@
-require "./cairo"
+require "./lib_cairo"
 
-{% if CairoCr::HAS_SCRIPT_SURFACE %}
-  module CairoCr
+{% if Cairo::C::HAS_SCRIPT_SURFACE %}
+  module Cairo::C
     @[Link("cairo")]
-    lib Cairo
+    lib LibCairo
       enum ScriptModeT
         MODE_ASCII,
         MODE_BINARY
@@ -49,8 +49,8 @@ require "./cairo"
         script : PDeviceT,
         recording_surface : PSurfaceT
       ) : StatusT
-    end # lib Cairo
-  end # module CairoCr
-{% else %} # CairoCr::HAS_SCRIPT_SURFACE
+    end # lib LibCairo
+  end # module Cairo::C
+{% else %} # Cairo::C::HAS_SCRIPT_SURFACE
 puts "Cairo was not compiled with support for the CairoScript backend"
-{% end %} # CairoCr::HAS_SCRIPT_SURFACE
+{% end %} # Cairo::C::HAS_SCRIPT_SURFACE

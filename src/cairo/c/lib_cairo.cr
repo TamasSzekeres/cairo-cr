@@ -1,7 +1,7 @@
 require "./features"
-require "./version"
+require "../version"
 
-module CairoCr
+module Cairo::C
   def self.version_encode(major, minor, micro)
     (major * 10000) +
     (minor *   100) +
@@ -27,7 +27,7 @@ module CairoCr
   end
 
   @[Link("cairo")]
-  lib Cairo
+  lib LibCairo
     fun version = cairo_version() : Int32
 
     fun version_string = cairo_version_string() : UInt8*
@@ -1450,7 +1450,7 @@ module CairoCr
       surface : PSurfaceT
     ) : ContentT
 
-    {% if HAS_PNG_FUNCTIONS %}
+    {% if Cairo::C::HAS_PNG_FUNCTIONS %}
 
       fun surface_write_to_png = cairo_surface_write_to_png(
         surface : PSurfaceT,
@@ -1617,7 +1617,7 @@ module CairoCr
       surface : PSurfaceT
     ) : Int32
 
-    {% if HAS_PNG_FUNCTIONS %}
+    {% if Cairo::C::HAS_PNG_FUNCTIONS %}
 
       fun image_surface_create_from_png = cairo_image_surface_create_from_png(
         filename : UInt8*
@@ -2184,5 +2184,5 @@ module CairoCr
     # Functions to be used while debugging (not intended for use in production code)
     fun debug_reset_static_data = cairo_debug_reset_static_data() : Void
 
-  end # lib Cairo
-end # module CairoCr
+  end # lib LibCairo
+end # module Cairo::C

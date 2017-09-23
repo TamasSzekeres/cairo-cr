@@ -1,13 +1,13 @@
-require "./cairo"
+require "./lib_cairo"
 
-{% if CairoCr::HAS_XLIB_SURFACE %}
+{% if Cairo::C::HAS_XLIB_SURFACE %}
   require "x11"
 
-  module CairoCr
+  module Cairo::C
     include X11;
 
     @[Link("cairo")]
-    lib Cairo
+    lib LibCairo
       fun xlib_surface_create = cairo_xlib_surface_create(
         dpy : X::PDisplay,
         drawable : Drawable,
@@ -83,8 +83,8 @@ require "./cairo"
       fun xlib_device_debug_get_precision = cairo_xlib_device_debug_get_precision(
         device : PDeviceT,
       ) : Int32
-    end # lib Cairo
-  end # module CairoCr
-{% else %} # CairoCr::HAS_XLIB_SURFACE
+    end # lib LibCairo
+  end # module Cairo::C
+{% else %} # Cairo::C::HAS_XLIB_SURFACE
   puts "Cairo was not compiled with support for the xlib backend"
-{% end %} # CairoCr::HAS_XLIB_SURFACE
+{% end %} # Cairo::C::HAS_XLIB_SURFACE
