@@ -591,6 +591,23 @@ module Cairo
       Surface.new(LibCairo.get_group_target(@cairo))
     end
 
+    def copy_path : Path
+      Path.new(LibCairo.copy_path(@cairo))
+    end
+
+    def copy_path_flat : Path
+      Path.new(LibCairo.copy_path_flat(@cairo))
+    end
+
+    def append(path : Path)
+      LibCairo.append_path(@cairo, path.to_unsafe)
+      self
+    end
+
+    def status : Status
+      Status.new(LibCairo.status(@cairo).value)
+    end
+
     def to_unsafe : PCairoT
       @cairo
     end

@@ -1,0 +1,29 @@
+module Cairo
+  enum SurfaceTypeT
+    Image,
+    PDF,
+    PS,
+    XLib,
+    XCB,
+    Glitz,
+    Quartz,
+    Win32,
+    BEOS,
+    DirectFB,
+    SVG,
+    OS2,
+    Win32Printing,
+    QuartzImage,
+    Script,
+    Qt,
+    Recording,
+    VG,
+    GL,
+    DRM,
+    Tee,
+    XML,
+    Skia,
+    Subsurface,
+    COGL
+  end
+end

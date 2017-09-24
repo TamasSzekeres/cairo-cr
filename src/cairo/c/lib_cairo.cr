@@ -123,6 +123,7 @@ module Cairo::C
     # closire, data, length -> status
     alias ReadFuncT = Void*, UInt8*, Int32 -> StatusT
 
+    alias PRectangleIntT = RectangleIntT*
     struct RectangleIntT
       x, y : Int32
       width, height : Int32

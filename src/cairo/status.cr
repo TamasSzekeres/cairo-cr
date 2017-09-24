@@ -1,4 +1,8 @@
+require "./c/lib_cairo"
+
 module Cairo
+  include Cairo::C
+
   enum Status
     Success = 0,
 
@@ -42,5 +46,9 @@ module Cairo
     Jbig2GlobalMissing,
 
     LastStatus
+
+    def to_string : String
+      String.new(LibCairo.status_to_string(LibCairo::StatusT.new(self)))
+    end
   end
 end
