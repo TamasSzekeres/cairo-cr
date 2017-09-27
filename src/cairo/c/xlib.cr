@@ -1,10 +1,11 @@
 require "./lib_cairo"
+require "./features"
 
 {% if Cairo::C::HAS_XLIB_SURFACE %}
   require "x11"
 
   module Cairo::C
-    include X11;
+    include X11
 
     @[Link("cairo")]
     lib LibCairo

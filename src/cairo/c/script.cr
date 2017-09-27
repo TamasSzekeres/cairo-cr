@@ -1,4 +1,5 @@
 require "./lib_cairo"
+require "./features"
 
 {% if Cairo::C::HAS_SCRIPT_SURFACE %}
   module Cairo::C
@@ -10,7 +11,7 @@ require "./lib_cairo"
       end
 
       fun script_create = cairo_script_create(
-        filename : UInt8
+        filename : UInt8*
       ) : PDeviceT
 
       fun script_create_for_stream = cairo_script_create_for_stream(

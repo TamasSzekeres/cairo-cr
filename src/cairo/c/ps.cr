@@ -1,4 +1,5 @@
 require "./lib_cairo"
+require "./features"
 
 {% if Cairo::C::HAS_PS_SURFACE %}
   module Cairo::C
