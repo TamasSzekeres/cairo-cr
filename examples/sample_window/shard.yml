@@ -1,0 +1,22 @@
+name: sample_window
+version: 0.1.0
+
+authors:
+  - Tamás Szekeres <szektam2@gmail.com>
+
+targets:
+  sample_window:
+    main: src/sample_window.cr
+
+dependencies:
+  x11:
+    github: TamasSzekeres/x11-cr
+    branch: master
+    version: ~> 0.3.0
+
+  cairo:
+    path: ../../.
+
+crystal: 0.22.0
+
+license: MIT

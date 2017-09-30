@@ -1,0 +1,10 @@
+version: 1.0
+shards:
+  cairo:
+    path: ../../.
+    version: 0.2.0
+
+  x11:
+    github: TamasSzekeres/x11-cr
+    commit: 
+
