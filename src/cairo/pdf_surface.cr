@@ -1,12 +1,13 @@
 require "./c/features"
 require "./c/lib_cairo"
 require "./c/pdf"
+require "./surface"
 
 {% if Cairo::C::HAS_PDF_SURFACE %}
 
 module Cairo
   include Cairo::C
-  
+
   class PdfSurface < Surface
     def initialize(filename : String, width_in_points : Float64, height_in_points : Float64)
       super(LibCairo.pdf_surface_create(filename.to_unsafe, width_in_points, height_in_points))

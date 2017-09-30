@@ -22,7 +22,7 @@ module Cairo
     end
 
     def self.versions : Array(SvgVersion)
-      LibCairo.svg_get_versions(out, version, out num_versions)
+      LibCairo.svg_get_versions(out version, out num_versions)
       return [] of SvgVersion if num_versions == 0
       Array(SvgVersion).new(num_versions) do |i|
         SvgVersion.new(version[i].value)

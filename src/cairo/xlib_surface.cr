@@ -10,7 +10,7 @@ module Cairo
   include Cairo::C
 
   class XlibSurface < Surface
-    def initialize(dpy : Display, drawable : Drawable, visual : Visual, width : Int32, height : Int32) : PSurfaceT
+    def initialize(dpy : Display, drawable : Drawable, visual : Visual, width : Int32, height : Int32)
       super(LibCairo.xlib_surface_create(dpy.to_unsafe, drawable, visual.to_unsafe, width, height))
     end
 

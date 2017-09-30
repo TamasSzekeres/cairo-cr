@@ -82,7 +82,7 @@ module Cairo
     end
 
     def text_to_glyphs_func : LibCairo::UserScaledFontTextToGlyphFuncT
-      LibCairo::user_font_face_get_text_to_glyphs_func(@font_face)
+      LibCairo.user_font_face_get_text_to_glyphs_func(@font_face)
     end
 
     def text_to_glyphs_func=(text_to_glyphs_func : LibCairo::UserScaledFontTextToGlyphFuncT)

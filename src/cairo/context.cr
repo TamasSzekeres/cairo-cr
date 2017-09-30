@@ -110,7 +110,7 @@ module Cairo
       self
     end
 
-    def line_width(width : Float64)
+    def line_width=(width : Float64)
       LibCairo.set_line_width(@cairo, width)
       self
     end
@@ -608,7 +608,7 @@ module Cairo
       Status.new(LibCairo.status(@cairo).value)
     end
 
-    def to_unsafe : PCairoT
+    def to_unsafe : LibCairo::PCairoT
       @cairo
     end
   end

@@ -24,7 +24,7 @@ module Cairo
       @rect.x
     end
 
-    def x=(x: Int32)
+    def x=(x : Int32)
       @rect.x = x
     end
 
@@ -32,7 +32,7 @@ module Cairo
       @rect.y
     end
 
-    def y=(y: Int32)
+    def y=(y : Int32)
       @rect.y = y
     end
 
@@ -40,7 +40,7 @@ module Cairo
       @rect.width
     end
 
-    def width=(width: Int32)
+    def width=(width : Int32)
       @rect.width = width
     end
 
@@ -48,7 +48,7 @@ module Cairo
       @rect.height
     end
 
-    def height=(height: Int32)
+    def height=(height : Int32)
       @rect.height = height
     end
 

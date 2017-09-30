@@ -14,7 +14,7 @@ module Cairo
       @rgba.red
     end
 
-    def red=(red: Float64)
+    def red=(red : Float64)
       @rgba.red = red
     end
 
@@ -22,7 +22,7 @@ module Cairo
       @rgba.green
     end
 
-    def green=(green: Float64)
+    def green=(green : Float64)
       @rgba.green = green
     end
 
@@ -30,7 +30,7 @@ module Cairo
       @rgba.blue
     end
 
-    def blue=(blue: Float64)
+    def blue=(blue : Float64)
       @rgba.blue = blue
     end
 
@@ -38,7 +38,7 @@ module Cairo
       @rgba.alpha
     end
 
-    def alpha=(alpha: Float64)
+    def alpha=(alpha : Float64)
       @rgba.alpha = alpha
     end
   end

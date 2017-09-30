@@ -51,7 +51,7 @@ module Cairo
     end
 
     def subpixel_order=(subpixel_order : SubpixelOrder)
-      LibCairo.font_options_set_subpixel_order(@font_options, LibCairo.SubpixelOrderT.new(subpixel_order.value))
+      LibCairo.font_options_set_subpixel_order(@font_options, LibCairo::SubpixelOrderT.new(subpixel_order.value))
       self
     end
 

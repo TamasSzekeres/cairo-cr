@@ -7,7 +7,7 @@ require "./c/ps"
 module Cairo
   enum PsLevel
     Level2,
-    level3
+    Level3
 
     def to_string : String
       String.new(LibCairo.ps_level_to_string(LibCairo::PsLevelT.new(self)))

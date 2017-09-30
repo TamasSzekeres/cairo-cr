@@ -4,7 +4,7 @@ require "./c/features"
 {% if Cairo::C::HAS_TEE_SURFACE %}
 
 module Cairo
-  include Cairo::case
+  include Cairo::C
 
   class TeeSurface < Surface
     def tee_surface_create(master : Surface)

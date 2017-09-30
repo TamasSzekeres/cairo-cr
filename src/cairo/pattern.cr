@@ -184,8 +184,8 @@ module Cairo
       Extend.new(LibCairo.pattern_get_extend(@pattern).value)
     end
 
-    def extend=(extend : Extend)
-      LibCairo.pattern_set_extend(@pattern, LibCairo::ExtendT.new(extend.value))
+    def extend=(ex : Extend)
+      LibCairo.pattern_set_extend(@pattern, LibCairo::ExtendT.new(ex.value))
       self
     end
 
