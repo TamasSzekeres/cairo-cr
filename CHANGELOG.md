@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - High level classes and structs.
 ### Changed
 - **(breaking change)** Low level binding moved to **C** namespace
+- **(breaking change)** `Cairo` binding class renamed to `LibCairo`
 
 ## [0.1.0] - 2017-05-18
 - First release
