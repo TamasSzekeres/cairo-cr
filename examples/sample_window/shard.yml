@@ -11,8 +11,7 @@ targets:
 dependencies:
   x11:
     github: TamasSzekeres/x11-cr
-    branch: master
-    version: ~> 0.3.0
+    version: ~> 0.3.1
 
   cairo:
     path: ../../.
