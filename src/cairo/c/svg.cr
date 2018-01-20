@@ -1,9 +1,10 @@
-require "./cairo"
+require "./lib_cairo"
+require "./features"
 
-{% if CairoCr::HAS_SVG_SURFACE %}
-  module CairoCr
+{% if Cairo::C::HAS_SVG_SURFACE %}
+  module Cairo::C
     @[Link("cairo")]
-    lib Cairo
+    lib LibCairo
       enum SvgVersionT
         V_1_1,
         V_1_2
@@ -35,8 +36,8 @@ require "./cairo"
       fun svg_version_to_string = cairo_svg_version_to_string(
         version : SvgVersionT
       ) : UInt8*
-    end # lib Cairo
-  end # module CairoCr
-{% else %} # CairoCr::HAS_SVG_SURFACE
+    end # lib LibCairo
+  end # module Cairo::C
+{% else %} # Cairo::C::HAS_SVG_SURFACE
   puts "Cairo was not compiled with support for the svg backend"
-{% end %} # CairoCr::HAS_SVG_SURFACE
+{% end %} # Cairo::C::HAS_SVG_SURFACE

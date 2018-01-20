@@ -19,11 +19,9 @@ Add this to your application's `shard.yml`:
 dependencies:
   x11:
     github: TamasSzekeres/x11-cr
-    branch: master
 
   cairo:
     github: TamasSzekeres/cairo-cr
-    branch: master
 ```
 Then run in terminal:
 ```bash
@@ -39,23 +37,33 @@ require "x11"
 require "cairo"
 
 module YourModule
-  include X11
-  include CairoCr
+  include X11::C # for low-level usage
+  include Cairo::C # for low-level usage
+  include X11 # for high-level usage
+  include Cairo # for high-level usage
 end
 ```
 
-For more details see the sample in [/sample](/sample) folder.
+For more details see the sample in [/examples](/examples) folder.
 
 ## Sample
 
-Build and run the sample:
-```bash
-  mkdir bin
-  crystal build -o bin/sample sample/simple_window.cr --release
-  ./bin/sample
-
+Build and run the low-level sample:
+```shell
+  cd examples/sample_window
+  crystal deps
+  make
+  ./sample_window
 ```
-![Simple Window](https://raw.githubusercontent.com/TamasSzekeres/cairo-cr/master/sample/simple-window.png)
+![Sample Window](https://raw.githubusercontent.com/TamasSzekeres/cairo-cr/master/examples/screenshot/sample_window.png)
+
+Build and run the high-level sample:
+```shell
+  cd examples/sample_window_hl
+  crystal deps
+  make
+  ./sample_window_hl
+```
 
 ## Contributing
 

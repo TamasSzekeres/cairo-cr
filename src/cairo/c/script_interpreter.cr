@@ -1,8 +1,8 @@
-require "./cairo"
+require "./lib_cairo"
 
-module CairoCr
+module Cairo::C
   @[Link("cairo")]
-  lib Cairo
+  lib LibCairo
     alias PScriptInterpreterT = ScriptInterpreterT*
     alias ScriptInterpreterT = Void*
 
@@ -81,5 +81,5 @@ module CairoCr
       write_func : WriteFuncT,
       closure : Void*
     ) : StatusT
-  end # lib Cairo
-end # module CairoCr
+  end # lib LibCairo
+end # module Cairo::C

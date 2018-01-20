@@ -1,56 +1,48 @@
-require "./cairo"
+require "./c/lib_cairo"
+require "./c/features"
+require "./c/script"
 
-{% if CairoCr::HAS_SCRIPT_SURFACE %}
-  module CairoCr
-    @[Link("cairo")]
-    lib Cairo
-      enum ScriptModeT
-        MODE_ASCII,
-        MODE_BINARY
-      end
+{% if Cairo::C::HAS_SCRIPT_SURFACE %}
 
-      fun script_create = cairo_script_create(
-        filename : UInt8
-      ) : PDeviceT
+module Cairo
+  include Cairo::C
 
-      fun script_create_for_stream = cairo_script_create_for_stream(
-        write_func : WriteFuncT,
-        closure : Void*
-      ) : PDeviceT
+  class Script < Device
+    def initialize(filename : String)
+      super(LibCairo.script_create(filename.to_unsafe))
+    end
 
-      fun script_write_comment = cairo_script_write_comment(
-        script : PDeviceT,
-        comment : UInt8*,
-        len : Int32
-      ) : Void
+    # Create for Stream
+    def initialize(write_func : LibCairo::WriteFuncT, closure : Void*)
+      super(LibCairo.script_create_for_stream(write_func, closure))
+    end
 
-      fun script_set_mode = cairo_script_set_mode(
-        script : PDeviceT,
-        mode : ScriptModeT
-      ) : Void
+    def write_comment(comment : String, len : Int32 = -1)
+      LibCairo.script_write_comment(to_unsafe, comment.to_unsafe, len)
+      self
+    end
 
-      fun script_get_mode = cairo_script_get_mode(
-        script : PDeviceT
-      ) : ScriptModeT
+    def mode : ScriptMode
+      ScriptMode.new(LibCairo.script_get_mode(to_unsafe).value)
+    end
 
-      fun script_surface_create = cairo_script_surface_create(
-        script : PDeviceT,
-        content : ContentT,
-        width : Float64,
-        height : Float64
-      ) : PSurfaceT
+    def mode=(mode : ScriptMode)
+      LibCairo.script_set_mode(to_unsafe, LibCairo::ScriptModeT.new(mode.value))
+      self
+    end
 
-      fun script_surface_create_for_target = cairo_script_surface_create_for_target(
-        script : PDeviceT,
-        target : PSurfaceT
-      ) : PSurfaceT
+    def create_script_surface(content : Content, width : Float64, height : Float64) : Surface
+      Surface.new(LibCairo.script_surface_create(to_unsafe, LibCairo::ContentT.new(content.value), width, height))
+    end
 
-      fun script_from_recording_surface = cairo_script_from_recording_surface(
-        script : PDeviceT,
-        recording_surface : PSurfaceT
-      ) : StatusT
-    end # lib Cairo
-  end # module CairoCr
-{% else %} # CairoCr::HAS_SCRIPT_SURFACE
-puts "Cairo was not compiled with support for the CairoScript backend"
-{% end %} # CairoCr::HAS_SCRIPT_SURFACE
+    def create_script_surface_for_target(target : Surface) : Surface
+      Surface.new(LibCairo.script_surface_create_for_target(to_unsafe, target.to_unsafe))
+    end
+
+    def from_recording_surface(recording_surface : Surface) : Status
+      Status.new(LibCairo.script_from_recording_surface(to_unsafe, recording_surface.to_unsafe).value)
+    end
+  end
+end
+
+{% end %}

@@ -1,9 +1,10 @@
-require "./cairo"
+require "./lib_cairo"
+require "./features"
 
-{% if CairoCr::HAS_PDF_SURFACE %}
-  module CairoCr
+{% if Cairo::C::HAS_PDF_SURFACE %}
+  module Cairo::C
     @[Link("cairo")]
-    lib Cairo
+    lib LibCairo
       enum PdfVersionT
         V_1_4,
         V_1_5
@@ -41,8 +42,8 @@ require "./cairo"
         width_in_points : Float64,
         height_in_points : Float64
       ) : Void
-    end # lib Cairo
-  end # module CairoCr
-{% else %} # CairoCr::HAS_PDF_SURFACE
+    end # lib LibCairo
+  end # module Cairo::C
+{% else %} # Cairo::C::HAS_PDF_SURFACE
   puts "Cairo was not compiled with support for the pdf backend"
-{% end %} # CairoCr::HAS_PDF_SURFACE
+{% end %} # Cairo::C::HAS_PDF_SURFACE

@@ -1,12 +1,9 @@
-/bin/
 /doc/
-/libs/
 /lib/
-/.crystal/
+/bin/
 /.shards/
 
-/examples/sample_window/sample_window
-/examples/sample_window_hl/sample_window_hl
+/sample_window
 
 # Libraries don't need dependency lock
 # Dependencies will be locked in application that uses them

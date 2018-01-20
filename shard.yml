@@ -1,5 +1,5 @@
 name: cairo
-version: 0.1.0
+version: 0.2.0
 
 authors:
   - Tamás Szekeres <szektam2@gmail.com>
@@ -11,6 +11,9 @@ dependencies:
   x11:
     github: TamasSzekeres/x11-cr
     branch: master
+<<<<<<< HEAD
     tag: v0.2.1
+=======
+>>>>>>> high-level
 
 license: MIT

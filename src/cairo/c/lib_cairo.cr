@@ -1,7 +1,7 @@
 require "./features"
-require "./version"
+require "../version"
 
-module CairoCr
+module Cairo::C
   def self.version_encode(major, minor, micro)
     (major * 10000) +
     (minor *   100) +
@@ -27,7 +27,7 @@ module CairoCr
   end
 
   @[Link("cairo")]
-  lib Cairo
+  lib LibCairo
     fun version = cairo_version() : Int32
 
     fun version_string = cairo_version_string() : UInt8*
@@ -123,6 +123,7 @@ module CairoCr
     # closire, data, length -> status
     alias ReadFuncT = Void*, UInt8*, Int32 -> StatusT
 
+    alias PRectangleIntT = RectangleIntT*
     struct RectangleIntT
       x, y : Int32
       width, height : Int32
@@ -137,12 +138,12 @@ module CairoCr
 
     fun get_reference_count = cairo_get_reference_count(cr:  PCairoT) : UInt32
 
-    fun get_user_date = cairo_get_user_data(
+    fun get_user_data = cairo_get_user_data(
       cr : PCairoT,
       key : PUserDataKeyT
     ) : Void*
 
-    fun set_user_date = cairo_set_user_data(
+    fun set_user_data = cairo_set_user_data(
       cr : PCairoT,
       key : PUserDataKeyT,
       user_data : Void*,
@@ -534,7 +535,7 @@ module CairoCr
     ) : BoolT
 
     # Rectangular extents
-    fun stroke_extets = cairo_stroke_extents(
+    fun stroke_extents = cairo_stroke_extents(
       cr : PCairoT,
       x1 : Float64*,
       y1 : Float64*,
@@ -687,7 +688,7 @@ module CairoCr
     fun font_options_create = cairo_font_options_create(
     ) : PFontOptionsT
 
-    fun font_optinos_copy = cairo_font_options_copy(
+    fun font_options_copy = cairo_font_options_copy(
       original : PFontOptionsT
     ) : PFontOptionsT
 
@@ -1450,7 +1451,7 @@ module CairoCr
       surface : PSurfaceT
     ) : ContentT
 
-    {% if HAS_PNG_FUNCTIONS %}
+    {% if Cairo::C::HAS_PNG_FUNCTIONS %}
 
       fun surface_write_to_png = cairo_surface_write_to_png(
         surface : PSurfaceT,
@@ -1617,7 +1618,7 @@ module CairoCr
       surface : PSurfaceT
     ) : Int32
 
-    {% if HAS_PNG_FUNCTIONS %}
+    {% if Cairo::C::HAS_PNG_FUNCTIONS %}
 
       fun image_surface_create_from_png = cairo_image_surface_create_from_png(
         filename : UInt8*
@@ -2184,5 +2185,5 @@ module CairoCr
     # Functions to be used while debugging (not intended for use in production code)
     fun debug_reset_static_data = cairo_debug_reset_static_data() : Void
 
-  end # lib Cairo
-end # module CairoCr
+  end # lib LibCairo
+end # module Cairo::C

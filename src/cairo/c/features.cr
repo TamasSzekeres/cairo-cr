@@ -1,4 +1,4 @@
-module CairoCr
+module Cairo::C
   HAS_FC_FONT              = true
   HAS_FT_FONT              = true
   HAS_GOBJECT_FUNCTIONS    = true
@@ -17,4 +17,4 @@ module CairoCr
   HAS_XCB_SURFACE          = true
   HAS_XLIB_SURFACE         = true
   HAS_XLIB_XRENDER_SURFACE = true
-end # module CairoCr
+end # module Cairo::C

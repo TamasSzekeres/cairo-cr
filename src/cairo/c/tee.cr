@@ -1,9 +1,10 @@
-require "./cairo"
+require "./lib_cairo"
+require "./features"
 
-{% if CairoCr::HAS_TEE_SURFACE %}
-  module CairoCr
+{% if Cairo::C::HAS_TEE_SURFACE %}
+  module Cairo::C
     @[Link("cairo")]
-    lib Cairo
+    lib LibCairo
       fun tee_surface_create = cairo_tee_surface_create(
         master : PSurfaceT
       ) : PSurfaceT
@@ -22,8 +23,8 @@ require "./cairo"
         surface : PSurfaceT,
         index : UInt32
       ) : PSurfaceT
-    end # lib Cairo
-  end # module CairoCr
-{% else %} # CairoCr::HAS_TEE_SURFACE
+    end # lib LibCairo
+  end # module Cairo::C
+{% else %} # Cairo::C::HAS_TEE_SURFACE
   puts "Cairo was not compiled with support for the TEE backend"
-{% end %} # CairoCr::HAS_TEE_SURFACE
+{% end %} # Cairo::C::HAS_TEE_SURFACE

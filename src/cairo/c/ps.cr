@@ -1,9 +1,10 @@
-require "./cairo"
+require "./lib_cairo"
+require "./features"
 
-{% if CairoCr::HAS_PS_SURFACE %}
-  module CairoCr
+{% if Cairo::C::HAS_PS_SURFACE %}
+  module Cairo::C
     @[Link("cairo")]
-    lib Cairo
+    lib LibCairo
       # PS-surface functions
 
       enum PsLevelT
@@ -65,8 +66,8 @@ require "./cairo"
       fun ps_surface_dsc_begin_page_setup = cairo_ps_surface_dsc_begin_page_setup(
         surface : PSurfaceT
       ) : Void
-    end # lib Cairo
-  end # module CairoCr
-{% else %} # CairoCr::HAS_PS_SURFACE
+    end # lib LibCairo
+  end # module Cairo::C
+{% else %} # Cairo::C::HAS_PS_SURFACE
   puts "Cairo was not compiled with support for the ps backend"
-{% end %} # CairoCr::HAS_PS_SURFACE
+{% end %} # Cairo::C::HAS_PS_SURFACE
