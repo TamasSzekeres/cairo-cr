@@ -11,9 +11,5 @@ dependencies:
   x11:
     github: TamasSzekeres/x11-cr
     branch: master
-<<<<<<< HEAD
-    tag: v0.2.1
-=======
->>>>>>> high-level
 
 license: MIT
