@@ -238,8 +238,8 @@ module Cairo
       self
     end
 
-    def arc(xc : Float64, yc : Float64,
-            radius : Float64, angle1 : Float64, angle2 : Float64)
+    def arc(xc : Int32 | Float64, yc : Int32 | Float64, radius : Int32 | Float64,
+            angle1 : Float64, angle2 : Float64)
       LibCairo.arc(@cairo, xc, yc, radius, angle1, angle2)
       self
     end
@@ -433,7 +433,7 @@ module Cairo
     def select_font_face(family : String, slant : FontSlant, weight : FontWeight)
       LibCairo.select_font_face(@cairo, family.to_unsafe,
                                 LibCairo::FontSlantT.new(slant.value),
-                                LibCairo::FontWeight.new(weight.new))
+                                LibCairo::FontWeightT.new(weight.value))
       self
     end
 
