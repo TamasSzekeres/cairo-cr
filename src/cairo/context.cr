@@ -465,9 +465,8 @@ module Cairo
     end
 
     def font_face : FontFace
-      font_face = FontFace.new
-      LibCairo.get_font_face(@cairo, font_face.to_unsafe)
-      font_face
+      font_face = LibCairo.get_font_face(@cairo)
+      FontFace.new(font_face)
     end
 
     def font_face=(font_face : FontFace)
