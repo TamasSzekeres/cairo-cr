@@ -8,7 +8,7 @@ module Cairo
       @cairo = LibCairo.create(target.to_unsafe)
     end
 
-    def initialize(cairo : PCairoT)
+    def initialize(cairo : LibCairo::PCairoT)
       raise ArgumentError.new("'cairo' cannot be null") if cairo.null?
       @cairo = cairo
     end
