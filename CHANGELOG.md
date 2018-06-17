@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.2] - 2018-06-17
+### Fixed
+- namespace missing in `Context::initializer` (#7, thanks @hodefoting)
+
 ## [0.2.1] - 2018-03-21
 ### Fixed
 - `Context::font_face` function (#6, thanks @bird1079s)
