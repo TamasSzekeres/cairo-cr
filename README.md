@@ -3,8 +3,6 @@
 [Cairo](https://cairographics.org/) bindings for Crystal language.
 
 [![Build Status](https://travis-ci.org/TamasSzekeres/cairo-cr.svg?branch=master)](https://travis-ci.org/TamasSzekeres/cairo-cr)
-[![Dependency Status](https://shards.rocks/badge/github/TamasSzekeres/cairo-cr/status.svg)](https://shards.rocks/github/TamasSzekeres/cairo-cr)
-[![devDependency Status](https://shards.rocks/badge/github/TamasSzekeres/cairo-cr/dev_status.svg)](https://shards.rocks/github/TamasSzekeres/cairo-cr)
 
 ## Installation
 
