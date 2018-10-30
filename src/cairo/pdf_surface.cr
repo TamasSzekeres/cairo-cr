@@ -26,7 +26,7 @@ module Cairo
       LibCairo.pdf_get_versions(out version, out num_versions)
       return [] of PdfVersion if num_versions == 0
       Array(PdfVersion).new(num_versions) do |i|
-        PdfVerison.new(version[i].value)
+        PdfVersion.new(version[i].value)
       end
     end
 
