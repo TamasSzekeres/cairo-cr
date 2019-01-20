@@ -518,7 +518,8 @@ module Cairo
     end
 
     def font_extents : FontExtents
-      FontExtents.new(LibCairo.font_extents(@cairo))
+      LibCairo.font_extents(@cairo, out font_extents)
+      FontExtents.new(font_extents)
     end
 
     # Query functions
