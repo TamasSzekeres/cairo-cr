@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.3.0] - 2019-10-13
+- Updated to Crystal 0.31.1
+### Fixed
+ - Must rename `unsafe_at` to `unsafe_fetch` in `Cairo::RectangleList` (#8, thanks @DmitryBochkarev)
+
 ## [0.2.2] - 2018-06-17
 ### Fixed
 - namespace missing in `Context::initializer` (#7, thanks @hodefoting)

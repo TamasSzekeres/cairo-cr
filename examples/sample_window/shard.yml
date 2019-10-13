@@ -16,6 +16,6 @@ dependencies:
   cairo:
     path: ../../.
 
-crystal: 0.22.0
+crystal: 0.31.1
 
 license: MIT
