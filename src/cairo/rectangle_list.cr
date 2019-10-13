@@ -28,7 +28,7 @@ module Cairo
     end
 
     @[AlwaysInline]
-    def unsafe_at(index : Int)
+    def unsafe_fetch(index : Int)
       Rectangle.new(@list.value.rectangles[index])
     end
 
