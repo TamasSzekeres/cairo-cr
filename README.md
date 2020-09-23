@@ -23,7 +23,7 @@ dependencies:
 ```
 Then run in terminal:
 ```bash
-crystal deps
+shards install
 ```
 
 See also: [x11-cr](https://github.com/TamasSzekeres/x11-cr)
@@ -49,7 +49,7 @@ For more details see the sample in [/examples](/examples) folder.
 Build and run the low-level sample:
 ```shell
   cd examples/sample_window
-  crystal deps
+  shards install
   make
   ./sample_window
 ```
@@ -58,7 +58,7 @@ Build and run the low-level sample:
 Build and run the high-level sample:
 ```shell
   cd examples/sample_window_hl
-  crystal deps
+  shards install
   make
   ./sample_window_hl
 ```

@@ -7,7 +7,7 @@ module Cairo
   include Cairo::C
 
   enum SvgVersion
-    V_1_1,
+    V_1_1
     V_1_2
 
     def to_string : String

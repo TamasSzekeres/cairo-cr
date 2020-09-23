@@ -1,8 +1,8 @@
 module Cairo
   enum Extend
-    None,
-    Repeat,
-    Reflect,
+    None
+    Repeat
+    Reflect
     Pad
   end
 end

@@ -6,7 +6,7 @@ require "./features"
     @[Link("cairo")]
     lib LibCairo
       enum PdfVersionT
-        V_1_4,
+        V_1_4
         V_1_5
       end
 

@@ -1,6 +1,6 @@
 module Cairo
   enum FontWeight
-    Normal,
+    Normal
     Bold
   end
 end

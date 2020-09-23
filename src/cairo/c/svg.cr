@@ -6,7 +6,7 @@ require "./features"
     @[Link("cairo")]
     lib LibCairo
       enum SvgVersionT
-        V_1_1,
+        V_1_1
         V_1_2
       end
 

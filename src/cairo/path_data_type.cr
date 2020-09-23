@@ -1,8 +1,8 @@
 module Cairo
   enum PathDataType
-    MoveTo,
-    LineTo,
-    CurveTo,
+    MoveTo
+    LineTo
+    CurveTo
     ClosePath
   end
 end

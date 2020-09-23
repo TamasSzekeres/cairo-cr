@@ -6,7 +6,7 @@ require "./features"
     @[Link("cairo")]
     lib LibCairo
       enum ScriptModeT
-        MODE_ASCII,
+        MODE_ASCII
         MODE_BINARY
       end
 

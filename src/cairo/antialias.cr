@@ -1,15 +1,15 @@
 module Cairo
   enum Antialias
-    AntialiasDefault,
+    AntialiasDefault
 
     # method
-    AntialiasNone,
-    AntialiasGray,
-    AntialiasSubpixel,
+    AntialiasNone
+    AntialiasGray
+    AntialiasSubpixel
 
     # hints
-    AntialiasFast,
-    AntialiasGood,
+    AntialiasFast
+    AntialiasGood
     AntialiasBest
   end
 end

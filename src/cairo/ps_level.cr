@@ -6,7 +6,7 @@ require "./c/ps"
 
 module Cairo
   enum PsLevel
-    Level2,
+    Level2
     Level3
 
     def to_string : String

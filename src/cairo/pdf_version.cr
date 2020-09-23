@@ -6,7 +6,7 @@ require "./c/pdf"
 
 module Cairo
   enum PdfVersion
-    V_1_4,
+    V_1_4
     V_1_5
 
     def to_string : String

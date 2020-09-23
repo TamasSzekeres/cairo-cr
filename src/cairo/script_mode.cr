@@ -5,7 +5,7 @@ require "./c/features"
 
 module Cairo
   enum ScriptMode
-    Ascii,
+    Ascii
     Binary
   end
 end

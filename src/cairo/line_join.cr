@@ -1,7 +1,7 @@
 module Cairo
   enum LineJoin
-    Miter,
-    Round,
+    Miter
+    Round
     Bevel
   end
 end

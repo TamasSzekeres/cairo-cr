@@ -57,63 +57,63 @@ module Cairo::C
     end
 
     enum StatusT
-      SUCCESS = 0,
+      SUCCESS = 0
 
-      NO_MEMORY,
-      INVALID_RESTORE,
-      INVALID_POP_GROUP,
-      NO_CURRENT_POINT,
-      INVALID_MATRIX,
-      INVALID_STATUS,
-      NULL_POINTER,
-      INVALID_STRING,
-      INVALID_PATH_DATA,
-      READ_ERROR,
-      WRITE_ERROR,
-      SURFACE_FINISHED,
-      SURFACE_TYPE_MISMATCH,
-      PATTERN_TYPE_MISMATCH,
-      INVALID_CONTENT,
-      INVALID_FORMAT,
-      INVALID_VISUAL,
-      FILE_NOT_FOUND,
-      INVALID_DASH,
-      INVALID_DSC_COMMENT,
-      INVALID_INDEX,
-      CLIP_NOT_REPRESENTABLE,
-      TEMP_FILE_ERROR,
-      INVALID_STRIDE,
-      FONT_TYPE_MISMATCH,
-      USER_FONT_IMMUTABLE,
-      USER_FONT_ERROR,
-      NEGATIVE_COUNT,
-      INVALID_CLUSTERS,
-      INVALID_SLANT,
-      INVALID_WEIGHT,
-      INVALID_SIZE,
-      USER_FONT_NOT_IMPLEMENTED,
-      DEVICE_TYPE_MISMATCH,
-      DEVICE_ERROR,
-      INVALID_MESH_CONSTRUCTION,
-      DEVICE_FINISHED,
-      JBIG2_GLOBAL_MISSING,
+      NO_MEMORY
+      INVALID_RESTORE
+      INVALID_POP_GROUP
+      NO_CURRENT_POINT
+      INVALID_MATRIX
+      INVALID_STATUS
+      NULL_POINTER
+      INVALID_STRING
+      INVALID_PATH_DATA
+      READ_ERROR
+      WRITE_ERROR
+      SURFACE_FINISHED
+      SURFACE_TYPE_MISMATCH
+      PATTERN_TYPE_MISMATCH
+      INVALID_CONTENT
+      INVALID_FORMAT
+      INVALID_VISUAL
+      FILE_NOT_FOUND
+      INVALID_DASH
+      INVALID_DSC_COMMENT
+      INVALID_INDEX
+      CLIP_NOT_REPRESENTABLE
+      TEMP_FILE_ERROR
+      INVALID_STRIDE
+      FONT_TYPE_MISMATCH
+      USER_FONT_IMMUTABLE
+      USER_FONT_ERROR
+      NEGATIVE_COUNT
+      INVALID_CLUSTERS
+      INVALID_SLANT
+      INVALID_WEIGHT
+      INVALID_SIZE
+      USER_FONT_NOT_IMPLEMENTED
+      DEVICE_TYPE_MISMATCH
+      DEVICE_ERROR
+      INVALID_MESH_CONSTRUCTION
+      DEVICE_FINISHED
+      JBIG2_GLOBAL_MISSING
 
       LAST_STATUS
     end
 
     enum ContentT
-      COLOR       = 0x1000,
-      ALPHA       = 0x2000,
+      COLOR       = 0x1000
+      ALPHA       = 0x2000
       COLOR_ALPHA = 0x3000
     end
 
     enum FormatT
-      INVALID   = -1,
-      ARGB32    = 0,
-      RGB24     = 1,
-      A8        = 2,
-      A1        = 3,
-      RGB16_565 = 4,
+      INVALID   = -1
+      ARGB32    = 0
+      RGB24     = 1
+      A8        = 2
+      A1        = 3
+      RGB16_565 = 4
       RGB30     = 5
     end
 
@@ -168,38 +168,38 @@ module Cairo::C
     # Modify state
 
     enum OperatorT
-      CLEAR,
+      CLEAR
 
-      SOURCE,
-      OVER,
-      IN,
-      OUT,
-      ATOP,
+      SOURCE
+      OVER
+      IN
+      OUT
+      ATOP
 
-      DEST,
-      DEST_OVER,
-      DEST_IN,
-      DEST_OUT,
-      DEST_ATOP,
+      DEST
+      DEST_OVER
+      DEST_IN
+      DEST_OUT
+      DEST_ATOP
 
-      XOR,
-      ADD,
-      SATURATE,
+      XOR
+      ADD
+      SATURATE
 
-      MULTIPLY,
-      SCREEN,
-      OVERLAY,
-      DARKEN,
-      LIGHTEN,
-      COLOR_DODGE,
-      COLOR_BURN,
-      HARD_LIGHT,
-      SOFT_LIGHT,
-      DIFFERENCE,
-      EXCLUSION,
-      HSL_HUE,
-      HSL_SATURATION,
-      HSL_COLOR,
+      MULTIPLY
+      SCREEN
+      OVERLAY
+      DARKEN
+      LIGHTEN
+      COLOR_DODGE
+      COLOR_BURN
+      HARD_LIGHT
+      SOFT_LIGHT
+      DIFFERENCE
+      EXCLUSION
+      HSL_HUE
+      HSL_SATURATION
+      HSL_COLOR
       HSL_LUMINOSITY
     end
 
@@ -241,16 +241,16 @@ module Cairo::C
     ) : Void
 
     enum AntialiasT
-      ANTIALIAS_DEFAULT,
+      ANTIALIAS_DEFAULT
 
       # method
-      ANTIALIAS_NONE,
-      ANTIALIAS_GRAY,
-      ANTIALIAS_SUBPIXEL,
+      ANTIALIAS_NONE
+      ANTIALIAS_GRAY
+      ANTIALIAS_SUBPIXEL
 
       # hints
-      ANTIALIAS_FAST,
-      ANTIALIAS_GOOD,
+      ANTIALIAS_FAST
+      ANTIALIAS_GOOD
       ANTIALIAS_BEST
     end
 
@@ -260,7 +260,7 @@ module Cairo::C
     ) : Void
 
     enum FillRuleT
-      WINDING,
+      WINDING
       EVEN_ODD
     end
 
@@ -275,8 +275,8 @@ module Cairo::C
     ) : Void
 
     enum LineCapT
-      BUTT,
-      ROUND,
+      BUTT
+      ROUND
       SQUARE
     end
 
@@ -286,8 +286,8 @@ module Cairo::C
     ) : Void
 
     enum LineJoinT
-      MITER,
-      ROUND,
+      MITER
+      ROUND
       BEVEL
     end
 
@@ -651,35 +651,35 @@ module Cairo::C
     end
 
     enum FontSlantT
-      NORMAL,
-      ITALIC,
+      NORMAL
+      ITALIC
       OBLIQUE
     end
 
     enum FontWeightT
-      NORMAL,
+      NORMAL
       BOLD
     end
 
     enum SubpixelOrderT
-      DEFAULT,
-      RGB,
-      BGR,
-      VRGB,
+      DEFAULT
+      RGB
+      BGR
+      VRGB
       VBGR
     end
 
     enum HintStyleT
-      DEFAULT,
-      NONE,
-      SLIGHT,
-      MEDIUM,
+      DEFAULT
+      NONE
+      SLIGHT
+      MEDIUM
       FULL
     end
 
     enum HintMetricsT
-      DEFAULT,
-      OFF,
+      DEFAULT
+      OFF
       ON
     end
 
@@ -873,10 +873,10 @@ module Cairo::C
     ) : StatusT
 
     enum FontTypeT
-      TOY,
-      FT,
-      WIN32,
-      QUARTZ,
+      TOY
+      FT
+      WIN32
+      QUARTZ
       USER
     end
 
@@ -1142,9 +1142,9 @@ module Cairo::C
     ) : PSurfaceT
 
     enum PathDataTypeT
-      MOVE_TO,
-      LINE_TO,
-      CURVE_TO,
+      MOVE_TO
+      LINE_TO
+      CURVE_TO
       CLOSE_PATH
     end
 
@@ -1206,14 +1206,14 @@ module Cairo::C
     ) : PDeviceT
 
     enum DeviceTypeT
-      DRM,
-      GL,
-      SCRIPT,
-      XCB,
-      XLIB,
-      XML,
-      COGL,
-      WIN32,
+      DRM
+      GL
+      SCRIPT
+      XCB
+      XLIB
+      XML
+      COGL
+      WIN32
 
       INVALID = -1
     end
@@ -1297,7 +1297,7 @@ module Cairo::C
     ) : PSurfaceT
 
     enum SurfaceObserverModeT
-      NORMAL = 0,
+      NORMAL = 0
       RECORD_OPERATIONS = 0x1
     end
 
@@ -1416,30 +1416,30 @@ module Cairo::C
     ) : StatusT
 
     enum SurfaceTypeT
-      IMAGE,
-      PDF,
-      PS,
-      XLIB,
-      XCB,
-      GLITZ,
-      QUARTZ,
-      WIN32,
-      BEOS,
-      DIRECTFB,
-      SVG,
-      OS2,
-      WIN32_PRINTING,
-      QUARTZ_IMAGE,
-      SCRIPT,
-      QT,
-      RECORDING,
-      VG,
-      GL,
-      DRM,
-      TEE,
-      XML,
-      SKIA,
-      SUBSURFACE,
+      IMAGE
+      PDF
+      PS
+      XLIB
+      XCB
+      GLITZ
+      QUARTZ
+      WIN32
+      BEOS
+      DIRECTFB
+      SVG
+      OS2
+      WIN32_PRINTING
+      QUARTZ_IMAGE
+      SCRIPT
+      QT
+      RECORDING
+      VG
+      GL
+      DRM
+      TEE
+      XML
+      SKIA
+      SUBSURFACE
       COGL
     end
 
@@ -1790,11 +1790,11 @@ module Cairo::C
     ) : StatusT
 
     enum PatternTypeT
-      SOLID,
-      SURFACE,
-      LINEAR,
-      RADIAL,
-      MESH,
+      SOLID
+      SURFACE
+      LINEAR
+      RADIAL
+      MESH
       RASTER_SOURCE
     end
 
@@ -1884,9 +1884,9 @@ module Cairo::C
     ) : Void
 
     enum ExtendT
-      NONE,
-      REPEAT,
-      REFLECT,
+      NONE
+      REPEAT
+      REFLECT
       PAD
     end
 
@@ -1900,11 +1900,11 @@ module Cairo::C
     ) : ExtendT
 
     enum FilterT
-      FAST,
-      GOOD,
-      BEST,
-      NEAREST,
-      BILINEAR,
+      FAST
+      GOOD
+      BEST
+      NEAREST
+      BILINEAR
       GAUSSIAN
     end
 
@@ -2069,8 +2069,8 @@ module Cairo::C
     alias RegionT = Void*
 
     enum RegionOverlapT
-      IN,  # completely inside region
-      OUT, # completely outside region
+      IN   # completely inside region
+      OUT  # completely outside region
       PART # partly inside region
     end
 

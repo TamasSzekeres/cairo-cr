@@ -11,11 +11,12 @@ targets:
 dependencies:
   x11:
     github: TamasSzekeres/x11-cr
-    version: ~> 0.3.1
+    branch: master
 
   cairo:
-    path: ../../.
+    github: TamasSzekeres/cairo-cr
+    branch: master
 
-crystal: 0.31.1
+crystal: 0.35.1
 
 license: MIT

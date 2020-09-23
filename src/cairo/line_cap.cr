@@ -1,7 +1,7 @@
 module Cairo
   enum LineCap
-    Butt,
-    Round,
+    Butt
+    Round
     Square
   end
 end

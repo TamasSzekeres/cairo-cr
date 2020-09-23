@@ -8,7 +8,7 @@ require "./features"
       # PS-surface functions
 
       enum PsLevelT
-        LEVEL_2,
+        LEVEL_2
         LEVEL_3
       end
 

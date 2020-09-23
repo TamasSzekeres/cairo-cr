@@ -1,37 +1,37 @@
 module Cairo
   enum Operator
-    Clear,
+    Clear
 
-    Source,
-    Over,
-    In,
-    Out,
-    Atop,
+    Source
+    Over
+    In
+    Out
+    Atop
 
-    Dest,
-    DestOver,
-    DestIn,
-    DestOut,
-    DestAtop,
+    Dest
+    DestOver
+    DestIn
+    DestOut
+    DestAtop
 
-    Xor,
-    Add,
-    Saturate,
+    Xor
+    Add
+    Saturate
 
-    Multiply,
-    Screen,
-    Overlay,
-    Darken,
-    Lighten,
-    ColorDodge,
-    ColorBurn,
-    HardLight,
-    SoftLight,
-    Difference,
-    Exclusion,
-    HslHue,
-    HslSaturation,
-    HslColor,
+    Multiply
+    Screen
+    Overlay
+    Darken
+    Lighten
+    ColorDodge
+    ColorBurn
+    HardLight
+    SoftLight
+    Difference
+    Exclusion
+    HslHue
+    HslSaturation
+    HslColor
     HslLuminosity
   end
 end

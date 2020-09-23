@@ -4,46 +4,46 @@ module Cairo
   include Cairo::C
 
   enum Status
-    Success = 0,
+    Success = 0
 
-    NoMemory,
-    InvalidRestore,
-    InvalidPopGroup,
-    NoCurrentPoint,
-    InvalidMatrix,
-    InvalidStatus,
-    NullPointer,
-    InvalidString,
-    InvalidPathData,
-    ReadError,
-    WriteError,
-    SurfaceFinished,
-    SurfaceTypeMismatch,
-    PatternTypeMismatch,
-    InvalidContent,
-    InvalidFormat,
-    InvalidVisual,
-    FileNotFound,
-    InvalidDash,
-    InvalidDscComment,
-    InvalidIndex,
-    ClipNotRepresentable,
-    TempFileRrror,
-    InvalidStride,
-    FontTypeMismatch,
-    UserFontImmutable,
-    UserFontError,
-    NegativeCount,
-    InvalidClusters,
-    InvalidSlant,
-    InvalidWeight,
-    InvalidSize,
-    UserFontNotImplemented,
-    DeviceTypeMismatch,
-    DeviceError,
-    InvalidMeshConstruction,
-    DeviceFinished,
-    Jbig2GlobalMissing,
+    NoMemory
+    InvalidRestore
+    InvalidPopGroup
+    NoCurrentPoint
+    InvalidMatrix
+    InvalidStatus
+    NullPointer
+    InvalidString
+    InvalidPathData
+    ReadError
+    WriteError
+    SurfaceFinished
+    SurfaceTypeMismatch
+    PatternTypeMismatch
+    InvalidContent
+    InvalidFormat
+    InvalidVisual
+    FileNotFound
+    InvalidDash
+    InvalidDscComment
+    InvalidIndex
+    ClipNotRepresentable
+    TempFileRrror
+    InvalidStride
+    FontTypeMismatch
+    UserFontImmutable
+    UserFontError
+    NegativeCount
+    InvalidClusters
+    InvalidSlant
+    InvalidWeight
+    InvalidSize
+    UserFontNotImplemented
+    DeviceTypeMismatch
+    DeviceError
+    InvalidMeshConstruction
+    DeviceFinished
+    Jbig2GlobalMissing
 
     LastStatus
 

@@ -1,7 +1,7 @@
 module Cairo
   enum HintMetrics
-    Default,
-    Off,
+    Default
+    Off
     On
   end
 end

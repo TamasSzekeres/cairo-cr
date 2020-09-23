@@ -1,9 +1,9 @@
 module Cairo
   enum RegionOverlap
     # completely inside region
-    In,
+    In
     # completely outside region
-    Out,
+    Out
     # partly inside region
     Part
   end

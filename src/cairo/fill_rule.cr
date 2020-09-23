@@ -1,6 +1,6 @@
 module Cairo
   enum FillRule
-    Winding,
+    Winding
     EvenOdd
   end
 end
