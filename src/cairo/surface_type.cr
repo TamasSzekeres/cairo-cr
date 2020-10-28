@@ -1,5 +1,5 @@
 module Cairo
-  enum SurfaceTypeT
+  enum SurfaceType
     Image
     PDF
     PS
