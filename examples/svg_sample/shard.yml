@@ -1,0 +1,23 @@
+name: svg_sample
+version: 0.1.0
+
+authors:
+  - ErikWDev <ErikWDev@gmail.com>
+  - Tamás Szekeres <szektam2@gmail.com>
+
+targets:
+  svg_sample:
+    main: src/svg_sample.cr
+
+dependencies:
+  x11:
+    github: TamasSzekeres/x11-cr
+    branch: master
+
+  cairo:
+    github: TamasSzekeres/cairo-cr
+    branch: master
+
+crystal: 0.35.1
+
+license: MIT
