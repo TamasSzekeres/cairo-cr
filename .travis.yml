@@ -8,6 +8,7 @@ crystal:
 
 script:
   - crystal spec
+  - crystal doc
 
 branches:
   only:

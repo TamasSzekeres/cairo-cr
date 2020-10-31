@@ -10,7 +10,6 @@ description: |
 dependencies:
   x11:
     github: TamasSzekeres/x11-cr
-    branch: master
 
 crystal: 0.35.1
 
