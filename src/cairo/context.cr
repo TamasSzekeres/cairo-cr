@@ -462,11 +462,17 @@ module Cairo
       Point.new(x, y)
     end
 
+    # Clears the current path. After this call there will be no path and no current point.
     def new_path
       LibCairo.new_path(@cairo)
       self
     end
 
+    # Begin a new sub-path. After this call the current point will be *(x, y)*.
+    #
+    # ###Parameters
+    # - **x** the X coordinate of the new position
+    # - **y** the Y coordinate of the new position
     def move_to(x : Float64, y : Float64)
       LibCairo.move_to(@cairo, x, y)
       self
@@ -477,6 +483,12 @@ module Cairo
       self
     end
 
+    # Begin a new sub-path. Note that the existing path is not affected. After this call there will be no current point.
+    #
+    # In many cases, this call is not needed since new sub-paths are frequently started with `Context#move_to`.
+    #
+    # A call to `Context#new_sub_path` is particularly useful when beginning a new sub-path with one of the `Context#arc` calls.
+    # This makes things easier as it is no longer necessary to manually compute the arc's initial coordinates for a call to `Context#move_to`.
     def new_sub_path
       LibCairo.new_sub_path(@cairo)
       self
@@ -494,6 +506,14 @@ module Cairo
       self
     end
 
+    # Adds a line to the path from the current point to position *(x, y)* in user-space coordinates.
+    # After this call the current point will be *(x, y)*.
+    #
+    # If there is no current point before the call to `Contxt#line_to` this function will behave as `Context#move_to(x, y)`.
+    #
+    # ###Parameters
+    # - **x** the X coordinate of the end of the new line
+    # - **y** the Y coordinate of the end of the new line
     def line_to(x : Float64, y : Float64)
       LibCairo.line_to(@cairo, x, y)
       self
@@ -504,6 +524,19 @@ module Cairo
       self
     end
 
+    # Adds a cubic Bézier spline to the path from the current point to position *(x3, y3)* in user-space coordinates,
+    # using *(x1, y1)* and *(x2, y2)* as the control points. After this call the current point will be *(x3, y3)*.
+    #
+    # If there is no current point before the call to `Context#curve_to` this function will behave as
+    # if preceded by a call to `Context#move_to(x1, y1)`.
+    #
+    # ###Parameters
+    # - **x1** the X coordinate of the first control point
+    # - **y1** the Y coordinate of the first control point
+    # - **x2** the X coordinate of the second control point
+    # - **y2** the Y coordinate of the second control point
+    # - **x3** the X coordinate of the end of the curve
+    # - **y3** the Y coordinate of the end of the curve
     def curve_to(x1 : Float64, y1 : Float64,
                  x2 : Float64, y2 : Float64,
                  x3 : Float64, y3 : Float64)
@@ -516,6 +549,39 @@ module Cairo
       self
     end
 
+    # Adds a circular arc of the given radius to the current path. The arc is centered at *(xc, yc)*,
+    # begins at *angle1* and proceeds in the direction of increasing angles to end at *angle2*.
+    # If *angle2* is less than *angle1* it will be progressively increased by 2*PI until it is greater than *angle1*.
+    #
+    # If there is a current point, an initial line segment will be added to the path to connect the current point to the beginning of the arc.
+    # If this initial line is undesired, it can be avoided by calling `Context#new_sub_path` before calling `Context#arc`.
+    #
+    # Angles are measured in radians. An angle of 0.0 is in the direction of the positive X axis (in user space).
+    # An angle of *PI/2.0* radians (90 degrees) is in the direction of the positive Y axis (in user space).
+    # Angles increase in the direction from the positive X axis toward the positive Y axis.
+    # So with the default transformation matrix, angles increase in a clockwise direction.
+    #
+    # (To convert from degrees to radians, use (degrees*(PI / 180.0)).)
+    #
+    # This function gives the arc in the direction of increasing angles; see `Context#arc_negative`
+    # to get the arc in the direction of decreasing angles.
+    #
+    # The arc is circular in user space. To achieve an elliptical arc, you can scale the current transformation matrix
+    # by different amounts in the X and Y directions. For example, to draw an ellipse in the box given by *x*, *y*, *width*, *height*:
+    # ```
+    # context.save
+    # context.translate(x + width / 20., y + height / 2.0)
+    # context.scale(width / 2.0, height / 2.0)
+    # context.arc(0.0, 0.0, 1.0, 0.0, 2.0 * Math.PI)
+    # context.restore
+    # ```
+    #
+    # ###Parameters
+    # - **xc** X position of the center of the arc
+    # - **yc** Y position of the center of the arc
+    # - **radius** the radius of the arc
+    # - **angle1** the start angle, in radians
+    # - **angle2** the end angle, in radians
     def arc(xc : Int32 | Float64, yc : Int32 | Float64, radius : Int32 | Float64,
             angle1 : Float64, angle2 : Float64)
       LibCairo.arc(@cairo, xc, yc, radius, angle1, angle2)
@@ -527,6 +593,18 @@ module Cairo
       self
     end
 
+    # Adds a circular arc of the given radius to the current path. The arc is centered at *(xc, yc)*,
+    # begins at *angle1* and proceeds in the direction of decreasing angles to end at *angle2*.
+    # If *angle2* is greater than *angle1* it will be progressively decreased by 2*PI until it is less than *angle1*.
+    #
+    # See `Contxt#arc` for more details. This function differs only in the direction of the arc between the two angles.
+    #
+    # ###Parameters
+    # - **xc** X position of the center of the arc
+    # - **yc** Y position of the center of the arc
+    # - **radius** the radius of the arc
+    # - **angle1** the start angle, in radians
+    # - **angle2** the end angle, in radians
     def arc_negative(xc : Float64, yc : Float64,
                      radius : Float64, angle1 : Float64, angle2 : Float64)
       LibCairo.arc_negative(@cairo, xc, yc, radius, angle1, angle2)
@@ -538,6 +616,16 @@ module Cairo
       self
     end
 
+    # Begin a new sub-path. After this call the current point will offset by *(x, y)*.
+    #
+    # Given a current point of *(x, y)*, `context.rel_move_to(dx, dy)` is logically equivalent to `context.move_to(x + dx, y + dy)`.
+    #
+    # It is an error to call this function with no current point. Doing so will cause cr to shutdown with
+    # a status of `Status::NoCurrentPoint`.
+    #
+    # ###Parameters
+    # - **dx** the X offset
+    # - **dy** the Y offset
     def rel_move_to(dx : Float64, dy : Float64)
       LibCairo.rel_move_to(@cairo, dx, dy)
       self
@@ -548,6 +636,18 @@ module Cairo
       self
     end
 
+    # Relative-coordinate version of `Context#line_to`. Adds a line to the path from the current point
+    # to a point that is offset from the current point by *(dx, dy)* in user space.
+    # After this call the current point will be offset by *(dx, dy)*.
+    #
+    # Given a current point of *(x, y)*, `context.rel_line_to(dx, dy)` is logically equivalent to `context.line_to(x + dx , y + dy)`.
+    #
+    # It is an error to call this function with no current point. Doing so will cause `Context` to shutdown
+    # with a status of `Status::NoCurrentPoint`.
+    #
+    # ###Parameters
+    # - **dx** the X offset to the end of the new line
+    # - **dy** the Y offset to the end of the new line
     def rel_line_to(dx : Float64, dy : Float64)
       LibCairo.rel_line_to(@cairo, dx, dy)
       self
@@ -558,6 +658,24 @@ module Cairo
       self
     end
 
+    # Relative-coordinate version of `Context#curve_to`. All offsets are relative to the current point.
+    # Adds a cubic Bézier spline to the path from the current point to a point offset from the current point by *(dx3, dy3)*,
+    # using points offset by *(dx1, dy1)* and *(dx2, dy2)* as the control points.
+    # After this call the current point will be offset by *(dx3, dy3)*.
+    #
+    # Given a current point of *(x, y)*, `context.rel_curve_to(dx1, dy1, dx2, dy2, dx3, dy3)`
+    # is logically equivalent to `context.curve_to(x+dx1, y+dy1, x+dx2, y+dy2, x+dx3, y+dy3)`.
+    #
+    # It is an error to call this function with no current point. Doing so will cause `Context` to shutdown
+    # with a status of `Status::NoCurrentPoint`.
+    #
+    # ###Parameters
+    # - **dx1** the X offset to the first control point
+    # - **dy1** the Y offset to the first control point
+    # - **dx2** the X offset to the second control point
+    # - **dy2** the Y offset to the second control point
+    # - **dx3** the X offset to the end of the curve
+    # - **dy3** the Y offset to the end of the curve
     def rel_curve_to(dx1 : Float64, dy1 : Float64,
                      dx2 : Float64, dy2 : Float64,
                      dx3 : Float64, dy3 : Float64)
@@ -570,16 +688,69 @@ module Cairo
       self
     end
 
+    # Adds a closed sub-path rectangle of the given size to the current path at position *(x, y)* in user-space coordinates.
+    #
+    # This function is logically equivalent to:
+    # ```
+    # context
+    #   .cairo_move_to(x, y)
+    #   .rel_line_to(width, 0)
+    #   .rel_line_to(0, height)
+    #   .rel_line_to(-width, 0)
+    #   .close_path
+    # ```
+    #
+    # ###Parameters
+    # - **x** the X coordinate of the top left corner of the rectangle
+    # - **y** the Y coordinate to the top left corner of the rectangle
+    # - **width** the width of the rectangle
+    # - **height** the height of the rectangle
     def rectangle(x : Float64, y : Float64, width : Float64, height : Float64)
       LibCairo.rectangle(@cairo, x, y, width, height)
       self
     end
 
+    # Adds a line segment to the path from the current point to the beginning of the current sub-path,
+    # (the most recent point passed to `Context#move_to`), and closes this sub-path.
+    # After this call the current point will be at the joined endpoint of the sub-path.
+    #
+    # The behavior of `Context#close_path` is distinct from simply calling `Context#line_to`
+    # with the equivalent coordinate in the case of stroking. When a closed sub-path is stroked,
+    # there are no caps on the ends of the sub-path. Instead, there is a line join connecting the final and initial segments of the sub-path.
+    #
+    # If there is no current point before the call to `Context#close_path`, this function will have no effect.
+    #
+    # Note: As of cairo version 1.2.4 any call to `Context#close_path` will place an explicit `PathDataType::MoveTo`
+    # element into the path immediately after the `PathDataType::ClosePath` element,
+    # (which can be seen in `Context#copy_path` for example). This can simplify path processing in some cases as it may not be necessary
+    # to save the "last move_to point" during processing as the `PathDataType::MoveTo`
+    # immediately after the `PathDataType::ClosePath` will provide that point.
     def close_path
       LibCairo.close_path(@cairo)
       self
     end
 
+    # Computes a bounding box in user-space coordinates covering the points on the current path.
+    # If the current path is empty, returns an empty rectangle *((0,0), (0,0))*.
+    # Stroke parameters, fill rule, surface dimensions and clipping are not taken into account.
+    #
+    # Contrast with `Context#fill_extents` and `Context#stroke_extents` which return the extents of only the area
+    # that would be "inked" by the corresponding drawing operations.
+    #
+    # The result of `Context#path_extents` is defined as equivalent to the limit of `Context#stroke_extents`
+    # with `LineCap::Round` as the line width approaches 0.0, (but never reaching the empty-rectangle
+    # returned by `Context#stroke_extents` for a line width of 0.0).
+    #
+    # Specifically, this means that zero-area sub-paths such as `Context#move_to`; `Context#line_to` segments,
+    # (even degenerate cases where the coordinates to both calls are identical),
+    # will be considered as contributing to the extents. However, a lone `Context#move_to` will not contribute
+    # to the results of `Context#path_extents`.
+    #
+    # ###Parameters
+    # - **x1** left of the resulting extents
+    # - **y1** top of the resulting extents
+    # - **x2** right of the resulting extents
+    # - **y2** bottom of the resulting extents
     def path_extents : Extents
       LibCairo.path_extents(@cairo, out x1, out y1, out x2, out y2)
       Extents.new(x1, y1, x2, y2)
@@ -984,11 +1155,32 @@ module Cairo
       raise "unimplemented method"
     end
 
+    # Adds closed paths for text to the current path. The generated path if filled,
+    # achieves an effect similar to that of `Context#show_text`.
+    #
+    # Text conversion and positioning is done similar to `Context#show_text`.
+    #
+    # Like `Context#show_text`, After this call the current point is moved to the origin of where
+    # the next glyph would be placed in this same progression. That is, the current point will be
+    # at the origin of the final glyph offset by its advance values. This allows for chaining multiple
+    # calls to to `Context#text_path` without having to set current point in between.
+    #
+    # Note: The `Context#text_path` function call is part of what the cairo designers call the "toy" text API.
+    # It is convenient for short demos and simple programs, but it is not expected to be adequate for serious text-using applications.
+    # See `Context#glyph_path` for the "real" text path API in cairo.
+    #
+    # ###Parameters
+    # - **text** string of text encoded in UTF-8
     def text_path(text : String)
       LibCairo.text_path(@cairo, text.to_unsafe)
       self
     end
 
+    # Adds closed paths for the glyphs to the current path. The generated path if filled,
+    # achieves an effect similar to that of `Context#show_glyphs`.
+    #
+    # ###Parameters
+    # - **glyphs** array of glyphs to show
     def glyph_path(glyphs : Array(Glyph))
       raise "unimplemented method"
     end
@@ -1039,10 +1231,29 @@ module Cairo
       Antialias.new(LibCairo.get_antialias(@cairo).value)
     end
 
+    # Returns whether a current point is defined on the current path. See `Context#current_point` for details on the current point.
+    #
+    # ###Returns
+    # Whether a current point is defined.
     def has_current_point? : Bool
       LibCairo.has_current_point(@cairo) == 1
     end
 
+    # Gets the current point of the current path, which is conceptually the final point reached by the path so far.
+    #
+    # The current point is returned in the user-space coordinate system.
+    # If there is no defined current point or if `Context` is in an error status,
+    # x and y will both be set to 0.0. It is possible to check this in advance with `Context#has_current_point?`.
+    #
+    # Most path construction functions alter the current point.
+    # See the following for details on how they affect the current point: `Context#new_path`, `Context#new_sub_path`,
+    # `Context#append`, `Context#close_path`, `Context#move_to`, `Context#line_to`, `Context#curve_to`, `Context#rel_move_to`,
+    # `Context#rel_line_to`, `Context#rel_curve_to`, `Context#arc`, `Context#arc_negative`, `Context#cairo_rectangle`,
+    # `Context#text_path`, `Context#glyph_path`, `Context#stroke_to_path`.
+    #
+    # Some functions use and alter the current point but do not otherwise change current path: `Context#show_text`.
+    #
+    # Some functions unset the current path and as a result, current point: `Context#fill`, `Context#stroke`.
     def current_point : Point
       LibCairo.get_current_point(@cairo, out x, out y)
       Point.new(x, y)
@@ -1134,14 +1345,47 @@ module Cairo
       Surface.new(LibCairo.get_group_target(@cairo))
     end
 
+    # Creates a copy of the current path and returns it to the user as a `Path`.
+    # See `PathData` for hints on how to iterate over the returned data structure.
+    #
+    # This function will always return a valid pointer, but the result will have no data (data==Nil and num_data==0),
+    # if either of the following conditions hold:
+    # 1. If there is insufficient memory to copy the path. In this case `Path#status` will be set to `Status::NoMemory`.
+    # 2. If `Context` is already in an error state. In this case `path.status` will contain the same status
+    # that would be returned by `Context#status`.
+    #
+    # ###Returns
+    # The copy of the current path. The caller owns the returned object and should call `Path#finalize` when finished with it.
     def copy_path : Path
       Path.new(LibCairo.copy_path(@cairo))
     end
 
+    # Gets a flattened copy of the current path and returns it to the user as a `Path`.
+    # See `PathData` for hints on how to iterate over the returned data structure.
+    #
+    # This function is like `Contxt#copy_path` except that any curves in the path will be approximated
+    # with piecewise-linear approximations, (accurate to within the current tolerance value).
+    # That is, the result is guaranteed to not have any elements of type `PathDataType::CurveTo`
+    # which will instead be replaced by a series of `PathDataType::LineTo` elements.
+    #
+    # This function will always return a valid pointer, but the result will have no data (data==Nil and num_data==0),
+    # if either of the following conditions hold:
+    # 1. If there is insufficient memory to copy the path. In this case `Path#status` will be set to `Status::NoMemory`.
+    # 2. If `Context` is already in an error state. In this case `Path#status` will contain the same status
+    # that would be returned by `Context#status`.
+    #
+    # ###Returns
+    # The copy of the current path. The caller owns the returned object and should call `Path#fnalize` when finished with it.
     def copy_path_flat : Path
       Path.new(LibCairo.copy_path_flat(@cairo))
     end
 
+    # Append the path onto the current path. The path may be either the return value from one of `Context#cairo_copy_path`
+    # or `Context#copy_path_flat` or it may be constructed manually. See `Path` for details on how the path data structure
+    # should be initialized, and note that `Path#status` must be initialized to `Status::Success`.
+    #
+    # ###Parameters
+    # - **path** path to be appended
     def append(path : Path)
       LibCairo.append_path(@cairo, path.to_unsafe)
       self

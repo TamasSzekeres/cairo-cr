@@ -15,9 +15,6 @@ Add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  x11:
-    github: TamasSzekeres/x11-cr
-
   cairo:
     github: TamasSzekeres/cairo-cr
 ```
