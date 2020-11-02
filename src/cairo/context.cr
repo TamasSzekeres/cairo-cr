@@ -16,7 +16,7 @@ module Cairo
   #
   # Cairo contexts, as `Context` objects are named, are central to cairo and all drawing with cairo is always done to a `Context` object.
   #
-  # Memory management of `Context` is done with `Contxt#reference` and `Context#finalize`.
+  # Memory management of `Context` is done with `Context#reference` and `Context#finalize`.
   class Context
     # Creates a new `Context` with all graphics state parameters set to default values and with target as a target surface.
     # The target surface should be constructed with a backend-specific function such as `Surface#initialite`.
@@ -413,52 +413,118 @@ module Cairo
       self
     end
 
+    # Modifies the current transformation matrix (CTM) by translating the user-space origin by *(tx, ty)*.
+    # This offset is interpreted as a user-space coordinate according to the CTM in place before the new call to `Context#translate`.
+    # In other words, the translation of the user-space origin takes place after any existing transformation.
+    #
+    # ###Parameters
+    # - **tx** amount to translate in the X direction
+    # - **ty** amount to translate in the Y direction
     def translate(tx : Float64, ty : Float64)
       LibCairo.translate(@cairo, tx, ty)
       self
     end
 
+    # Modifies the current transformation matrix (CTM) by scaling the X and Y user-space axes by sx and sy respectively.
+    # The scaling of the axes takes place after any existing transformation of user space.
+    #
+    # ###Parameters
+    # - **sx** scale factor for the X dimension
+    # - **sy** scale factor for the Y dimension
     def scale(sx : Float64, sy : Float64)
       LibCairo.scale(@cairo, sx, sy)
       self
     end
 
+    # Modifies the current transformation matrix (CTM) by rotating the user-space axes by angle radians.
+    # The rotation of the axes takes places after any existing transformation of user space. The rotation direction
+    # for positive angles is from the positive X axis toward the positive Y axis.
+    #
+    # ###Parameters
+    # - **angle** angle (in radians) by which the user-space axes will be rotated
     def rotate(angle : Float64)
       LibCairo.rotate(@cairo, angle)
       self
     end
 
+    # Modifies the current transformation matrix (CTM) by applying matrix as an additional transformation.
+    # The new transformation of user space takes place after any existing transformation.
+    #
+    # ###Parameters
+    # - **matrix** a transformation to be applied to the user-space axes
     def transform(matrix : Matrix)
       LibCairo.transform(@cairo, matrix.to_unsafe)
     end
 
+    # Modifies the current transformation matrix (CTM) by setting it equal to matrix.
+    #
+    # ###Parameters
+    # - **matrix** a transformation matrix from user space to device space
     def matrix=(matrix : Matrix)
       LibCairo.set_matrix(@cairo, matrix.to_unsafe)
       self
     end
 
+    # Resets the current transformation matrix (CTM) by setting it equal to the identity matrix.
+    # That is, the user-space and device-space axes will be aligned and one user-space unit will transform to one device-space unit.
     def identity_matrix
       LibCairo.identity_matrix(@cairo)
       self
     end
 
-    def user_to_device : Point
-      LibCairo.user_to_device(@cairo, out x, out y)
+    # Transform a coordinate from user space to device space by multiplying the given point by the current transformation matrix (CTM).
+    #
+    # ###Parameters
+    # - **p** point to transform
+    #
+    # ###Returns
+    # The transformed point.
+    def user_to_device(p : Point) : Point
+      x, y = p.x, p.y
+      LibCairo.user_to_device(@cairo, pointerof(x), pointerof(y))
       Point.new(x, y)
     end
 
-    def user_to_device_distance : Point
-      LibCairo.user_to_device_distance(@cairo, out x, out y)
+    # Transform a distance vector from user space to device space. This function is similar to `Context#user_to_device`
+    # except that the translation components of the CTM will be ignored when transforming *(dx, dy)*.
+    #
+    # ###Parameters
+    # - **d** the distance vector in user space.
+    #
+    # ###Returns
+    # The distance vector is device space.
+    def user_to_device_distance(d : Point) : Point
+      x, y = d.x, d.y
+      LibCairo.user_to_device_distance(@cairo, pointerof(x), pointerof(y))
       Point.new(x, y)
     end
 
-    def device_to_user : Point
-      LibCairo.device_to_user(@cairo, out x, out y)
+    # Transform a coordinate from device space to user space by multiplying the given point by the inverse
+    # of the current transformation matrix (CTM).
+    #
+    # ###Parameters
+    # - **p** point to transform
+    #
+    # ###Returns
+    # The transformed point.
+    def device_to_user(p : Point) : Point
+      x, y = p.x, p.x
+      LibCairo.device_to_user(@cairo, pointerof(x), pointerof(y))
       Point.new(x, y)
     end
 
-    def device_to_user_distance : Point
-      LibCairo.device_to_user_distance(@cairo, out x, out y)
+    # Transform a distance vector from device space to user space.
+    # This function is similar to `Context#device_to_user` except that the translation components
+    # of the inverse CTM will be ignored when transforming *(dx, dy)*.
+    #
+    # ###Parameters
+    # - **d** the distance vector in device space.
+    #
+    # ###Returns
+    # The distance vector is user space.
+    def device_to_user_distance(d : Point) : Point
+      x, y = d.x, d.y
+      LibCairo.device_to_user_distance(@cairo, pointerof(x), pointerof(y))
       Point.new(x, y)
     end
 
@@ -1317,6 +1383,10 @@ module Cairo
       {dashes: dashes, offset: offset}
     end
 
+    # Stores the current transformation matrix (CTM) into matrix .
+    #
+    # ###Returns
+    # The matrix.
     def matrix : Matrix
       LibCairo.get_matrix(@cairo, out matrix)
       Matrix.new(matrix)

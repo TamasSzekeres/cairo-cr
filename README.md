@@ -3,6 +3,7 @@
 [Cairo](https://cairographics.org/) bindings for Crystal language.
 
 [![Build Status](https://travis-ci.org/TamasSzekeres/cairo-cr.svg?branch=master)](https://travis-ci.org/TamasSzekeres/cairo-cr)
+[![Docs](https://img.shields.io/badge/docs-available-brightgreen.svg)](https://tamasszekeres.github.io/cairo-cr/)
 
 ## Installation
 
@@ -59,6 +60,16 @@ Build and run the high-level sample:
   make
   ./sample_window_hl
 ```
+
+## Documentation
+
+You can generate documentation for yourself:
+```shell
+crystal docs
+```
+Then you can open `/doc/index.html` in your browser.
+
+Or you can view last commited documentation online at: [https://tamasszekeres.github.io/cairo-cr/docs/](https://tamasszekeres.github.io/cairo-cr/).
 
 ## Contributing
 
