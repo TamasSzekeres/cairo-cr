@@ -1,10 +1,13 @@
 module Cairo
+  # Used as the return value for `Region#contains_rectangle`.
   enum RegionOverlap
-    # completely inside region
+    # The contents are entirely inside the region.
     In
-    # completely outside region
+
+    # The contents are entirely outside the region.
     Out
-    # partly inside region
+
+    # The contents are partially inside and partially outside the region.
     Part
   end
 end
