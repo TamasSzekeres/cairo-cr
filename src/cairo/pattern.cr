@@ -74,7 +74,7 @@ module Cairo
     # Before using the gradient pattern, a number of color stops should be defined
     # using `Pattern#add_color_stop`.
     #
-    # Note: The coordinates here are in pattern space. For a new pattern, pattern space is identical to user space,
+    # NOTE: The coordinates here are in pattern space. For a new pattern, pattern space is identical to user space,
     # but the relationship between the spaces can be changed with `Pattern#matrix=`.
     #
     # ###Parameters
@@ -96,7 +96,7 @@ module Cairo
     # Creates a new radial gradient `Pattern` between the two circles defined by *(cx0, cy0, radius0)* and *(cx1, cy1, radius1)*.
     # Before using the gradient pattern, a number of color stops should be defined using `Pattern#add_color_stop`.
     #
-    # Note: The coordinates here are in pattern space. For a new pattern, pattern space is identical to user space,
+    # NOTE: The coordinates here are in pattern space. For a new pattern, pattern space is identical to user space,
     # but the relationship between the spaces can be changed with `Pattern#matrix=`.
     #
     # ###Parameters
@@ -215,7 +215,7 @@ module Cairo
     #
     # For a complete definition of tensor-product patches, see the PDF specification (ISO32000), which describes the parametrization in detail.
     #
-    # Note: The coordinates are always in pattern space. For a new pattern, pattern space is identical to user space,
+    # NOTE: The coordinates are always in pattern space. For a new pattern, pattern space is identical to user space,
     # but the relationship between the spaces can be changed with `Pattern#matrix=`.
     #
     # ###Returns
@@ -339,7 +339,7 @@ module Cairo
     # in which the stops are added, (stops added earlier will compare less than stops added later).
     # This can be useful for reliably making sharp color transitions instead of the typical blend.
     #
-    # Note: If the pattern is not a gradient pattern, (eg. a linear or radial pattern),
+    # NOTE: If the pattern is not a gradient pattern, (eg. a linear or radial pattern),
     # then the pattern will be put into an error status with a status of `Status::PatternTypeMismatch`.
     #
     # ###Parameters
@@ -362,7 +362,7 @@ module Cairo
     # (stops added earlier will compare less than stops added later). This can be useful for reliably making sharp color transitions
     # instead of the typical blend.
     #
-    # Note: If the pattern is not a gradient pattern, (eg. a linear or radial pattern), then the pattern will be put into an
+    # NOTE: If the pattern is not a gradient pattern, (eg. a linear or radial pattern), then the pattern will be put into an
     # error status with a status of `Status::PatternTypeMismatch`.
     #
     # ###Parameters
@@ -382,7 +382,7 @@ module Cairo
     #
     # After defining the patch, `Pattern#end_patch` must be called before using pattern as a source or mask.
     #
-    # Note: If pattern is not a mesh pattern then pattern will be put into an error status with a status
+    # NOTE: If pattern is not a mesh pattern then pattern will be put into an error status with a status
     # of `Status::PatternTypeMismatch`. If pattern already has a current patch, it will be put into an error status
     # with a status of `Status::InvalidMeshConstruction`.
     def begin_patch
@@ -395,7 +395,7 @@ module Cairo
     # If the current patch has less than 4 sides, it is closed with a straight line from the current point to
     # the first point of the patch as if `Pattern#line_to` was used.
     #
-    # Note: If pattern is not a mesh pattern then pattern will be put into an error status with a status
+    # NOTE: If pattern is not a mesh pattern then pattern will be put into an error status with a status
     # of `Status::PatternTypeMismatch`. If pattern has no current patch or the current patch has no current point,
     # pattern will be put into an error status with a status of `Status::InvalidMeshConstruction`.
     def end_patch
@@ -411,7 +411,7 @@ module Cairo
     #
     # After this call the current point will be *(x3, y3)*.
     #
-    # Note: If pattern is not a mesh pattern then pattern will be put into an error status with a status
+    # NOTE: If pattern is not a mesh pattern then pattern will be put into an error status with a status
     # of `Status::PatternTypeMismatch`. If pattern has no current patch or the current patch already has 4 sides,
     # pattern will be put into an error status with a status of `Status::InvalidMeshConstruction`.
     #
@@ -433,7 +433,7 @@ module Cairo
     #
     # After this call the current point will be *(x, y)*.
     #
-    # Note: If pattern is not a mesh pattern then pattern will be put into an error status with a status
+    # NOTE: If pattern is not a mesh pattern then pattern will be put into an error status with a status
     # of `Status::PatternTypeMismatch`. If pattern has no current patch or the current patch already has 4 sides,
     # pattern will be put into an error status with a status of `Status::InvalidMeshConstruction`.
     #
@@ -449,7 +449,7 @@ module Cairo
     #
     # After this call the current point will be *(x, y)*.
     #
-    # Note: If pattern is not a mesh pattern then pattern will be put into an error status with a status
+    # NOTE: If pattern is not a mesh pattern then pattern will be put into an error status with a status
     # of `Status::PatternTypeMismatch`. If pattern has no current patch or the current patch already has at least one side,
     # pattern will be put into an error status with a status of `Status::InvalidMeshConstruction`.
     #
@@ -465,7 +465,7 @@ module Cairo
     #
     # Valid values for *point_num* are from 0 to 3 and identify the control points as explained in `Pattern#create_mesh`.
     #
-    # Note: If pattern is not a mesh pattern then pattern will be put into an error status with a status
+    # NOTE: If pattern is not a mesh pattern then pattern will be put into an error status with a status
     # of `Status::PatternTypeMismatch`. If *point_num* is not valid, pattern will be put into an error status with a status
     # of `Status::InvalidIndex`. If pattern has no current patch, pattern will be put into an error status with a status
     # of `Status::InvalidMeshConstruction`.
@@ -485,7 +485,7 @@ module Cairo
     #
     # Valid values for *corner_num* are from 0 to 3 and identify the corners as explained in `Pattern#create_mesh`.
     #
-    # Note: If pattern is not a mesh pattern then pattern will be put into an error status with a status of
+    # NOTE: If pattern is not a mesh pattern then pattern will be put into an error status with a status of
     # `Status::PatternTypeMismatch`. If *corner_num* is not valid, pattern will be put into an error status with
     # a status of `Status::InvalidIndex`. If pattern has no current patch, pattern will be put into an error
     # status with a status of `Status::InvalidMeshConstruction`.
@@ -506,7 +506,7 @@ module Cairo
     #
     # Valid values for *corner_num* are from 0 to 3 and identify the corners as explained in `Pattern#create_mesh`.
     #
-    # Note: If pattern is not a mesh pattern then pattern will be put into an error status with a status of
+    # NOTE: If pattern is not a mesh pattern then pattern will be put into an error status with a status of
     # `Status::PatternTypeMismatch`. If *corner_num* is not valid, pattern will be put into an error status with
     # a status of `Status::InvalidIndex`. If pattern has no current patch, pattern will be put into an error status
     # with a status of `Status::InvalidMeshConstruction`.
@@ -535,7 +535,7 @@ module Cairo
     # When a pattern is first created it always has the identity matrix for its transformation matrix,
     # which means that pattern space is initially identical to user space.
     #
-    # Important: Please note that the direction of this transformation matrix is from user space to pattern space.
+    # Important: Please NOTE that the direction of this transformation matrix is from user space to pattern space.
     # This means that if you imagine the flow from a pattern to user space (and on to device space),
     # then coordinates in that flow will be transformed by the inverse of the pattern matrix.
     #
@@ -586,7 +586,7 @@ module Cairo
 
     # Sets the filter to be used for resizing when using this pattern. See `Filter` for details on each filter.
     #
-    # Note that you might want to control filtering even when you do not have an explicit `Pattern` object,
+    # NOTE that you might want to control filtering even when you do not have an explicit `Pattern` object,
     # (for example when using `Context#set_source_surface`). In these cases, it is convenient to use `Context#get_source`
     # to get access to the pattern that cairo creates implicitly. For example:
     # ```

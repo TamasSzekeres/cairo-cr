@@ -3,37 +3,37 @@ module Cairo
   #
   # As it is not necessarily clear from the above what advantages a particular antialias method provides,
   # there is also a set of hints:
-  # - `Antialias::AntialiasFast` : Allow the backend to degrade raster quality for speed
-  # - `Antialias::AntialiasGood` : A balance between speed and quality
-  # - `Antialias::AntialiasBest` : A high-fidelity, but potentially slow, raster mode
+  # - `Antialias::Fast` : Allow the backend to degrade raster quality for speed
+  # - `Antialias::Good` : A balance between speed and quality
+  # - `Antialias::Best` : A high-fidelity, but potentially slow, raster mode
   #
   # These make no guarantee on how the backend will perform its rasterisation (if it even rasterises!),
   # nor that they have any differing effect other than to enable some form of antialiasing.
-  # In the case of glyph rendering, `Antialias::AntialiasFast` and `Antialias::AntialiasGood` will be mapped to `Antialias::AntialiasGray`,
-  # with `Antialias::AntialiasBest` being equivalent to `Antialias::AntialiasSubpixel`.
+  # In the case of glyph rendering, `Antialias::Fast` and `Antialias::Good` will be mapped to `Antialias::Gray`,
+  # with `Antialias::Best` being equivalent to `Antialias::Subpixel`.
   #
-  # The interpretation of `Antialias::AntialiasDefault` is left entirely up to the backend,
-  # typically this will be similar to `Antialias::AntialiasGood` .
+  # The interpretation of `Antialias::Default` is left entirely up to the backend,
+  # typically this will be similar to `Antialias::Good` .
   enum Antialias
     # Use the default antialiasing for the subsystem and target device.
-    AntialiasDefault
+    Default
 
     # Use a bilevel alpha mask.
-    AntialiasNone
+    None
 
     # Perform single-color antialiasing (using shades of gray for black text on a white background, for example).
-    AntialiasGray
+    Gray
 
     # Perform antialiasing by taking advantage of the order of subpixel elements on devices such as LCD panels.
-    AntialiasSubpixel
+    Subpixel
 
     # Hint that the backend should perform some antialiasing but prefer speed over quality.
-    AntialiasFast
+    Fast
 
     # The backend should balance quality against performance
-    AntialiasGood
+    Good
 
     # Hint that the backend should render at the highest quality, sacrificing speed if necessary.
-    AntialiasBest
+    Best
   end
 end

@@ -20,7 +20,7 @@ module Cairo
     # Immediately releases all memory associated with path.
     # After a call to `Path#finalize` the path pointer is no longer valid and should not be used further.
     #
-    # Note: should only be called `Path` returned by a `Context` function.
+    # NOTE: should only be called `Path` returned by a `Context` function.
     # Any path that is created manually (ie. outside of `Context`) should be destroyed manually as well.
     def finalize
       LibCairo.path_destroy(@path)

@@ -4,7 +4,7 @@ module Cairo
   include Cairo::C
 
   # Wrapper for LibCairo::PGlyphT.
-  class Gylph
+  class Glyph
     def initialize
       @glyph = LibCairo.glyph_allocate(1)
       raise "Can't allocate glyph." if @glyph.null?

@@ -148,7 +148,7 @@ module Cairo
     TAG_ERROR
 
     # This is a special value indicating the number of status values defined in this enumeration.
-    # When using this value, note that the version of cairo at run-time may have additional status values defined
+    # When using this value, NOTE that the version of cairo at run-time may have additional status values defined
     # than the value of this symbol at compile-time.
     LastStatus
 

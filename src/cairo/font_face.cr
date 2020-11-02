@@ -44,21 +44,48 @@ module Cairo
       ScaledFont.new(LibCairo.scaled_font_create(@font_face, font_matrix.to_unsafe, ctm.to_unsafe, options.to_unsafe))
     end
 
-    # Create Toy Font Face
+    # Creates a font face from a triplet of *family*, *slant*, and *weight*.
+    # These font faces are used in implementation of the the `Context` "toy" font API.
+    #
+    # If family is the zero-length string "", the platform-specific default family is assumed.
+    # The default family then can be queried using `FontFace#family`.
+    #
+    # The `Context#select_font_face` function uses this to create font faces.
+    # See that function for limitations and other details of toy font faces.
+    #
+    # ###Parameters
+    # - **family** a font family name, encoded in UTF-8
+    # - **slant** the slant for the font
+    # - **weight** the weight for the font
+    #
+    # ###Returns
+    # A newly created `FontFace`. Free with `FontFace#finalize` when you are done using it.
     def initialize(family : String, slant : FontSlant, weight : FontWeight)
       @font_face = LibCairo.toy_font_face_create(family.to_unsafe,
         LibCairo::FontSlantT.new(slant.value),
         LibCairo::FontWeightT.new(weight.value))
     end
 
+    # Gets the familly name of a toy font.
+    #
+    # ###Returns
+    # The family name. This string is owned by the font face and remains valid as long as the font face is alive (referenced).
     def family : String
       String.new(LibCairo.toy_font_face_get_family(@font_face))
     end
 
+    # Gets the slant a toy font.
+    #
+    # ###Returns
+    # The slant value.
     def slant : FontSlant
       FontSlant.new(LibCairo.toy_font_face_get_slant(@font_face).value)
     end
 
+    # Gets the weight a toy font.
+    #
+    # ###Returns
+    # The weight value.
     def weight : FontWeight
       FontWeight.new(LibCairo.toy_font_face_get_weight(@font_face).value)
     end

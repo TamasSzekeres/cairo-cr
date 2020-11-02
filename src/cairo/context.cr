@@ -207,7 +207,7 @@ module Cairo
     # Sets the source pattern within `Context` to source. This pattern will then be used for any subsequent
     # drawing operation until a new source pattern is set.
     #
-    # Note: The pattern's transformation matrix will be locked to the user space in effect at the time of `Context#source=`.
+    # NOTE: The pattern's transformation matrix will be locked to the user space in effect at the time of `Context#source=`.
     # This means that further modifications of the current transformation matrix will not affect the source pattern.
     # See `Pattern#matrix=`.
     #
@@ -294,7 +294,7 @@ module Cairo
     # and a particular backend may or may not support a particular value. At the current time,
     # no backend supports `Antialias::SubPixel` when drawing shapes.
     #
-    # Note that this option does not affect text rendering, instead see `FontOptions#antialias=`.
+    # NOTE that this option does not affect text rendering, instead see `FontOptions#antialias=`.
     #
     # ###Parameters
     # - **antialias** the new antialiasing mode
@@ -319,7 +319,7 @@ module Cairo
     # Sets the current line width within the cairo context. The line width value specifies the diameter of a pen that is circular in user space,
     # (though device-space pen may be an ellipse in general due to scaling/shear/rotation of the CTM).
     #
-    # Note: When the description above refers to user space and CTM it refers to the user space and CTM in effect
+    # NOTE: When the description above refers to user space and CTM it refers to the user space and CTM in effect
     # at the time of the stroking operation, not the user space and CTM in effect at the time of the call to `Context#line_width=`.
     # The simplest usage makes both of these spaces identical. That is, if there is no change to the CTM between
     # a call to `Context#line_width` and the stroking operation, then one can just pass user-space values to `Context#line_width=`
@@ -373,7 +373,7 @@ module Cairo
     # Each "on" segment will have caps applied as if the segment were a separate sub-path. In particular,
     # it is valid to use an "on" length of 0.0 with `LineCap::Round` or `LineCap::Square` in order to distributed dots or squares along a path.
     #
-    # Note: The length values are in user-space units as evaluated at the time of stroking.
+    # NOTE: The length values are in user-space units as evaluated at the time of stroking.
     # This is not necessarily the same as the user space at the time of `Context#dash`.
     #
     # If `dashes.size` is 0 dashing is disabled.
@@ -549,7 +549,7 @@ module Cairo
       self
     end
 
-    # Begin a new sub-path. Note that the existing path is not affected. After this call there will be no current point.
+    # Begin a new sub-path. NOTE that the existing path is not affected. After this call there will be no current point.
     #
     # In many cases, this call is not needed since new sub-paths are frequently started with `Context#move_to`.
     #
@@ -786,7 +786,7 @@ module Cairo
     #
     # If there is no current point before the call to `Context#close_path`, this function will have no effect.
     #
-    # Note: As of cairo version 1.2.4 any call to `Context#close_path` will place an explicit `PathDataType::MoveTo`
+    # NOTE: As of cairo version 1.2.4 any call to `Context#close_path` will place an explicit `PathDataType::MoveTo`
     # element into the path immediately after the `PathDataType::ClosePath` element,
     # (which can be seen in `Context#copy_path` for example). This can simplify path processing in some cases as it may not be necessary
     # to save the "last move_to point" during processing as the `PathDataType::MoveTo`
@@ -865,14 +865,14 @@ module Cairo
     # line cap, and dash settings. After `Context#stroke`, the current path will be cleared from the cairo context.
     # See `Context#line_width=`, `Context#line_join=`, `Context#line_cap=`, `Context#set_dash`, and `Context#stroke_preserve`.
     #
-    # Note: Degenerate segments and sub-paths are treated specially and provide a useful result. These can result in two different situations:
+    # NOTE: Degenerate segments and sub-paths are treated specially and provide a useful result. These can result in two different situations:
     # 1. Zero-length "on" segments set in `Context#set_dash`. If the cap style is `LineCap::Round` or `LineCap::Square`
     # then these segments will be drawn as circular dots or squares respectively. In the case of `LineCap::Square`,
     # the orientation of the squares is determined by the direction of the underlying path.
     # 2. A sub-path created by `Context#move_to` followed by either a `Cntext#close_path`
     # or one or more calls to `Context#line_to` to the same coordinate as the `Context#move_to`.
     # If the cap style is `LineCap::Round` then these sub-paths will be drawn as circular dots.
-    # Note that in the case of `LineCap::Square` a degenerate sub-path will not be drawn at all,
+    # NOTE that in the case of `LineCap::Square` a degenerate sub-path will not be drawn at all,
     # (since the correct orientation is indeterminate).
     #
     # In no case will a cap style of `LineCap::Butt` cause anything to be drawn in the case of either degenerate segments or sub-paths.
@@ -997,10 +997,10 @@ module Cairo
     # by a `Context#stroke` operation given the current path and stroke parameters. If the current path is empty,
     # returns an empty rectangle ((0,0), (0,0)). Surface dimensions and clipping are not taken into account.
     #
-    # Note that if the line width is set to exactly zero, then `Context#stroke_extents` will return an empty rectangle.
+    # NOTE that if the line width is set to exactly zero, then `Context#stroke_extents` will return an empty rectangle.
     # Contrast with `Context#path_extents` which can be used to compute the non-empty bounds as the line width approaches zero.
     #
-    # Note that `Context#stroke_extents` must necessarily do more work to compute the precise inked areas in light of the stroke parameters,
+    # NOTE that `Context#stroke_extents` must necessarily do more work to compute the precise inked areas in light of the stroke parameters,
     # so `Context#path_extents` may be more desirable for sake of performance if non-inked path extents are desired.
     #
     # See `Context#stroke`, `Context#line_width=`, `Context#`line_join=`, `Context#line_cap=`, `Context#set_dash`, and `Context#stroke_preserve`.
@@ -1023,7 +1023,7 @@ module Cairo
     # Contrast with `Context#path_extents`, which is similar, but returns non-zero extents for some paths with no inked area,
     # (such as a simple line segment).
     #
-    # Note that `Context#fill_extents` must necessarily do more work to compute the precise inked areas in light of the fill rule,
+    # NOTE that `Context#fill_extents` must necessarily do more work to compute the precise inked areas in light of the fill rule,
     # so `Context#path_extents` may be more desirable for sake of performance if the non-inked path extents are desired.
     #
     # See `Context#fill`, `Context#fill_rule=` and `Context#fill_preserve`.
@@ -1046,7 +1046,7 @@ module Cairo
     # Contrast with `Context#path_extents`, which is similar, but returns non-zero extents for some paths with no inked area,
     # (such as a simple line segment).
     #
-    # Note that `Context#fill_extents` must necessarily do more work to compute the precise inked areas in light of the fill rule,
+    # NOTE that `Context#fill_extents` must necessarily do more work to compute the precise inked areas in light of the fill rule,
     # so `Context#path_extents` may be more desirable for sake of performance if the non-inked path extents are desired.
     #
     # See `Context#fill`, `Context#fill_rule=` and `Context#fill_preserve`.
@@ -1067,7 +1067,7 @@ module Cairo
     # Contrast with `Context#path_extents`, which is similar, but returns non-zero extents for some paths with no inked area,
     # (such as a simple line segment).
     #
-    # Note that `Context#fill_extents` must necessarily do more work to compute the precise inked areas in light of the fill rule,
+    # NOTE that `Context#fill_extents` must necessarily do more work to compute the precise inked areas in light of the fill rule,
     # so `Context#path_extents` may be more desirable for sake of performance if the non-inked path extents are desired.
     #
     # See `Context#fill`, `Context#fill_rule=` and `Context#fill_preserve`.
@@ -1083,7 +1083,7 @@ module Cairo
     # That is, set the clip region to an infinitely large shape containing the target surface.
     # Equivalently, if infinity is too hard to grasp, one can imagine the clip region being reset to the exact bounds of the target surface.
     #
-    # Note that code meant to be reusable should not call `Context#reset_clip` as it will cause results unexpected by higher-level code
+    # NOTE that code meant to be reusable should not call `Context#reset_clip` as it will cause results unexpected by higher-level code
     # which calls `Context#clip`. Consider using `Context#save` and `Context#restore` around `Context#clip` as a more robust means
     # of temporarily restricting the clip region.
     def reset_clip
@@ -1152,6 +1152,41 @@ module Cairo
       end
     end
 
+    # NOTE: The `Context#select_font_face` function call is part of what the cairo designers
+    # call the "toy" text API. It is convenient for short demos and simple programs,
+    # but it is not expected to be adequate for serious text-using applications.
+    #
+    # Selects a family and style of font from a simplified description as a family name, slant and weight.
+    # Cairo provides no operation to list available family names on the system (this is a "toy", remember),
+    # but the standard CSS2 generic family names, ("serif", "sans-serif", "cursive", "fantasy", "monospace"),
+    # are likely to work as expected.
+    #
+    # If family starts with the string "cairo :", or if no native font backends are compiled in,
+    # cairo will use an internal font family. The internal font family recognizes many modifiers in the family string,
+    # most notably, it recognizes the string "monospace". That is, the family name "cairo :monospace" will use
+    # the monospace version of the internal font family.
+    #
+    # For "real" font selection, see the font-backend-specific font_face_create functions for the font backend you are using.
+    # (For example, if you are using the freetype-based cairo-ft font backend, see `FTFace#create_for_ft_face`
+    # or `FcPattern#create_for_pattern`.) The resulting font face could then be used with `FontFace#scaled_font_create`
+    # and `Context#scaled_font=`.
+    #
+    # Similarly, when using the "real" font support, you can call directly into the underlying font system,
+    # (such as fontconfig or freetype), for operations such as listing available fonts, etc.
+    #
+    # It is expected that most applications will need to use a more comprehensive font handling and text layout library,
+    # (for example, pango), in conjunction with cairo.
+    #
+    # If text is drawn without a call to `Context#select_font_face`, (nor `Context#font_face=` nor `Context#scaled_font=`),
+    # the default family is platform-specific, but is essentially "sans-serif". Default slant is
+    # `FontSlant::Normal`, and default weight is `FontWeight::Normal`.
+    #
+    # This function is equivalent to a call to `FontFace#initialize(family, slant, weight)` followed by `Context#font_face=`.
+    #
+    # ###Parameters
+    # - **family** a font family name, encoded in UTF-8
+    # - **slant** the slant for the font
+    # - **weight** the weight for the font
     def select_font_face(family : String, slant : FontSlant, weight : FontWeight)
       LibCairo.select_font_face(@cairo, family.to_unsafe,
                                 LibCairo::FontSlantT.new(slant.value),
@@ -1159,62 +1194,180 @@ module Cairo
       self
     end
 
+    # Sets the current font matrix to a scale by a factor of size,
+    # replacing any font matrix previously set with `Context#set_font_size=` or `Context#font_matrix=`.
+    # This results in a font size of size user space units. (More precisely, this matrix will result in
+    # the font's em-square being a size by size square in user space.)
+    #
+    # If text is drawn without a call to `Context#font_size=`, (nor `Context#font_matrix=` nor `Context#scaled_font=`),
+    # the default font size is 10.0.
+    #
+    # ###Parameters
+    # - **size** the new font size, in user space units
     def font_size=(size : Float64)
       LibCairo.set_font_size(@cairo, size)
       self
     end
 
+    # Returns the current font matrix. See `Context#font_matrix=`.
+    #
+    # ###Return
+    # The matrix.
     def font_matrix : Matrix
       matrix = Matrix.new
       LibCairo.get_font_matrix(@cairo, matrix.to_unsafe)
       matrix
     end
 
+    # Sets the current font matrix to matrix. The font matrix gives a transformation from the design space
+    # of the font (in this space, the em-square is 1 unit by 1 unit) to user space.
+    # Normally, a simple scale is used (see `Context#font_size=`), but a more complex font matrix can be used
+    # to shear the font or stretch it unequally along the two axes.
+    #
+    # ###Parameters
+    # - **matrix** a `Matrix` describing a transform to be applied to the current font.
     def font_matrix=(matrix : Matrix)
       LibCairo.set_font_matrix(@cairo, matrix.to_unsafe)
       self
     end
 
+    # Retrieves font rendering options set via `Context#font_options=`.
+    # NOTE that the returned options do not include any options derived from the underlying surface;
+    # they are literally the options passed to `Context#font_options=`.
+    #
+    # ###Parameters
+    # - **options** a `FontOptions` object into which to store the retrieved options. All existing values are overwritten.
     def font_options : FontOptions
       font_options = FontOptions.new
       LibCairo.get_font_options(@cairo, font_options.to_unsafe)
       font_options
     end
 
+    # Sets a set of custom font rendering options for the `Context`.
+    # Rendering options are derived by merging these options with the options derived from underlying surface;
+    # if the value in options has a default value (like Antialias::Default), then the value from the surface is used.
+    #
+    # ###Parameters
+    # - **options** font options to use
     def font_options=(options : FontOptions)
       LibCairo.set_font_options(@cairo, options.to_unsafe)
       self
     end
 
+    # Gets the current font face for a `Context`.
+    #
+    # ###Returns
+    # The current font face. This object is owned by cairo. To keep a reference to it, you must call `FontFace#reference`.
+    #
+    # This function never returns Nil. If memory cannot be allocated, a special "nil" `FontFace` object will be
+    # returned on which `FontFace#status` returns `Status::NoMemory`.
+    # Using this nil object will cause its error state to propagate to other objects it is passed to,
+    # (for example, calling `Context#font_face=` with a nil font will trigger an error that will shutdown the `Context` object).
     def font_face : FontFace
       font_face = LibCairo.get_font_face(@cairo)
       FontFace.new(font_face)
     end
 
-    def font_face=(font_face : FontFace)
-      LibCairo.set_font_face(@cairo, font_face.to_unsafe)
+    # Replaces the current `FontFace` object in the `Context` with *font_face*.
+    # The replaced font face in the `Context` will be destroyed if there are no other references to it.
+    #
+    # ###Parameters
+    # - **font_face** a `FontFace`, or `Nil` to restore to the default font.
+    def font_face=(font_face : FontFace?)
+      if font_face.nil?
+        LibCairo.set_font_face(@cairo, LibCairo::PFontFaceT.null)
+      else
+        LibCairo.set_font_face(@cairo, font_face.not_nil!.to_unsafe)
+      end
       self
     end
 
+    # Gets the current scaled font for a `Context`.
+    #
+    # ###Returns
+    # The current scaled font. This object is owned by cairo. To keep a reference to it, you must call `ScaledFont#reference`.
+    #
+    # This function never returns Nil. If memory cannot be allocated, a special "nil" `ScaledFont` object
+    # will be returned on which `ScaledFont#status` returns `Status::NoMemory`.
+    # Using this nil object will cause its error state to propagate to other objects it is passed to,
+    # (for example, calling `Context#scaled_font=` with a nil font will trigger an error that will shutdown the `Context` object).
     def scaled_font : ScaledFont
       scaled_font = LibCairo.get_scaled_font(@cairo)
       ScaledFont.new(scaled_font)
     end
 
+    # Replaces the current font face, font matrix, and font options in the `Context` with those of the `ScaledFont`.
+    # Except for some translation, the current CTM of the `Context` should be the same as that of the
+    # `ScaledFont`, which can be accessed using `ScaledFont#ctm`
+    #
+    # ###Parameters
+    # - **scaled_font** a `ScaledFont`
     def scaled_font=(scaled_font : ScaledFont)
       LibCairo.set_scaled_font(@cairo, scaled_font.value)
       self
     end
 
+    # A drawing operator that generates the shape from a string of UTF-8 characters,
+    # rendered according to the current *font_face*, *font_size* (font_matrix), and *font_options*.
+    #
+    # This function first computes a set of glyphs for the string of text.
+    # The first glyph is placed so that its origin is at the current point.
+    # The origin of each subsequent glyph is offset from that of the previous glyph by the advance values of the previous glyph.
+    #
+    # After this call the current point is moved to the origin of where the next glyph would be placed in this same progression.
+    # That is, the current point will be at the origin of the final glyph offset by its advance values.
+    # This allows for easy display of a single logical string with multiple calls to `Context#show_text`.
+    #
+    # NOTE: The `Context#show_text` function call is part of what the cairo designers call the "toy" text API.
+    # It is convenient for short demos and simple programs, but it is not expected to be adequate for serious text-using applications.
+    # See `Context#show_glyphs` for the "real" text display API in cairo.
+    #
+    # ###Parameters
+    # - **utf8** a string of text encoded in UTF-8
     def show_text(text : String)
       LibCairo.show_text(@cairo, text.to_unsafe)
       self
     end
 
+    # A drawing operator that generates the shape from an array of glyphs, rendered according to the current font face,
+    # font size (font matrix), and font options.
+    #
+    # ###Parameters
+    # - **glyphs** array of glyphs to show
+    #
+    # TODO: Implement `Context#show_glyphs` method.
+    #
+    # ###Raises
+    # `"unimplemented method"` string
     def show_glyphs(glyphs : Array(Glyph))
       raise "unimplemented method"
     end
 
+    # This operation has rendering effects similar to `Context#show_glyphs` but, if the target surface supports it,
+    # uses the provided text and cluster mapping to embed the text for the *glyphs* shown in the output.
+    # If the target does not support the extended attributes, this function acts like the basic `Context#show_glyphs`
+    # as if it had been passed *glyphs*.
+    #
+    # The mapping between *text* and *glyphs** is provided by an array of *clusters*.
+    # Each cluster covers a number of *text* bytes and *glyphs*, and neighboring *clusters* cover neighboring areas of *text* and *glyphs*.
+    # The *clusters* should collectively cover *text* and *glyphs* in entirety.
+    #
+    # The first cluster always covers bytes from the beginning of *text*. If *cluster_flags* do not have the
+    # `TextClusterFlags::Backward` set, the first cluster also covers the beginning of *glyphs*,
+    # otherwise it covers the end of the *glyphs* array and following *clusters* move backward.
+    #
+    # See `TextCluster` for constraints on valid clusters.
+    #
+    # ###Parameters
+    # - **text** a string of text encoded in UTF-8
+    # - **glyphs** array of glyphs to show
+    # - **clusters** array of cluster mapping information
+    # - **cluster_flags** cluster mapping flags
+    #
+    # TODO: Implement `Context#show_text_glyphs` method.
+    #
+    # ###Raises
+    # `"unimplemented method"` string
     def show_text_glyphs(text : String, glyphs : Array(Glyph),
                          clusters : Array(TextCluster),
                          cluster_flags : TextClusterFlags)
@@ -1231,7 +1384,7 @@ module Cairo
     # at the origin of the final glyph offset by its advance values. This allows for chaining multiple
     # calls to to `Context#text_path` without having to set current point in between.
     #
-    # Note: The `Context#text_path` function call is part of what the cairo designers call the "toy" text API.
+    # NOTE: The `Context#text_path` function call is part of what the cairo designers call the "toy" text API.
     # It is convenient for short demos and simple programs, but it is not expected to be adequate for serious text-using applications.
     # See `Context#glyph_path` for the "real" text path API in cairo.
     #
@@ -1251,15 +1404,51 @@ module Cairo
       raise "unimplemented method"
     end
 
+    # Gets the extents for a string of text. The extents describe a user-space rectangle
+    # that encloses the "inked" portion of the text, (as it would be drawn by `Context#show_text`).
+    # Additionally, the *x_advance* and *y_advance* values indicate the amount by which the current
+    # point would be advanced by `Context#show_text`.
+    #
+    # NOTE that whitespace characters do not directly contribute to the size of the rectangle
+    # (`extents.width` and `extents.height`). They do contribute indirectly by changing
+    # the position of non-whitespace characters. In particular, trailing whitespace characters are
+    # likely to not affect the size of the rectangle, though they will affect the *x_advance* and *y_advance* values.
+    #
+    # ###Parameters
+    # - **text** a string of text encoded in UTF-8
+    #
+    # ###Returns
+    # A `TextExtends` object into which the results will be stored.
     def text_extents(text : String) : TextExtents
       LibCairo.text_extents(@cairo, text.to_unsafe, out text_extents)
       TextExtents.new(text_extents)
     end
 
+    # Gets the extents for an array of glyphs. The extents describe a user-space rectangle that encloses
+    # the "inked" portion of the glyphs, (as they would be drawn by `Context#show_glyphs`).
+    # Additionally, the *x_advance* and *y_advance* values indicate the amount by which the current point
+    # would be advanced by `Context#show_glyphs`.
+    #
+    # NOTE that whitespace glyphs do not contribute to the size of the rectangle (`extents.width` and `extents.height`).
+    #
+    # ###Parameters
+    # - **glyphs** an array of `Glyph` objects
+    #
+    # ###Returns
+    # A `TextExtents` object into which the results will be stored.
+    #
+    # TODO: Implement `Context#show_text_glyphs` method.
+    #
+    # ###Raises
+    # `"unimplemented method"` string
     def glyph_extents(glyphs : Array(Glyph)) : TextExtents
       raise "unimplemented method"
     end
 
+    # Gets the font extents for the currently selected font.
+    #
+    # ###Returns
+    # A `FontExtents` object into which the results will be stored.
     def font_extents : FontExtents
       LibCairo.font_extents(@cairo, out font_extents)
       FontExtents.new(font_extents)
@@ -1334,7 +1523,7 @@ module Cairo
     end
 
     # This function returns the current line width value exactly as set by `Context#line_width=`.
-    # Note that the value is unchanged even if the CTM has changed between the calls to `Context#line_width=` and `Context#line_width`.
+    # NOTE that the value is unchanged even if the CTM has changed between the calls to `Context#line_width=` and `Context#line_width`.
     #
     # ###Returns
     # The current line width.

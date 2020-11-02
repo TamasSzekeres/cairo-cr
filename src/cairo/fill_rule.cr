@@ -3,7 +3,7 @@ module Cairo
   # whether or not a point is included in the fill is determined by taking a ray from that point to infinity
   # and looking at intersections with the path. The ray can be in any direction,
   # as long as it doesn't pass through the end point of a segment or have a tricky intersection such as intersecting tangent to the path.
-  # (Note that filling is not actually implemented in this way. This is just a description of the rule that is applied.)
+  # (NOTE that filling is not actually implemented in this way. This is just a description of the rule that is applied.)
   #
   # The default fill rule is `FillRule::Winding`.
   #
