@@ -596,6 +596,24 @@ module Cairo::C
       rectangle_list : PRectangleListT
     ) : Void
 
+
+    # Logical structure tagging functions
+
+    TAG_DEST = "cairo.dest"
+    TAG_LINK = "Link"
+
+    fun tag_begin = cairo_tag_begin(
+      cr : PCairoT,
+      tag_name : UInt8*,
+      attributes : UInt8*
+    ) : Void
+
+    fun tag_end = cairo_tag_end(
+      cr : PCairoT,
+      tag_name : UInt8*,
+    ) : Void
+
+
     # Font/Text functions
 
     alias PScaledFontT = Void*

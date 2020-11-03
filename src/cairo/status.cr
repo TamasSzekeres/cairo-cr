@@ -136,16 +136,16 @@ module Cairo
     Jbig2GlobalMissing
 
     # Error occurred in libpng while reading from or writing to a PNG file.
-    PNG_ERROR
+    PngError
 
     # Error occurred in libfreetype.
-    FREETYPE_ERROR
+    FreeTypeError
 
     # Error occurred in the Windows Graphics Device Interface.
-    WIN32_GDI_ERROR
+    Win32GdiError
 
     # Invalid tag name, attributes, or nesting.
-    TAG_ERROR
+    TagError
 
     # This is a special value indicating the number of status values defined in this enumeration.
     # When using this value, NOTE that the version of cairo at run-time may have additional status values defined

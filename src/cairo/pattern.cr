@@ -17,7 +17,19 @@ module Cairo
       LibCairo.pattern_destroy(@pattern)
     end
 
-    # Create Raster Source Pattern
+    # Creates a new user pattern for providing pixel data.
+    #
+    # Use the setter functions to associate callbacks with the returned pattern. The only mandatory callback is acquire.
+    #
+    # ###Parameters
+    # - **user_data** the user data to be passed to all callbacks
+    # - **content** content type for the pixel data that will be returned.
+    # Knowing the content type ahead of time is used for analysing the operation and picking the appropriate rendering path.
+    # - **width** maximum size of the sample area
+    # - **height** maximum size of the sample area
+    #
+    # ###Returns
+    # A newly created `Pattern`. Free with `Pattern#finalize` when you are done using it.
     def self.create_raster_source(user_data : Void*, content : Content, width : Int32, height : Int32) : Pattern
       Pattern.new(LibCairo.pattern_create_raster_source(user_data,
         LibCairo::ContentT.new(content.value), width, height))
@@ -228,47 +240,98 @@ module Cairo
       Pattern.new(LibCairo.pattern_create_mesh)
     end
 
+    # Queries the current user data.
+    #
+    # ###Returns
+    # The current user-data passed to each callback.
     def callback_data : Void*
       LibCairo.raster_source_pattern_get_callback_data(@pattern)
     end
 
+    # Updates the user data that is provided to all callbacks.
+    #
+    # ###Parameters
+    # - **data** the user data to be passed to all callbacks
     def callback_data=(data : Void*)
       LibCairo.raster_source_pattern_set_callback_data(@pattern, data)
       self
     end
 
+    # Queries the current acquire and release callbacks.
+    #
+    # ###Returns
+    # - **acquire** the current acquire callback
+    # - **release** the current release callback
     def acquire : NamedTuple(acquire: LibCairo::RasterSourceAcquireFuncT, release: LibCairo::RasterSourceReleaseFuncT)
       LibCairo.raster_source_pattern_get_acquire(@pattern, out acquire, out release)
       {acquire: acquire, release: release}
     end
 
+    # Specifies the callbacks used to generate the image surface for a rendering operation (acquire)
+    # and the function used to cleanup that surface afterwards.
+    #
+    # The acquire callback should create a surface (preferably an image surface created to match
+    # the target using `Surface#create_similar_image`) that defines at least the region of interest
+    # specified by extents. The surface is allowed to be the entire sample area, but if it does contain
+    # a subsection of the sample area, the surface extents should be provided by setting the device offset
+    # (along with its width and height) using `Surface#set_device_offset`.
+    #
+    # ###Parameters
+    # - **acquire** acquire callback
+    # - **release** release callback
     def set_acquire(acquire : LibCairo::RasterSourceAcquireFuncT, release : LibCairo::RasterSourceReleaseFuncT)
       LibCairo.raster_source_pattern_set_acquire(@pattern, acquire, release)
       self
     end
 
+    # Queries the current snapshot callback.
+    #
+    # ###Returns
+    # The current snapshot callback.
     def snapshot : LibCairo::RasterSourceSnapshotFuncT
       LibCairo.raster_source_pattern_get_snapshot(@pattern)
     end
 
+    # Sets the callback that will be used whenever a snapshot is taken of the pattern,
+    # that is whenever the current contents of the pattern should be preserved for later use.
+    # This is typically invoked whilst printing.
+    #
+    # ###Parameters
+    # - **snapshot** snapshot callback
     def snapshot=(snapshot : LibCairo::RasterSourceSnapshotFuncT)
       LibCairo.raster_source_pattern_set_snapshot(@pattern, snapshot)
       self
     end
 
+    # Queries the current copy callback.
+    #
+    # ###Returns
+    # The current copy callback.
     def copy : LibCairo::RasterSourceCopyFuncT
       LibCairo.raster_source_pattern_get_copy(@pattern)
     end
 
+    # Updates the copy callback which is used whenever a temporary copy of the pattern is taken.
+    #
+    # ###Parameters
+    # - **copy** the copy callback
     def copy=(copy : LibCairo::RasterSourceCopyFuncT)
       LibCairo.raster_source_pattern_set_copy(@pattern, copy)
       self
     end
 
+    # Queries the current finish callback.
+    #
+    # ##Returns
+    # The current finish callback.
     def finish : LibCairo::RasterSourceFinishFuncT
       LibCairo.raster_source_pattern_get_finish(@pattern)
     end
 
+    # Updates the finish callback which is used whenever a pattern (or a copy thereof) will no longer be used.
+    #
+    # ###Parameters
+    # - **finish** the finish callback
     def finish=(finish : LibCairo::RasterSourceFinishFuncT)
       LibCairo.raster_source_pattern_set_finish(@pattern, finish)
       self

@@ -3,6 +3,12 @@ require "./c/lib_cairo"
 module Cairo
   include Cairo::C
 
+  # Create a destination for a hyperlink. Destination tag attributes are detailed at Destinations.
+  TAG_DEST = "cairo.dest"
+
+  # Create hyperlink. Link tag attributes are detailed at Links.
+  TAG_LINK = "Link"
+
   # The cairo drawing context.
   #
   # `Context` is the main object used when drawing with cairo. To draw with cairo, you create a `Context`,
@@ -575,7 +581,7 @@ module Cairo
     # Adds a line to the path from the current point to position *(x, y)* in user-space coordinates.
     # After this call the current point will be *(x, y)*.
     #
-    # If there is no current point before the call to `Contxt#line_to` this function will behave as `Context#move_to(x, y)`.
+    # If there is no current point before the call to `Context#line_to` this function will behave as `Context#move_to(x, y)`.
     #
     # ###Parameters
     # - **x** the X coordinate of the end of the new line
@@ -663,7 +669,7 @@ module Cairo
     # begins at *angle1* and proceeds in the direction of decreasing angles to end at *angle2*.
     # If *angle2* is greater than *angle1* it will be progressively decreased by 2*PI until it is less than *angle1*.
     #
-    # See `Contxt#arc` for more details. This function differs only in the direction of the arc between the two angles.
+    # See `Context#arc` for more details. This function differs only in the direction of the arc between the two angles.
     #
     # ###Parameters
     # - **xc** X position of the center of the arc
@@ -1152,6 +1158,45 @@ module Cairo
       end
     end
 
+    # Marks the beginning of the *tag_name* structure.
+    # Call `Context#tag_end` with the same *tag_name* to mark the end of the structure.
+    #
+    # The attributes string is of the form `"key1=value2 key2=value2 ..."`.
+    # Values may be boolean (true/false or 1/0), integer, float, string, or an array.
+    #
+    # String values are enclosed in single quotes ('). Single quotes and backslashes inside the string should be escaped with a backslash.
+    #
+    # Boolean values may be set to true by only specifying the key. eg the attribute string `"key"` is the equivalent to `"key=true"`.
+    #
+    # Arrays are enclosed in `'[]'`. eg `"rect=[1.2 4.3 2.0 3.0]"`.
+    #
+    # If no attributes are required, attributes can be an empty string.
+    #
+    # Invalid nesting of tags or invalid attributes will cause `Context` to shutdown with a status of `Status::TagError`.
+    #
+    # See `Context#tag_end`.
+    #
+    # ###Parameters
+    # - **tag_name** tag name
+    # - **attributes** tag attributes
+    def tag_begin(tag_name : String, attributes : String)
+      LibCairo.tag_begin(@cairo, tag_name.to_unsafe, attributes.to_unsafe)
+      self
+    end
+
+    # Marks the end of the tag_name structure.
+    #
+    # Invalid nesting of tags will cause cr to shutdown with a status of `Status::TagError`.
+    #
+    # See `Context#tag_begin`.
+    #
+    # ###Parameters
+    # - **tag_name** tag name
+    def tag_end(tag_name : String)
+      LibCairo.tag_end(@cairo, tag_name.to_unsafe)
+      self
+    end
+
     # NOTE: The `Context#select_font_face` function call is part of what the cairo designers
     # call the "toy" text API. It is convenient for short demos and simple programs,
     # but it is not expected to be adequate for serious text-using applications.
@@ -1622,7 +1667,7 @@ module Cairo
     # Gets a flattened copy of the current path and returns it to the user as a `Path`.
     # See `PathData` for hints on how to iterate over the returned data structure.
     #
-    # This function is like `Contxt#copy_path` except that any curves in the path will be approximated
+    # This function is like `Context#copy_path` except that any curves in the path will be approximated
     # with piecewise-linear approximations, (accurate to within the current tolerance value).
     # That is, the result is guaranteed to not have any elements of type `PathDataType::CurveTo`
     # which will instead be replaced by a series of `PathDataType::LineTo` elements.
