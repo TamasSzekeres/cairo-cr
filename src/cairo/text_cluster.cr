@@ -14,22 +14,51 @@ module Cairo
   # ignore those clusters when PDF text is being selected.
   #
   # See `Context#show_text_glyphs` for how clusters are used in advanced text operations.
-  class TextCluster
+  struct TextCluster
     def initialize
-      @text_cluster = LibCairo.text_cluster_allocate(1)
+      @cluster = uninitialized LibCairo::TextClusterT
+      @cluster.num_bytes = 0
+      @cluster.num_glyphs = 0
     end
 
-    def initialize(text_cluster : LibCairo::PTextClusterT)
-      raise ArgumentError.new("'text_cluster' cannot be null.") if text_cluster.null?
-      @text_cluster = text_cluster
+    def initialize(num_bytes : Int32, num_glyphs : Int32)
+      @cluster = uninitialized LibCairo::TextClusterT
+      @cluster.num_bytes = num_bytes
+      @cluster.num_glyphs = num_glyphs
     end
 
-    def finalize
-      LibCairo.text_cluster_free(@text_cluster)
+    def initialize(@cluster : LibCairo::TextClusterT)
+    end
+
+    def initialize(cluster : LibCairo::PTextClusterT)
+      raise ArgumentError.new("'cluster' cannot be null.") if cluster.null?
+      @cluster = cluster.value
+    end
+
+    # The number of bytes of UTF-8 text covered by cluster.
+    def num_bytes : Int32
+      @cluster.num_bytes
+    end
+
+    def num_bytes=(num_bytes : Int32)
+      @cluster.num_bytes = num_bytes
+    end
+
+    # The number of glyphs covered by cluster.
+    def num_glyphs : Int32
+      @cluster.num_glyphs
+    end
+
+    def num_glyphs=(num_glyphs : Int32)
+      @cluster.num_glyphs = num_glyphs
+    end
+
+    def to_cairo_cluster : LibCairo::TextClusterT
+      @cluster
     end
 
     def to_unsafe : LibCairo::PTextClusterT
-      @text_cluster
+      pointerof(@cluster)
     end
   end
 end
