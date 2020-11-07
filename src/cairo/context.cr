@@ -1,4 +1,6 @@
 require "./c/lib_cairo"
+require "./glyph_array"
+require "./text_cluster_array"
 
 module Cairo
   include Cairo::C
@@ -1379,13 +1381,9 @@ module Cairo
     #
     # ###Parameters
     # - **glyphs** array of glyphs to show
-    #
-    # TODO: Implement `Context#show_glyphs` method.
-    #
-    # ###Raises
-    # `"unimplemented method"` string
-    def show_glyphs(glyphs : Array(Glyph))
-      raise "unimplemented method"
+    def show_glyphs(glyphs : GlyphArray)
+      LibCairo.show_glyphs(@cairo, glyphs.to_unsafe, glyphs.size)
+      self
     end
 
     # This operation has rendering effects similar to `Context#show_glyphs` but, if the target surface supports it,
@@ -1408,15 +1406,13 @@ module Cairo
     # - **glyphs** array of glyphs to show
     # - **clusters** array of cluster mapping information
     # - **cluster_flags** cluster mapping flags
-    #
-    # TODO: Implement `Context#show_text_glyphs` method.
-    #
-    # ###Raises
-    # `"unimplemented method"` string
-    def show_text_glyphs(text : String, glyphs : Array(Glyph),
-                         clusters : Array(TextCluster),
-                         cluster_flags : TextClusterFlags)
-      raise "unimplemented method"
+    def show_text_glyphs(text : String,
+        glyphs : GlyphArray, clusters : TextClusterArray, cluster_flags : TextClusterFlags)
+      LibCairo.show_text_glyphs(@cairo, text.to_unsafe, text.size,
+        glyphs.to_unsafe, glyphs.size,
+        clusters.to_unsafe, clusters.size,
+        LibCairo::TextClusterFlagsT.new(cluster_flags.value))
+        self
     end
 
     # Adds closed paths for text to the current path. The generated path if filled,
@@ -1445,8 +1441,9 @@ module Cairo
     #
     # ###Parameters
     # - **glyphs** array of glyphs to show
-    def glyph_path(glyphs : Array(Glyph))
-      raise "unimplemented method"
+    def glyph_path(glyphs : GlyphArray)
+      LibCairo.glyph_path(@cairo, glyphs.to_unsafe, glyphs.size)
+      self
     end
 
     # Gets the extents for a string of text. The extents describe a user-space rectangle
@@ -1481,13 +1478,9 @@ module Cairo
     #
     # ###Returns
     # A `TextExtents` object into which the results will be stored.
-    #
-    # TODO: Implement `Context#show_text_glyphs` method.
-    #
-    # ###Raises
-    # `"unimplemented method"` string
-    def glyph_extents(glyphs : Array(Glyph)) : TextExtents
-      raise "unimplemented method"
+    def glyph_extents(glyphs : GlyphArray) : TextExtents
+      LibCairo.glyph_extents(@cairo, glyphs.to_unsafe, glyphs.size, out extents)
+      TextExtents.new(extents)
     end
 
     # Gets the font extents for the currently selected font.
