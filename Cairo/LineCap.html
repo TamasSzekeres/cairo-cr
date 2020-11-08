@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="cairo">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="cairo">
+  <title>Cairo::LineCap - cairo HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cairo
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cairo/Cairo" data-name="cairo">
+      <a href="../Cairo.html">Cairo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cairo/Cairo/Antialias" data-name="cairo::antialias">
+      <a href="../Cairo/Antialias.html">Antialias</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/C" data-name="cairo::c">
+      <a href="../Cairo/C.html">C</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ColorStop" data-name="cairo::colorstop">
+      <a href="../Cairo/ColorStop.html">ColorStop</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Content" data-name="cairo::content">
+      <a href="../Cairo/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Context" data-name="cairo::context">
+      <a href="../Cairo/Context.html">Context</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Device" data-name="cairo::device">
+      <a href="../Cairo/Device.html">Device</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/DeviceType" data-name="cairo::devicetype">
+      <a href="../Cairo/DeviceType.html">DeviceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extend" data-name="cairo::extend">
+      <a href="../Cairo/Extend.html">Extend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extents" data-name="cairo::extents">
+      <a href="../Cairo/Extents.html">Extents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FillRule" data-name="cairo::fillrule">
+      <a href="../Cairo/FillRule.html">FillRule</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Filter" data-name="cairo::filter">
+      <a href="../Cairo/Filter.html">Filter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontExtents" data-name="cairo::fontextents">
+      <a href="../Cairo/FontExtents.html">FontExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontFace" data-name="cairo::fontface">
+      <a href="../Cairo/FontFace.html">FontFace</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontOptions" data-name="cairo::fontoptions">
+      <a href="../Cairo/FontOptions.html">FontOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontSlant" data-name="cairo::fontslant">
+      <a href="../Cairo/FontSlant.html">FontSlant</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontType" data-name="cairo::fonttype">
+      <a href="../Cairo/FontType.html">FontType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontWeight" data-name="cairo::fontweight">
+      <a href="../Cairo/FontWeight.html">FontWeight</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Format" data-name="cairo::format">
+      <a href="../Cairo/Format.html">Format</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Glyph" data-name="cairo::glyph">
+      <a href="../Cairo/Glyph.html">Glyph</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/GlyphArray" data-name="cairo::glypharray">
+      <a href="../Cairo/GlyphArray.html">GlyphArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintMetrics" data-name="cairo::hintmetrics">
+      <a href="../Cairo/HintMetrics.html">HintMetrics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintStyle" data-name="cairo::hintstyle">
+      <a href="../Cairo/HintStyle.html">HintStyle</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cairo/Cairo/LineCap" data-name="cairo::linecap">
+      <a href="../Cairo/LineCap.html">LineCap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineJoin" data-name="cairo::linejoin">
+      <a href="../Cairo/LineJoin.html">LineJoin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Matrix" data-name="cairo::matrix">
+      <a href="../Cairo/Matrix.html">Matrix</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Operator" data-name="cairo::operator">
+      <a href="../Cairo/Operator.html">Operator</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Path" data-name="cairo::path">
+      <a href="../Cairo/Path.html">Path</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathData" data-name="cairo::pathdata">
+      <a href="../Cairo/PathData.html">PathData</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataHeader" data-name="cairo::pathdataheader">
+      <a href="../Cairo/PathDataHeader.html">PathDataHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataType" data-name="cairo::pathdatatype">
+      <a href="../Cairo/PathDataType.html">PathDataType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Pattern" data-name="cairo::pattern">
+      <a href="../Cairo/Pattern.html">Pattern</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
+      <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfSurface" data-name="cairo::pdfsurface">
+      <a href="../Cairo/PdfSurface.html">PdfSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfVersion" data-name="cairo::pdfversion">
+      <a href="../Cairo/PdfVersion.html">PdfVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Point" data-name="cairo::point">
+      <a href="../Cairo/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsLevel" data-name="cairo::pslevel">
+      <a href="../Cairo/PsLevel.html">PsLevel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsSurface" data-name="cairo::pssurface">
+      <a href="../Cairo/PsSurface.html">PsSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Rectangle" data-name="cairo::rectangle">
+      <a href="../Cairo/Rectangle.html">Rectangle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleInt" data-name="cairo::rectangleint">
+      <a href="../Cairo/RectangleInt.html">RectangleInt</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleList" data-name="cairo::rectanglelist">
+      <a href="../Cairo/RectangleList.html">RectangleList</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Region" data-name="cairo::region">
+      <a href="../Cairo/Region.html">Region</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RegionOverlap" data-name="cairo::regionoverlap">
+      <a href="../Cairo/RegionOverlap.html">RegionOverlap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RGBA" data-name="cairo::rgba">
+      <a href="../Cairo/RGBA.html">RGBA</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScaledFont" data-name="cairo::scaledfont">
+      <a href="../Cairo/ScaledFont.html">ScaledFont</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Script" data-name="cairo::script">
+      <a href="../Cairo/Script.html">Script</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptInterpreter" data-name="cairo::scriptinterpreter">
+      <a href="../Cairo/ScriptInterpreter.html">ScriptInterpreter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptMode" data-name="cairo::scriptmode">
+      <a href="../Cairo/ScriptMode.html">ScriptMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Status" data-name="cairo::status">
+      <a href="../Cairo/Status.html">Status</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/StatusException" data-name="cairo::statusexception">
+      <a href="../Cairo/StatusException.html">StatusException</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SubpixelOrder" data-name="cairo::subpixelorder">
+      <a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Surface" data-name="cairo::surface">
+      <a href="../Cairo/Surface.html">Surface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceObserverMode" data-name="cairo::surfaceobservermode">
+      <a href="../Cairo/SurfaceObserverMode.html">SurfaceObserverMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceType" data-name="cairo::surfacetype">
+      <a href="../Cairo/SurfaceType.html">SurfaceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgSurface" data-name="cairo::svgsurface">
+      <a href="../Cairo/SvgSurface.html">SvgSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgVersion" data-name="cairo::svgversion">
+      <a href="../Cairo/SvgVersion.html">SvgVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TeeSurface" data-name="cairo::teesurface">
+      <a href="../Cairo/TeeSurface.html">TeeSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextCluster" data-name="cairo::textcluster">
+      <a href="../Cairo/TextCluster.html">TextCluster</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterArray" data-name="cairo::textclusterarray">
+      <a href="../Cairo/TextClusterArray.html">TextClusterArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterFlags" data-name="cairo::textclusterflags">
+      <a href="../Cairo/TextClusterFlags.html">TextClusterFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextExtents" data-name="cairo::textextents">
+      <a href="../Cairo/TextExtents.html">TextExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/UserDataKey" data-name="cairo::userdatakey">
+      <a href="../Cairo/UserDataKey.html">UserDataKey</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/XlibSurface" data-name="cairo::xlibsurface">
+      <a href="../Cairo/XlibSurface.html">XlibSurface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> Cairo::LineCap
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Specifies how to render the endpoints of the path when stroking.</p>
+
+<p>The default line cap style is <code><a href="../Cairo/LineCap.html#Butt">LineCap::Butt</a></code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/line_cap.cr#L5" target="_blank">
+        cairo/line_cap.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Butt">
+        <strong>Butt</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Start(stop) the line exactly at the start(end) point.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Round">
+        <strong>Round</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Use a round ending, the center of the circle is the end.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Square">
+        <strong>Square</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Use squared ending, the center of the square is the end.</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#butt?-instance-method" class="signature"><strong>#butt?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#round?-instance-method" class="signature"><strong>#round?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#square?-instance-method" class="signature"><strong>#square?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="butt?-instance-method">
+      <div class="signature">
+        
+        def <strong>butt?</strong>
+
+        <a class="method-permalink" href="#butt?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/line_cap.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="round?-instance-method">
+      <div class="signature">
+        
+        def <strong>round?</strong>
+
+        <a class="method-permalink" href="#round?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/line_cap.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="square?-instance-method">
+      <div class="signature">
+        
+        def <strong>square?</strong>
+
+        <a class="method-permalink" href="#square?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/line_cap.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="cairo">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="cairo">
+  <title>Cairo::Operator - cairo HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cairo
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cairo/Cairo" data-name="cairo">
+      <a href="../Cairo.html">Cairo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cairo/Cairo/Antialias" data-name="cairo::antialias">
+      <a href="../Cairo/Antialias.html">Antialias</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/C" data-name="cairo::c">
+      <a href="../Cairo/C.html">C</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ColorStop" data-name="cairo::colorstop">
+      <a href="../Cairo/ColorStop.html">ColorStop</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Content" data-name="cairo::content">
+      <a href="../Cairo/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Context" data-name="cairo::context">
+      <a href="../Cairo/Context.html">Context</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Device" data-name="cairo::device">
+      <a href="../Cairo/Device.html">Device</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/DeviceType" data-name="cairo::devicetype">
+      <a href="../Cairo/DeviceType.html">DeviceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extend" data-name="cairo::extend">
+      <a href="../Cairo/Extend.html">Extend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extents" data-name="cairo::extents">
+      <a href="../Cairo/Extents.html">Extents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FillRule" data-name="cairo::fillrule">
+      <a href="../Cairo/FillRule.html">FillRule</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Filter" data-name="cairo::filter">
+      <a href="../Cairo/Filter.html">Filter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontExtents" data-name="cairo::fontextents">
+      <a href="../Cairo/FontExtents.html">FontExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontFace" data-name="cairo::fontface">
+      <a href="../Cairo/FontFace.html">FontFace</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontOptions" data-name="cairo::fontoptions">
+      <a href="../Cairo/FontOptions.html">FontOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontSlant" data-name="cairo::fontslant">
+      <a href="../Cairo/FontSlant.html">FontSlant</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontType" data-name="cairo::fonttype">
+      <a href="../Cairo/FontType.html">FontType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontWeight" data-name="cairo::fontweight">
+      <a href="../Cairo/FontWeight.html">FontWeight</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Format" data-name="cairo::format">
+      <a href="../Cairo/Format.html">Format</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Glyph" data-name="cairo::glyph">
+      <a href="../Cairo/Glyph.html">Glyph</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/GlyphArray" data-name="cairo::glypharray">
+      <a href="../Cairo/GlyphArray.html">GlyphArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintMetrics" data-name="cairo::hintmetrics">
+      <a href="../Cairo/HintMetrics.html">HintMetrics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintStyle" data-name="cairo::hintstyle">
+      <a href="../Cairo/HintStyle.html">HintStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineCap" data-name="cairo::linecap">
+      <a href="../Cairo/LineCap.html">LineCap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineJoin" data-name="cairo::linejoin">
+      <a href="../Cairo/LineJoin.html">LineJoin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Matrix" data-name="cairo::matrix">
+      <a href="../Cairo/Matrix.html">Matrix</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cairo/Cairo/Operator" data-name="cairo::operator">
+      <a href="../Cairo/Operator.html">Operator</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Path" data-name="cairo::path">
+      <a href="../Cairo/Path.html">Path</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathData" data-name="cairo::pathdata">
+      <a href="../Cairo/PathData.html">PathData</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataHeader" data-name="cairo::pathdataheader">
+      <a href="../Cairo/PathDataHeader.html">PathDataHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataType" data-name="cairo::pathdatatype">
+      <a href="../Cairo/PathDataType.html">PathDataType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Pattern" data-name="cairo::pattern">
+      <a href="../Cairo/Pattern.html">Pattern</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
+      <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfSurface" data-name="cairo::pdfsurface">
+      <a href="../Cairo/PdfSurface.html">PdfSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfVersion" data-name="cairo::pdfversion">
+      <a href="../Cairo/PdfVersion.html">PdfVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Point" data-name="cairo::point">
+      <a href="../Cairo/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsLevel" data-name="cairo::pslevel">
+      <a href="../Cairo/PsLevel.html">PsLevel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsSurface" data-name="cairo::pssurface">
+      <a href="../Cairo/PsSurface.html">PsSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Rectangle" data-name="cairo::rectangle">
+      <a href="../Cairo/Rectangle.html">Rectangle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleInt" data-name="cairo::rectangleint">
+      <a href="../Cairo/RectangleInt.html">RectangleInt</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleList" data-name="cairo::rectanglelist">
+      <a href="../Cairo/RectangleList.html">RectangleList</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Region" data-name="cairo::region">
+      <a href="../Cairo/Region.html">Region</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RegionOverlap" data-name="cairo::regionoverlap">
+      <a href="../Cairo/RegionOverlap.html">RegionOverlap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RGBA" data-name="cairo::rgba">
+      <a href="../Cairo/RGBA.html">RGBA</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScaledFont" data-name="cairo::scaledfont">
+      <a href="../Cairo/ScaledFont.html">ScaledFont</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Script" data-name="cairo::script">
+      <a href="../Cairo/Script.html">Script</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptInterpreter" data-name="cairo::scriptinterpreter">
+      <a href="../Cairo/ScriptInterpreter.html">ScriptInterpreter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptMode" data-name="cairo::scriptmode">
+      <a href="../Cairo/ScriptMode.html">ScriptMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Status" data-name="cairo::status">
+      <a href="../Cairo/Status.html">Status</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/StatusException" data-name="cairo::statusexception">
+      <a href="../Cairo/StatusException.html">StatusException</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SubpixelOrder" data-name="cairo::subpixelorder">
+      <a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Surface" data-name="cairo::surface">
+      <a href="../Cairo/Surface.html">Surface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceObserverMode" data-name="cairo::surfaceobservermode">
+      <a href="../Cairo/SurfaceObserverMode.html">SurfaceObserverMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceType" data-name="cairo::surfacetype">
+      <a href="../Cairo/SurfaceType.html">SurfaceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgSurface" data-name="cairo::svgsurface">
+      <a href="../Cairo/SvgSurface.html">SvgSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgVersion" data-name="cairo::svgversion">
+      <a href="../Cairo/SvgVersion.html">SvgVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TeeSurface" data-name="cairo::teesurface">
+      <a href="../Cairo/TeeSurface.html">TeeSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextCluster" data-name="cairo::textcluster">
+      <a href="../Cairo/TextCluster.html">TextCluster</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterArray" data-name="cairo::textclusterarray">
+      <a href="../Cairo/TextClusterArray.html">TextClusterArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterFlags" data-name="cairo::textclusterflags">
+      <a href="../Cairo/TextClusterFlags.html">TextClusterFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextExtents" data-name="cairo::textextents">
+      <a href="../Cairo/TextExtents.html">TextExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/UserDataKey" data-name="cairo::userdatakey">
+      <a href="../Cairo/UserDataKey.html">UserDataKey</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/XlibSurface" data-name="cairo::xlibsurface">
+      <a href="../Cairo/XlibSurface.html">XlibSurface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> Cairo::Operator
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p><code><a href="../Cairo/Operator.html">Operator</a></code> is used to set the compositing operator for all cairo drawing operations.</p>
+
+<p>The default operator is <code><a href="../Cairo/Operator.html#Over">Operator::Over</a></code>.</p>
+
+<p>The operators marked as unbounded modify their destination even outside of the mask layer
+(that is, their effect is not bound by the mask layer). However, their effect can still be limited by way of clipping.</p>
+
+<p>To keep things simple, the operator descriptions here document the behavior for when both source and destination are either fully transparent
+or fully opaque. The actual implementation works for translucent layers too.
+For a more detailed explanation of the effects of each operator, including the mathematical definitions,
+see <a href="https://cairographics.org/operators/" target="_blank">https://cairographics.org/operators/</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L13" target="_blank">
+        cairo/operator.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Clear">
+        <strong>Clear</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Clear destination layer (bounded).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Source">
+        <strong>Source</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Replace destination layer (bounded).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Over">
+        <strong>Over</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Draw source layer on top of destination layer.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="In">
+        <strong>In</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Draw source where there was destination content (unbounded).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Out">
+        <strong>Out</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Draw source where there was no destination content (unbounded).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Atop">
+        <strong>Atop</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Draw source on top of destination content and only there.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Dest">
+        <strong>Dest</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Ignore the source.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DestOver">
+        <strong>DestOver</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Draw destination on top of source.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DestIn">
+        <strong>DestIn</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Leave destination only where there was source content (unbounded).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DestOut">
+        <strong>DestOut</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Leave destination only where there was no source content.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DestAtop">
+        <strong>DestAtop</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Leave destination on top of source content and only there (unbounded).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Xor">
+        <strong>Xor</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Source and destination are shown where there is only one of them.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Add">
+        <strong>Add</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Source and destination layers are accumulated.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Saturate">
+        <strong>Saturate</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Like over, but assuming source and dest are disjoint geometries.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Multiply">
+        <strong>Multiply</strong> = <code><span class="n">14</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Source and destination layers are multiplied. This causes the result to be at least as dark as the darker inputs.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Screen">
+        <strong>Screen</strong> = <code><span class="n">15</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Source and destination are complemented and multiplied. This causes the result to be at least as light as the lighter inputs.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Overlay">
+        <strong>Overlay</strong> = <code><span class="n">16</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Multiplies or screens, depending on the lightness of the destination color.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Darken">
+        <strong>Darken</strong> = <code><span class="n">17</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Replaces the destination with the source if it is darker, otherwise keeps the source.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Lighten">
+        <strong>Lighten</strong> = <code><span class="n">18</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Replaces the destination with the source if it is lighter, otherwise keeps the source.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="ColorDodge">
+        <strong>ColorDodge</strong> = <code><span class="n">19</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Brightens the destination color to reflect the source color.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="ColorBurn">
+        <strong>ColorBurn</strong> = <code><span class="n">20</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Darkens the destination color to reflect the source color.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="HardLight">
+        <strong>HardLight</strong> = <code><span class="n">21</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Multiplies or screens, dependent on source color.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="SoftLight">
+        <strong>SoftLight</strong> = <code><span class="n">22</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Darkens or lightens, dependent on source color.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Difference">
+        <strong>Difference</strong> = <code><span class="n">23</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Takes the difference of the source and destination color.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Exclusion">
+        <strong>Exclusion</strong> = <code><span class="n">24</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Produces an effect similar to difference, but with lower contrast.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="HslHue">
+        <strong>HslHue</strong> = <code><span class="n">25</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Creates a color with the hue of the source and the saturation and luminosity of the target.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="HslSaturation">
+        <strong>HslSaturation</strong> = <code><span class="n">26</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Creates a color with the saturation of the source and the hue and luminosity of the target.
+Painting with this mode onto a gray area produces no change.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="HslColor">
+        <strong>HslColor</strong> = <code><span class="n">27</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Creates a color with the hue and saturation of the source and the luminosity of the target.
+This preserves the gray levels of the target and is useful for coloring monochrome images or tinting color images.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="HslLuminosity">
+        <strong>HslLuminosity</strong> = <code><span class="n">28</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Creates a color with the luminosity of the source and the hue and saturation of the target.
+This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColor">Operator::HslColor</a></code>.</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#add?-instance-method" class="signature"><strong>#add?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#atop?-instance-method" class="signature"><strong>#atop?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#clear?-instance-method" class="signature"><strong>#clear?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#color_burn?-instance-method" class="signature"><strong>#color_burn?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#color_dodge?-instance-method" class="signature"><strong>#color_dodge?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#darken?-instance-method" class="signature"><strong>#darken?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dest?-instance-method" class="signature"><strong>#dest?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dest_atop?-instance-method" class="signature"><strong>#dest_atop?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dest_in?-instance-method" class="signature"><strong>#dest_in?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dest_out?-instance-method" class="signature"><strong>#dest_out?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dest_over?-instance-method" class="signature"><strong>#dest_over?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#difference?-instance-method" class="signature"><strong>#difference?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#exclusion?-instance-method" class="signature"><strong>#exclusion?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hard_light?-instance-method" class="signature"><strong>#hard_light?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hsl_color?-instance-method" class="signature"><strong>#hsl_color?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hsl_hue?-instance-method" class="signature"><strong>#hsl_hue?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hsl_luminosity?-instance-method" class="signature"><strong>#hsl_luminosity?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hsl_saturation?-instance-method" class="signature"><strong>#hsl_saturation?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#in?-instance-method" class="signature"><strong>#in?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lighten?-instance-method" class="signature"><strong>#lighten?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#multiply?-instance-method" class="signature"><strong>#multiply?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#out?-instance-method" class="signature"><strong>#out?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#over?-instance-method" class="signature"><strong>#over?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#overlay?-instance-method" class="signature"><strong>#overlay?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#saturate?-instance-method" class="signature"><strong>#saturate?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#screen?-instance-method" class="signature"><strong>#screen?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#soft_light?-instance-method" class="signature"><strong>#soft_light?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#source?-instance-method" class="signature"><strong>#source?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xor?-instance-method" class="signature"><strong>#xor?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="add?-instance-method">
+      <div class="signature">
+        
+        def <strong>add?</strong>
+
+        <a class="method-permalink" href="#add?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="atop?-instance-method">
+      <div class="signature">
+        
+        def <strong>atop?</strong>
+
+        <a class="method-permalink" href="#atop?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="clear?-instance-method">
+      <div class="signature">
+        
+        def <strong>clear?</strong>
+
+        <a class="method-permalink" href="#clear?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="color_burn?-instance-method">
+      <div class="signature">
+        
+        def <strong>color_burn?</strong>
+
+        <a class="method-permalink" href="#color_burn?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="color_dodge?-instance-method">
+      <div class="signature">
+        
+        def <strong>color_dodge?</strong>
+
+        <a class="method-permalink" href="#color_dodge?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L72" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="darken?-instance-method">
+      <div class="signature">
+        
+        def <strong>darken?</strong>
+
+        <a class="method-permalink" href="#darken?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L66" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dest?-instance-method">
+      <div class="signature">
+        
+        def <strong>dest?</strong>
+
+        <a class="method-permalink" href="#dest?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dest_atop?-instance-method">
+      <div class="signature">
+        
+        def <strong>dest_atop?</strong>
+
+        <a class="method-permalink" href="#dest_atop?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dest_in?-instance-method">
+      <div class="signature">
+        
+        def <strong>dest_in?</strong>
+
+        <a class="method-permalink" href="#dest_in?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dest_out?-instance-method">
+      <div class="signature">
+        
+        def <strong>dest_out?</strong>
+
+        <a class="method-permalink" href="#dest_out?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dest_over?-instance-method">
+      <div class="signature">
+        
+        def <strong>dest_over?</strong>
+
+        <a class="method-permalink" href="#dest_over?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="difference?-instance-method">
+      <div class="signature">
+        
+        def <strong>difference?</strong>
+
+        <a class="method-permalink" href="#difference?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="exclusion?-instance-method">
+      <div class="signature">
+        
+        def <strong>exclusion?</strong>
+
+        <a class="method-permalink" href="#exclusion?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hard_light?-instance-method">
+      <div class="signature">
+        
+        def <strong>hard_light?</strong>
+
+        <a class="method-permalink" href="#hard_light?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L78" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hsl_color?-instance-method">
+      <div class="signature">
+        
+        def <strong>hsl_color?</strong>
+
+        <a class="method-permalink" href="#hsl_color?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hsl_hue?-instance-method">
+      <div class="signature">
+        
+        def <strong>hsl_hue?</strong>
+
+        <a class="method-permalink" href="#hsl_hue?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L90" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hsl_luminosity?-instance-method">
+      <div class="signature">
+        
+        def <strong>hsl_luminosity?</strong>
+
+        <a class="method-permalink" href="#hsl_luminosity?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L102" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hsl_saturation?-instance-method">
+      <div class="signature">
+        
+        def <strong>hsl_saturation?</strong>
+
+        <a class="method-permalink" href="#hsl_saturation?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L94" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="in?-instance-method">
+      <div class="signature">
+        
+        def <strong>in?</strong>
+
+        <a class="method-permalink" href="#in?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lighten?-instance-method">
+      <div class="signature">
+        
+        def <strong>lighten?</strong>
+
+        <a class="method-permalink" href="#lighten?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L69" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="multiply?-instance-method">
+      <div class="signature">
+        
+        def <strong>multiply?</strong>
+
+        <a class="method-permalink" href="#multiply?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="out?-instance-method">
+      <div class="signature">
+        
+        def <strong>out?</strong>
+
+        <a class="method-permalink" href="#out?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="over?-instance-method">
+      <div class="signature">
+        
+        def <strong>over?</strong>
+
+        <a class="method-permalink" href="#over?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L21" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="overlay?-instance-method">
+      <div class="signature">
+        
+        def <strong>overlay?</strong>
+
+        <a class="method-permalink" href="#overlay?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L63" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="saturate?-instance-method">
+      <div class="signature">
+        
+        def <strong>saturate?</strong>
+
+        <a class="method-permalink" href="#saturate?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L54" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="screen?-instance-method">
+      <div class="signature">
+        
+        def <strong>screen?</strong>
+
+        <a class="method-permalink" href="#screen?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L60" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="soft_light?-instance-method">
+      <div class="signature">
+        
+        def <strong>soft_light?</strong>
+
+        <a class="method-permalink" href="#soft_light?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L81" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="source?-instance-method">
+      <div class="signature">
+        
+        def <strong>source?</strong>
+
+        <a class="method-permalink" href="#source?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xor?-instance-method">
+      <div class="signature">
+        
+        def <strong>xor?</strong>
+
+        <a class="method-permalink" href="#xor?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/operator.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

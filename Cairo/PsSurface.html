@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="cairo">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="cairo">
+  <title>Cairo::PsSurface - cairo HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cairo
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cairo/Cairo" data-name="cairo">
+      <a href="../Cairo.html">Cairo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cairo/Cairo/Antialias" data-name="cairo::antialias">
+      <a href="../Cairo/Antialias.html">Antialias</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/C" data-name="cairo::c">
+      <a href="../Cairo/C.html">C</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ColorStop" data-name="cairo::colorstop">
+      <a href="../Cairo/ColorStop.html">ColorStop</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Content" data-name="cairo::content">
+      <a href="../Cairo/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Context" data-name="cairo::context">
+      <a href="../Cairo/Context.html">Context</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Device" data-name="cairo::device">
+      <a href="../Cairo/Device.html">Device</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/DeviceType" data-name="cairo::devicetype">
+      <a href="../Cairo/DeviceType.html">DeviceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extend" data-name="cairo::extend">
+      <a href="../Cairo/Extend.html">Extend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extents" data-name="cairo::extents">
+      <a href="../Cairo/Extents.html">Extents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FillRule" data-name="cairo::fillrule">
+      <a href="../Cairo/FillRule.html">FillRule</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Filter" data-name="cairo::filter">
+      <a href="../Cairo/Filter.html">Filter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontExtents" data-name="cairo::fontextents">
+      <a href="../Cairo/FontExtents.html">FontExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontFace" data-name="cairo::fontface">
+      <a href="../Cairo/FontFace.html">FontFace</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontOptions" data-name="cairo::fontoptions">
+      <a href="../Cairo/FontOptions.html">FontOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontSlant" data-name="cairo::fontslant">
+      <a href="../Cairo/FontSlant.html">FontSlant</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontType" data-name="cairo::fonttype">
+      <a href="../Cairo/FontType.html">FontType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontWeight" data-name="cairo::fontweight">
+      <a href="../Cairo/FontWeight.html">FontWeight</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Format" data-name="cairo::format">
+      <a href="../Cairo/Format.html">Format</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Glyph" data-name="cairo::glyph">
+      <a href="../Cairo/Glyph.html">Glyph</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/GlyphArray" data-name="cairo::glypharray">
+      <a href="../Cairo/GlyphArray.html">GlyphArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintMetrics" data-name="cairo::hintmetrics">
+      <a href="../Cairo/HintMetrics.html">HintMetrics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintStyle" data-name="cairo::hintstyle">
+      <a href="../Cairo/HintStyle.html">HintStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineCap" data-name="cairo::linecap">
+      <a href="../Cairo/LineCap.html">LineCap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineJoin" data-name="cairo::linejoin">
+      <a href="../Cairo/LineJoin.html">LineJoin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Matrix" data-name="cairo::matrix">
+      <a href="../Cairo/Matrix.html">Matrix</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Operator" data-name="cairo::operator">
+      <a href="../Cairo/Operator.html">Operator</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Path" data-name="cairo::path">
+      <a href="../Cairo/Path.html">Path</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathData" data-name="cairo::pathdata">
+      <a href="../Cairo/PathData.html">PathData</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataHeader" data-name="cairo::pathdataheader">
+      <a href="../Cairo/PathDataHeader.html">PathDataHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataType" data-name="cairo::pathdatatype">
+      <a href="../Cairo/PathDataType.html">PathDataType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Pattern" data-name="cairo::pattern">
+      <a href="../Cairo/Pattern.html">Pattern</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
+      <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfSurface" data-name="cairo::pdfsurface">
+      <a href="../Cairo/PdfSurface.html">PdfSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfVersion" data-name="cairo::pdfversion">
+      <a href="../Cairo/PdfVersion.html">PdfVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Point" data-name="cairo::point">
+      <a href="../Cairo/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsLevel" data-name="cairo::pslevel">
+      <a href="../Cairo/PsLevel.html">PsLevel</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cairo/Cairo/PsSurface" data-name="cairo::pssurface">
+      <a href="../Cairo/PsSurface.html">PsSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Rectangle" data-name="cairo::rectangle">
+      <a href="../Cairo/Rectangle.html">Rectangle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleInt" data-name="cairo::rectangleint">
+      <a href="../Cairo/RectangleInt.html">RectangleInt</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleList" data-name="cairo::rectanglelist">
+      <a href="../Cairo/RectangleList.html">RectangleList</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Region" data-name="cairo::region">
+      <a href="../Cairo/Region.html">Region</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RegionOverlap" data-name="cairo::regionoverlap">
+      <a href="../Cairo/RegionOverlap.html">RegionOverlap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RGBA" data-name="cairo::rgba">
+      <a href="../Cairo/RGBA.html">RGBA</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScaledFont" data-name="cairo::scaledfont">
+      <a href="../Cairo/ScaledFont.html">ScaledFont</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Script" data-name="cairo::script">
+      <a href="../Cairo/Script.html">Script</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptInterpreter" data-name="cairo::scriptinterpreter">
+      <a href="../Cairo/ScriptInterpreter.html">ScriptInterpreter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptMode" data-name="cairo::scriptmode">
+      <a href="../Cairo/ScriptMode.html">ScriptMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Status" data-name="cairo::status">
+      <a href="../Cairo/Status.html">Status</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/StatusException" data-name="cairo::statusexception">
+      <a href="../Cairo/StatusException.html">StatusException</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SubpixelOrder" data-name="cairo::subpixelorder">
+      <a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Surface" data-name="cairo::surface">
+      <a href="../Cairo/Surface.html">Surface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceObserverMode" data-name="cairo::surfaceobservermode">
+      <a href="../Cairo/SurfaceObserverMode.html">SurfaceObserverMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceType" data-name="cairo::surfacetype">
+      <a href="../Cairo/SurfaceType.html">SurfaceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgSurface" data-name="cairo::svgsurface">
+      <a href="../Cairo/SvgSurface.html">SvgSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgVersion" data-name="cairo::svgversion">
+      <a href="../Cairo/SvgVersion.html">SvgVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TeeSurface" data-name="cairo::teesurface">
+      <a href="../Cairo/TeeSurface.html">TeeSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextCluster" data-name="cairo::textcluster">
+      <a href="../Cairo/TextCluster.html">TextCluster</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterArray" data-name="cairo::textclusterarray">
+      <a href="../Cairo/TextClusterArray.html">TextClusterArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterFlags" data-name="cairo::textclusterflags">
+      <a href="../Cairo/TextClusterFlags.html">TextClusterFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextExtents" data-name="cairo::textextents">
+      <a href="../Cairo/TextExtents.html">TextExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/UserDataKey" data-name="cairo::userdatakey">
+      <a href="../Cairo/UserDataKey.html">UserDataKey</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/XlibSurface" data-name="cairo::xlibsurface">
+      <a href="../Cairo/XlibSurface.html">XlibSurface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Cairo::PsSurface
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Cairo/PsSurface.html">Cairo::PsSurface</a></li><li class="superclass"><a href="../Cairo/Surface.html">Cairo::Surface</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">
+        cairo/ps_surface.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void),width_in_points:Float64,height_in_points:Float64)-class-method" class="signature"><strong>.new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void), width_in_points : Float64, height_in_points : Float64)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new(filename:String,width_in_points:Float64,height_in_points:Float64)-class-method" class="signature"><strong>.new</strong>(filename : String, width_in_points : Float64, height_in_points : Float64)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#levels:Array(PsLevel)-class-method" class="signature"><strong>.levels</strong> : Array(PsLevel)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#dsc_begin_page_setup-instance-method" class="signature"><strong>#dsc_begin_page_setup</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dsc_begin_setup-instance-method" class="signature"><strong>#dsc_begin_setup</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dsc_comment(comment:String)-instance-method" class="signature"><strong>#dsc_comment</strong>(comment : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#eps:Bool-instance-method" class="signature"><strong>#eps</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#eps=(eps:Bool)-instance-method" class="signature"><strong>#eps=</strong>(eps : Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ps_surface_restrict_to_level(level:PsLevel)-instance-method" class="signature"><strong>#ps_surface_restrict_to_level</strong>(level : PsLevel)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_size(width_in_points:Float64,height_in_points:Float64)-instance-method" class="signature"><strong>#set_size</strong>(width_in_points : Float64, height_in_points : Float64)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="../Cairo/Surface.html">Cairo::Surface</a></code></h3>
+  
+  
+    <a href="../Cairo/Surface.html#content:Content-instance-method" class="tooltip">
+      <span>content : Content</span>
+    content</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#copy_page-instance-method" class="tooltip">
+      <span>copy_page</span>
+    copy_page</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#create_for_rectangle(x:Float64,y:Float64,width:Float64,height:Float64):Surface-instance-method" class="tooltip">
+      <span>create_for_rectangle(x : Float64, y : Float64, width : Float64, height : Float64) : Surface</span>
+    create_for_rectangle</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#create_observer(mode:SurfaceObserverMode):Surface-instance-method" class="tooltip">
+      <span>create_observer(mode : SurfaceObserverMode) : Surface</span>
+    create_observer</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method" class="tooltip">
+      <span>create_similar(content : Content, width : Int32, height : Int32) : Surface</span>
+    create_similar</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#create_similar_image(format:Format,width:Int32,height:Int32):Surface-instance-method" class="tooltip">
+      <span>create_similar_image(format : Format, width : Int32, height : Int32) : Surface</span>
+    create_similar_image</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#data:String-instance-method" class="tooltip">
+      <span>data : String</span>
+    data</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#device:Device-instance-method" class="tooltip">
+      <span>device : Device</span>
+    device</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#device_offset:Point-instance-method" class="tooltip">
+      <span>device_offset : Point</span>
+    device_offset</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#device_offset=(offset:Point)-instance-method" class="tooltip">
+      <span>device_offset=(offset : Point)</span>
+    device_offset=</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#device_scale:Point-instance-method" class="tooltip">
+      <span>device_scale : Point</span>
+    device_scale</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#device_scale=(scale:Point)-instance-method" class="tooltip">
+      <span>device_scale=(scale : Point)</span>
+    device_scale=</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#extents:NamedTuple()-instance-method" class="tooltip">
+      <span>extents : NamedTuple()</span>
+    extents</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#fallback_resolution:Point-instance-method" class="tooltip">
+      <span>fallback_resolution : Point</span>
+    fallback_resolution</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#fallback_resolution=(res:Point)-instance-method" class="tooltip">
+      <span>fallback_resolution=(res : Point)</span>
+    fallback_resolution=</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#finalize-instance-method" class="tooltip">
+      <span>finalize</span>
+    finalize</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#finish-instance-method" class="tooltip">
+      <span>finish</span>
+    finish</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#flush-instance-method" class="tooltip">
+      <span>flush</span>
+    flush</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#font_options:FontOptions-instance-method" class="tooltip">
+      <span>font_options : FontOptions</span>
+    font_options</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#format:Format-instance-method" class="tooltip">
+      <span>format : Format</span>
+    format</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#get_type:SurfaceType-instance-method" class="tooltip">
+      <span>get_type : SurfaceType</span>
+    get_type</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#has_show_text_glyphs?:Bool-instance-method" class="tooltip">
+      <span>has_show_text_glyphs? : Bool</span>
+    has_show_text_glyphs?</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#height:Int32-instance-method" class="tooltip">
+      <span>height : Int32</span>
+    height</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#ink_extents:Rectangle-instance-method" class="tooltip">
+      <span>ink_extents : Rectangle</span>
+    ink_extents</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#map_to_image(extents:RectangleInt?):Surface-instance-method" class="tooltip">
+      <span>map_to_image(extents : RectangleInt?) : Surface</span>
+    map_to_image</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#mark_dirty-instance-method" class="tooltip">
+      <span>mark_dirty</span>
+    mark_dirty</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#mark_dirty_rectangle(x:Int32,y:Int32,width:Int32,height:Int32)-instance-method" class="tooltip">
+      <span>mark_dirty_rectangle(x : Int32, y : Int32, width : Int32, height : Int32)</span>
+    mark_dirty_rectangle</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#mime_data(mime_type:String):Bytes-instance-method" class="tooltip">
+      <span>mime_data(mime_type : String) : Bytes</span>
+    mime_data</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#observer_add_fill_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>observer_add_fill_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
+    observer_add_fill_callback</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#observer_add_finish_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>observer_add_finish_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
+    observer_add_finish_callback</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#observer_add_flush_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>observer_add_flush_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
+    observer_add_flush_callback</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#observer_add_glyphs_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>observer_add_glyphs_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
+    observer_add_glyphs_callback</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#observer_add_mask_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>observer_add_mask_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
+    observer_add_mask_callback</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#observer_add_paint_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>observer_add_paint_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
+    observer_add_paint_callback</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#observer_add_stroke_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>observer_add_stroke_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
+    observer_add_stroke_callback</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#observer_elapsed:Float64-instance-method" class="tooltip">
+      <span>observer_elapsed : Float64</span>
+    observer_elapsed</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#observer_print(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>observer_print(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</span>
+    observer_print</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#reference:Surface-instance-method" class="tooltip">
+      <span>reference : Surface</span>
+    reference</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#reference_count:UInt32-instance-method" class="tooltip">
+      <span>reference_count : UInt32</span>
+    reference_count</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#set_device_offset(x_offset:Float64,y_offset:Float64)-instance-method" class="tooltip">
+      <span>set_device_offset(x_offset : Float64, y_offset : Float64)</span>
+    set_device_offset</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#set_device_scale(x_scale:Float64,y_scale:Float64)-instance-method" class="tooltip">
+      <span>set_device_scale(x_scale : Float64, y_scale : Float64)</span>
+    set_device_scale</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#set_fallback_resolution(x_pixels_per_inch:Float64,y_pixels_per_inch:Float64)-instance-method" class="tooltip">
+      <span>set_fallback_resolution(x_pixels_per_inch : Float64, y_pixels_per_inch : Float64)</span>
+    set_fallback_resolution</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#set_mime_data(mime_type:String,data:Bytes,destroy:LibCairo::DestroyFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>set_mime_data(mime_type : String, data : Bytes, destroy : LibCairo::DestroyFuncT, closure : Pointer(Void)) : Status</span>
+    set_mime_data</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method" class="tooltip">
+      <span>set_user_data(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</span>
+    set_user_data</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#status:Status-instance-method" class="tooltip">
+      <span>status : Status</span>
+    status</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#stride:Int32-instance-method" class="tooltip">
+      <span>stride : Int32</span>
+    stride</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#supports_mime_type?(mime_type:String):Bool-instance-method" class="tooltip">
+      <span>supports_mime_type?(mime_type : String) : Bool</span>
+    supports_mime_type?</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#surface_show_page-instance-method" class="tooltip">
+      <span>surface_show_page</span>
+    surface_show_page</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#to_unsafe:LibCairo::PSurfaceT-instance-method" class="tooltip">
+      <span>to_unsafe : LibCairo::PSurfaceT</span>
+    to_unsafe</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#unmap_image(image:Surface)-instance-method" class="tooltip">
+      <span>unmap_image(image : Surface)</span>
+    unmap_image</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="tooltip">
+      <span>user_data(key : UserDataKey) : Pointer(Void)</span>
+    user_data</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#width:Int32-instance-method" class="tooltip">
+      <span>width : Int32</span>
+    width</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#write_to_png(filename:String):Status-instance-method" class="tooltip">
+      <span>write_to_png(filename : String) : Status</span>
+    write_to_png</a>, 
+    
+  
+    <a href="../Cairo/Surface.html#write_to_png_stream(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+      <span>write_to_png_stream(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</span>
+    write_to_png_stream</a>
+    
+  
+
+
+    
+
+  <h3>Constructor methods inherited from class <code><a href="../Cairo/Surface.html">Cairo::Surface</a></code></h3>
+  
+  
+    <a href="../Cairo/Surface.html#new(data:Bytes,format:Format,width:Int32,height:Int32,stride:Int32)-class-method" class="tooltip">
+      <span>new(data : Bytes, format : Format, width : Int32, height : Int32, stride : Int32)<br/>new(format : Format, width : Int32, height : Int32)<br/>new(read_func : LibCairo::ReadFuncT, closure : Pointer(Void))<br/>new(content : Content, extents : Rectangle?)<br/>new(surface : LibCairo::PSurfaceT)<br/>new(filename : String)</span>
+    new</a>
+    
+  
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void),width_in_points:Float64,height_in_points:Float64)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void), width_in_points : Float64, height_in_points : Float64)
+
+        <a class="method-permalink" href="#new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void),width_in_points:Float64,height_in_points:Float64)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(filename:String,width_in_points:Float64,height_in_points:Float64)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(filename : String, width_in_points : Float64, height_in_points : Float64)
+
+        <a class="method-permalink" href="#new(filename:String,width_in_points:Float64,height_in_points:Float64)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="levels:Array(PsLevel)-class-method">
+      <div class="signature">
+        
+        def self.<strong>levels</strong> : Array(<a href="../Cairo/PsLevel.html">PsLevel</a>)
+
+        <a class="method-permalink" href="#levels:Array(PsLevel)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="dsc_begin_page_setup-instance-method">
+      <div class="signature">
+        
+        def <strong>dsc_begin_page_setup</strong>
+
+        <a class="method-permalink" href="#dsc_begin_page_setup-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dsc_begin_setup-instance-method">
+      <div class="signature">
+        
+        def <strong>dsc_begin_setup</strong>
+
+        <a class="method-permalink" href="#dsc_begin_setup-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dsc_comment(comment:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>dsc_comment</strong>(comment : String)
+
+        <a class="method-permalink" href="#dsc_comment(comment:String)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="eps:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>eps</strong> : Bool
+
+        <a class="method-permalink" href="#eps:Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="eps=(eps:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>eps=</strong>(eps : Bool)
+
+        <a class="method-permalink" href="#eps=(eps:Bool)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ps_surface_restrict_to_level(level:PsLevel)-instance-method">
+      <div class="signature">
+        
+        def <strong>ps_surface_restrict_to_level</strong>(level : <a href="../Cairo/PsLevel.html">PsLevel</a>)
+
+        <a class="method-permalink" href="#ps_surface_restrict_to_level(level:PsLevel)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_size(width_in_points:Float64,height_in_points:Float64)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_size</strong>(width_in_points : Float64, height_in_points : Float64)
+
+        <a class="method-permalink" href="#set_size(width_in_points:Float64,height_in_points:Float64)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="cairo">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="cairo">
+  <title>Cairo::Region - cairo HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cairo
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cairo/Cairo" data-name="cairo">
+      <a href="../Cairo.html">Cairo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cairo/Cairo/Antialias" data-name="cairo::antialias">
+      <a href="../Cairo/Antialias.html">Antialias</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/C" data-name="cairo::c">
+      <a href="../Cairo/C.html">C</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ColorStop" data-name="cairo::colorstop">
+      <a href="../Cairo/ColorStop.html">ColorStop</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Content" data-name="cairo::content">
+      <a href="../Cairo/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Context" data-name="cairo::context">
+      <a href="../Cairo/Context.html">Context</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Device" data-name="cairo::device">
+      <a href="../Cairo/Device.html">Device</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/DeviceType" data-name="cairo::devicetype">
+      <a href="../Cairo/DeviceType.html">DeviceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extend" data-name="cairo::extend">
+      <a href="../Cairo/Extend.html">Extend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extents" data-name="cairo::extents">
+      <a href="../Cairo/Extents.html">Extents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FillRule" data-name="cairo::fillrule">
+      <a href="../Cairo/FillRule.html">FillRule</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Filter" data-name="cairo::filter">
+      <a href="../Cairo/Filter.html">Filter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontExtents" data-name="cairo::fontextents">
+      <a href="../Cairo/FontExtents.html">FontExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontFace" data-name="cairo::fontface">
+      <a href="../Cairo/FontFace.html">FontFace</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontOptions" data-name="cairo::fontoptions">
+      <a href="../Cairo/FontOptions.html">FontOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontSlant" data-name="cairo::fontslant">
+      <a href="../Cairo/FontSlant.html">FontSlant</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontType" data-name="cairo::fonttype">
+      <a href="../Cairo/FontType.html">FontType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontWeight" data-name="cairo::fontweight">
+      <a href="../Cairo/FontWeight.html">FontWeight</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Format" data-name="cairo::format">
+      <a href="../Cairo/Format.html">Format</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Glyph" data-name="cairo::glyph">
+      <a href="../Cairo/Glyph.html">Glyph</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/GlyphArray" data-name="cairo::glypharray">
+      <a href="../Cairo/GlyphArray.html">GlyphArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintMetrics" data-name="cairo::hintmetrics">
+      <a href="../Cairo/HintMetrics.html">HintMetrics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintStyle" data-name="cairo::hintstyle">
+      <a href="../Cairo/HintStyle.html">HintStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineCap" data-name="cairo::linecap">
+      <a href="../Cairo/LineCap.html">LineCap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineJoin" data-name="cairo::linejoin">
+      <a href="../Cairo/LineJoin.html">LineJoin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Matrix" data-name="cairo::matrix">
+      <a href="../Cairo/Matrix.html">Matrix</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Operator" data-name="cairo::operator">
+      <a href="../Cairo/Operator.html">Operator</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Path" data-name="cairo::path">
+      <a href="../Cairo/Path.html">Path</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathData" data-name="cairo::pathdata">
+      <a href="../Cairo/PathData.html">PathData</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataHeader" data-name="cairo::pathdataheader">
+      <a href="../Cairo/PathDataHeader.html">PathDataHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataType" data-name="cairo::pathdatatype">
+      <a href="../Cairo/PathDataType.html">PathDataType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Pattern" data-name="cairo::pattern">
+      <a href="../Cairo/Pattern.html">Pattern</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
+      <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfSurface" data-name="cairo::pdfsurface">
+      <a href="../Cairo/PdfSurface.html">PdfSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfVersion" data-name="cairo::pdfversion">
+      <a href="../Cairo/PdfVersion.html">PdfVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Point" data-name="cairo::point">
+      <a href="../Cairo/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsLevel" data-name="cairo::pslevel">
+      <a href="../Cairo/PsLevel.html">PsLevel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsSurface" data-name="cairo::pssurface">
+      <a href="../Cairo/PsSurface.html">PsSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Rectangle" data-name="cairo::rectangle">
+      <a href="../Cairo/Rectangle.html">Rectangle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleInt" data-name="cairo::rectangleint">
+      <a href="../Cairo/RectangleInt.html">RectangleInt</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleList" data-name="cairo::rectanglelist">
+      <a href="../Cairo/RectangleList.html">RectangleList</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cairo/Cairo/Region" data-name="cairo::region">
+      <a href="../Cairo/Region.html">Region</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RegionOverlap" data-name="cairo::regionoverlap">
+      <a href="../Cairo/RegionOverlap.html">RegionOverlap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RGBA" data-name="cairo::rgba">
+      <a href="../Cairo/RGBA.html">RGBA</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScaledFont" data-name="cairo::scaledfont">
+      <a href="../Cairo/ScaledFont.html">ScaledFont</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Script" data-name="cairo::script">
+      <a href="../Cairo/Script.html">Script</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptInterpreter" data-name="cairo::scriptinterpreter">
+      <a href="../Cairo/ScriptInterpreter.html">ScriptInterpreter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptMode" data-name="cairo::scriptmode">
+      <a href="../Cairo/ScriptMode.html">ScriptMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Status" data-name="cairo::status">
+      <a href="../Cairo/Status.html">Status</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/StatusException" data-name="cairo::statusexception">
+      <a href="../Cairo/StatusException.html">StatusException</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SubpixelOrder" data-name="cairo::subpixelorder">
+      <a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Surface" data-name="cairo::surface">
+      <a href="../Cairo/Surface.html">Surface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceObserverMode" data-name="cairo::surfaceobservermode">
+      <a href="../Cairo/SurfaceObserverMode.html">SurfaceObserverMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceType" data-name="cairo::surfacetype">
+      <a href="../Cairo/SurfaceType.html">SurfaceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgSurface" data-name="cairo::svgsurface">
+      <a href="../Cairo/SvgSurface.html">SvgSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgVersion" data-name="cairo::svgversion">
+      <a href="../Cairo/SvgVersion.html">SvgVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TeeSurface" data-name="cairo::teesurface">
+      <a href="../Cairo/TeeSurface.html">TeeSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextCluster" data-name="cairo::textcluster">
+      <a href="../Cairo/TextCluster.html">TextCluster</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterArray" data-name="cairo::textclusterarray">
+      <a href="../Cairo/TextClusterArray.html">TextClusterArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterFlags" data-name="cairo::textclusterflags">
+      <a href="../Cairo/TextClusterFlags.html">TextClusterFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextExtents" data-name="cairo::textextents">
+      <a href="../Cairo/TextExtents.html">TextExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/UserDataKey" data-name="cairo::userdatakey">
+      <a href="../Cairo/UserDataKey.html">UserDataKey</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/XlibSurface" data-name="cairo::xlibsurface">
+      <a href="../Cairo/XlibSurface.html">XlibSurface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Cairo::Region
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Cairo/Region.html">Cairo::Region</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>A <code><a href="../Cairo/Region.html">Region</a></code> represents a set of integer-aligned rectangles.</p>
+
+<p>It allows set-theoretical operations like <code><a href="../Cairo/Region.html#union(other:Region)-instance-method">Region#union</a></code> and <code><a href="../Cairo/Region.html#intersect(other:Region)-instance-method">Region#intersect</a></code> to be performed on them.</p>
+
+<p>Memory management of <code><a href="../Cairo/Region.html">Region</a></code> is done with <code><a href="../Cairo/Region.html#reference:Region-instance-method">Region#reference</a></code> and <code><a href="../Cairo/Region.html#finalize-instance-method">Region#finalize</a></code>.</p>
+
+<p>Wrapper for LibCairo::PRegionT</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L13" target="_blank">
+        cairo/region.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(region:LibCairo::PRegionT)-class-method" class="signature"><strong>.new</strong>(region : LibCairo::PRegionT)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new(rectangle:RectangleInt)-class-method" class="signature"><strong>.new</strong>(rectangle : RectangleInt)</a>
+        
+          <div class="summary"><p>Allocates a new region object containing rectangle.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new(rects:Array(RectangleInt))-class-method" class="signature"><strong>.new</strong>(rects : Array(RectangleInt))</a>
+        
+          <div class="summary"><p>Allocates a new region object containing the union of all given rects.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Allocates a new empty region object.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#==(other:Region):Bool-instance-method" class="signature"><strong>#==</strong>(other : Region) : Bool</a>
+        
+          <div class="summary"><p>Compares whether region is equivalent to <em>other</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#contains?(p:Point):Bool-instance-method" class="signature"><strong>#contains?</strong>(p : Point) : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#contains?(rectangle:RectangleInt):RegionOverlap-instance-method" class="signature"><strong>#contains?</strong>(rectangle : RectangleInt) : RegionOverlap</a>
+        
+          <div class="summary"><p>Checks whether rectangle is inside, outside or partially contained in region.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#contains?(x:Int32,y:Int32):Bool-instance-method" class="signature"><strong>#contains?</strong>(x : Int32, y : Int32) : Bool</a>
+        
+          <div class="summary"><p>Checks whether <em>(x, y)</em> is contained in region.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dup:Region-instance-method" class="signature"><strong>#dup</strong> : Region</a>
+        
+          <div class="summary"><p>Allocates a new region object copying the area from original.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#empty?:Bool-instance-method" class="signature"><strong>#empty?</strong> : Bool</a>
+        
+          <div class="summary"><p>Checks whether region is empty.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#extents:RectangleInt-instance-method" class="signature"><strong>#extents</strong> : RectangleInt</a>
+        
+          <div class="summary"><p>Gets the bounding rectangle of region as a <code><a href="../Cairo/RectangleInt.html">RectangleInt</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        
+          <div class="summary"><p>Destroys a <code><a href="../Cairo/Region.html">Region</a></code> object created with <code>Region#initialize</code>, <code><a href="../Cairo/Region.html#dup:Region-instance-method">Region#dup</a></code>, or <code>Region#initialize(rectangle)</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#intersect(other:Region)-instance-method" class="signature"><strong>#intersect</strong>(other : Region)</a>
+        
+          <div class="summary"><p>Computes the intersection of <code>self</code> with other and places the result in <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#intersect(rectangle:RectangleInt)-instance-method" class="signature"><strong>#intersect</strong>(rectangle : RectangleInt)</a>
+        
+          <div class="summary"><p>Computes the intersection of <code>self</code> with rectangle and places the result in <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#num_rectangles:Int32-instance-method" class="signature"><strong>#num_rectangles</strong> : Int32</a>
+        
+          <div class="summary"><p>Returns the number of rectangles contained in region.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rectangle(nth:Int32):RectangleInt-instance-method" class="signature"><strong>#rectangle</strong>(nth : Int32) : RectangleInt</a>
+        
+          <div class="summary"><p>Stores the nth rectangle from the region in rectangle.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reference:Region-instance-method" class="signature"><strong>#reference</strong> : Region</a>
+        
+          <div class="summary"><p>Increases the reference count on region by one.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#status:Status-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        
+          <div class="summary"><p>Checks whether an error has previous occurred for this region object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subtract(other:Region)-instance-method" class="signature"><strong>#subtract</strong>(other : Region)</a>
+        
+          <div class="summary"><p>Subtracts other from <code>self</code> and places the result in <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subtract(rectangle:RectangleInt)-instance-method" class="signature"><strong>#subtract</strong>(rectangle : RectangleInt)</a>
+        
+          <div class="summary"><p>Subtracts rectangle from <code>self</code> and places the result in <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_unsafe:LibCairo::PRegionT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PRegionT</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#translate(dx:Int32,dy:Int32)-instance-method" class="signature"><strong>#translate</strong>(dx : Int32, dy : Int32)</a>
+        
+          <div class="summary"><p>Translates region by <em>(dx, dy)</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#translate(d:Point)-instance-method" class="signature"><strong>#translate</strong>(d : Point)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#union(other:Region)-instance-method" class="signature"><strong>#union</strong>(other : Region)</a>
+        
+          <div class="summary"><p>Computes the union of <code>self</code> with other and places the result in <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#union(rectangle:RectangleInt)-instance-method" class="signature"><strong>#union</strong>(rectangle : RectangleInt)</a>
+        
+          <div class="summary"><p>Computes the union of <code>self</code> with rectangle and places the result in <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xor(other:Region)-instance-method" class="signature"><strong>#xor</strong>(other : Region)</a>
+        
+          <div class="summary"><p>Computes the exclusive difference of <code>self</code> with other and places the result in <code>self</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xor_rectangle(rectangle:RectangleInt)-instance-method" class="signature"><strong>#xor_rectangle</strong>(rectangle : RectangleInt)</a>
+        
+          <div class="summary"><p>Computes the exclusive difference of <code>self</code> with rectangle and places the result in <code>self</code>.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(region:LibCairo::PRegionT)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(region : LibCairo::PRegionT)
+
+        <a class="method-permalink" href="#new(region:LibCairo::PRegionT)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(rectangle:RectangleInt)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(rectangle : <a href="../Cairo/RectangleInt.html">RectangleInt</a>)
+
+        <a class="method-permalink" href="#new(rectangle:RectangleInt)-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Allocates a new region object containing rectangle.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(rects:Array(RectangleInt))-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(rects : Array(<a href="../Cairo/RectangleInt.html">RectangleInt</a>))
+
+        <a class="method-permalink" href="#new(rects:Array(RectangleInt))-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Allocates a new region object containing the union of all given rects.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>rects</strong> an array of count rectangles</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Allocates a new empty region object.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="==(other:Region):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>==</strong>(other : <a href="../Cairo/Region.html">Region</a>) : Bool
+
+        <a class="method-permalink" href="#==(other:Region):Bool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Compares whether region is equivalent to <em>other</em>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li>*<em>other</em> a <code><a href="../Cairo/Region.html">Region</a></code> object</li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p><code>true</code> if both regions contained the same coverage, <code>false</code> if it is not or any region is in an error status.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L64" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="contains?(p:Point):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>contains?</strong>(p : <a href="../Cairo/Point.html">Point</a>) : Bool
+
+        <a class="method-permalink" href="#contains?(p:Point):Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="contains?(rectangle:RectangleInt):RegionOverlap-instance-method">
+      <div class="signature">
+        
+        def <strong>contains?</strong>(rectangle : <a href="../Cairo/RectangleInt.html">RectangleInt</a>) : <a href="../Cairo/RegionOverlap.html">RegionOverlap</a>
+
+        <a class="method-permalink" href="#contains?(rectangle:RectangleInt):RegionOverlap-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Checks whether rectangle is inside, outside or partially contained in region.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>rectangle</strong> a <code><a href="../Cairo/RectangleInt.html">RectangleInt</a></code></li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<ul><li><code><a href="../Cairo/RegionOverlap.html#In">RegionOverlap::In</a></code> if rectangle is entirely inside region</li><li><code><a href="../Cairo/RegionOverlap.html#Out">RegionOverlap::Out</a></code> if rectangle is entirely outside region</li><li><code>RegionOVerlap::Part</code> if rectangle is partially inside and partially outside region</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L122" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="contains?(x:Int32,y:Int32):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>contains?</strong>(x : Int32, y : Int32) : Bool
+
+        <a class="method-permalink" href="#contains?(x:Int32,y:Int32):Bool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Checks whether <em>(x, y)</em> is contained in region.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><em>x</em> the x coordinate of a point</li><li><em>y</em> the y coordinate of a point</li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p><code>true</code> if <em>(x, y)</em> is contained in region, <code>false</code> if it is not.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dup:Region-instance-method">
+      <div class="signature">
+        
+        def <strong>dup</strong> : <a href="../Cairo/Region.html">Region</a>
+
+        <a class="method-permalink" href="#dup:Region-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Allocates a new region object copying the area from original.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="empty?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>empty?</strong> : Bool
+
+        <a class="method-permalink" href="#empty?:Bool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Checks whether region is empty.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p><code>true</code> if region is empty, <code>false</code> if it isn't.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L109" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="extents:RectangleInt-instance-method">
+      <div class="signature">
+        
+        def <strong>extents</strong> : <a href="../Cairo/RectangleInt.html">RectangleInt</a>
+
+        <a class="method-permalink" href="#extents:RectangleInt-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Gets the bounding rectangle of region as a <code><a href="../Cairo/RectangleInt.html">RectangleInt</a></code>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>extents</strong> rectangle into which to store the extents</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L80" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="finalize-instance-method">
+      <div class="signature">
+        
+        def <strong>finalize</strong>
+
+        <a class="method-permalink" href="#finalize-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Destroys a <code><a href="../Cairo/Region.html">Region</a></code> object created with <code>Region#initialize</code>, <code><a href="../Cairo/Region.html#dup:Region-instance-method">Region#dup</a></code>, or <code>Region#initialize(rectangle)</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="intersect(other:Region)-instance-method">
+      <div class="signature">
+        
+        def <strong>intersect</strong>(other : <a href="../Cairo/Region.html">Region</a>)
+
+        <a class="method-permalink" href="#intersect(other:Region)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Computes the intersection of <code>self</code> with other and places the result in <code>self</code>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>other</strong> another <code><a href="../Cairo/Region.html">Region</a></code></li></ul>
+
+<h2><a id="raises" class="anchor" href="#raises">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Raises</h2>
+
+<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with status of <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L190" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="intersect(rectangle:RectangleInt)-instance-method">
+      <div class="signature">
+        
+        def <strong>intersect</strong>(rectangle : <a href="../Cairo/RectangleInt.html">RectangleInt</a>)
+
+        <a class="method-permalink" href="#intersect(rectangle:RectangleInt)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Computes the intersection of <code>self</code> with rectangle and places the result in <code>self</code>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>rectangle</strong> a <code><a href="../Cairo/RectangleInt.html">RectangleInt</a></code></li></ul>
+
+<h3><a id="raises" class="anchor" href="#raises">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Raises</h3>
+
+<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with status of <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L203" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="num_rectangles:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>num_rectangles</strong> : Int32
+
+        <a class="method-permalink" href="#num_rectangles:Int32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns the number of rectangles contained in region.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The number of rectangles contained in region.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L89" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rectangle(nth:Int32):RectangleInt-instance-method">
+      <div class="signature">
+        
+        def <strong>rectangle</strong>(nth : Int32) : <a href="../Cairo/RectangleInt.html">RectangleInt</a>
+
+        <a class="method-permalink" href="#rectangle(nth:Int32):RectangleInt-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Stores the nth rectangle from the region in rectangle.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>nth</strong> a number indicating which rectangle should be returned</li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The location for a <code><a href="../Cairo/RectangleInt.html">RectangleInt</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L100" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reference:Region-instance-method">
+      <div class="signature">
+        
+        def <strong>reference</strong> : <a href="../Cairo/Region.html">Region</a>
+
+        <a class="method-permalink" href="#reference:Region-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Increases the reference count on region by one. This prevents region from being destroyed until a matching call
+to <code><a href="../Cairo/Region.html#finalize-instance-method">Region#finalize</a></code> is made.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The referenced <code><a href="../Cairo/Region.html">Region</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="status:Status-instance-method">
+      <div class="signature">
+        
+        def <strong>status</strong> : <a href="../Cairo/Status.html">Status</a>
+
+        <a class="method-permalink" href="#status:Status-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Checks whether an error has previous occurred for this region object.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L72" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subtract(other:Region)-instance-method">
+      <div class="signature">
+        
+        def <strong>subtract</strong>(other : <a href="../Cairo/Region.html">Region</a>)
+
+        <a class="method-permalink" href="#subtract(other:Region)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Subtracts other from <code>self</code> and places the result in <code>self</code>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>other</strong> another <code><a href="../Cairo/Region.html">Region</a></code></li></ul>
+
+<h3><a id="raises" class="anchor" href="#raises">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Raises</h3>
+
+<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with status of <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L164" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subtract(rectangle:RectangleInt)-instance-method">
+      <div class="signature">
+        
+        def <strong>subtract</strong>(rectangle : <a href="../Cairo/RectangleInt.html">RectangleInt</a>)
+
+        <a class="method-permalink" href="#subtract(rectangle:RectangleInt)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Subtracts rectangle from <code>self</code> and places the result in <code>self</code>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>rectangle</strong> a <code><a href="../Cairo/RectangleInt.html">RectangleInt</a></code></li></ul>
+
+<h3><a id="raises" class="anchor" href="#raises">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Raises</h3>
+
+<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with status of <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L177" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_unsafe:LibCairo::PRegionT-instance-method">
+      <div class="signature">
+        
+        def <strong>to_unsafe</strong> : LibCairo::PRegionT
+
+        <a class="method-permalink" href="#to_unsafe:LibCairo::PRegionT-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L263" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="translate(dx:Int32,dy:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>translate</strong>(dx : Int32, dy : Int32)
+
+        <a class="method-permalink" href="#translate(dx:Int32,dy:Int32)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Translates region by <em>(dx, dy)</em>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>dx</strong> Amount to translate in the x direction</li><li><strong>dy</strong> Amount to translate in the y direction</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L147" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="translate(d:Point)-instance-method">
+      <div class="signature">
+        
+        def <strong>translate</strong>(d : <a href="../Cairo/Point.html">Point</a>)
+
+        <a class="method-permalink" href="#translate(d:Point)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L152" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="union(other:Region)-instance-method">
+      <div class="signature">
+        
+        def <strong>union</strong>(other : <a href="../Cairo/Region.html">Region</a>)
+
+        <a class="method-permalink" href="#union(other:Region)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Computes the union of <code>self</code> with other and places the result in <code>self</code>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>other</strong> another <code><a href="../Cairo/Region.html">Region</a></code></li></ul>
+
+<h3><a id="raises" class="anchor" href="#raises">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Raises</h3>
+
+<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with status of <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L216" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="union(rectangle:RectangleInt)-instance-method">
+      <div class="signature">
+        
+        def <strong>union</strong>(rectangle : <a href="../Cairo/RectangleInt.html">RectangleInt</a>)
+
+        <a class="method-permalink" href="#union(rectangle:RectangleInt)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Computes the union of <code>self</code> with rectangle and places the result in <code>self</code>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>rectangle</strong> a RectangleInt</li></ul>
+
+<h3><a id="raises" class="anchor" href="#raises">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Raises</h3>
+
+<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with status of <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L229" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xor(other:Region)-instance-method">
+      <div class="signature">
+        
+        def <strong>xor</strong>(other : <a href="../Cairo/Region.html">Region</a>)
+
+        <a class="method-permalink" href="#xor(other:Region)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Computes the exclusive difference of <code>self</code> with other and places the result in <code>self</code>.
+That is, <code>self</code> will be set to contain all areas that are either in <code>self</code> or in other , but not in both.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>other</strong> another <code><a href="../Cairo/Region.html">Region</a></code></li></ul>
+
+<h3><a id="raises" class="anchor" href="#raises">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Raises</h3>
+
+<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with status of <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L243" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xor_rectangle(rectangle:RectangleInt)-instance-method">
+      <div class="signature">
+        
+        def <strong>xor_rectangle</strong>(rectangle : <a href="../Cairo/RectangleInt.html">RectangleInt</a>)
+
+        <a class="method-permalink" href="#xor_rectangle(rectangle:RectangleInt)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Computes the exclusive difference of <code>self</code> with rectangle and places the result in <code>self</code>.
+That is, <code>self</code> will be set to contain all areas that are either in <code>self</code> or in rectangle, but not in both.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>rectangle</strong> a <code><a href="../Cairo/RectangleInt.html">RectangleInt</a></code></li></ul>
+
+<h3><a id="raises" class="anchor" href="#raises">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Raises</h3>
+
+<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with status of <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/region.cr#L257" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

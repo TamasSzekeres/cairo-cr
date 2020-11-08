@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="cairo">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="cairo">
+  <title>Cairo::Status - cairo HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cairo
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cairo/Cairo" data-name="cairo">
+      <a href="../Cairo.html">Cairo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cairo/Cairo/Antialias" data-name="cairo::antialias">
+      <a href="../Cairo/Antialias.html">Antialias</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/C" data-name="cairo::c">
+      <a href="../Cairo/C.html">C</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ColorStop" data-name="cairo::colorstop">
+      <a href="../Cairo/ColorStop.html">ColorStop</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Content" data-name="cairo::content">
+      <a href="../Cairo/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Context" data-name="cairo::context">
+      <a href="../Cairo/Context.html">Context</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Device" data-name="cairo::device">
+      <a href="../Cairo/Device.html">Device</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/DeviceType" data-name="cairo::devicetype">
+      <a href="../Cairo/DeviceType.html">DeviceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extend" data-name="cairo::extend">
+      <a href="../Cairo/Extend.html">Extend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extents" data-name="cairo::extents">
+      <a href="../Cairo/Extents.html">Extents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FillRule" data-name="cairo::fillrule">
+      <a href="../Cairo/FillRule.html">FillRule</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Filter" data-name="cairo::filter">
+      <a href="../Cairo/Filter.html">Filter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontExtents" data-name="cairo::fontextents">
+      <a href="../Cairo/FontExtents.html">FontExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontFace" data-name="cairo::fontface">
+      <a href="../Cairo/FontFace.html">FontFace</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontOptions" data-name="cairo::fontoptions">
+      <a href="../Cairo/FontOptions.html">FontOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontSlant" data-name="cairo::fontslant">
+      <a href="../Cairo/FontSlant.html">FontSlant</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontType" data-name="cairo::fonttype">
+      <a href="../Cairo/FontType.html">FontType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontWeight" data-name="cairo::fontweight">
+      <a href="../Cairo/FontWeight.html">FontWeight</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Format" data-name="cairo::format">
+      <a href="../Cairo/Format.html">Format</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Glyph" data-name="cairo::glyph">
+      <a href="../Cairo/Glyph.html">Glyph</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/GlyphArray" data-name="cairo::glypharray">
+      <a href="../Cairo/GlyphArray.html">GlyphArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintMetrics" data-name="cairo::hintmetrics">
+      <a href="../Cairo/HintMetrics.html">HintMetrics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintStyle" data-name="cairo::hintstyle">
+      <a href="../Cairo/HintStyle.html">HintStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineCap" data-name="cairo::linecap">
+      <a href="../Cairo/LineCap.html">LineCap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineJoin" data-name="cairo::linejoin">
+      <a href="../Cairo/LineJoin.html">LineJoin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Matrix" data-name="cairo::matrix">
+      <a href="../Cairo/Matrix.html">Matrix</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Operator" data-name="cairo::operator">
+      <a href="../Cairo/Operator.html">Operator</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Path" data-name="cairo::path">
+      <a href="../Cairo/Path.html">Path</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathData" data-name="cairo::pathdata">
+      <a href="../Cairo/PathData.html">PathData</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataHeader" data-name="cairo::pathdataheader">
+      <a href="../Cairo/PathDataHeader.html">PathDataHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataType" data-name="cairo::pathdatatype">
+      <a href="../Cairo/PathDataType.html">PathDataType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Pattern" data-name="cairo::pattern">
+      <a href="../Cairo/Pattern.html">Pattern</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
+      <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfSurface" data-name="cairo::pdfsurface">
+      <a href="../Cairo/PdfSurface.html">PdfSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfVersion" data-name="cairo::pdfversion">
+      <a href="../Cairo/PdfVersion.html">PdfVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Point" data-name="cairo::point">
+      <a href="../Cairo/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsLevel" data-name="cairo::pslevel">
+      <a href="../Cairo/PsLevel.html">PsLevel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsSurface" data-name="cairo::pssurface">
+      <a href="../Cairo/PsSurface.html">PsSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Rectangle" data-name="cairo::rectangle">
+      <a href="../Cairo/Rectangle.html">Rectangle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleInt" data-name="cairo::rectangleint">
+      <a href="../Cairo/RectangleInt.html">RectangleInt</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleList" data-name="cairo::rectanglelist">
+      <a href="../Cairo/RectangleList.html">RectangleList</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Region" data-name="cairo::region">
+      <a href="../Cairo/Region.html">Region</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RegionOverlap" data-name="cairo::regionoverlap">
+      <a href="../Cairo/RegionOverlap.html">RegionOverlap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RGBA" data-name="cairo::rgba">
+      <a href="../Cairo/RGBA.html">RGBA</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScaledFont" data-name="cairo::scaledfont">
+      <a href="../Cairo/ScaledFont.html">ScaledFont</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Script" data-name="cairo::script">
+      <a href="../Cairo/Script.html">Script</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptInterpreter" data-name="cairo::scriptinterpreter">
+      <a href="../Cairo/ScriptInterpreter.html">ScriptInterpreter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptMode" data-name="cairo::scriptmode">
+      <a href="../Cairo/ScriptMode.html">ScriptMode</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cairo/Cairo/Status" data-name="cairo::status">
+      <a href="../Cairo/Status.html">Status</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/StatusException" data-name="cairo::statusexception">
+      <a href="../Cairo/StatusException.html">StatusException</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SubpixelOrder" data-name="cairo::subpixelorder">
+      <a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Surface" data-name="cairo::surface">
+      <a href="../Cairo/Surface.html">Surface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceObserverMode" data-name="cairo::surfaceobservermode">
+      <a href="../Cairo/SurfaceObserverMode.html">SurfaceObserverMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceType" data-name="cairo::surfacetype">
+      <a href="../Cairo/SurfaceType.html">SurfaceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgSurface" data-name="cairo::svgsurface">
+      <a href="../Cairo/SvgSurface.html">SvgSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgVersion" data-name="cairo::svgversion">
+      <a href="../Cairo/SvgVersion.html">SvgVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TeeSurface" data-name="cairo::teesurface">
+      <a href="../Cairo/TeeSurface.html">TeeSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextCluster" data-name="cairo::textcluster">
+      <a href="../Cairo/TextCluster.html">TextCluster</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterArray" data-name="cairo::textclusterarray">
+      <a href="../Cairo/TextClusterArray.html">TextClusterArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterFlags" data-name="cairo::textclusterflags">
+      <a href="../Cairo/TextClusterFlags.html">TextClusterFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextExtents" data-name="cairo::textextents">
+      <a href="../Cairo/TextExtents.html">TextExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/UserDataKey" data-name="cairo::userdatakey">
+      <a href="../Cairo/UserDataKey.html">UserDataKey</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/XlibSurface" data-name="cairo::xlibsurface">
+      <a href="../Cairo/XlibSurface.html">XlibSurface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> Cairo::Status
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Cairo uses a single status type to represent all kinds of errors. A status value of <code><a href="../Cairo/Status.html#Success">Success</a></code> represents no error and has an integer
+value of zero. All other status values represent an error.</p>
+
+<p>Cairo's error handling is designed to be easy to use and safe. All major cairo objects retain an error status internally
+which can be queried anytime by the users using <code>status</code> calls. In the mean time,
+it is safe to call all cairo functions normally even if the underlying object is in an error status.
+This means that no error handling code is required before or after each individual cairo function call.</p>
+
+<p><code><a href="../Cairo/Status.html">Status</a></code> is used to indicate errors that can occur when using <code><a href="../Cairo/Context.html">Context</a></code>. In some cases it is returned directly by functions.
+But when using <code><a href="../Cairo/Context.html">Context</a></code>, the last error, if any, is stored in the context and can be retrieved with <code><a href="../Cairo/Context.html#status:Status-instance-method">Context#status</a></code>.</p>
+
+<p>New entries may be added in future versions. Use <code><a href="../Cairo/Status.html#to_string:String-instance-method">Status#to_string</a></code> to get a human-readable representation of an error message.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L19" target="_blank">
+        cairo/status.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Success">
+        <strong>Success</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>No error has occurred.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="NoMemory">
+        <strong>NoMemory</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Out of memory.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidRestore">
+        <strong>InvalidRestore</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p><code><a href="../Cairo/Context.html#restore-instance-method">Context#restore</a></code> called without matching <code><a href="../Cairo/Context.html#save-instance-method">Context#save</a></code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidPopGroup">
+        <strong>InvalidPopGroup</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>No saved group to pop, i.e. <code><a href="../Cairo/Context.html#pop_group:Pattern-instance-method">Context#pop_group</a></code> without matching <code><a href="../Cairo/Context.html#push_group-instance-method">Context#push_group</a></code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="NoCurrentPoint">
+        <strong>NoCurrentPoint</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>No current point defined.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidMatrix">
+        <strong>InvalidMatrix</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid matrix (not invertible).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidStatus">
+        <strong>InvalidStatus</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value for an input <code><a href="../Cairo/Status.html">Status</a></code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="NullPointer">
+        <strong>NullPointer</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>NULL pointer.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidString">
+        <strong>InvalidString</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Input string not valid UTF-8.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidPathData">
+        <strong>InvalidPathData</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Input path data not valid.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="ReadError">
+        <strong>ReadError</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Error while reading from input stream.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="WriteError">
+        <strong>WriteError</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Error while writing to output stream.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="SurfaceFinished">
+        <strong>SurfaceFinished</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Target surface has been finished.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="SurfaceTypeMismatch">
+        <strong>SurfaceTypeMismatch</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface type is not appropriate for the operation.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PatternTypeMismatch">
+        <strong>PatternTypeMismatch</strong> = <code><span class="n">14</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The pattern type is not appropriate for the operation.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidContent">
+        <strong>InvalidContent</strong> = <code><span class="n">15</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value for an input <code><a href="../Cairo/Content.html">Content</a></code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidFormat">
+        <strong>InvalidFormat</strong> = <code><span class="n">16</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value for an input <code><a href="../Cairo/Format.html">Format</a></code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidVisual">
+        <strong>InvalidVisual</strong> = <code><span class="n">17</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value for an input <code>Visual</code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="FileNotFound">
+        <strong>FileNotFound</strong> = <code><span class="n">18</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>File not found.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidDash">
+        <strong>InvalidDash</strong> = <code><span class="n">19</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value for a dash setting.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidDscComment">
+        <strong>InvalidDscComment</strong> = <code><span class="n">20</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value for a DSC comment.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidIndex">
+        <strong>InvalidIndex</strong> = <code><span class="n">21</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid index passed to getter.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="ClipNotRepresentable">
+        <strong>ClipNotRepresentable</strong> = <code><span class="n">22</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Clip region not representable in desired format.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="TempFileRrror">
+        <strong>TempFileRrror</strong> = <code><span class="n">23</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Error creating or writing to a temporary file.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidStride">
+        <strong>InvalidStride</strong> = <code><span class="n">24</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value for stride.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="FontTypeMismatch">
+        <strong>FontTypeMismatch</strong> = <code><span class="n">25</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The font type is not appropriate for the operation.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="UserFontImmutable">
+        <strong>UserFontImmutable</strong> = <code><span class="n">26</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The user-font is immutable.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="UserFontError">
+        <strong>UserFontError</strong> = <code><span class="n">27</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Error occurred in a user-font callback function.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="NegativeCount">
+        <strong>NegativeCount</strong> = <code><span class="n">28</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Negative number used where it is not allowed.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidClusters">
+        <strong>InvalidClusters</strong> = <code><span class="n">29</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Input clusters do not represent the accompanying text and glyph array.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidSlant">
+        <strong>InvalidSlant</strong> = <code><span class="n">30</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value for an input <code><a href="../Cairo/FontSlant.html">FontSlant</a></code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidWeight">
+        <strong>InvalidWeight</strong> = <code><span class="n">31</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value for an input <code><a href="../Cairo/FontWeight.html">FontWeight</a></code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidSize">
+        <strong>InvalidSize</strong> = <code><span class="n">32</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid value (typically too big) for the size of the input (surface, pattern, etc.).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="UserFontNotImplemented">
+        <strong>UserFontNotImplemented</strong> = <code><span class="n">33</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>User-font method not implemented.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DeviceTypeMismatch">
+        <strong>DeviceTypeMismatch</strong> = <code><span class="n">34</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The device type is not appropriate for the operation.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DeviceError">
+        <strong>DeviceError</strong> = <code><span class="n">35</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>An operation to the device caused an unspecified error.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="InvalidMeshConstruction">
+        <strong>InvalidMeshConstruction</strong> = <code><span class="n">36</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>A mesh pattern construction operation was used outside of a
+<code><a href="../Cairo/Pattern.html#begin_patch-instance-method">Pattern#begin_patch</a></code>/<code><a href="../Cairo/Pattern.html#end_patch-instance-method">Pattern#end_patch</a></code> pair.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="DeviceFinished">
+        <strong>DeviceFinished</strong> = <code><span class="n">37</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Target device has been finished.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Jbig2GlobalMissing">
+        <strong>Jbig2GlobalMissing</strong> = <code><span class="n">38</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p><code><a href="../Cairo.html">Cairo</a>::C::LibCairo::MIME_TYPE_JBIG2_GLOBAL_ID</code> has been used on at least one image but no image provided <code><a href="../Cairo.html">Cairo</a>::C::LibCairo::MIME_TYPE_JBIG2_GLOBAL</code>.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="PngError">
+        <strong>PngError</strong> = <code><span class="n">39</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Error occurred in libpng while reading from or writing to a PNG file.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="FreeTypeError">
+        <strong>FreeTypeError</strong> = <code><span class="n">40</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Error occurred in libfreetype.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Win32GdiError">
+        <strong>Win32GdiError</strong> = <code><span class="n">41</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Error occurred in the Windows Graphics Device Interface.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="TagError">
+        <strong>TagError</strong> = <code><span class="n">42</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Invalid tag name, attributes, or nesting.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="LastStatus">
+        <strong>LastStatus</strong> = <code><span class="n">43</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>This is a special value indicating the number of status values defined in this enumeration.
+When using this value, NOTE that the version of cairo at run-time may have additional status values defined
+than the value of this symbol at compile-time.</p>
+      </dd>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#clip_not_representable?-instance-method" class="signature"><strong>#clip_not_representable?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#device_error?-instance-method" class="signature"><strong>#device_error?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#device_finished?-instance-method" class="signature"><strong>#device_finished?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#device_type_mismatch?-instance-method" class="signature"><strong>#device_type_mismatch?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#file_not_found?-instance-method" class="signature"><strong>#file_not_found?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#font_type_mismatch?-instance-method" class="signature"><strong>#font_type_mismatch?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#free_type_error?-instance-method" class="signature"><strong>#free_type_error?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_clusters?-instance-method" class="signature"><strong>#invalid_clusters?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_content?-instance-method" class="signature"><strong>#invalid_content?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_dash?-instance-method" class="signature"><strong>#invalid_dash?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_dsc_comment?-instance-method" class="signature"><strong>#invalid_dsc_comment?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_format?-instance-method" class="signature"><strong>#invalid_format?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_index?-instance-method" class="signature"><strong>#invalid_index?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_matrix?-instance-method" class="signature"><strong>#invalid_matrix?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_mesh_construction?-instance-method" class="signature"><strong>#invalid_mesh_construction?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_path_data?-instance-method" class="signature"><strong>#invalid_path_data?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_pop_group?-instance-method" class="signature"><strong>#invalid_pop_group?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_restore?-instance-method" class="signature"><strong>#invalid_restore?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_size?-instance-method" class="signature"><strong>#invalid_size?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_slant?-instance-method" class="signature"><strong>#invalid_slant?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_status?-instance-method" class="signature"><strong>#invalid_status?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_stride?-instance-method" class="signature"><strong>#invalid_stride?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_string?-instance-method" class="signature"><strong>#invalid_string?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_visual?-instance-method" class="signature"><strong>#invalid_visual?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invalid_weight?-instance-method" class="signature"><strong>#invalid_weight?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#jbig2_global_missing?-instance-method" class="signature"><strong>#jbig2_global_missing?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#last_status?-instance-method" class="signature"><strong>#last_status?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#negative_count?-instance-method" class="signature"><strong>#negative_count?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#no_current_point?-instance-method" class="signature"><strong>#no_current_point?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#no_memory?-instance-method" class="signature"><strong>#no_memory?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#null_pointer?-instance-method" class="signature"><strong>#null_pointer?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pattern_type_mismatch?-instance-method" class="signature"><strong>#pattern_type_mismatch?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#png_error?-instance-method" class="signature"><strong>#png_error?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#read_error?-instance-method" class="signature"><strong>#read_error?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#success?-instance-method" class="signature"><strong>#success?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#surface_finished?-instance-method" class="signature"><strong>#surface_finished?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#surface_type_mismatch?-instance-method" class="signature"><strong>#surface_type_mismatch?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tag_error?-instance-method" class="signature"><strong>#tag_error?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#temp_file_rrror?-instance-method" class="signature"><strong>#temp_file_rrror?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_string:String-instance-method" class="signature"><strong>#to_string</strong> : String</a>
+        
+          <div class="summary"><p>Provides a human-readable description.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_font_error?-instance-method" class="signature"><strong>#user_font_error?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_font_immutable?-instance-method" class="signature"><strong>#user_font_immutable?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_font_not_implemented?-instance-method" class="signature"><strong>#user_font_not_implemented?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#win32_gdi_error?-instance-method" class="signature"><strong>#win32_gdi_error?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#write_error?-instance-method" class="signature"><strong>#write_error?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="clip_not_representable?-instance-method">
+      <div class="signature">
+        
+        def <strong>clip_not_representable?</strong>
+
+        <a class="method-permalink" href="#clip_not_representable?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="device_error?-instance-method">
+      <div class="signature">
+        
+        def <strong>device_error?</strong>
+
+        <a class="method-permalink" href="#device_error?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L126" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="device_finished?-instance-method">
+      <div class="signature">
+        
+        def <strong>device_finished?</strong>
+
+        <a class="method-permalink" href="#device_finished?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L133" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="device_type_mismatch?-instance-method">
+      <div class="signature">
+        
+        def <strong>device_type_mismatch?</strong>
+
+        <a class="method-permalink" href="#device_type_mismatch?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L123" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="file_not_found?-instance-method">
+      <div class="signature">
+        
+        def <strong>file_not_found?</strong>
+
+        <a class="method-permalink" href="#file_not_found?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="font_type_mismatch?-instance-method">
+      <div class="signature">
+        
+        def <strong>font_type_mismatch?</strong>
+
+        <a class="method-permalink" href="#font_type_mismatch?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L96" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="free_type_error?-instance-method">
+      <div class="signature">
+        
+        def <strong>free_type_error?</strong>
+
+        <a class="method-permalink" href="#free_type_error?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L142" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_clusters?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_clusters?</strong>
+
+        <a class="method-permalink" href="#invalid_clusters?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L108" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_content?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_content?</strong>
+
+        <a class="method-permalink" href="#invalid_content?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L66" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_dash?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_dash?</strong>
+
+        <a class="method-permalink" href="#invalid_dash?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L78" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_dsc_comment?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_dsc_comment?</strong>
+
+        <a class="method-permalink" href="#invalid_dsc_comment?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L81" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_format?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_format?</strong>
+
+        <a class="method-permalink" href="#invalid_format?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L69" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_index?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_index?</strong>
+
+        <a class="method-permalink" href="#invalid_index?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_matrix?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_matrix?</strong>
+
+        <a class="method-permalink" href="#invalid_matrix?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_mesh_construction?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_mesh_construction?</strong>
+
+        <a class="method-permalink" href="#invalid_mesh_construction?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_path_data?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_path_data?</strong>
+
+        <a class="method-permalink" href="#invalid_path_data?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_pop_group?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_pop_group?</strong>
+
+        <a class="method-permalink" href="#invalid_pop_group?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_restore?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_restore?</strong>
+
+        <a class="method-permalink" href="#invalid_restore?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_size?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_size?</strong>
+
+        <a class="method-permalink" href="#invalid_size?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L117" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_slant?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_slant?</strong>
+
+        <a class="method-permalink" href="#invalid_slant?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L111" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_status?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_status?</strong>
+
+        <a class="method-permalink" href="#invalid_status?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_stride?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_stride?</strong>
+
+        <a class="method-permalink" href="#invalid_stride?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L93" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_string?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_string?</strong>
+
+        <a class="method-permalink" href="#invalid_string?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_visual?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_visual?</strong>
+
+        <a class="method-permalink" href="#invalid_visual?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L72" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invalid_weight?-instance-method">
+      <div class="signature">
+        
+        def <strong>invalid_weight?</strong>
+
+        <a class="method-permalink" href="#invalid_weight?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L114" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="jbig2_global_missing?-instance-method">
+      <div class="signature">
+        
+        def <strong>jbig2_global_missing?</strong>
+
+        <a class="method-permalink" href="#jbig2_global_missing?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="last_status?-instance-method">
+      <div class="signature">
+        
+        def <strong>last_status?</strong>
+
+        <a class="method-permalink" href="#last_status?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L153" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="negative_count?-instance-method">
+      <div class="signature">
+        
+        def <strong>negative_count?</strong>
+
+        <a class="method-permalink" href="#negative_count?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L105" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="no_current_point?-instance-method">
+      <div class="signature">
+        
+        def <strong>no_current_point?</strong>
+
+        <a class="method-permalink" href="#no_current_point?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="no_memory?-instance-method">
+      <div class="signature">
+        
+        def <strong>no_memory?</strong>
+
+        <a class="method-permalink" href="#no_memory?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="null_pointer?-instance-method">
+      <div class="signature">
+        
+        def <strong>null_pointer?</strong>
+
+        <a class="method-permalink" href="#null_pointer?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pattern_type_mismatch?-instance-method">
+      <div class="signature">
+        
+        def <strong>pattern_type_mismatch?</strong>
+
+        <a class="method-permalink" href="#pattern_type_mismatch?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L63" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="png_error?-instance-method">
+      <div class="signature">
+        
+        def <strong>png_error?</strong>
+
+        <a class="method-permalink" href="#png_error?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L139" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read_error?-instance-method">
+      <div class="signature">
+        
+        def <strong>read_error?</strong>
+
+        <a class="method-permalink" href="#read_error?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="success?-instance-method">
+      <div class="signature">
+        
+        def <strong>success?</strong>
+
+        <a class="method-permalink" href="#success?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L21" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="surface_finished?-instance-method">
+      <div class="signature">
+        
+        def <strong>surface_finished?</strong>
+
+        <a class="method-permalink" href="#surface_finished?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="surface_type_mismatch?-instance-method">
+      <div class="signature">
+        
+        def <strong>surface_type_mismatch?</strong>
+
+        <a class="method-permalink" href="#surface_type_mismatch?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L60" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tag_error?-instance-method">
+      <div class="signature">
+        
+        def <strong>tag_error?</strong>
+
+        <a class="method-permalink" href="#tag_error?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L148" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="temp_file_rrror?-instance-method">
+      <div class="signature">
+        
+        def <strong>temp_file_rrror?</strong>
+
+        <a class="method-permalink" href="#temp_file_rrror?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L90" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_string:String-instance-method">
+      <div class="signature">
+        
+        def <strong>to_string</strong> : String
+
+        <a class="method-permalink" href="#to_string:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Provides a human-readable description.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L156" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_font_error?-instance-method">
+      <div class="signature">
+        
+        def <strong>user_font_error?</strong>
+
+        <a class="method-permalink" href="#user_font_error?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L102" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_font_immutable?-instance-method">
+      <div class="signature">
+        
+        def <strong>user_font_immutable?</strong>
+
+        <a class="method-permalink" href="#user_font_immutable?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L99" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_font_not_implemented?-instance-method">
+      <div class="signature">
+        
+        def <strong>user_font_not_implemented?</strong>
+
+        <a class="method-permalink" href="#user_font_not_implemented?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L120" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="win32_gdi_error?-instance-method">
+      <div class="signature">
+        
+        def <strong>win32_gdi_error?</strong>
+
+        <a class="method-permalink" href="#win32_gdi_error?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L145" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="write_error?-instance-method">
+      <div class="signature">
+        
+        def <strong>write_error?</strong>
+
+        <a class="method-permalink" href="#write_error?-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/status.cr#L54" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

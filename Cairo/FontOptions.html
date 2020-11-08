@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="crystal_docs.project_name" content="cairo">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="cairo">
+  <title>Cairo::FontOptions - cairo HEAD</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cairo
+        </a>
+      </h1>
+
+      <span class="project-version">
+        HEAD
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cairo/Cairo" data-name="cairo">
+      <a href="../Cairo.html">Cairo</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cairo/Cairo/Antialias" data-name="cairo::antialias">
+      <a href="../Cairo/Antialias.html">Antialias</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/C" data-name="cairo::c">
+      <a href="../Cairo/C.html">C</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ColorStop" data-name="cairo::colorstop">
+      <a href="../Cairo/ColorStop.html">ColorStop</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Content" data-name="cairo::content">
+      <a href="../Cairo/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Context" data-name="cairo::context">
+      <a href="../Cairo/Context.html">Context</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Device" data-name="cairo::device">
+      <a href="../Cairo/Device.html">Device</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/DeviceType" data-name="cairo::devicetype">
+      <a href="../Cairo/DeviceType.html">DeviceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extend" data-name="cairo::extend">
+      <a href="../Cairo/Extend.html">Extend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Extents" data-name="cairo::extents">
+      <a href="../Cairo/Extents.html">Extents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FillRule" data-name="cairo::fillrule">
+      <a href="../Cairo/FillRule.html">FillRule</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Filter" data-name="cairo::filter">
+      <a href="../Cairo/Filter.html">Filter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontExtents" data-name="cairo::fontextents">
+      <a href="../Cairo/FontExtents.html">FontExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontFace" data-name="cairo::fontface">
+      <a href="../Cairo/FontFace.html">FontFace</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cairo/Cairo/FontOptions" data-name="cairo::fontoptions">
+      <a href="../Cairo/FontOptions.html">FontOptions</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontSlant" data-name="cairo::fontslant">
+      <a href="../Cairo/FontSlant.html">FontSlant</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontType" data-name="cairo::fonttype">
+      <a href="../Cairo/FontType.html">FontType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/FontWeight" data-name="cairo::fontweight">
+      <a href="../Cairo/FontWeight.html">FontWeight</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Format" data-name="cairo::format">
+      <a href="../Cairo/Format.html">Format</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Glyph" data-name="cairo::glyph">
+      <a href="../Cairo/Glyph.html">Glyph</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/GlyphArray" data-name="cairo::glypharray">
+      <a href="../Cairo/GlyphArray.html">GlyphArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintMetrics" data-name="cairo::hintmetrics">
+      <a href="../Cairo/HintMetrics.html">HintMetrics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/HintStyle" data-name="cairo::hintstyle">
+      <a href="../Cairo/HintStyle.html">HintStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineCap" data-name="cairo::linecap">
+      <a href="../Cairo/LineCap.html">LineCap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/LineJoin" data-name="cairo::linejoin">
+      <a href="../Cairo/LineJoin.html">LineJoin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Matrix" data-name="cairo::matrix">
+      <a href="../Cairo/Matrix.html">Matrix</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Operator" data-name="cairo::operator">
+      <a href="../Cairo/Operator.html">Operator</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Path" data-name="cairo::path">
+      <a href="../Cairo/Path.html">Path</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathData" data-name="cairo::pathdata">
+      <a href="../Cairo/PathData.html">PathData</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataHeader" data-name="cairo::pathdataheader">
+      <a href="../Cairo/PathDataHeader.html">PathDataHeader</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PathDataType" data-name="cairo::pathdatatype">
+      <a href="../Cairo/PathDataType.html">PathDataType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Pattern" data-name="cairo::pattern">
+      <a href="../Cairo/Pattern.html">Pattern</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
+      <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfSurface" data-name="cairo::pdfsurface">
+      <a href="../Cairo/PdfSurface.html">PdfSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfVersion" data-name="cairo::pdfversion">
+      <a href="../Cairo/PdfVersion.html">PdfVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Point" data-name="cairo::point">
+      <a href="../Cairo/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsLevel" data-name="cairo::pslevel">
+      <a href="../Cairo/PsLevel.html">PsLevel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PsSurface" data-name="cairo::pssurface">
+      <a href="../Cairo/PsSurface.html">PsSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Rectangle" data-name="cairo::rectangle">
+      <a href="../Cairo/Rectangle.html">Rectangle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleInt" data-name="cairo::rectangleint">
+      <a href="../Cairo/RectangleInt.html">RectangleInt</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RectangleList" data-name="cairo::rectanglelist">
+      <a href="../Cairo/RectangleList.html">RectangleList</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Region" data-name="cairo::region">
+      <a href="../Cairo/Region.html">Region</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RegionOverlap" data-name="cairo::regionoverlap">
+      <a href="../Cairo/RegionOverlap.html">RegionOverlap</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/RGBA" data-name="cairo::rgba">
+      <a href="../Cairo/RGBA.html">RGBA</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScaledFont" data-name="cairo::scaledfont">
+      <a href="../Cairo/ScaledFont.html">ScaledFont</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Script" data-name="cairo::script">
+      <a href="../Cairo/Script.html">Script</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptInterpreter" data-name="cairo::scriptinterpreter">
+      <a href="../Cairo/ScriptInterpreter.html">ScriptInterpreter</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/ScriptMode" data-name="cairo::scriptmode">
+      <a href="../Cairo/ScriptMode.html">ScriptMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Status" data-name="cairo::status">
+      <a href="../Cairo/Status.html">Status</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/StatusException" data-name="cairo::statusexception">
+      <a href="../Cairo/StatusException.html">StatusException</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SubpixelOrder" data-name="cairo::subpixelorder">
+      <a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/Surface" data-name="cairo::surface">
+      <a href="../Cairo/Surface.html">Surface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceObserverMode" data-name="cairo::surfaceobservermode">
+      <a href="../Cairo/SurfaceObserverMode.html">SurfaceObserverMode</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SurfaceType" data-name="cairo::surfacetype">
+      <a href="../Cairo/SurfaceType.html">SurfaceType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgSurface" data-name="cairo::svgsurface">
+      <a href="../Cairo/SvgSurface.html">SvgSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/SvgVersion" data-name="cairo::svgversion">
+      <a href="../Cairo/SvgVersion.html">SvgVersion</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TeeSurface" data-name="cairo::teesurface">
+      <a href="../Cairo/TeeSurface.html">TeeSurface</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextCluster" data-name="cairo::textcluster">
+      <a href="../Cairo/TextCluster.html">TextCluster</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterArray" data-name="cairo::textclusterarray">
+      <a href="../Cairo/TextClusterArray.html">TextClusterArray</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextClusterFlags" data-name="cairo::textclusterflags">
+      <a href="../Cairo/TextClusterFlags.html">TextClusterFlags</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/TextExtents" data-name="cairo::textextents">
+      <a href="../Cairo/TextExtents.html">TextExtents</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/UserDataKey" data-name="cairo::userdatakey">
+      <a href="../Cairo/UserDataKey.html">UserDataKey</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/XlibSurface" data-name="cairo::xlibsurface">
+      <a href="../Cairo/XlibSurface.html">XlibSurface</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Cairo::FontOptions
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Cairo/FontOptions.html">Cairo::FontOptions</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The font options specify how fonts should be rendered.
+Most of the time the font options implied by a surface are just right and do not need any changes,
+but for pixel-based targets tweaking font options may result in superior output on a particular display.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L9" target="_blank">
+        cairo/font_options.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new(font_options:LibCairo::PFontOptionsT)-class-method" class="signature"><strong>.new</strong>(font_options : LibCairo::PFontOptionsT)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+          <div class="summary"><p>Allocates a new font options object with all options initialized to default values.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#antialias:Antialias-instance-method" class="signature"><strong>#antialias</strong> : Antialias</a>
+        
+          <div class="summary"><p>Gets the antialiasing mode for the font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#antialias=(antialias:Antialias)-instance-method" class="signature"><strong>#antialias=</strong>(antialias : Antialias)</a>
+        
+          <div class="summary"><p>Sets the antialiasing mode for the font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dup:FontOptions-instance-method" class="signature"><strong>#dup</strong> : FontOptions</a>
+        
+          <div class="summary"><p>Allocates a new font options object copying the option values from original.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#equals(other:FontOptions):Bool-instance-method" class="signature"><strong>#equals</strong>(other : FontOptions) : Bool</a>
+        
+          <div class="summary"><p>Compares two font options objects for equality.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#finalize-instance-method" class="signature"><strong>#finalize</strong></a>
+        
+          <div class="summary"><p>Destroys a <code><a href="../Cairo/FontOptions.html">FontOptions</a></code> object created with <code>FontOptions#initialize</code> or <code><a href="../Cairo/FontOptions.html#dup:FontOptions-instance-method">FontOptions#dup</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hash:UInt64-instance-method" class="signature"><strong>#hash</strong> : UInt64</a>
+        
+          <div class="summary"><p>Compute a hash for the font options object; this value will be useful when storing an object containing a <code><a href="../Cairo/FontOptions.html">FontOptions</a></code> in a hash table.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hint_metrics:HintMetrics-instance-method" class="signature"><strong>#hint_metrics</strong> : HintMetrics</a>
+        
+          <div class="summary"><p>Gets the metrics hinting mode for the font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hint_metrics=(hint_metrics:HintMetrics)-instance-method" class="signature"><strong>#hint_metrics=</strong>(hint_metrics : HintMetrics)</a>
+        
+          <div class="summary"><p>Sets the metrics hinting mode for the font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hint_style:HintStyle-instance-method" class="signature"><strong>#hint_style</strong> : HintStyle</a>
+        
+          <div class="summary"><p>Gets the hint style for font outlines for the font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hint_style=(hint_style:HintStyle)-instance-method" class="signature"><strong>#hint_style=</strong>(hint_style : HintStyle)</a>
+        
+          <div class="summary"><p>Sets the hint style for font outlines for the font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#merge(other:FontOptions)-instance-method" class="signature"><strong>#merge</strong>(other : FontOptions)</a>
+        
+          <div class="summary"><p>Merges non-default options from other into options, replacing existing values.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#status:Status-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        
+          <div class="summary"><p>Checks whether an error has previously occurred for this font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subpixel_order:SubpixelOrder-instance-method" class="signature"><strong>#subpixel_order</strong> : SubpixelOrder</a>
+        
+          <div class="summary"><p>Gets the subpixel order for the font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#subpixel_order=(subpixel_order:SubpixelOrder)-instance-method" class="signature"><strong>#subpixel_order=</strong>(subpixel_order : SubpixelOrder)</a>
+        
+          <div class="summary"><p>Sets the subpixel order for the font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_unsafe:LibCairo::PFontOptionsT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PFontOptionsT</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#variations:String-instance-method" class="signature"><strong>#variations</strong> : String</a>
+        
+          <div class="summary"><p>Gets the OpenType font variations for the font options object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#variations=(variation:String)-instance-method" class="signature"><strong>#variations=</strong>(variation : String)</a>
+        
+          <div class="summary"><p>Sets the OpenType font variations for the font options object.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(font_options:LibCairo::PFontOptionsT)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(font_options : LibCairo::PFontOptionsT)
+
+        <a class="method-permalink" href="#new(font_options:LibCairo::PFontOptionsT)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L21" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Allocates a new font options object with all options initialized to default values.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>A newly allocated <code><a href="../Cairo/FontOptions.html">FontOptions</a></code>. Free with <code><a href="../Cairo/FontOptions.html#finalize-instance-method">FontOptions#finalize</a></code>.
+This function always returns a valid pointer; if memory cannot be allocated,
+then a special error object is returned where all operations on the object do nothing.
+You can check for this with <code><a href="../Cairo/FontOptions.html#status:Status-instance-method">FontOptions#status</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="antialias:Antialias-instance-method">
+      <div class="signature">
+        
+        def <strong>antialias</strong> : <a href="../Cairo/Antialias.html">Antialias</a>
+
+        <a class="method-permalink" href="#antialias:Antialias-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Gets the antialiasing mode for the font options object.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The antialiasing mode.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L82" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="antialias=(antialias:Antialias)-instance-method">
+      <div class="signature">
+        
+        def <strong>antialias=</strong>(antialias : <a href="../Cairo/Antialias.html">Antialias</a>)
+
+        <a class="method-permalink" href="#antialias=(antialias:Antialias)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the antialiasing mode for the font options object.
+This specifies the type of antialiasing to do when rendering text.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>antialias</strong> the new antialiasing mode</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L91" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dup:FontOptions-instance-method">
+      <div class="signature">
+        
+        def <strong>dup</strong> : <a href="../Cairo/FontOptions.html">FontOptions</a>
+
+        <a class="method-permalink" href="#dup:FontOptions-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Allocates a new font options object copying the option values from original.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>A newly allocated <code><a href="../Cairo/FontOptions.html">FontOptions</a></code>. Free with <code><a href="../Cairo/FontOptions.html#finalize-instance-method">FontOptions#finalize</a></code>.
+This function always returns a valid pointer; if memory cannot be allocated,
+then a special error object is returned where all operations on the object do nothing.
+You can check for this with <code><a href="../Cairo/FontOptions.html#status:Status-instance-method">FontOptions#status</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="equals(other:FontOptions):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>equals</strong>(other : <a href="../Cairo/FontOptions.html">FontOptions</a>) : Bool
+
+        <a class="method-permalink" href="#equals(other:FontOptions):Bool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Compares two font options objects for equality.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>other</strong> another <code>FontOptinos</code></li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p><code>true</code> if all fields of the two font options objects match. Note that this function will return <code>false</code> if either object is in error.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="finalize-instance-method">
+      <div class="signature">
+        
+        def <strong>finalize</strong>
+
+        <a class="method-permalink" href="#finalize-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Destroys a <code><a href="../Cairo/FontOptions.html">FontOptions</a></code> object created with <code>FontOptions#initialize</code> or <code><a href="../Cairo/FontOptions.html#dup:FontOptions-instance-method">FontOptions#dup</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hash:UInt64-instance-method">
+      <div class="signature">
+        
+        def <strong>hash</strong> : UInt64
+
+        <a class="method-permalink" href="#hash:UInt64-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Compute a hash for the font options object;
+this value will be useful when storing an object containing a <code><a href="../Cairo/FontOptions.html">FontOptions</a></code> in a hash table.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The hash value for the font options object. The return value can be cast to a 32-bit type if a 32-bit hash value is needed.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L74" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hint_metrics:HintMetrics-instance-method">
+      <div class="signature">
+        
+        def <strong>hint_metrics</strong> : <a href="../Cairo/HintMetrics.html">HintMetrics</a>
+
+        <a class="method-permalink" href="#hint_metrics:HintMetrics-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Gets the metrics hinting mode for the font options object.
+See the documentation for <code><a href="../Cairo/HintMetrics.html">HintMetrics</a></code> for full details.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The metrics hinting mode for the font options object.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L143" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hint_metrics=(hint_metrics:HintMetrics)-instance-method">
+      <div class="signature">
+        
+        def <strong>hint_metrics=</strong>(hint_metrics : <a href="../Cairo/HintMetrics.html">HintMetrics</a>)
+
+        <a class="method-permalink" href="#hint_metrics=(hint_metrics:HintMetrics)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the metrics hinting mode for the font options object.
+This controls whether metrics are quantized to integer values in device units.
+See the documentation for <code><a href="../Cairo/HintMetrics.html">HintMetrics</a></code> for full details.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>hint_metrics</strong> the new metrics hinting mode</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L153" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hint_style:HintStyle-instance-method">
+      <div class="signature">
+        
+        def <strong>hint_style</strong> : <a href="../Cairo/HintStyle.html">HintStyle</a>
+
+        <a class="method-permalink" href="#hint_style:HintStyle-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Gets the hint style for font outlines for the font options object.
+See the documentation for <code><a href="../Cairo/HintStyle.html">HintStyle</a></code> for full details.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The hint style for the font options object.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L122" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hint_style=(hint_style:HintStyle)-instance-method">
+      <div class="signature">
+        
+        def <strong>hint_style=</strong>(hint_style : <a href="../Cairo/HintStyle.html">HintStyle</a>)
+
+        <a class="method-permalink" href="#hint_style=(hint_style:HintStyle)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the hint style for font outlines for the font options object.
+This controls whether to fit font outlines to the pixel grid, and if so,
+whether to optimize for fidelity or contrast.
+See the documentation for <code><a href="../Cairo/HintStyle.html">HintStyle</a></code> for full details.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>hint_style</strong> the new hint style</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L133" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="merge(other:FontOptions)-instance-method">
+      <div class="signature">
+        
+        def <strong>merge</strong>(other : <a href="../Cairo/FontOptions.html">FontOptions</a>)
+
+        <a class="method-permalink" href="#merge(other:FontOptions)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Merges non-default options from other into options, replacing existing values.
+This operation can be thought of as somewhat similar to compositing other onto options with the operation of <code><a href="../Cairo/Operator.html#Over">Operator::Over</a></code>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>other</strong> another <code><a href="../Cairo/FontOptions.html">FontOptions</a></code></li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="status:Status-instance-method">
+      <div class="signature">
+        
+        def <strong>status</strong> : <a href="../Cairo/Status.html">Status</a>
+
+        <a class="method-permalink" href="#status:Status-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Checks whether an error has previously occurred for this font options object.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subpixel_order:SubpixelOrder-instance-method">
+      <div class="signature">
+        
+        def <strong>subpixel_order</strong> : <a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a>
+
+        <a class="method-permalink" href="#subpixel_order:SubpixelOrder-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Gets the subpixel order for the font options object.
+See the documentation for <code><a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a></code> for full details.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The subpixel order for the font options object.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L101" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="subpixel_order=(subpixel_order:SubpixelOrder)-instance-method">
+      <div class="signature">
+        
+        def <strong>subpixel_order=</strong>(subpixel_order : <a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a>)
+
+        <a class="method-permalink" href="#subpixel_order=(subpixel_order:SubpixelOrder)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the subpixel order for the font options object.
+The subpixel order specifies the order of color elements within each pixel on the display device
+when rendering with an antialiasing mode of <code><a href="../Cairo/Antialias.html#Subpixel">Antialias::Subpixel</a></code>.
+See the documentation for <code><a href="../Cairo/SubpixelOrder.html">SubpixelOrder</a></code> for full details.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>subpixel_order</strong> the new subpixel order</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L112" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_unsafe:LibCairo::PFontOptionsT-instance-method">
+      <div class="signature">
+        
+        def <strong>to_unsafe</strong> : LibCairo::PFontOptionsT
+
+        <a class="method-permalink" href="#to_unsafe:LibCairo::PFontOptionsT-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L182" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="variations:String-instance-method">
+      <div class="signature">
+        
+        def <strong>variations</strong> : String
+
+        <a class="method-permalink" href="#variations:String-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Gets the OpenType font variations for the font options object.
+See <code><a href="../Cairo/FontOptions.html#variations:String-instance-method">FontOptions#variations</a></code>= for details about the string format.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The font variations for the font options object.
+The returned string belongs to the options and must not be modified.
+It is valid until either the font options object is destroyed or the font variations in this object
+is modified with <code><a href="../Cairo/FontOptions.html#variations=(variation:String)-instance-method">FontOptions#variations=</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L166" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="variations=(variation:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>variations=</strong>(variation : String)
+
+        <a class="method-permalink" href="#variations=(variation:String)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Sets the OpenType font variations for the font options object.
+Font variations are specified as a string with a format that is similar to the CSS font-variation-settings.
+The string contains a comma-separated list of axis assignments,
+which each assignment consists of a 4-character axis name and a value, separated by whitespace and optional equals sign.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>variations</strong> the new font variations</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/font_options.cr#L177" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
