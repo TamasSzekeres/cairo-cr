@@ -1517,6 +1517,10 @@ module Cairo::C
     MIME_TYPE_JBIG2 = "application/x-cairo.jbig2"
     MIME_TYPE_JBIG2_GLOBAL = "application/x-cairo.jbig2-global"
     MIME_TYPE_JBIG2_GLOBAL_ID = "application/x-cairo.jbig2-global-id"
+    MIME_TYPE_CCITT_FAX = "image/g3fax"
+    MIME_TYPE_CCITT_FAX_PARAMS = "application/x-cairo.ccitt.params"
+    MIME_TYPE_EPS = "application/postscript"
+    MIME_TYPE_EPS_PARAMS = "application/x-cairo.eps.params"
 
     fun surface_get_mime_data = cairo_surface_get_mime_data(
       surface : PSurfaceT,
