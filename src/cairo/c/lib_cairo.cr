@@ -772,6 +772,15 @@ module Cairo::C
       options : PFontOptionsT
     ) : HintMetricsT
 
+    fun font_options_get_variations = cairo_font_options_get_variations(
+      options : PFontOptionsT
+    ) : UInt8*
+
+    fun cairo_font_options_set_variations = cairo_font_options_set_variations(
+      options : PFontOptionsT,
+      variations : UInt8*
+    ) : Void
+
     # This interface is for dealing with text as text, not caring about the
     # font object inside the the CairoT.
 
