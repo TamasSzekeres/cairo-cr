@@ -214,6 +214,28 @@ module Cairo
     # Other sections: `%%BeginProlog`, `%%EndProlog`, `%%Page`, `%%Trailer`, `%%EOF`
     #
     # Here is an example sequence showing how this function might be used:
+    # ```
+    # surface = PsSurface.new(filename, width, height)
+    # ...
+    # surface.dsc_comment("%%Title: My excellent document")
+    # surface.dsc_comment("%%Copyright: Copyright (C) 2006 Cairo Lover")
+    # ...
+    # surface.dsc_begin_setup
+    # surface.dsc_comment("%%IncludeFeature: *MediaColor White")
+    # ...
+    # surface.dsc_begin_page_setup
+    # surface.dsc_comment("%%IncludeFeature: *PageSize A3")
+    # surface.dsc_comment("%%IncludeFeature: *InputSlot LargeCapacity")
+    # surface.dsc_comment("%%IncludeFeature: *MediaType Glossy")
+    # surface.dsc_comment("%%IncludeFeature: *MediaColor Blue")
+    # ... draw to first page here ..
+    # cr.show_page
+    # ...
+    # surface.dsc_comment("%%IncludeFeature: *PageSize A5")
+    # ```
+    #
+    # ###Parameters
+    # - **comment** a comment string to be emitted into the PostScript output
     def dsc_comment(comment : String)
       LibCairo.ps_surface_dsc_comment(to_unsafe, comment.to_unsafe)
       self
