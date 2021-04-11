@@ -15,8 +15,15 @@ jobs:
       image: crystallang/crystal
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: shards install
-    - name: Run tests
-      run: crystal spec
+      - name: Download source
+        uses: actions/checkout@v2
+      - name: Install X11 (ubuntu-latest)
+        run: sudo apt-get install libx11-dev
+      - name: Install Cairo (ubuntu-latest)
+        run: sudo apt-get install libcairo2 libcairo2-dev
+      - name: Install Crystal
+        uses: oprypin/install-crystal@v1
+      - name: Install shards
+        run: shards update --ignore-crystal-version
+      - name: Run tests
+        run: crystal spec
