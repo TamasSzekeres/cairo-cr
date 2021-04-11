@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="cairo">
-  <title>Cairo::Rectangle - cairo master</title>
+  <title>Cairo::PdfMetadata - cairo master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -216,7 +216,7 @@
       
     </li>
   
-  <li class=" " data-id="cairo/Cairo/PdfMetadata" data-name="cairo::pdfmetadata">
+  <li class=" current" data-id="cairo/Cairo/PdfMetadata" data-name="cairo::pdfmetadata">
       <a href="../Cairo/PdfMetadata.html">PdfMetadata</a>
       
     </li>
@@ -251,7 +251,7 @@
       
     </li>
   
-  <li class=" current" data-id="cairo/Cairo/Rectangle" data-name="cairo::rectangle">
+  <li class=" " data-id="cairo/Cairo/Rectangle" data-name="cairo::rectangle">
       <a href="../Cairo/Rectangle.html">Rectangle</a>
       
     </li>
@@ -390,12 +390,10 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Cairo::Rectangle
+  <span class="kind">enum</span> Cairo::PdfMetadata
 
 </h1>
 
-
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Cairo/Rectangle.html">Cairo::Rectangle</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -409,9 +407,7 @@
     Overview
   </h2>
 
-  <p>A data structure for holding a rectangle.</p>
-
-<p>Wrapper for <code>LibCairo::RectangleT</code> structure.</p>
+  <p>Used by the <code><a href="../Cairo/PdfSurface.html#set_metadata(metadata:PdfMetadata,value:String)-instance-method">PdfSurface#set_metadata</a></code> function specify the metadata to set.</p>
 
 
 
@@ -436,8 +432,8 @@
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L9" target="_blank">
-        cairo/rectangle.cr
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pdf_metadata.cr#L3" target="_blank">
+        cairo/pdf_metadata.cr
       </a>
     
     <br/>
@@ -445,40 +441,84 @@
 
 
 
-
-
-  <h2>
-    <a id="constructors" class="anchor" href="#constructors">
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>
-    Constructors
-  </h2>
-  <ul class="list-summary">
+      Enum Members
+    </h2>
+  
+  <dl>
     
-      <li class="entry-summary">
-        <a href="#new(x:Float64,y:Float64,width:Float64,height:Float64)-class-method" class="signature"><strong>.new</strong>(x : Float64, y : Float64, width : Float64, height : Float64)</a>
-        
-          <div class="summary"><p>Creates new rectangle using specified coordinates of top left corner (x, y), width and height.</p></div>
-        
-      </li>
+      <dt class="entry-const" id="Title">
+        <strong>Title</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The document title.</p>
+      </dd>
+      
     
-      <li class="entry-summary">
-        <a href="#new(rect:LibCairo::RectangleT)-class-method" class="signature"><strong>.new</strong>(rect : LibCairo::RectangleT)</a>
-        
-          <div class="summary"><p>Creates new rectangle from <code>LibCairo::RectangleT</code>.</p></div>
-        
-      </li>
+      <dt class="entry-const" id="Author">
+        <strong>Author</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The document author.</p>
+      </dd>
+      
     
-      <li class="entry-summary">
-        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
-        
-          <div class="summary"><p>Creates uninitialized rectangle.</p></div>
-        
-      </li>
+      <dt class="entry-const" id="Subject">
+        <strong>Subject</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The document subject.</p>
+      </dd>
+      
     
-  </ul>
+      <dt class="entry-const" id="Keywords">
+        <strong>Keywords</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The document keywords.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Creator">
+        <strong>Creator</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The document creator.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="CreateDate">
+        <strong>CreateDate</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The document creation date.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="ModDate">
+        <strong>ModDate</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The document modification date.</p>
+      </dd>
+      
+    
+  </dl>
+
+
 
 
 
@@ -495,72 +535,37 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#height:Float64-instance-method" class="signature"><strong>#height</strong> : Float64</a>
-        
-          <div class="summary"><p>Height of the rectangle.</p></div>
+        <a href="#author?-instance-method" class="signature"><strong>#author?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height=(height:Float64)-instance-method" class="signature"><strong>#height=</strong>(height : Float64)</a>
-        
-          <div class="summary"><p>Setter for height.</p></div>
+        <a href="#create_date?-instance-method" class="signature"><strong>#create_date?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_cairo_rectange:LibCairo::RectangleT-instance-method" class="signature"><strong>#to_cairo_rectange</strong> : LibCairo::RectangleT</a>
-        
-          <div class="summary"><p>Returns undelying <code>LibCairo::RectangleT</code> structure.</p></div>
+        <a href="#creator?-instance-method" class="signature"><strong>#creator?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PRectangleT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PRectangleT</a>
-        
-          <div class="summary"><p>Pointer of underlying <code>LibCairo::RectangleT</code> structure.</p></div>
+        <a href="#keywords?-instance-method" class="signature"><strong>#keywords?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width:Float64-instance-method" class="signature"><strong>#width</strong> : Float64</a>
-        
-          <div class="summary"><p>Width of the rectangle.</p></div>
+        <a href="#mod_date?-instance-method" class="signature"><strong>#mod_date?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width=(width:Float64)-instance-method" class="signature"><strong>#width=</strong>(width : Float64)</a>
-        
-          <div class="summary"><p>Setter for width.</p></div>
+        <a href="#subject?-instance-method" class="signature"><strong>#subject?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#x:Float64-instance-method" class="signature"><strong>#x</strong> : Float64</a>
-        
-          <div class="summary"><p>X coordinate of the left side of the rectangle.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#x=(x:Float64)-instance-method" class="signature"><strong>#x=</strong>(x : Float64)</a>
-        
-          <div class="summary"><p>Setter for X coordinate.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#y:Float64-instance-method" class="signature"><strong>#y</strong> : Float64</a>
-        
-          <div class="summary"><p>Y coordinate of the the top side of the rectangle.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#y=(y:Float64)-instance-method" class="signature"><strong>#y=</strong>(y : Float64)</a>
-        
-          <div class="summary"><p>Setter for Y coordinate.</p></div>
+        <a href="#title?-instance-method" class="signature"><strong>#title?</strong></a>
         
       </li>
     
@@ -602,81 +607,18 @@
 
 
   
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
-
-  <h2>
-    <a id="constructor-detail" class="anchor" href="#constructor-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructor Detail
-  </h2>
-  
-    <div class="entry-detail" id="new(x:Float64,y:Float64,width:Float64,height:Float64)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(x : Float64, y : Float64, width : Float64, height : Float64)
-
-        <a class="method-permalink" href="#new(x:Float64,y:Float64,width:Float64,height:Float64)-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Creates new rectangle using specified coordinates of top left corner (x, y), width and height.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L16" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new(rect:LibCairo::RectangleT)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(rect : LibCairo::RectangleT)
-
-        <a class="method-permalink" href="#new(rect:LibCairo::RectangleT)-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Creates new rectangle from <code>LibCairo::RectangleT</code>.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L25" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>
-
-        <a class="method-permalink" href="#new-class-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Creates uninitialized rectangle.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L11" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
 
 
 
@@ -691,212 +633,114 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="height:Float64-instance-method">
+    <div class="entry-detail" id="author?-instance-method">
       <div class="signature">
         
-        def <strong>height</strong> : Float64
+        def <strong>author?</strong>
 
-        <a class="method-permalink" href="#height:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#author?-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>Height of the rectangle.</p>
-        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pdf_metadata.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="height=(height:Float64)-instance-method">
+    <div class="entry-detail" id="create_date?-instance-method">
       <div class="signature">
         
-        def <strong>height=</strong>(height : Float64)
+        def <strong>create_date?</strong>
 
-        <a class="method-permalink" href="#height=(height:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#create_date?-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>Setter for height.</p>
-        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pdf_metadata.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="to_cairo_rectange:LibCairo::RectangleT-instance-method">
+    <div class="entry-detail" id="creator?-instance-method">
       <div class="signature">
         
-        def <strong>to_cairo_rectange</strong> : LibCairo::RectangleT
+        def <strong>creator?</strong>
 
-        <a class="method-permalink" href="#to_cairo_rectange:LibCairo::RectangleT-instance-method">#</a>
+        <a class="method-permalink" href="#creator?-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>Returns undelying <code>LibCairo::RectangleT</code> structure.</p>
-        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pdf_metadata.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="to_unsafe:LibCairo::PRectangleT-instance-method">
+    <div class="entry-detail" id="keywords?-instance-method">
       <div class="signature">
         
-        def <strong>to_unsafe</strong> : LibCairo::PRectangleT
+        def <strong>keywords?</strong>
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PRectangleT-instance-method">#</a>
+        <a class="method-permalink" href="#keywords?-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>Pointer of underlying <code>LibCairo::RectangleT</code> structure.</p>
-        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pdf_metadata.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="width:Float64-instance-method">
+    <div class="entry-detail" id="mod_date?-instance-method">
       <div class="signature">
         
-        def <strong>width</strong> : Float64
+        def <strong>mod_date?</strong>
 
-        <a class="method-permalink" href="#width:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#mod_date?-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>Width of the rectangle.</p>
-        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pdf_metadata.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="width=(width:Float64)-instance-method">
+    <div class="entry-detail" id="subject?-instance-method">
       <div class="signature">
         
-        def <strong>width=</strong>(width : Float64)
+        def <strong>subject?</strong>
 
-        <a class="method-permalink" href="#width=(width:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#subject?-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>Setter for width.</p>
-        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pdf_metadata.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="x:Float64-instance-method">
+    <div class="entry-detail" id="title?-instance-method">
       <div class="signature">
         
-        def <strong>x</strong> : Float64
+        def <strong>title?</strong>
 
-        <a class="method-permalink" href="#x:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#title?-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>X coordinate of the left side of the rectangle.</p>
-        </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L29" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="x=(x:Float64)-instance-method">
-      <div class="signature">
-        
-        def <strong>x=</strong>(x : Float64)
-
-        <a class="method-permalink" href="#x=(x:Float64)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Setter for X coordinate.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L34" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="y:Float64-instance-method">
-      <div class="signature">
-        
-        def <strong>y</strong> : Float64
-
-        <a class="method-permalink" href="#y:Float64-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Y coordinate of the the top side of the rectangle.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L39" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="y=(y:Float64)-instance-method">
-      <div class="signature">
-        
-        def <strong>y=</strong>(y : Float64)
-
-        <a class="method-permalink" href="#y=(y:Float64)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Setter for Y coordinate.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/rectangle.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pdf_metadata.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>

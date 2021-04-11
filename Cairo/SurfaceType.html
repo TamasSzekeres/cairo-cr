@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.34.0">
-<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
+
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
 
-<svg class="hidden">
-  <symbol id="octicon-link" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-  </symbol>
-</svg>
-
-  <meta id="repository-name" content="cairo">
-  <title>Cairo::SurfaceType - cairo HEAD</title>
+  <meta name="repository-name" content="cairo">
+  <title>Cairo::SurfaceType - cairo master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
 </head>
 <body>
 
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
@@ -39,12 +39,12 @@
       </h1>
 
       <span class="project-version">
-        HEAD
+        master
       </span>
     </div>
   </div>
 
-  <div class="search-results" class="hidden">
+  <div class="search-results hidden">
     <ul class="search-list"></ul>
   </div>
 
@@ -213,6 +213,16 @@
   
   <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
       <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfMetadata" data-name="cairo::pdfmetadata">
+      <a href="../Cairo/PdfMetadata.html">PdfMetadata</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfOutlineFlags" data-name="cairo::pdfoutlineflags">
+      <a href="../Cairo/PdfOutlineFlags.html">PdfOutlineFlags</a>
       
     </li>
   
@@ -388,6 +398,32 @@
 
 
 
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p><code><a href="../Cairo/SurfaceType.html">SurfaceType</a></code> is used to describe the type of a given surface.
+The surface types are also known as "backends" or "surface backends" within cairo.</p>
+
+<p>The type of a surface is determined by the function used to create it,
+which will generally be of the form <code>Surface#initialize</code>, (though see <code><a href="../Cairo/Surface.html#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method">Surface#create_similar</a></code> as well).</p>
+
+<p>The surface type can be queried with <code><a href="../Cairo/Surface.html#type:SurfaceType-instance-method">Surface#type</a></code>.</p>
+
+<p>The various <code><a href="../Cairo/Surface.html">Surface</a></code> functions can be used with surfaces of any type,
+but some backends also provide type-specific functions that must only
+be called with a surface of the appropriate type. These functions have names
+that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#width:Int32-instance-method">Surface#width</a></code>.</p>
+
+<p>The behavior of calling a type-specific function with a surface of the wrong type is undefined.</p>
+
+<p>New entries may be added in future versions.</p>
+
 
 
 
@@ -411,7 +447,7 @@
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L2" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L18" target="_blank">
         cairo/surface_type.cr
       </a>
     
@@ -436,125 +472,225 @@
         <strong>Image</strong> = <code><span class="n">0</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type image.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="PDF">
         <strong>PDF</strong> = <code><span class="n">1</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type pdf.</p>
+      </dd>
       
     
       <dt class="entry-const" id="PS">
         <strong>PS</strong> = <code><span class="n">2</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type ps.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="XLib">
         <strong>XLib</strong> = <code><span class="n">3</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type xlib.</p>
+      </dd>
       
     
       <dt class="entry-const" id="XCB">
         <strong>XCB</strong> = <code><span class="n">4</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type xcb.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="Glitz">
         <strong>Glitz</strong> = <code><span class="n">5</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type glitz.</p>
+      </dd>
       
     
       <dt class="entry-const" id="Quartz">
         <strong>Quartz</strong> = <code><span class="n">6</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type quartz.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="Win32">
         <strong>Win32</strong> = <code><span class="n">7</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type win32.</p>
+      </dd>
       
     
       <dt class="entry-const" id="BEOS">
         <strong>BEOS</strong> = <code><span class="n">8</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type beos.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="DirectFB">
         <strong>DirectFB</strong> = <code><span class="n">9</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type directfb.</p>
+      </dd>
       
     
       <dt class="entry-const" id="SVG">
         <strong>SVG</strong> = <code><span class="n">10</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type svg.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="OS2">
         <strong>OS2</strong> = <code><span class="n">11</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type os2.</p>
+      </dd>
       
     
       <dt class="entry-const" id="Win32Printing">
         <strong>Win32Printing</strong> = <code><span class="n">12</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is a win32 printing surface.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="QuartzImage">
         <strong>QuartzImage</strong> = <code><span class="n">13</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type quartz_image.</p>
+      </dd>
       
     
       <dt class="entry-const" id="Script">
         <strong>Script</strong> = <code><span class="n">14</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type scrip.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="Qt">
         <strong>Qt</strong> = <code><span class="n">15</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type Qt.</p>
+      </dd>
       
     
       <dt class="entry-const" id="Recording">
         <strong>Recording</strong> = <code><span class="n">16</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type recording.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="VG">
         <strong>VG</strong> = <code><span class="n">17</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is a OpenVG surface.</p>
+      </dd>
       
     
       <dt class="entry-const" id="GL">
         <strong>GL</strong> = <code><span class="n">18</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type OpenGL.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="DRM">
         <strong>DRM</strong> = <code><span class="n">19</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type Direct Render Manager.</p>
+      </dd>
       
     
       <dt class="entry-const" id="Tee">
         <strong>Tee</strong> = <code><span class="n">20</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type 'tee' (a multiplexing surface).</p>
+      </dd>
+      
     
       <dt class="entry-const" id="XML">
         <strong>XML</strong> = <code><span class="n">21</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The surface is of type XML (for debugging).</p>
+      </dd>
       
     
       <dt class="entry-const" id="Skia">
         <strong>Skia</strong> = <code><span class="n">22</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is of type Skia.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="Subsurface">
         <strong>Subsurface</strong> = <code><span class="n">23</span></code>
       </dt>
       
+      <dd class="entry-const-doc">
+        <p>The surface is a subsurface created with <code><a href="../Cairo/Surface.html#create_for_rectangle(x:Float64,y:Float64,width:Float64,height:Float64):Surface-instance-method">Surface#create_for_rectangle</a></code>.</p>
+      </dd>
+      
     
       <dt class="entry-const" id="COGL">
         <strong>COGL</strong> = <code><span class="n">24</span></code>
       </dt>
+      
+      <dd class="entry-const-doc">
+        <p>This surface is of type Cogl.</p>
+      </dd>
       
     
   </dl>
@@ -775,7 +911,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -791,7 +927,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L92" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -807,7 +943,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -823,7 +959,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L22" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -839,7 +975,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -855,7 +991,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -871,7 +1007,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -887,7 +1023,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -903,7 +1039,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -919,7 +1055,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L26" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -935,7 +1071,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -951,7 +1087,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -967,7 +1103,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -983,7 +1119,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -999,7 +1135,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1015,7 +1151,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L86" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1031,7 +1167,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L89" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1047,7 +1183,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1063,7 +1199,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L80" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1079,7 +1215,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1095,7 +1231,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1111,7 +1247,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1127,7 +1263,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1143,7 +1279,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1159,7 +1295,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/surface_type.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/surface_type.cr#L83" target="_blank">View source</a>]
         
       </div>
     </div>

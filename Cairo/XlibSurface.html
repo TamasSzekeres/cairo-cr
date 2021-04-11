@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.34.0">
-<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
+
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
 
-<svg class="hidden">
-  <symbol id="octicon-link" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-  </symbol>
-</svg>
-
-  <meta id="repository-name" content="cairo">
-  <title>Cairo::XlibSurface - cairo HEAD</title>
+  <meta name="repository-name" content="cairo">
+  <title>Cairo::XlibSurface - cairo master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
 </head>
 <body>
 
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
@@ -39,12 +39,12 @@
       </h1>
 
       <span class="project-version">
-        HEAD
+        master
       </span>
     </div>
   </div>
 
-  <div class="search-results" class="hidden">
+  <div class="search-results hidden">
     <ul class="search-list"></ul>
   </div>
 
@@ -213,6 +213,16 @@
   
   <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
       <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfMetadata" data-name="cairo::pdfmetadata">
+      <a href="../Cairo/PdfMetadata.html">PdfMetadata</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfOutlineFlags" data-name="cairo::pdfoutlineflags">
+      <a href="../Cairo/PdfOutlineFlags.html">PdfOutlineFlags</a>
       
     </li>
   
@@ -413,7 +423,7 @@
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">
         cairo/xlib_surface.cr
       </a>
     
@@ -478,6 +488,8 @@
       <li class="entry-summary">
         <a href="#height:Int32-instance-method" class="signature"><strong>#height</strong> : Int32</a>
         
+          <div class="summary"><p>Get the height of the image surface in pixels.</p></div>
+        
       </li>
     
       <li class="entry-summary">
@@ -502,6 +514,8 @@
     
       <li class="entry-summary">
         <a href="#width:Int32-instance-method" class="signature"><strong>#width</strong> : Int32</a>
+        
+          <div class="summary"><p>Get the width of the image surface in pixels.</p></div>
         
       </li>
     
@@ -548,8 +562,8 @@
     create_similar_image</a>, 
     
   
-    <a href="../Cairo/Surface.html#data:String-instance-method" class="tooltip">
-      <span>data : String</span>
+    <a href="../Cairo/Surface.html#data:Pointer(UInt8)-instance-method" class="tooltip">
+      <span>data : Pointer(UInt8)</span>
     data</a>, 
     
   
@@ -616,11 +630,6 @@
     <a href="../Cairo/Surface.html#format:Format-instance-method" class="tooltip">
       <span>format : Format</span>
     format</a>, 
-    
-  
-    <a href="../Cairo/Surface.html#get_type:SurfaceType-instance-method" class="tooltip">
-      <span>get_type : SurfaceType</span>
-    get_type</a>, 
     
   
     <a href="../Cairo/Surface.html#has_show_text_glyphs?:Bool-instance-method" class="tooltip">
@@ -763,6 +772,11 @@
     to_unsafe</a>, 
     
   
+    <a href="../Cairo/Surface.html#type:SurfaceType-instance-method" class="tooltip">
+      <span>type : SurfaceType</span>
+    type</a>, 
+    
+  
     <a href="../Cairo/Surface.html#unmap_image(image:Surface)-instance-method" class="tooltip">
       <span>unmap_image(image : Surface)</span>
     unmap_image</a>, 
@@ -849,7 +863,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -865,7 +879,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -895,7 +909,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -911,7 +925,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -927,7 +941,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -940,10 +954,27 @@
         <a class="method-permalink" href="#height:Int32-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class <a href="../Cairo/Surface.html">Cairo::Surface</a>
+            </div>
+          
+          <p>Get the height of the image surface in pixels.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The height of the surface in pixels.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -959,7 +990,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -975,7 +1006,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -991,7 +1022,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1007,7 +1038,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1020,10 +1051,27 @@
         <a class="method-permalink" href="#width:Int32-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class <a href="../Cairo/Surface.html">Cairo::Surface</a>
+            </div>
+          
+          <p>Get the width of the image surface in pixels.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The width of the surface in pixels.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>

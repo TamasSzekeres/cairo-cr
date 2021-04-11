@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.34.0">
-<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
+
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
 
-<svg class="hidden">
-  <symbol id="octicon-link" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-  </symbol>
-</svg>
-
-  <meta id="repository-name" content="cairo">
-  <title>Cairo::Matrix - cairo HEAD</title>
+  <meta name="repository-name" content="cairo">
+  <title>Cairo::Matrix - cairo master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
 </head>
 <body>
 
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
@@ -39,12 +39,12 @@
       </h1>
 
       <span class="project-version">
-        HEAD
+        master
       </span>
     </div>
   </div>
 
-  <div class="search-results" class="hidden">
+  <div class="search-results hidden">
     <ul class="search-list"></ul>
   </div>
 
@@ -213,6 +213,16 @@
   
   <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
       <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfMetadata" data-name="cairo::pdfmetadata">
+      <a href="../Cairo/PdfMetadata.html">PdfMetadata</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfOutlineFlags" data-name="cairo::pdfoutlineflags">
+      <a href="../Cairo/PdfOutlineFlags.html">PdfOutlineFlags</a>
       
     </li>
   
@@ -401,6 +411,9 @@
 
   <p>Wrapper for LibCairo::MatrixT</p>
 
+<p><code><a href="../Cairo/Matrix.html">Matrix</a></code> is used throughout cairo to convert between different coordinate spaces.
+A <code><a href="../Cairo/Matrix.html">Matrix</a></code> holds an affine transformation, such as a scale, rotation, shear, or a combination of these.</p>
+
 
 
 
@@ -424,7 +437,7 @@
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L7" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L10" target="_blank">
         cairo/matrix.cr
       </a>
     
@@ -479,45 +492,63 @@
       <li class="entry-summary">
         <a href="#init(xx:Float64,yx:Float64,xy:Float64,yy:Float64,x0:Float64,y0:Float64)-instance-method" class="signature"><strong>#init</strong>(xx : Float64, yx : Float64, xy : Float64, yy : Float64, x0 : Float64, y0 : Float64)</a>
         
+          <div class="summary"><p>Sets matrix to be the affine transformation given by <em>xx</em>, <em>yx</em>, <em>xy</em>, <em>yy</em>, <em>x0</em>, <em>y0</em>.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#init_identity-instance-method" class="signature"><strong>#init_identity</strong></a>
+        
+          <div class="summary"><p>Modifies matrix to be an identity transformation.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#init_rotate(radians:Float64)-instance-method" class="signature"><strong>#init_rotate</strong>(radians : Float64)</a>
         
+          <div class="summary"><p>Initialized matrix to a transformation that rotates by radians.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#init_scale(sx:Float64,sy:Float64)-instance-method" class="signature"><strong>#init_scale</strong>(sx : Float64, sy : Float64)</a>
+        
+          <div class="summary"><p>Initializes matrix to a transformation that scales by <em>sx</em> and <em>sy</em> in the <em>X</em> and <em>Y</em> dimensions, respectively.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#init_translate(tx:Float64,ty:Float64)-instance-method" class="signature"><strong>#init_translate</strong>(tx : Float64, ty : Float64)</a>
         
+          <div class="summary"><p>Initializes matrix to a transformation that translates by <em>tx</em> and <em>ty</em> in the <em>X</em> and <em>Y</em> dimensions, respectively.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#invert:Status-instance-method" class="signature"><strong>#invert</strong> : Status</a>
+        
+          <div class="summary"><p>Changes matrix to be the inverse of its original value.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#multiply(a:Matrix,b:Matrix)-instance-method" class="signature"><strong>#multiply</strong>(a : Matrix, b : Matrix)</a>
         
+          <div class="summary"><p>Multiplies the affine transformations in <em>a</em> and <em>b</em> together and returns the result.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#rotate(radians:Float64)-instance-method" class="signature"><strong>#rotate</strong>(radians : Float64)</a>
         
+          <div class="summary"><p>Applies rotation by radians to the transformation in matrix.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#scale(sx:Float64,sy:Float64)-instance-method" class="signature"><strong>#scale</strong>(sx : Float64, sy : Float64)</a>
+        
+          <div class="summary"><p>Applies scaling by <em>sx</em>, <em>sy</em> to the transformation in matrix.</p></div>
         
       </li>
     
@@ -538,15 +569,21 @@
       <li class="entry-summary">
         <a href="#transform_distance(d:Point):Point-instance-method" class="signature"><strong>#transform_distance</strong>(d : Point) : Point</a>
         
+          <div class="summary"><p>Transforms the distance vector <em>(dx, dy)</em> by matrix.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#transform_point(p:Point):Point-instance-method" class="signature"><strong>#transform_point</strong>(p : Point) : Point</a>
         
+          <div class="summary"><p>Transforms the point <em>(x, y)</em> by matrix.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#translate(tx:Float64,ty:Float64)-instance-method" class="signature"><strong>#translate</strong>(tx : Float64, ty : Float64)</a>
+        
+          <div class="summary"><p>Applies a translation by <em>tx</em>, <em>ty</em> to the transformation in matrix.</p></div>
         
       </li>
     
@@ -671,7 +708,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -687,7 +724,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -703,7 +740,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -730,10 +767,26 @@
         <a class="method-permalink" href="#init(xx:Float64,yx:Float64,xy:Float64,yy:Float64,x0:Float64,y0:Float64)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Sets matrix to be the affine transformation given by <em>xx</em>, <em>yx</em>, <em>xy</em>, <em>yy</em>, <em>x0</em>, <em>y0</em>. The transformation is given by:</p>
+
+<pre><code class="language-crystal">x_new <span class="o">=</span> xx <span class="o">*</span> x <span class="o">+</span> xy <span class="o">*</span> y <span class="o">+</span> x0
+y_new <span class="o">=</span> yx <span class="o">*</span> x <span class="o">+</span> yy <span class="o">*</span> y <span class="o">+</span> y0</code></pre>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>xx</strong> xx component of the affine transformation</li><li><strong>yx</strong> yx component of the affine transformation</li><li><strong>xy</strong> xy component of the affine transformation</li><li><strong>yy</strong> yy component of the affine transformation</li><li><strong>x0</strong> X translation component of the affine transformation</li><li><strong>y0</strong> Y translation component of the affine transformation</li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L75" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L91" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -746,10 +799,15 @@
         <a class="method-permalink" href="#init_identity-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Modifies matrix to be an identity transformation.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L80" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L97" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -762,10 +820,26 @@
         <a class="method-permalink" href="#init_rotate(radians:Float64)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Initialized matrix to a transformation that rotates by radians.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>radians</strong> angle of rotation, in radians.
+The direction of rotation is defined such that positive angles rotate in the direction
+from the positive X axis toward the positive Y axis. With the default axis orientation of cairo,
+positive angles rotate in a clockwise direction.</li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L95" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L129" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -778,10 +852,23 @@
         <a class="method-permalink" href="#init_scale(sx:Float64,sy:Float64)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Initializes matrix to a transformation that scales by <em>sx</em> and <em>sy</em> in the <em>X</em> and <em>Y</em> dimensions, respectively.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>sx</strong> scale factor in the X direction</li><li><strong>sy</strong> scale factor in the Y direction</li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L90" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L117" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -794,10 +881,23 @@
         <a class="method-permalink" href="#init_translate(tx:Float64,ty:Float64)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Initializes matrix to a transformation that translates by <em>tx</em> and <em>ty</em> in the <em>X</em> and <em>Y</em> dimensions, respectively.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>tx</strong> amount to translate in the X direction</li><li><strong>ty</strong> amount to translate in the Y direction</li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L85" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L107" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -810,10 +910,25 @@
         <a class="method-permalink" href="#invert:Status-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Changes matrix to be the inverse of its original value. Not all transformation matrices have inverses;
+if the matrix collapses points together (it is degenerate), then it has no inverse and this function will fail.</p>
+
+<h2><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h2>
+
+<p>If matrix has an inverse, modifies matrix to be the inverse matrix and returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code>. Otherwise, returns <code><a href="../Cairo/Status.html#InvalidMatrix">Status::InvalidMatrix</a></code>.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L115" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L178" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -826,10 +941,27 @@
         <a class="method-permalink" href="#multiply(a:Matrix,b:Matrix)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Multiplies the affine transformations in <em>a</em> and <em>b</em> together and returns the result.
+The effect of the resulting transformation is to first apply the transformation in <em>a</em> to the coordinates
+and then apply the transformation in <em>b</em> to the coordinates.</p>
+
+<p>It is allowable for result to be identical to either <em>a</em> or <em>b</em>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>a</strong> a <code><a href="../Cairo/Matrix.html">Matrix</a></code></li><li><strong>b</strong> a <code><a href="../Cairo/Matrix.html">Matrix</a></code></li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L119" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L191" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -842,10 +974,28 @@
         <a class="method-permalink" href="#rotate(radians:Float64)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Applies rotation by radians to the transformation in matrix.
+The effect of the new transformation is to first rotate the coordinates by radians,
+then apply the original transformation to the coordinates.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>radians</strong> angle of rotation, in radians.
+The direction of rotation is defined such that positive angles rotate in the direction
+from the positive X axis toward the positive Y axis. With the default axis orientation of cairo,
+positive angles rotate in a clockwise direction.</li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L110" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L167" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -858,10 +1008,25 @@
         <a class="method-permalink" href="#scale(sx:Float64,sy:Float64)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Applies scaling by <em>sx</em>, <em>sy</em> to the transformation in matrix.
+The effect of the new transformation is to first scale the coordinates by <em>sx</em> and <em>sy</em>,
+then apply the original transformation to the coordinates.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>sx</strong> scale factor in the X direction</li><li><strong>sy</strong> scale factor in the Y direction</li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L105" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L153" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -882,7 +1047,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L141" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -903,7 +1068,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L146" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L244" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -916,10 +1081,40 @@
         <a class="method-permalink" href="#transform_distance(d:Point):Point-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Transforms the distance vector <em>(dx, dy)</em> by matrix.
+This is similar to <code><a href="../Cairo/Matrix.html#transform_point(p:Point):Point-instance-method">Matrix#transform_point</a></code> except that the translation components
+of the transformation are ignored. The calculation of the returned vector is as follows:</p>
+
+<pre><code class="language-crystal">dx2 <span class="o">=</span> dx1 <span class="o">*</span> a <span class="o">+</span> dy1 <span class="o">*</span> c
+dy2 <span class="o">=</span> dx1 <span class="o">*</span> b <span class="o">+</span> dy1 <span class="o">*</span> d</code></pre>
+
+<p>Affine transformations are position invariant, so the same vector always transforms to the same vector.
+If <em>(x1, y1)</em> transforms to <em>(x2, y2)</em> then <em>(x1 + dx1, y1 + dy1)</em> will transform
+to <em>(x1 + dx2, y1 + dy2)</em> for all values of <em>x1</em> and <em>x2</em>.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>dx</strong> X component of a distance vector.</li><li><strong>dy</strong> Y component of a distance vector.</li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>Transformed vector.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L124" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L214" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -932,10 +1127,31 @@
         <a class="method-permalink" href="#transform_point(p:Point):Point-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Transforms the point <em>(x, y)</em> by matrix.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>x</strong> X position.</li><li><strong>y</strong> Y position.</li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>Transformed vector.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L132" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L230" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -948,10 +1164,25 @@
         <a class="method-permalink" href="#translate(tx:Float64,ty:Float64)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Applies a translation by <em>tx</em>, <em>ty</em> to the transformation in matrix.
+The effect of the new transformation is to first translate the coordinates by <em>tx</em> and <em>ty</em>,
+then apply the original transformation to the coordinates.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>tx</strong> amount to translate in the X direction</li><li><strong>ty</strong> amount to translate in the Y direction</li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L100" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L141" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -967,7 +1198,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -983,7 +1214,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -999,7 +1230,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1015,7 +1246,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1031,7 +1262,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1047,7 +1278,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1063,7 +1294,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L70" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1079,7 +1310,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1095,7 +1326,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L35" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1111,7 +1342,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1127,7 +1358,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1143,7 +1374,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/matrix.cr#L55" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/matrix.cr#L58" target="_blank">View source</a>]
         
       </div>
     </div>

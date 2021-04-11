@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.34.0">
-<meta name="crystal_docs.project_version" content="HEAD">
+<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
+
 
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
 
-<svg class="hidden">
-  <symbol id="octicon-link" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
-  </symbol>
-</svg>
-
-  <meta id="repository-name" content="cairo">
-  <title>Cairo::Pattern - cairo HEAD</title>
+  <meta name="repository-name" content="cairo">
+  <title>Cairo::Pattern - cairo master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
 </head>
 <body>
 
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 <div class="sidebar">
   <div class="sidebar-header">
     <div class="search-box">
@@ -39,12 +39,12 @@
       </h1>
 
       <span class="project-version">
-        HEAD
+        master
       </span>
     </div>
   </div>
 
-  <div class="search-results" class="hidden">
+  <div class="search-results hidden">
     <ul class="search-list"></ul>
   </div>
 
@@ -213,6 +213,16 @@
   
   <li class=" " data-id="cairo/Cairo/PatternType" data-name="cairo::patterntype">
       <a href="../Cairo/PatternType.html">PatternType</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfMetadata" data-name="cairo::pdfmetadata">
+      <a href="../Cairo/PdfMetadata.html">PdfMetadata</a>
+      
+    </li>
+  
+  <li class=" " data-id="cairo/Cairo/PdfOutlineFlags" data-name="cairo::pdfoutlineflags">
+      <a href="../Cairo/PdfOutlineFlags.html">PdfOutlineFlags</a>
       
     </li>
   
@@ -425,7 +435,7 @@ although they can also be used as masks, that is, as the brush too.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L8" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L8" target="_blank">
         cairo/pattern.cr
       </a>
     
@@ -898,7 +908,7 @@ To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#stat
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L81" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -944,7 +954,7 @@ To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#stat
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L104" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L104" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1016,7 +1026,7 @@ with C0 of the patch and their color will be set to be the same as the color of 
 
 <p>Additional patches may be added with additional calls to <code><a href="../Cairo/Pattern.html#begin_patch-instance-method">Pattern#begin_patch</a></code>/<code><a href="../Cairo/Pattern.html#end_patch-instance-method">Pattern#end_patch</a></code>.</p>
 
-<pre><code>pattern <span class="o">=</span> <span class="t">Pattern</span>.create_mesh
+<pre><code class="language-crystal">pattern <span class="o">=</span> <span class="t">Pattern</span>.create_mesh
 
 <span class="c"># Add a Coons patch</span>
 pattern
@@ -1074,7 +1084,7 @@ To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#stat
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L239" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1119,7 +1129,7 @@ To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#stat
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L129" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L129" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1159,7 +1169,7 @@ Knowing the content type ahead of time is used for analysing the operation and p
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1198,7 +1208,7 @@ The caller owns the returned object and should call <code><a href="../Cairo/Patt
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1214,7 +1224,7 @@ The caller owns the returned object and should call <code><a href="../Cairo/Patt
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1257,7 +1267,7 @@ The caller owns the returned object and should call <code><a href="../Cairo/Patt
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L265" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L265" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1297,7 +1307,7 @@ then the pattern will be put into an error status with a status of <code><a href
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L413" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L413" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1337,7 +1347,7 @@ error status with a status of <code><a href="../Cairo/Status.html#PatternTypeMis
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L437" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L437" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1366,7 +1376,7 @@ with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">St
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L451" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L451" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1395,7 +1405,7 @@ with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">St
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L247" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L247" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1424,7 +1434,7 @@ with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">St
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L255" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L255" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1471,7 +1481,7 @@ Values of index range from <em>0</em> to <em>n-1</em> where <em>n</em> is the nu
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L706" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L706" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1508,7 +1518,7 @@ Values of index range from <em>0</em> to <em>n-1</em> where <em>n</em> is the nu
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L720" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L720" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1558,7 +1568,7 @@ If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTyp
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L831" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L831" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1587,7 +1597,7 @@ If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTyp
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L310" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L310" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1616,7 +1626,7 @@ If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTyp
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L318" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L318" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1666,7 +1676,7 @@ If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTyp
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L808" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L808" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1705,7 +1715,7 @@ The caller owns the returned object and should call <code><a href="../Cairo/Patt
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1744,7 +1754,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L488" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L488" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1772,7 +1782,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L464" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L464" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1801,7 +1811,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L626" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L626" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1833,7 +1843,7 @@ See <code><a href="../Cairo/Extend.html">Extend</a></code> for details on the se
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L637" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L637" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1862,7 +1872,7 @@ See <code><a href="../Cairo/Extend.html">Extend</a></code> for details on the se
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L646" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L646" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1883,7 +1893,7 @@ See <code><a href="../Cairo/Extend.html">Extend</a></code> for details on the se
 (for example when using <code><a href="../Cairo/Context.html#set_source_surface(surface:Surface,x:Float64,y:Float64)-instance-method">Context#set_source_surface</a></code>). In these cases, it is convenient to use <code>Context#get_source</code>
 to get access to the pattern that cairo creates implicitly. For example:</p>
 
-<pre><code>context.set_source_surface(image, x, y)
+<pre><code class="language-crystal">context.set_source_surface(image, x, y)
 context.source.filter <span class="o">=</span> <span class="t">Filter</span><span class="t">::</span><span class="t">Nearest</span></code></pre>
 
 <h3><a id="parameters" class="anchor" href="#parameters">
@@ -1898,7 +1908,7 @@ context.source.filter <span class="o">=</span> <span class="t">Filter</span><spa
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L662" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L662" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1920,7 +1930,7 @@ See <code><a href="../Cairo/Pattern.html#reference:Pattern-instance-method">Patt
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1949,7 +1959,7 @@ See <code><a href="../Cairo/Pattern.html#reference:Pattern-instance-method">Patt
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L327" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L327" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1978,7 +1988,7 @@ See <code><a href="../Cairo/Pattern.html#reference:Pattern-instance-method">Patt
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L335" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L335" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2015,7 +2025,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L506" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L506" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2052,7 +2062,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L736" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L736" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2073,7 +2083,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L589" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L589" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2100,7 +2110,7 @@ then coordinates in that flow will be transformed by the inverse of the pattern 
 
 <p>For example, if you want to make a pattern appear twice as large as it does by default the correct code to use is:</p>
 
-<pre><code>matrix.init_scale(<span class="n">0.5</span>, <span class="n">0.5</span>)
+<pre><code class="language-crystal">matrix.init_scale(<span class="n">0.5</span>, <span class="n">0.5</span>)
 pattern.matrix <span class="o">=</span> matrix</code></pre>
 
 <p>Meanwhile, using values of 2.0 rather than 0.5 in the code above would cause the pattern to appear at half of its default size.</p>
@@ -2119,7 +2129,7 @@ pattern.matrix <span class="o">=</span> matrix</code></pre>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L617" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L617" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2154,7 +2164,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L522" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L522" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2194,7 +2204,7 @@ For example it will be 0 during the definition of the first patch.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L772" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L772" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2234,7 +2244,7 @@ If pattern is not a mesh pattern, a path with status <code><a href="../Cairo/Sta
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L788" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L788" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2271,7 +2281,7 @@ If pattern is not a mesh pattern, a path with status <code><a href="../Cairo/Sta
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L755" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L755" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2303,7 +2313,7 @@ This prevents pattern from being destroyed until a matching call to <code><a hre
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L347" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L347" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2324,7 +2334,7 @@ This prevents pattern from being destroyed until a matching call to <code><a hre
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L352" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L352" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2361,7 +2371,7 @@ This prevents pattern from being destroyed until a matching call to <code><a hre
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L674" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L674" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2397,7 +2407,7 @@ a subsection of the sample area, the surface extents should be provided by setti
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L282" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L282" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2433,7 +2443,7 @@ of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidM
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L540" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L540" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2471,7 +2481,7 @@ status with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruct
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L561" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L561" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2509,7 +2519,7 @@ with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">St
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L583" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L583" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2547,7 +2557,7 @@ or when new user data is attached using the same key.</li></ul>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L386" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L386" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2576,7 +2586,7 @@ or when new user data is attached using the same key.</li></ul>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L291" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L291" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2607,7 +2617,7 @@ This is typically invoked whilst printing.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L301" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L301" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2636,7 +2646,7 @@ This is typically invoked whilst printing.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L360" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L360" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2674,7 +2684,7 @@ the caller should call <code><a href="../Cairo/Surface.html#reference:Surface-in
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L688" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L688" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2690,7 +2700,7 @@ the caller should call <code><a href="../Cairo/Surface.html#reference:Surface-in
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L843" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L843" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2711,7 +2721,7 @@ the caller should call <code><a href="../Cairo/Surface.html#reference:Surface-in
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L391" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L391" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2749,7 +2759,7 @@ If no user data has been attached with the given key this function returns Nil.<
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/5f3761340bc4d3038e17f362564a4288d77d3fef/src/cairo/pattern.cr#L372" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c4d0092ad93de1779307154c8a26da52bc8034d/src/cairo/pattern.cr#L372" target="_blank">View source</a>]
         
       </div>
     </div>
