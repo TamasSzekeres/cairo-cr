@@ -6,8 +6,8 @@ require "./features"
     @[Link("cairo")]
     lib LibCairo
       enum ScriptModeT
-        MODE_ASCII
-        MODE_BINARY
+        ModeAscii
+        ModeBinary
       end
 
       fun script_create = cairo_script_create(

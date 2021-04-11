@@ -8,8 +8,8 @@ require "./features"
       # PS-surface functions
 
       enum PsLevelT
-        LEVEL_2
-        LEVEL_3
+        Level2
+        Level3
       end
 
       fun ps_surface_create = cairo_ps_surface_create(
