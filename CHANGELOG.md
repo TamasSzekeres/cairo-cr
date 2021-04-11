@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.0] - 2021-04-11
+- Updated to Crystal 1.0.0
+### Added
+- Documentation
+- Pdf types:
+  - `PdfOutlineFlags`
+  - `PdfMetadata`
+- Pdf functions:
+  - `PdfSurface#set_metadata`
+  - `PdfSurface#set_page_label`
+  - `PdfSurface#set_thumbnail_size`
+
 ## [0.3.1] - 2020-09-23
 - Updated to Crystal 0.35.1
 
@@ -20,7 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - `Context::font_face` function (#6, thanks @bird1079s)
 
-## [0.2.0] - 2017-01-20
+## [0.2.0] - 2018-01-20
 ### Added
 - High level classes and structs.
 ### Changed

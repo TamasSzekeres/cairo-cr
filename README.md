@@ -2,7 +2,7 @@
 
 [Cairo](https://cairographics.org/) bindings for Crystal language.
 
-[![Build Status](https://travis-ci.org/TamasSzekeres/cairo-cr.svg?branch=master)](https://travis-ci.org/TamasSzekeres/cairo-cr)
+[![GitHub release](https://img.shields.io/github/release/TamasSzekeres/cairo-cr.svg)](https://github.com/TamasSzekeres/cairo-cr/releases)
 [![Docs](https://img.shields.io/badge/docs-available-brightgreen.svg)](https://tamasszekeres.github.io/cairo-cr/)
 
 ## Installation
@@ -47,33 +47,31 @@ For more details see the sample in [/examples](/examples) folder.
 Build and run the low-level sample:
 ```shell
   cd examples/sample_window
-  shards install
-  make
-  ./sample_window
+  shards build
+  ./bin/sample_window
 ```
 ![Sample Window](https://raw.githubusercontent.com/TamasSzekeres/cairo-cr/master/examples/screenshot/sample_window.png)
 
 Build and run the high-level sample:
 ```shell
   cd examples/sample_window_hl
-  shards install
-  make
-  ./sample_window_hl
+  shards build
+  ./bin/sample_window
 ```
 
 ## Documentation
 
 You can generate documentation for yourself:
 ```shell
-crystal docs
+crystal doc
 ```
-Then you can open `/doc/index.html` in your browser.
+Then you can open `/docs/index.html` in your browser.
 
-Or you can view last commited documentation online at: [https://tamasszekeres.github.io/cairo-cr/docs/](https://tamasszekeres.github.io/cairo-cr/).
+Or you can view last commited documentation online at: [https://tamasszekeres.github.io/cairo-cr/](https://tamasszekeres.github.io/cairo-cr/).
 
 ## Contributing
 
-1. Fork it ( https://github.com/TamasSzekeres/cairo-cr/fork )
+1. Fork it (<https://github.com/TamasSzekeres/cairo-cr/fork>)
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -81,4 +79,4 @@ Or you can view last commited documentation online at: [https://tamasszekeres.gi
 
 ## Contributors
 
-- [TamasSzekeres](https://github.com/TamasSzekeres) Tamás Szekeres - creator, maintainer
+- [Tamás Szekeres](https://github.com/TamasSzekeres) - creator, maintainer

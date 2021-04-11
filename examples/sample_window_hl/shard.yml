@@ -1,8 +1,11 @@
 name: sample_window_hl
-version: 0.1.0
+version: 1.0.0
+crystal: ~> 1.0
 
 authors:
   - Tamás Szekeres <szektam2@gmail.com>
+
+license: MIT
 
 targets:
   sample_window:
@@ -12,11 +15,9 @@ dependencies:
   x11:
     github: TamasSzekeres/x11-cr
     branch: master
+    version: ~> 1.0
 
   cairo:
     github: TamasSzekeres/cairo-cr
     branch: master
-
-crystal: 0.35.1
-
-license: MIT
+    varsion: ~> 1.0

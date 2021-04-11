@@ -1,16 +1,22 @@
 name: cairo
-version: 0.3.1
+version: 1.0.0
+crystal: ">= 0.35.0"
 
 authors:
   - Tamás Szekeres <szektam2@gmail.com>
 
+license: MIT
+
 description: |
   Cairo bindings for Crystal language.
+
+documentation: https://tamasszekeres.github.io/cairo-cr/
 
 dependencies:
   x11:
     github: TamasSzekeres/x11-cr
+    branch: master
+    version: ~> 1.0
 
-crystal: 0.35.1
-
-license: MIT
+libraries:
+  libcairo: ~> 1.17
