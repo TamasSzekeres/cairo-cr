@@ -38,12 +38,63 @@ module Cairo
       @surface = surface
     end
 
-    # Create Image Surface
+    # Creates an image surface of the specified format and dimensions.
+    # Initially the surface contents are set to 0. (Specifically, within each pixel,
+    # each color or alpha channel belonging to format will be 0. The contents of
+    # bits within a pixel, but not belonging to the given format are undefined).
+    #
+    # ###Parameters
+    # - **format** format of pixels in the surface to create
+    # - **width** width of the surface, in pixels
+    # - **height** height of the surface, in pixels
+    #
+    # ###Returns
+    # A pointer to the newly created surface. The caller owns the surface and
+    # should call `Surface#finalize when done with it.
+    #
+    # This function always returns a valid pointer, but it will return a pointer
+    # to a "nil" surface if an error such as out of memory occurs.
+    # You can use `Surface#status` to check for this.
     def initialize(format : Format, width : Int32, height : Int32)
       @surface = LibCairo.image_surface_create(LibCairo::FormatT.new(format.value), width, height)
     end
 
-    # Create Image Surface for Data
+    # Creates an image surface for the provided pixel data. The output buffer
+    # must be kept around until the `Surface` is destroyed or `Surface#finish`
+    # is called on the surface. The initial contents of data will be used as
+    # the initial image contents; you must explicitly clear the buffer, using,
+    # for example, `Context#rectangle` and `Context#fill` if you want it cleared.
+    #
+    # NOTE: that the stride may be larger than `width * bytes_per_pixel` to
+    # provide proper alignment for each pixel and row. This alignment is
+    # required to allow high-performance rendering within cairo. The correct
+    # way to obtain a legal stride value is to call `Format#stride_for_width`
+    # with the desired format and maximum image width value, and then use the
+    # resulting stride value to allocate the data and to create the image surface.
+    # See `Format#stride_for_width` for example code.
+    #
+    # ###Parameters
+    # - **data** a pointer to a buffer supplied by the application in which to
+    # write contents. This pointer must be suitably aligned for any kind of variable.
+    # - **format** the format of pixels in the buffer
+    # - **width** the width of the image to be stored in the buffer
+    # - **height** the height of the image to be stored in the buffer
+    # - **stride** the number of bytes between the start of rows in the
+    # buffer as allocated. This value should always be computed by `Format#stride_for_width`
+    # before allocating the data buffer.
+    #
+    # ###Returns
+    # A pointer to the newly created surface. The caller owns the surface and
+    # should call `Surface#finalize` when done with it.
+    #
+    # This function always returns a valid pointer, but it will return a
+    # pointer to a "nil" surface in the case of an error such as out of memory
+    # or an invalid stride value. In case of invalid stride value the error
+    # status of the returned surface will be `Status::InvalidStride`.
+    # You can use `Surface#status` to check for this.
+    #
+    # See `Surface#set_user_data` for a means of attaching a
+    # destroy-notification fallback to the surface if necessary.
     def initialize(data : Bytes, format : Format, width : Int32, height : Int32, stride : Int32)
       @surface = LibCairo.image_surface_create_for_data(data.to_unsafe,
         LibCairo::FormatT.new(format.value), width, height, stride)
@@ -51,12 +102,43 @@ module Cairo
 
     {% if Cairo::C::HAS_PNG_FUNCTIONS %}
 
-    # Create Image Surface form PNG
+    # Creates a new image surface and initializes the contents to the given PNG file.
+    #
+    # ###Parameters
+    # - **filename** name of PNG file to load. On Windows this filename is encoded in UTF-8.
+    #
+    # ###Returns
+    # A new `Surface` initialized with the contents of the PNG file,
+    # or a "nil" surface if any error occurred. A nil surface can be checked
+    # for with `Surface#status` which may return one of the following values:
+    #
+    # `Status#NoMemory` `Status#FileNotFound` `Status#ReadError` `Status#PngError`
+    #
+    # Alternatively, you can allow errors to propagate through the drawing
+    # operations and check the status on the context upon completion using
+    # `Context#status`.
     def initialize(filename : String)
       @surface = LibCairo.image_surface_create_from_png(filename.to_unsafe)
     end
 
-    # Create Image Surface form PNG Stream
+    # Creates a new image surface from PNG data read incrementally via the
+    # *read_func* function.
+    #
+    # ###Parameters
+    # - **read_func** function called to read the data of the file
+    # - **closure** data to pass to *read_func*.
+    #
+    # ###Returns
+    # A new `Surface` initialized with the contents of the PNG file or a "nil"
+    # surface if the data read is not a valid PNG image or memory could not be
+    # allocated for the operation. A nil surface can be checked for with
+    # `Surface#status` which may return one of the following values:
+    #
+    # `Status#NoMemory` `Status#ReadError` `Status#PngError`
+    #
+    # Alternatively, you can allow errors to propagate through the drawing
+    # operations and check the status on the context upon completion
+    # using `Context#status`.
     def initialize(read_func : LibCairo::ReadFuncT, closure : Void*)
       @surface = LibCairo.image_surface_create_from_png_stream(read_func, closure)
     end
@@ -300,10 +382,35 @@ module Cairo
 
     {% if Cairo::C::HAS_PNG_FUNCTIONS %}
 
+    # Writes the contents of surface to a new file filename as a PNG image.
+    #
+    # ###Parameters
+    # - **surface** a `Surface` with pixel contents
+    # - **filename** the name of a file to write to;
+    # on Windows this filename is encoded in UTF-8.
+    #
+    # ###Returns
+    # `Status#success` if the PNG file was written successfully.
+    # Otherwise, `Status#NoMemory` if memory could not be allocated for the
+    # operation or `Status#SurfaceTypeMismatch` if the surface does not have
+    # pixel contents, or `Status#WriteError` if an I/O error occurs while
+    # attempting to write the file, or `Status#PngError` if libpng returned an error.
     def write_to_png(filename : String) : Status
       Status.new(LibCairo.surface_write_to_png(@surface, filename.to_unsafe).value)
     end
 
+    # Writes the image surface to the write function.
+    #
+    # ###Parameters
+    # - **surface** a `Surface` with pixel contents
+    # - **write_func** a `Cairo::C::LibCairo::WriteFuncT`
+    # - **closure** closure data for the write function
+    #
+    # ###Returns
+    # `Status#Success` if the PNG file was written successfully.
+    # Otherwise, `Status#NoMemory` is returned if memory could not be allocated
+    # for the operation, `Status#SurfaceTypeMismatch` if the surface does not
+    # have pixel contents, or `Status#PngError` if libpng returned an error.
     def write_to_png_stream(write_func : LibCairo::WriteFuncT, closure : Void*) : Status
       Status.new(LibCairo.surface_write_to_png_stream(@surface, write_func, closure).value)
     end
@@ -574,22 +681,50 @@ module Cairo
       LibCairo.surface_has_show_text_glyphs(@surface) == 1
     end
 
-    def data : String
-      String.new(LibCairo.image_surface_get_data(@surface))
+    # Get a pointer to the data of the image surface, for direct inspection or
+    # modification.
+    #
+    # A call to `Surface#flush` is required before accessing the pixel data to
+    # ensure that all pending drawing operations are finished. A call to
+    # `Surface#mark_dirty` is required after the data is modified.
+    #
+    # ###Returns
+    # A pointer to the image data of this surface or `nil` if surface is not
+    # an image surface, or if `Surface#finish` has been called.
+    def data : UInt8*
+      LibCairo.image_surface_get_data(@surface)
     end
 
+    # Get the format of the surface.
+    #
+    # ###Returns
+    # The format of the surface.
     def format : Format
       Format.new(LibCairo.image_surface_get_format(@surface).value)
     end
 
+    # Get the width of the image surface in pixels.
+    #
+    # ###Returns
+    # The width of the surface in pixels.
     def width : Int32
       LibCairo.image_surface_get_width(@surface)
     end
 
+    # Get the height of the image surface in pixels.
+    #
+    # ###Returns
+    # The height of the surface in pixels.
     def height : Int32
       LibCairo.image_surface_get_height(@surface)
     end
 
+    # Get the stride of the image surface in bytes.
+    #
+    # ###Returns
+    # The stride of the image surface in bytes (or 0 if *surface* is not
+    # an image surface). The stride is the distance in bytes from the beginning
+    # of one row of the image data to the beginning of the next row.
     def stride : Int32
       LibCairo.image_surface_get_stride(@surface)
     end
