@@ -8,12 +8,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    container:
-      image: crystallang/crystal
-
     steps:
       - name: Download source
         uses: actions/checkout@v2
