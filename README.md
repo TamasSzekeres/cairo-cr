@@ -2,6 +2,7 @@
 
 [Cairo](https://cairographics.org/) bindings for Crystal language.
 
+![Crystal CI](https://github.com/TamasSzekeres/cairo-cr/actions/workflows/crystal.yml/badge.svg)
 [![GitHub release](https://img.shields.io/github/release/TamasSzekeres/cairo-cr.svg)](https://github.com/TamasSzekeres/cairo-cr/releases)
 [![Docs](https://img.shields.io/badge/docs-available-brightgreen.svg)](https://tamasszekeres.github.io/cairo-cr/)
 
