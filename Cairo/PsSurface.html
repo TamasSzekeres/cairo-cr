@@ -469,7 +469,7 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">
         cairo/ps_surface.cr
       </a>
     
@@ -967,7 +967,7 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1015,7 +1015,7 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1057,7 +1057,7 @@ See <code><a href="../Cairo/PsSurface.html#restrict_to_level(level:PsLevel)-inst
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1098,7 +1098,7 @@ and before any drawing is performed to the surface.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1127,7 +1127,7 @@ and before any drawing is performed to the surface.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1195,12 +1195,38 @@ As such, applications must not manually generate any of the following comments:<
 <p>Other sections: <code>%%BeginProlog</code>, <code>%%EndProlog</code>, <code>%%Page</code>, <code>%%Trailer</code>, <code>%%EOF</code></p>
 
 <p>Here is an example sequence showing how this function might be used:</p>
+
+<pre><code class="language-crystal">surface <span class="o">=</span> <span class="t">PsSurface</span>.<span class="k">new</span>(filename, width, height)
+...
+surface.dsc_comment(<span class="s">&quot;%%Title: My excellent document&quot;</span>)
+surface.dsc_comment(<span class="s">&quot;%%Copyright: Copyright (C) 2006 Cairo Lover&quot;</span>)
+...
+surface.dsc_begin_setup
+surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *MediaColor White&quot;</span>)
+...
+surface.dsc_begin_page_setup
+surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *PageSize A3&quot;</span>)
+surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *InputSlot LargeCapacity&quot;</span>)
+surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *MediaType Glossy&quot;</span>)
+surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *MediaColor Blue&quot;</span>)
+... draw to first page here ..
+cr.show_page
+...
+surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *PageSize A5&quot;</span>)</code></pre>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>comment</strong> a comment string to be emitted into the PostScript output</li></ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1229,7 +1255,7 @@ As such, applications must not manually generate any of the following comments:<
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1263,7 +1289,7 @@ file should never contain more than one page.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1297,7 +1323,7 @@ call this function immediately after creating the surface.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1331,7 +1357,7 @@ completing a page with either <code><a href="../Cairo/Context.html#show_page-ins
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/482e3fcc5e070212c53ef83af0a63a0fcc9be099/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
