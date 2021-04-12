@@ -145,7 +145,24 @@ module Cairo
 
     {% end %}
 
-    # Create Recording Surface
+    {% if Cairo::C::HAS_RECORDING_SURFACE %}
+
+    # Creates a recording-surface which can be used to record all drawing
+    # operations at the highest level (that is, the level of paint, mask,
+    # stroke, fill and show_text_glyphs). The recording surface can then be
+    # "replayed" against any target surface by using it as a source
+    # to drawing operations.
+    #
+    # The recording phase of the recording surface is careful to snapshot all
+    # necessary objects (paths, patterns, etc.), in order to achieve accurate replay.
+    #
+    # ###Parameters
+    # - **content** the content of the recording surface
+    # - **extents** the extents to record in pixels, can be `nil` to record unbounded operations.
+    #
+    # ###Returns
+    # A pointer to the newly created surface. The caller owns the surface and should
+    # call `Surface#finalize` when done with it.
     def initialize(content : Content, extents : Rectangle?)
       if extents.is_a?(Rectangle)
         @surface = LibCairo.recording_surface_create(
@@ -156,6 +173,8 @@ module Cairo
           LibCairo::ContentT.new(content.value), nil)
       end
     end
+
+    {% end %}
 
     # Decreases the reference count on surface by one. If the result is zero,
     # then surface and all associated resources are freed. See `Surface#reference`.
@@ -729,15 +748,31 @@ module Cairo
       LibCairo.image_surface_get_stride(@surface)
     end
 
+    {% if Cairo::C::HAS_RECORDING_SURFACE %}
+
+    # Measures the extents of the operations stored within the recording-surface.
+    # This is useful to compute the required size of an image surface
+    # (or equivalent) into which to replay the full sequence of drawing operations.
+    #
+    # ###Returns
+    # A `Rectangle` of ink bounding-box.
     def ink_extents : Rectangle
       LibCairo.recording_surface_ink_extents(@surface, out x0, out y0, out width, out height)
       Rectangle.new(x1, y1, width, height)
     end
 
+    # Get the extents of the recording-surface.
+    #
+    # ###Returns
+    # - **extents** the `Rectangle` to be assigned the extents
+    # - **bounded** `true` if the surface is bounded,
+    # of recording type, and not in an error state, otherwise `false`
     def extents : NamedTuple(extents: Rectangle, bounded: Bool)
       bounded = LibCairo.recording_surface_get_extents(@surface, out extents) == 1
       {extents: extents, bounded: bounded}
     end
+
+    {% end %}
 
     def to_unsafe : LibCairo::PSurfaceT
       @surface

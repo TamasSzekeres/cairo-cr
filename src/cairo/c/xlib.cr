@@ -74,7 +74,7 @@ require "./features"
         minor_version : Int32
       ) : Void
 
-      # @precision: -1 implies automatically choose based on antialiasing mode,
+      # precision: -1 implies automatically choose based on antialiasing mode,
       #            any other value overrides and sets the corresponding PolyMode.
       fun xlib_device_debug_set_precision = cairo_xlib_device_debug_set_precision(
         device : PDeviceT,

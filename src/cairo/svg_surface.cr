@@ -1,26 +1,136 @@
 require "./c/features"
 require "./c/lib_cairo"
+require "./svg_unit"
+require "./svg_version"
 
 {% if Cairo::C::HAS_SVG_SURFACE %}
 
 module Cairo
   include Cairo::C
 
+  # The SVG surface is used to render cairo graphics to SVG files and is a
+  # multi-page vector surface backend.
   class SvgSurface < Surface
+    # Creates a SVG surface of the specified size in
+    # points to be written to *filename*.
+    #
+    # The SVG surface backend recognizes the following MIME types for the data
+    # attached to a surface (see `Surface#set_mime_data`) when it is used as a
+    # source pattern for drawing on this surface:
+    # - `Cairo::C::LibCairo::MIME_TYPE_JPEG`,
+    # - `Cairo::C::LibCairo::MIME_TYPE_PNG`,
+    # - `Cairo::C::LibCairo::MIME_TYPE_URI`.
+    # If any of them is specified, the SVG backend emits a href with the content
+    # of MIME data instead of a surface snapshot (PNG, Base64-encoded)
+    # in the corresponding image tag.
+    #
+    # The unofficial MIME type `Cairo::C::LibCairo::MIME_TYPE_URI` is examined
+    # first. If present, the URI is emitted as is: assuring the correctness of
+    # URI is left to the client code.
+    #
+    # If `Cairo::C::LibCairo::MIME_TYPE_URI` is not present,
+    # but `Cairo::C::LibCairo::MIME_TYPE_JPEG` or
+    # `Cairo::C::LibCairo::MIME_TYPE_PNG` is specified,
+    # the corresponding data is Base64-encoded and emitted.
+    #
+    # If `Cairo::C::LibCairo::MIME_TYPE_UNIQUE_ID` is present, all surfaces
+    # with the same unique identifier will only be embedded once.
+    #
+    # ###Parameters
+    # - **filename** a filename for the SVG output (must be writable),
+    # `nil` may be used to specify no output. This will generate a SVG surface
+    # that may be queried and used as a source, without generating a temporary file.
+    # - **width_in_points** width of the surface, in points (1 point == 1/72.0 inch)
+    # - **height_in_points** height of the surface, in points (1 point == 1/72.0 inch)
+    #
+    # ###Returns
+    # A pointer to the newly created surface. The caller owns the surface and
+    # should call `Surface#finalize` when done with it.
+    #
+    # This function always returns a valid pointer, but it will return a pointer
+    # to a `nil` surface if an error such as out of memory occurs.
+    # You can use `Surface#status` to check for this.
     def initialize(filename : String, width_in_points : Float64, height_in_points : Float64)
       super(LibCairo.svg_surface_create(filename.to_unsafe, width_in_points, height_in_points))
     end
 
-    # Create for Stream
+    # Creates a SVG surface of the specified size in points to be written
+    # incrementally to the stream represented by write_func and closure .
+    #
+    # ###Parameters
+    # - **write_func** a `Cairo::C::LibCairo::WriteFuncT` to accept the output
+    # data, may be `nil` to indicate a no-op *write_func*.
+    # With a no-op *write_func*, the surface may be queried or used as a source
+    # without generating any temporary files.
+    # - **closure** the closure argument for *write_func*
+    # - **width_in_points** width of the surface, in points (1 point == 1/72.0 inch)
+    # - **height_in_points** height of the surface, in points (1 point == 1/72.0 inch)
+    #
+    # ###Returns
+    # A pointer to the newly created surface. The caller owns the surface and
+    # should call `Surface#finalize` when done with it.
+    #
+    # This function always returns a valid pointer, but it will return a pointer
+    # to a `nil` surface if an error such as out of memory occurs.
+    # You can use Surface#status` to check for this.
     def initialize(write_func : LibCairo::WriteFuncT, closure : Void*, width_in_points : Float64, height_in_points : Float64)
       super(LibCairo.svg_surface_create_for_stream(write_func, closure, width_in_points, height_in_points))
     end
 
+    # Get the unit of the SVG surface.
+    #
+    # If the surface passed as an argument is not a SVG surface,
+    # the function sets the error status to
+    # `Status::SurfaceTypeMismatch` and returns `SvgUnit::User`.
+    #
+    # ###Returns
+    # The SVG unit of the SVG surface.
+    def document_unit : SvgUnit
+      SvgUnit.new(LibCairo.svg_surface_get_document_unit(to_unsafe).value)
+    end
+
+    # Use the specified unit for the width and height of the generated SVG file.
+    # See `SvgUnit` for a list of available unit values that can be used here.
+    #
+    # This function can be called at any time before generating the SVG file.
+    #
+    # However to minimize the risk of ambiguities it's recommended to call it
+    # before any drawing operations have been performed on the given surface,
+    # to make it clearer what the unit used in the drawing operations is.
+    #
+    # The simplest way to do this is to call this function immediately after
+    # creating the SVG surface.
+    #
+    # NOTE: if this function is never called, the default unit for SVG documents
+    # generated by cairo will be "pt". This is for historical reasons.
+    #
+    # ###Parameters
+    # - **unit** SVG unit
+    def ducument_unit=(unit : SvgUnit)
+      LibCairo.svg_surface_set_document_unit(to_unsafe, LibCairo::SvgUnitT.new(unit.value))
+      self
+    end
+
+    # Restricts the generated SVG file to version.
+    # See `SvgSurface#versions` for a list of available version
+    # values that can be used here.
+    #
+    # This function should only be called before any drawing operations have
+    # been performed on the given surface. The simplest way to do this is to
+    # call this function immediately after creating the surface.
+    #
+    # ###Parameters
+    # - **version** SVG version
     def restrict_to_version(version : SvgVersion)
       LibCairo.svg_surface_restrict_to_version(to_unsafe, LibCairo::SvgVersionT.new(version.value))
       self
     end
 
+    # Used to retrieve the list of supported versions.
+    # See `SvgSurface#restrict_to_version`.
+    #
+    # ###Returns
+    # The supported version list.
     def self.versions : Array(SvgVersion)
       LibCairo.svg_get_versions(out version, out num_versions)
       return [] of SvgVersion if num_versions == 0

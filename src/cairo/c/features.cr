@@ -19,13 +19,31 @@ module Cairo::C
   # Defined if the PostScript surface backend is available.
   HAS_PS_SURFACE = true
 
+  # Defined if the recording surface backend is available.
   HAS_RECORDING_SURFACE = true
+
+  # Defined if the script surface backend is available.
   HAS_SCRIPT_SURFACE = true
+
+  # Defined if the Microsoft Windows surface backend is available.
+  HAS_WIN32_SURFACE = false
+
+  # Defined if the SVG surface backend is available.
   HAS_SVG_SURFACE = true
+
   HAS_TEE_SURFACE = true
   HAS_USER_FONT = true
-  HAS_XCB_SHM_FUNCTIONS = true
-  HAS_XCB_SURFACE = true
+
+  # Defined if the Quartz surface backend is available.
+  HAS_QUARTZ_SURFACE = false
+
+  # Defined if the xcb surface backend is available
+  HAS_XCB_SURFACE = false
+  HAS_XCB_SHM_FUNCTIONS = false
+
+  # Defined if the Xlib surface backend is available.
   HAS_XLIB_SURFACE = true
-  HAS_XLIB_XRENDER_SURFACE = true
+
+  # Defined if the XLib/XRender surface functions are available.
+  HAS_XLIB_XRENDER_SURFACE = false
 end # module Cairo::C

@@ -3,7 +3,10 @@ require "./c/lib_cairo"
 module Cairo
   include Cairo::C
 
-  # Wrapper for LibCairo::UserDataKeyT
+  # `UserDataKey` is used for attaching user data to cairo data structures.
+  # The actual contents of the struct is never used, and there is no need
+  # to initialize the object; only the unique address of a `UserDataKey` object
+  # is used. Typically, you would just use the address of a static `UserDataKey` object.
   class UserDataKey
     def initialize
       @key = LibCairo::UserDataKeyT.new
@@ -17,6 +20,7 @@ module Cairo
     def initialize(@key : LibCairo::UserDataKeyT)
     end
 
+    # Not used.
     def unused : Int32
       @key.unused
     end

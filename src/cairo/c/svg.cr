@@ -10,6 +10,19 @@ require "./features"
         V_1_2
       end
 
+      enum SvgUnitT
+        User = 0
+        Em
+        Ex
+        Px
+        In
+        Cm
+        Mm
+        Pt
+        Pc
+        Percent
+      end
+
       fun svg_surface_create = cairo_svg_surface_create(
         filename : UInt8*,
         width_in_points : Float64,
@@ -36,6 +49,15 @@ require "./features"
       fun svg_version_to_string = cairo_svg_version_to_string(
         version : SvgVersionT
       ) : UInt8*
+
+      fun svg_surface_set_document_unit = cairo_svg_surface_set_document_unit(
+        surface : PSurfaceT,
+        unit : SvgUnitT
+      ) : Void
+
+      fun svg_surface_get_document_unit = cairo_svg_surface_get_document_unit(
+        surface : PSurfaceT
+      ) : SvgUnitT
     end # lib LibCairo
   end # module Cairo::C
 {% else %} # Cairo::C::HAS_SVG_SURFACE

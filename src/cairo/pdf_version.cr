@@ -5,8 +5,13 @@ require "./c/pdf"
 {% if Cairo::C::HAS_PDF_SURFACE %}
 
 module Cairo
+  # `PdfVersion` is used to describe the version number of the
+  # PDF specification that a generated PDF file will conform to.
   enum PdfVersion
+    # The version 1.4 of the PDF specification.
     V_1_4
+
+    # The version 1.5 of the PDF specification.
     V_1_5
 
     # Get the string representation of the given version id.

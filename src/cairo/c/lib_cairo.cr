@@ -1448,18 +1448,18 @@ module Cairo::C
 
     enum SurfaceTypeT
       Image
-      PDF
-      PS
-      XLib
-      XCB
+      Pdf
+      Ps
+      Xlib
+      Xcb
       Glitz
       Quartz
-      WIN32
-      BEOS
+      Win32
+      BeOS
       DirectFB
-      SVG
+      Svg
       OS2
-      WIN32Printing
+      Win32Printing
       QuartzImage
       Script
       Qt

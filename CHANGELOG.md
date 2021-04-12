@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - `PdfSurface#set_metadata`
   - `PdfSurface#set_page_label`
   - `PdfSurface#set_thumbnail_size`
+- Svg type:
+  - `SvgUnit`
+- Svg functions:
+  - `SvgSurface#document_unit`
+  - `SvgSurface#document_unit=`
 
 ## [0.3.1] - 2020-09-23
 - Updated to Crystal 0.35.1

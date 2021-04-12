@@ -65,7 +65,7 @@ module Cairo
       @rect.height = height
     end
 
-    # Returns undelying `LibCairo::RectangleT` structure.
+    # Returns underlying `LibCairo::RectangleT` structure.
     def to_cairo_rectange : LibCairo::RectangleT
       @rect
     end

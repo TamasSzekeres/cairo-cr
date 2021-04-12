@@ -1,4 +1,5 @@
 module Cairo
+  # Version of **cairo-cr** package.
   VERSION = "1.0.0"
 
   CAIRO_VERSION_MAJOR = 1
