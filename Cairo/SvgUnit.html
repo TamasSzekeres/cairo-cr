@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="cairo">
-  <title>Cairo::ColorStop - cairo master</title>
+  <title>Cairo::SvgUnit - cairo master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -66,7 +66,7 @@
       
     </li>
   
-  <li class=" current" data-id="cairo/Cairo/ColorStop" data-name="cairo::colorstop">
+  <li class=" " data-id="cairo/Cairo/ColorStop" data-name="cairo::colorstop">
       <a href="../Cairo/ColorStop.html">ColorStop</a>
       
     </li>
@@ -336,7 +336,7 @@
       
     </li>
   
-  <li class=" " data-id="cairo/Cairo/SvgUnit" data-name="cairo::svgunit">
+  <li class=" current" data-id="cairo/Cairo/SvgUnit" data-name="cairo::svgunit">
       <a href="../Cairo/SvgUnit.html">SvgUnit</a>
       
     </li>
@@ -395,15 +395,33 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Cairo::ColorStop
+  <span class="kind">enum</span> Cairo::SvgUnit
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Cairo/ColorStop.html">Cairo::ColorStop</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p><code><a href="../Cairo/SvgUnit.html">SvgUnit</a></code> used to describe the units valid for coordinates and
+lengths in the SVG specification.</p>
+
+<h3><a id="see-also" class="anchor" href="#see-also">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>See also</h3>
+
+<ul><li><a href="https://www.w3.org/TR/SVG/coords.html#Units">https://www.w3.org/TR/SVG/coords.html#Units</a></li><li><a href="https://www.w3.org/TR/SVG/types.html#DataTypeLength">https://www.w3.org/TR/SVG/types.html#DataTypeLength</a></li><li><a href="https://www.w3.org/TR/css-values-3/#lengths">https://www.w3.org/TR/css-values-3/#lengths</a></li></ul>
 
 
 
@@ -428,8 +446,8 @@
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L2" target="_blank">
-        cairo/color_stop.cr
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">
+        cairo/svg_unit.cr
       </a>
     
     <br/>
@@ -437,29 +455,113 @@
 
 
 
-
-
-  <h2>
-    <a id="constructors" class="anchor" href="#constructors">
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>
-    Constructors
-  </h2>
-  <ul class="list-summary">
+      Enum Members
+    </h2>
+  
+  <dl>
     
-      <li class="entry-summary">
-        <a href="#new(offset:Float64,red:Float64,green:Float64,blue:Float64,alpha:Float64)-class-method" class="signature"><strong>.new</strong>(offset : Float64, red : Float64, green : Float64, blue : Float64, alpha : Float64)</a>
-        
-      </li>
+      <dt class="entry-const" id="User">
+        <strong>User</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>User unit, a value in the current coordinate system.
+If used in the root element for the initial coordinate systems it
+corresponds to pixels.</p>
+      </dd>
+      
     
-      <li class="entry-summary">
-        <a href="#new(offset:Float64,rgba:RGBA)-class-method" class="signature"><strong>.new</strong>(offset : Float64, rgba : RGBA)</a>
-        
-      </li>
+      <dt class="entry-const" id="Em">
+        <strong>Em</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The size of the element's font.</p>
+      </dd>
+      
     
-  </ul>
+      <dt class="entry-const" id="Ex">
+        <strong>Ex</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>The x-height of the element’s font.</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Px">
+        <strong>Px</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Pixels (1px = 1/96th of 1in).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="In">
+        <strong>In</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Inches (1in = 2.54cm = 96px).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Cm">
+        <strong>Cm</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Centimeters (1cm = 96px/2.54).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Mm">
+        <strong>Mm</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Millimeters (1mm = 1/10th of 1cm).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Pt">
+        <strong>Pt</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Points (1pt = 1/72th of 1in).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Pc">
+        <strong>Pc</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Picas (1pc = 1/6th of 1in).</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="Percent">
+        <strong>Percent</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Percent, a value that is some fraction of another reference value.</p>
+      </dd>
+      
+    
+  </dl>
+
+
 
 
 
@@ -476,62 +578,52 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#alpha-instance-method" class="signature"><strong>#alpha</strong></a>
+        <a href="#cm?-instance-method" class="signature"><strong>#cm?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#alpha=(alpha:Float64)-instance-method" class="signature"><strong>#alpha=</strong>(alpha : Float64)</a>
+        <a href="#em?-instance-method" class="signature"><strong>#em?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#blue-instance-method" class="signature"><strong>#blue</strong></a>
+        <a href="#ex?-instance-method" class="signature"><strong>#ex?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#blue=(blue:Float64)-instance-method" class="signature"><strong>#blue=</strong>(blue : Float64)</a>
+        <a href="#in?-instance-method" class="signature"><strong>#in?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#green-instance-method" class="signature"><strong>#green</strong></a>
+        <a href="#mm?-instance-method" class="signature"><strong>#mm?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#green=(green:Float64)-instance-method" class="signature"><strong>#green=</strong>(green : Float64)</a>
+        <a href="#pc?-instance-method" class="signature"><strong>#pc?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#offset:Float64-instance-method" class="signature"><strong>#offset</strong> : Float64</a>
+        <a href="#percent?-instance-method" class="signature"><strong>#percent?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#offset=(offset:Float64)-instance-method" class="signature"><strong>#offset=</strong>(offset : Float64)</a>
+        <a href="#pt?-instance-method" class="signature"><strong>#pt?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#red-instance-method" class="signature"><strong>#red</strong></a>
+        <a href="#px?-instance-method" class="signature"><strong>#px?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#red=(red:Float64)-instance-method" class="signature"><strong>#red=</strong>(red : Float64)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#rgba:RGBA-instance-method" class="signature"><strong>#rgba</strong> : RGBA</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#rgba=(rgba:RGBA)-instance-method" class="signature"><strong>#rgba=</strong>(rgba : RGBA)</a>
+        <a href="#user?-instance-method" class="signature"><strong>#user?</strong></a>
         
       </li>
     
@@ -573,50 +665,18 @@
 
 
   
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
-
-  <h2>
-    <a id="constructor-detail" class="anchor" href="#constructor-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructor Detail
-  </h2>
-  
-    <div class="entry-detail" id="new(offset:Float64,red:Float64,green:Float64,blue:Float64,alpha:Float64)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(offset : Float64, red : Float64, green : Float64, blue : Float64, alpha : Float64)
-
-        <a class="method-permalink" href="#new(offset:Float64,red:Float64,green:Float64,blue:Float64,alpha:Float64)-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L9" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new(offset:Float64,rgba:RGBA)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(offset : Float64, rgba : <a href="../Cairo/RGBA.html">RGBA</a>)
-
-        <a class="method-permalink" href="#new(offset:Float64,rgba:RGBA)-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L6" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
 
 
 
@@ -631,194 +691,162 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="alpha-instance-method">
+    <div class="entry-detail" id="cm?-instance-method">
       <div class="signature">
         
-        def <strong>alpha</strong>
+        def <strong>cm?</strong>
 
-        <a class="method-permalink" href="#alpha-instance-method">#</a>
+        <a class="method-permalink" href="#cm?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="alpha=(alpha:Float64)-instance-method">
+    <div class="entry-detail" id="em?-instance-method">
       <div class="signature">
         
-        def <strong>alpha=</strong>(alpha : Float64)
+        def <strong>em?</strong>
 
-        <a class="method-permalink" href="#alpha=(alpha:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#em?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="blue-instance-method">
+    <div class="entry-detail" id="ex?-instance-method">
       <div class="signature">
         
-        def <strong>blue</strong>
+        def <strong>ex?</strong>
 
-        <a class="method-permalink" href="#blue-instance-method">#</a>
+        <a class="method-permalink" href="#ex?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="blue=(blue:Float64)-instance-method">
+    <div class="entry-detail" id="in?-instance-method">
       <div class="signature">
         
-        def <strong>blue=</strong>(blue : Float64)
+        def <strong>in?</strong>
 
-        <a class="method-permalink" href="#blue=(blue:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#in?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="green-instance-method">
+    <div class="entry-detail" id="mm?-instance-method">
       <div class="signature">
         
-        def <strong>green</strong>
+        def <strong>mm?</strong>
 
-        <a class="method-permalink" href="#green-instance-method">#</a>
+        <a class="method-permalink" href="#mm?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="green=(green:Float64)-instance-method">
+    <div class="entry-detail" id="pc?-instance-method">
       <div class="signature">
         
-        def <strong>green=</strong>(green : Float64)
+        def <strong>pc?</strong>
 
-        <a class="method-permalink" href="#green=(green:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#pc?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="offset:Float64-instance-method">
+    <div class="entry-detail" id="percent?-instance-method">
       <div class="signature">
         
-        def <strong>offset</strong> : Float64
+        def <strong>percent?</strong>
 
-        <a class="method-permalink" href="#offset:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#percent?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="offset=(offset:Float64)-instance-method">
+    <div class="entry-detail" id="pt?-instance-method">
       <div class="signature">
         
-        def <strong>offset=</strong>(offset : Float64)
+        def <strong>pt?</strong>
 
-        <a class="method-permalink" href="#offset=(offset:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#pt?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="red-instance-method">
+    <div class="entry-detail" id="px?-instance-method">
       <div class="signature">
         
-        def <strong>red</strong>
+        def <strong>px?</strong>
 
-        <a class="method-permalink" href="#red-instance-method">#</a>
+        <a class="method-permalink" href="#px?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="red=(red:Float64)-instance-method">
+    <div class="entry-detail" id="user?-instance-method">
       <div class="signature">
         
-        def <strong>red=</strong>(red : Float64)
+        def <strong>user?</strong>
 
-        <a class="method-permalink" href="#red=(red:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#user?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L17" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="rgba:RGBA-instance-method">
-      <div class="signature">
-        
-        def <strong>rgba</strong> : <a href="../Cairo/RGBA.html">RGBA</a>
-
-        <a class="method-permalink" href="#rgba:RGBA-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L4" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="rgba=(rgba:RGBA)-instance-method">
-      <div class="signature">
-        
-        def <strong>rgba=</strong>(rgba : <a href="../Cairo/RGBA.html">RGBA</a>)
-
-        <a class="method-permalink" href="#rgba=(rgba:RGBA)-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/color_stop.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_unit.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>

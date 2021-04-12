@@ -336,6 +336,11 @@
       
     </li>
   
+  <li class=" " data-id="cairo/Cairo/SvgUnit" data-name="cairo::svgunit">
+      <a href="../Cairo/SvgUnit.html">SvgUnit</a>
+      
+    </li>
+  
   <li class=" " data-id="cairo/Cairo/SvgVersion" data-name="cairo::svgversion">
       <a href="../Cairo/SvgVersion.html">SvgVersion</a>
       
@@ -482,7 +487,7 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L35" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L35" target="_blank">
         cairo/surface.cr
       </a>
     
@@ -527,7 +532,7 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
       <li class="entry-summary">
         <a href="#new(content:Content,extents:Rectangle?)-class-method" class="signature"><strong>.new</strong>(content : Content, extents : Rectangle?)</a>
         
-          <div class="summary"><p>Create Recording Surface</p></div>
+          <div class="summary"><p>Creates a recording-surface which can be used to record all drawing operations at the highest level (that is, the level of paint, mask, stroke, fill and show_text_glyphs).</p></div>
         
       </li>
     
@@ -644,6 +649,8 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
       <li class="entry-summary">
         <a href="#extents:NamedTuple()-instance-method" class="signature"><strong>#extents</strong> : NamedTuple()</a>
         
+          <div class="summary"><p>Get the extents of the recording-surface.</p></div>
+        
       </li>
     
       <li class="entry-summary">
@@ -711,6 +718,8 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
     
       <li class="entry-summary">
         <a href="#ink_extents:Rectangle-instance-method" class="signature"><strong>#ink_extents</strong> : Rectangle</a>
+        
+          <div class="summary"><p>Measures the extents of the operations stored within the recording-surface.</p></div>
         
       </li>
     
@@ -1002,7 +1011,7 @@ destroy-notification fallback to the surface if necessary.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L98" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L98" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1047,7 +1056,7 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L58" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L58" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1094,7 +1103,7 @@ using <code><a href="../Cairo/Context.html#status:Status-instance-method">Contex
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1109,13 +1118,37 @@ using <code><a href="../Cairo/Context.html#status:Status-instance-method">Contex
       
         <div class="doc">
           
-          <p>Create Recording Surface</p>
+          <p>Creates a recording-surface which can be used to record all drawing
+operations at the highest level (that is, the level of paint, mask,
+stroke, fill and show_text_glyphs). The recording surface can then be
+"replayed" against any target surface by using it as a source
+to drawing operations.</p>
+
+<p>The recording phase of the recording surface is careful to snapshot all
+necessary objects (paths, patterns, etc.), in order to achieve accurate replay.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>content</strong> the content of the recording surface</li><li><strong>extents</strong> the extents to record in pixels, can be <code>nil</code> to record unbounded operations.</li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>A pointer to the newly created surface. The caller owns the surface and should
+call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L149" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L148" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1131,7 +1164,7 @@ using <code><a href="../Cairo/Context.html#status:Status-instance-method">Contex
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1176,7 +1209,7 @@ operations and check the status on the context upon completion using
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1220,7 +1253,7 @@ surface contains color and/or alpha information. See <code><a href="../Cairo/Con
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L379" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L398" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1245,7 +1278,7 @@ Use <code>Surface#show_page</code> if you want to get an empty page after the em
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L657" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L676" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1293,7 +1326,7 @@ if other is already in an error state or any other error occurs.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L273" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L292" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1309,7 +1342,7 @@ if other is already in an error state or any other error occurs.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L277" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L296" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1358,7 +1391,7 @@ if other is already in an error state or any other error occurs.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L187" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L206" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1405,7 +1438,7 @@ if other is already in an error state or any other error occurs.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L210" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L229" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1440,7 +1473,7 @@ an image surface, or if <code><a href="../Cairo/Surface.html#finish-instance-met
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L694" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L713" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1469,7 +1502,7 @@ an image surface, or if <code><a href="../Cairo/Surface.html#finish-instance-met
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L345" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L364" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1498,7 +1531,7 @@ an image surface, or if <code><a href="../Cairo/Surface.html#finish-instance-met
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L590" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L609" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1533,7 +1566,7 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L606" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L625" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1562,7 +1595,7 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L560" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L579" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1597,7 +1630,7 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L576" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L595" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1610,10 +1643,24 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
         <a class="method-permalink" href="#extents:NamedTuple()-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Get the extents of the recording-surface.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<ul><li><strong>extents</strong> the <code><a href="../Cairo/Rectangle.html">Rectangle</a></code> to be assigned the extents</li><li><strong>bounded</strong> <code>true</code> if the surface is bounded,
+of recording type, and not in an error state, otherwise <code>false</code></li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L737" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L751" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1643,7 +1690,7 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L621" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L640" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1688,7 +1735,7 @@ have more than one fallback resolution in effect on a single page.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L647" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L666" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1710,7 +1757,7 @@ then surface and all associated resources are freed. See <code><a href="../Cairo
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L162" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L181" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1738,7 +1785,7 @@ Further drawing to the surface will not affect the surface but will instead trig
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L336" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L355" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1761,7 +1808,7 @@ or accessing its memory outside of Cairo. If the surface doesn't support direct 
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L522" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L541" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1793,7 +1840,7 @@ The result can then be used with <code>ScaledFont#initialize</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L513" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L532" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1822,7 +1869,7 @@ The result can then be used with <code>ScaledFont#initialize</code>.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L702" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L721" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1856,7 +1903,7 @@ Users can use this function to avoid computing UTF-8 text and cluster mapping if
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L680" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L699" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1885,7 +1932,7 @@ Users can use this function to avoid computing UTF-8 text and cluster mapping if
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L718" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L737" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1898,10 +1945,25 @@ Users can use this function to avoid computing UTF-8 text and cluster mapping if
         <a class="method-permalink" href="#ink_extents:Rectangle-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Measures the extents of the operations stored within the recording-surface.
+This is useful to compute the required size of an image surface
+(or equivalent) into which to replay the full sequence of drawing operations.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>A <code><a href="../Cairo/Rectangle.html">Rectangle</a></code> of ink bounding-box.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L732" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L751" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1948,7 +2010,7 @@ it is guaranteed to be an image surface whose format is not <code><a href="../Ca
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L231" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L250" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1972,7 +2034,7 @@ and that cairo should reread any cached areas.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L530" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L549" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2005,7 +2067,7 @@ to make sure that future cairo calls have the clip set that they expect.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L546" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L565" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2043,7 +2105,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L455" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L474" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2059,7 +2121,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L289" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L308" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2075,7 +2137,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L305" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L324" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2091,7 +2153,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L301" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L320" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2107,7 +2169,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L297" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L316" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2123,7 +2185,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L285" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L304" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2139,7 +2201,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L281" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L300" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2155,7 +2217,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L293" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L312" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2171,7 +2233,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L313" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L332" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2187,7 +2249,7 @@ If no data has been attached with the given mime type, data is set empty.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L309" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L328" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2219,7 +2281,7 @@ This prevents surface from being destroyed until a matching call to <code><a hre
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L324" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L343" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2248,7 +2310,7 @@ This prevents surface from being destroyed until a matching call to <code><a hre
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L353" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L372" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2264,7 +2326,7 @@ This prevents surface from being destroyed until a matching call to <code><a hre
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L581" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L600" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2280,7 +2342,7 @@ This prevents surface from being destroyed until a matching call to <code><a hre
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L551" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L570" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2296,7 +2358,7 @@ This prevents surface from being destroyed until a matching call to <code><a hre
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L611" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L630" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2353,7 +2415,7 @@ destroyed or when new image data is attached using the same mime type.</li><li><
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L490" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L509" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2392,7 +2454,7 @@ destroyed or when new user data is attached using the same key.</li></ul>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L443" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L462" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2422,7 +2484,7 @@ destroyed or when new user data is attached using the same key.</li></ul>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L362" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L381" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2453,7 +2515,7 @@ of one row of the image data to the beginning of the next row.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L728" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L747" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2490,7 +2552,7 @@ of one row of the image data to the beginning of the next row.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L502" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L521" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2514,7 +2576,7 @@ Use <code><a href="../Cairo/Surface.html#copy_page-instance-method">Surface#copy
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L666" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L685" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2530,7 +2592,7 @@ Use <code><a href="../Cairo/Surface.html#copy_page-instance-method">Surface#copy
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L742" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L777" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2559,7 +2621,7 @@ Use <code><a href="../Cairo/Surface.html#copy_page-instance-method">Surface#copy
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L370" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L389" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2592,7 +2654,7 @@ Use <code><a href="../Cairo/Surface.html#copy_page-instance-method">Surface#copy
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L247" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L266" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2630,7 +2692,7 @@ If no user data has been attached with the given key this function returns <code
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L428" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L447" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2659,7 +2721,7 @@ If no user data has been attached with the given key this function returns <code
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L710" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L729" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2701,7 +2763,7 @@ attempting to write the file, or <code>Status#PngError</code> if libpng returned
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L383" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L402" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2741,7 +2803,7 @@ have pixel contents, or <code>Status#PngError</code> if libpng returned an error
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/surface.cr#L383" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/surface.cr#L402" target="_blank">View source</a>]
         
       </div>
     </div>

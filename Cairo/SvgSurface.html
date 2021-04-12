@@ -336,6 +336,11 @@
       
     </li>
   
+  <li class=" " data-id="cairo/Cairo/SvgUnit" data-name="cairo::svgunit">
+      <a href="../Cairo/SvgUnit.html">SvgUnit</a>
+      
+    </li>
+  
   <li class=" " data-id="cairo/Cairo/SvgVersion" data-name="cairo::svgversion">
       <a href="../Cairo/SvgVersion.html">SvgVersion</a>
       
@@ -400,6 +405,18 @@
 
 
 
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The SVG surface is used to render cairo graphics to SVG files and is a
+multi-page vector surface backend.</p>
+
 
 
 
@@ -423,7 +440,7 @@
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/svg_surface.cr#L4" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_surface.cr#L6" target="_blank">
         cairo/svg_surface.cr
       </a>
     
@@ -447,12 +464,14 @@
       <li class="entry-summary">
         <a href="#new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void),width_in_points:Float64,height_in_points:Float64)-class-method" class="signature"><strong>.new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void), width_in_points : Float64, height_in_points : Float64)</a>
         
-          <div class="summary"><p>Create for Stream</p></div>
+          <div class="summary"><p>Creates a SVG surface of the specified size in points to be written incrementally to the stream represented by write_func and closure .</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#new(filename:String,width_in_points:Float64,height_in_points:Float64)-class-method" class="signature"><strong>.new</strong>(filename : String, width_in_points : Float64, height_in_points : Float64)</a>
+        
+          <div class="summary"><p>Creates a SVG surface of the specified size in points to be written to <em>filename</em>.</p></div>
         
       </li>
     
@@ -473,6 +492,8 @@
       <li class="entry-summary">
         <a href="#versions:Array(SvgVersion)-class-method" class="signature"><strong>.versions</strong> : Array(SvgVersion)</a>
         
+          <div class="summary"><p>Used to retrieve the list of supported versions.</p></div>
+        
       </li>
     
   </ul>
@@ -490,7 +511,23 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#document_unit:SvgUnit-instance-method" class="signature"><strong>#document_unit</strong> : SvgUnit</a>
+        
+          <div class="summary"><p>Get the unit of the SVG surface.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ducument_unit=(unit:SvgUnit)-instance-method" class="signature"><strong>#ducument_unit=</strong>(unit : SvgUnit)</a>
+        
+          <div class="summary"><p>Use the specified unit for the width and height of the generated SVG file.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#restrict_to_version(version:SvgVersion)-instance-method" class="signature"><strong>#restrict_to_version</strong>(version : SvgVersion)</a>
+        
+          <div class="summary"><p>Restricts the generated SVG file to version.</p></div>
         
       </li>
     
@@ -837,13 +874,38 @@
       
         <div class="doc">
           
-          <p>Create for Stream</p>
+          <p>Creates a SVG surface of the specified size in points to be written
+incrementally to the stream represented by write_func and closure .</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>write_func</strong> a <code><a href="../Cairo.html">Cairo</a>::C::LibCairo::WriteFuncT</code> to accept the output
+data, may be <code>nil</code> to indicate a no-op <em>write_func</em>.
+With a no-op <em>write_func</em>, the surface may be queried or used as a source
+without generating any temporary files.</li><li><strong>closure</strong> the closure argument for <em>write_func</em></li><li><strong>width_in_points</strong> width of the surface, in points (1 point == 1/72.0 inch)</li><li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>A pointer to the newly created surface. The caller owns the surface and
+should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
+
+<p>This function always returns a valid pointer, but it will return a pointer
+to a <code>nil</code> surface if an error such as out of memory occurs.
+You can use Surface#status` to check for this.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/svg_surface.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -856,10 +918,60 @@
         <a class="method-permalink" href="#new(filename:String,width_in_points:Float64,height_in_points:Float64)-class-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Creates a SVG surface of the specified size in
+points to be written to <em>filename</em>.</p>
+
+<p>The SVG surface backend recognizes the following MIME types for the data
+attached to a surface (see <code><a href="../Cairo/Surface.html#set_mime_data(mime_type:String,data:Bytes,destroy:LibCairo::DestroyFuncT,closure:Pointer(Void)):Status-instance-method">Surface#set_mime_data</a></code>) when it is used as a
+source pattern for drawing on this surface:</p>
+
+<ul><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_JPEG">LibCairo::MIME_TYPE_JPEG</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_PNG">LibCairo::MIME_TYPE_PNG</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_URI">LibCairo::MIME_TYPE_URI</a></code>.
+If any of them is specified, the SVG backend emits a href with the content
+of MIME data instead of a surface snapshot (PNG, Base64-encoded)
+in the corresponding image tag.</li></ul>
+
+<p>The unofficial MIME type <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_URI">LibCairo::MIME_TYPE_URI</a></code> is examined
+first. If present, the URI is emitted as is: assuring the correctness of
+URI is left to the client code.</p>
+
+<p>If <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_URI">LibCairo::MIME_TYPE_URI</a></code> is not present,
+but <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_JPEG">LibCairo::MIME_TYPE_JPEG</a></code> or
+<code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_PNG">LibCairo::MIME_TYPE_PNG</a></code> is specified,
+the corresponding data is Base64-encoded and emitted.</p>
+
+<p>If <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_UNIQUE_ID">LibCairo::MIME_TYPE_UNIQUE_ID</a></code> is present, all surfaces
+with the same unique identifier will only be embedded once.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>filename</strong> a filename for the SVG output (must be writable),
+<code>nil</code> may be used to specify no output. This will generate a SVG surface
+that may be queried and used as a source, without generating a temporary file.</li><li><strong>width_in_points</strong> width of the surface, in points (1 point == 1/72.0 inch)</li><li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li></ul>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>A pointer to the newly created surface. The caller owns the surface and
+should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
+
+<p>This function always returns a valid pointer, but it will return a pointer
+to a <code>nil</code> surface if an error such as out of memory occurs.
+You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> to check for this.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/svg_surface.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -884,10 +996,24 @@
         <a class="method-permalink" href="#versions:Array(SvgVersion)-class-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Used to retrieve the list of supported versions.
+See <code><a href="../Cairo/SvgSurface.html#restrict_to_version(version:SvgVersion)-instance-method">SvgSurface#restrict_to_version</a></code>.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The supported version list.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/svg_surface.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -904,6 +1030,81 @@
     Instance Method Detail
   </h2>
   
+    <div class="entry-detail" id="document_unit:SvgUnit-instance-method">
+      <div class="signature">
+        
+        def <strong>document_unit</strong> : <a href="../Cairo/SvgUnit.html">SvgUnit</a>
+
+        <a class="method-permalink" href="#document_unit:SvgUnit-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get the unit of the SVG surface.</p>
+
+<p>If the surface passed as an argument is not a SVG surface,
+the function sets the error status to
+<code><a href="../Cairo/Status.html#SurfaceTypeMismatch">Status::SurfaceTypeMismatch</a></code> and returns <code><a href="../Cairo/SvgUnit.html#User">SvgUnit::User</a></code>.</p>
+
+<h3><a id="returns" class="anchor" href="#returns">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Returns</h3>
+
+<p>The SVG unit of the SVG surface.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ducument_unit=(unit:SvgUnit)-instance-method">
+      <div class="signature">
+        
+        def <strong>ducument_unit=</strong>(unit : <a href="../Cairo/SvgUnit.html">SvgUnit</a>)
+
+        <a class="method-permalink" href="#ducument_unit=(unit:SvgUnit)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Use the specified unit for the width and height of the generated SVG file.
+See <code><a href="../Cairo/SvgUnit.html">SvgUnit</a></code> for a list of available unit values that can be used here.</p>
+
+<p>This function can be called at any time before generating the SVG file.</p>
+
+<p>However to minimize the risk of ambiguities it's recommended to call it
+before any drawing operations have been performed on the given surface,
+to make it clearer what the unit used in the drawing operations is.</p>
+
+<p>The simplest way to do this is to call this function immediately after
+creating the SVG surface.</p>
+
+<p><span class="flag purple">NOTE</span>  if this function is never called, the default unit for SVG documents
+generated by cairo will be "pt". This is for historical reasons.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>unit</strong> SVG unit</li></ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="restrict_to_version(version:SvgVersion)-instance-method">
       <div class="signature">
         
@@ -912,10 +1113,29 @@
         <a class="method-permalink" href="#restrict_to_version(version:SvgVersion)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Restricts the generated SVG file to version.
+See <code><a href="../Cairo/SvgSurface.html#versions:Array(SvgVersion)-class-method">SvgSurface#versions</a></code> for a list of available version
+values that can be used here.</p>
+
+<p>This function should only be called before any drawing operations have
+been performed on the given surface. The simplest way to do this is to
+call this function immediately after creating the surface.</p>
+
+<h3><a id="parameters" class="anchor" href="#parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Parameters</h3>
+
+<ul><li><strong>version</strong> SVG version</li></ul>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a930720e5dec31b00e7ca0bbc99a56843f62f402/src/cairo/svg_surface.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/a0b5e6bedd97b73c1da4e29556b0dcd5e20ba93d/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
