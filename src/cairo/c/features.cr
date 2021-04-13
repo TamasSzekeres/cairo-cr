@@ -31,13 +31,16 @@ module Cairo::C
   # Defined if the SVG surface backend is available.
   HAS_SVG_SURFACE = true
 
+  # Defined if the tee surface backend is available.
   HAS_TEE_SURFACE = true
+
+  # Defined if the user font backend is available.
   HAS_USER_FONT = true
 
   # Defined if the Quartz surface backend is available.
   HAS_QUARTZ_SURFACE = false
 
-  # Defined if the xcb surface backend is available
+  # Defined if the xcb surface backend is available.
   HAS_XCB_SURFACE = false
   HAS_XCB_SHM_FUNCTIONS = false
 

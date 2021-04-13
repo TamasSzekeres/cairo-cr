@@ -37,7 +37,7 @@ module Cairo
       Rectangle.new(@list.value.rectangles[index])
     end
 
-  # Returns underlying `LibCairo::RectangleIntT` structure.
+    # Returns underlying `LibCairo::RectangleIntT` structure.
     def to_cairo_rectangle_list : LibCairo::RectangleListT
       @list.value
     end

@@ -7,7 +7,14 @@ module Cairo
   class GlyphArray
     include Indexable(Glyph)
 
-    def initialize(num_glyphs : Int)
+    # Allocates an array of `Glyph`'s.
+    #
+    # ###Parameters
+    # - ***num_glyphs** number of glyphs to allocate
+    #
+    # ###Returns
+    # The newly allocated array of glyphs that should be freed using `GlyphArray#finalize`
+    def initialize(num_glyphs : Int32)
       @glyphs = LibCairo.glyph_allocate(num_glyphs)
       raise "Can't allocate glyphs." if @glyphs.null?
       @num_glyphs = num_glyphs

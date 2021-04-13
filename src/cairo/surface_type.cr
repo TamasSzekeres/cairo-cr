@@ -20,16 +20,16 @@ module Cairo
     Image
 
     # The surface is of type pdf.
-    PDF
+    Pdf
 
     # The surface is of type ps.
-    PS
+    Ps
 
     # The surface is of type xlib.
     XLib
 
     # The surface is of type xcb.
-    XCB
+    Xcb
 
     # The surface is of type glitz.
     Glitz
@@ -41,13 +41,13 @@ module Cairo
     Win32
 
     # The surface is of type beos.
-    BEOS
+    BeOS
 
     # The surface is of type directfb.
     DirectFB
 
     # The surface is of type svg.
-    SVG
+    Svg
 
     # The surface is of type os2.
     OS2

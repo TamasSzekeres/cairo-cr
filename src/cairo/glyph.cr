@@ -3,7 +3,18 @@ require "./c/lib_cairo"
 module Cairo
   include Cairo::C
 
-  # Wrapper for LibCairo::GlyphT.
+  # The `Glyph` structure holds information about a single glyph when drawing
+  # or measuring text. A font is (in simple terms) a collection of shapes used
+  # to draw text. A glyph is one of these shapes. There can be multiple glyphs
+  # for a single character (alternates to be used in different contexts, for
+  # example), or a glyph can be a *ligature* of multiple characters. Cairo
+  # doesn't expose any way of converting input text into glyphs, so in order
+  # to use the Cairo interfaces that take arrays of glyphs, you must directly
+  # access the appropriate underlying font system.
+  #
+  # NOTE: that the offsets given by *x* and *y* are not cumulative.
+  # When drawing or measuring text,
+  # each glyph is individually positioned with respect to the overall origin.
   struct Glyph
     def initialize
       @glyph = uninitialized LibCairo::GlyphT

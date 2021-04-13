@@ -144,37 +144,98 @@ module Cairo
       FontWeight.new(LibCairo.toy_font_face_get_weight(@font_face).value)
     end
 
+    # Gets the scaled-font initialization function of a user-font.
+    #
+    # ###Returns
+    # The init callback of `FontFace` or `nil`
+    # if none set or an error has occurred.
     def init_func : LibCairo::UserScaledFontInitFuncT
       LibCairo.user_font_face_get_init_func(@font_face)
     end
 
+    # Sets the scaled-font initialization function of a user-font.
+    # See `LibCairo::UserScaledFontInitFuncT` for details of how the callback works.
+    #
+    # The font-face should not be immutable or a `Status#UserFontImmutable` error
+    # will occur. A user font-face is immutable as soon as a scaled-font is created from it.
+    #
+    # ###Parameters
+    # - **init_func** The init callback, or `nil`
     def init_func=(init_func : LibCairo::UserScaledFontInitFuncT)
       LibCairo.user_font_face_set_init_func(@font_face, init_func)
       self
     end
 
+    # Gets the glyph rendering function of a user-font.
+    #
+    # ###Returns
+    # The *render_glyph* callback of `FontFace` or `nil`
+    # if none set or an error has occurred.
     def render_glyph_func : LibCairo::UserScaledFontRenderGlyphFuncT
       LibCairo.user_font_face_get_render_glyph_func(@font_face)
     end
 
+    # Sets the glyph rendering function of a user-font.
+    # See `LibCairo::UserScaledFontRenderGlyphFuncT for
+    # details of how the callback works.
+    #
+    # The font-face should not be immutable or a `Status#UserFontImmutable`
+    # error will occur. A user font-face is immutable as soon as
+    # a scaled-font is created from it.
+    #
+    # The *render_glyph* callback is the only mandatory callback of a user-font.
+    # If the callback is `nil` and a glyph is tried to be rendered using
+    # `FontFace`, a `Status#UserFontError` will occur.
+    #
+    # ###Parameters
+    # - **render_glyph_func** The *render_glyph* callback, or `nil`
     def render_glyph_func=(render_glyph_func : LibCairo::UserScaledFontRenderGlyphFuncT)
       LibCairo.user_font_face_set_render_glyph_func(@font_face, render_glyph_func)
       self
     end
 
+    # Gets the text-to-glyphs conversion function of a user-font.
+    #
+    # ###Returns
+    # The *text_to_glyphs* callback of `FontFace` or `nil` if none set or an error occurred.
     def text_to_glyphs_func : LibCairo::UserScaledFontTextToGlyphFuncT
       LibCairo.user_font_face_get_text_to_glyphs_func(@font_face)
     end
 
+    # Sets th text-to-glyphs conversion function of a user-font.
+    # See `LibCairo::UserScaledFontTextToGlyphsFuncT`
+    # for details of how the callback works.
+    #
+    # The font-face should not be immutable or a `Status#UserFontImmutable`
+    # error will occur. A user font-face is immutable as soon as a
+    # scaled-font is created from it.
+    #
+    # ###Parameters
+    # - **text_to_glyphs_func** The *text_to_glyphs* callback, or `nil`
     def text_to_glyphs_func=(text_to_glyphs_func : LibCairo::UserScaledFontTextToGlyphFuncT)
       LibCairo.user_font_face_set_text_to_glyphs_func(@font_face, text_to_glyphs_func)
       self
     end
 
+    # Gets the unicode-to-glyph conversion function of a user-font.
+    #
+    # ###Returns
+    # The *unicode_to_glyph* callback of `FontFace` or `nil`
+    # if none set or an error occurred.
     def user_font_face_get_unicode_to_glyph_func : LibCairo::UserScaledFontUnicodeToGlyphFuncT
       LibCairo.user_font_face_get_unicode_to_glyph_func(@font_face)
     end
 
+    # Sets the unicode-to-glyph conversion function of a user-font.
+    # See `LibCairo::UserScaledFontUnicodeToGlyphFuncT`
+    # for details of how the callback works.
+    #
+    # The font-face should not be immutable or a `Status::UserFontImmutable`
+    # error will occur. A user font-face is immutable as soon as a
+    # scaled-font is created from it.
+    #
+    # ###Parameters
+    # - **unicode_to_glyph_func** The *unicode_to_glyph* callback, or `nil`
     def unicode_to_glyph_func=(unicode_to_glyph_func : LibCairo::UserScaledFontUnicodeToGlyphFuncT)
       LibCairo.user_font_face_set_unicode_to_glyph_func(@font_face, unicode_to_glyph_func)
       self

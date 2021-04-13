@@ -567,6 +567,19 @@ module Cairo
       self
     end
 
+    # Sets a scale that is multiplied to the device coordinates determined by
+    # the CTM when drawing to `Surface`. One common use for this is to render
+    # to very high resolution display devices at a scale factor, so that code
+    # that assumes 1 pixel will be a certain size will still work. Setting a
+    # transformation via `Context#translate` isn't sufficient to do this,
+    # since functions like `Context#device_to_user` will expose the hidden scale.
+    #
+    # NOTE: that the scale affects drawing to the surface as well as using
+    # the surface in a source pattern.
+    #
+    # ###Parameters
+    # - **x_scale** a scale factor in the X direction
+    # - **y_scale** a scale factor in the Y direction
     def set_device_scale(x_scale : Float64, y_scale : Float64)
       LibCairo.surface_set_device_scale(@surface, x_scale, y_scale)
       self
@@ -597,6 +610,17 @@ module Cairo
       self
     end
 
+    # Sets an offset that is added to the device coordinates determined by the CTM when drawing to surface.
+    # One use case for this function is when we want to create a `Surface` that redirects drawing for
+    # a portion of an onscreen surface to an offscreen surface in a way that is completely invisible
+    # to the user of the cairo API. Setting a transformation via `Context#translate` isn't sufficient to do this,
+    # since functions like `Context#device_to_user` will expose the hidden offset.
+    #
+    # NOTE that the offset affects drawing to the surface as well as using the surface in a source pattern.
+    #
+    # ###Parameters
+    # - **x_offset** the offset in the X direction, in device units
+    # - **y_offset** the offset in the Y direction, in device units
     def set_device_offset(x_offset : Float64, y_offset : Float64)
       LibCairo.surface_set_device_offset(@surface, x_offset, y_offset)
       self

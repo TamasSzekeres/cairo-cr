@@ -1244,7 +1244,7 @@ module Cairo::C
       XLib
       XML
       COGL
-      WIN32
+      Win32
 
       Invalid = -1
     end
@@ -1450,7 +1450,7 @@ module Cairo::C
       Image
       Pdf
       Ps
-      Xlib
+      XLib
       Xcb
       Glitz
       Quartz
@@ -2104,9 +2104,9 @@ module Cairo::C
     alias RegionT = Void*
 
     enum RegionOverlapT
-      IN   # completely inside region
-      OUT  # completely outside region
-      PART # partly inside region
+      In   # completely inside region
+      Out  # completely outside region
+      Part # partly inside region
     end
 
     fun region_create = cairo_region_create() : PRegionT
