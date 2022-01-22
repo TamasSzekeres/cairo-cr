@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -442,7 +442,7 @@
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/glyph_array.cr#L7" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/glyph_array.cr#L7" target="_blank">
         cairo/glyph_array.cr
       </a>
     
@@ -464,12 +464,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(glyphs:LibCairo::PGlyphT,num_glyphs:Int32)-class-method" class="signature"><strong>.new</strong>(glyphs : LibCairo::PGlyphT, num_glyphs : Int32)</a>
+        <a href="#new%28glyphs%3ALibCairo%3A%3APGlyphT%2Cnum_glyphs%3AInt32%29-class-method" class="signature"><strong>.new</strong>(glyphs : LibCairo::PGlyphT, num_glyphs : Int32)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(num_glyphs:Int32)-class-method" class="signature"><strong>.new</strong>(num_glyphs : Int32)</a>
+        <a href="#new%28num_glyphs%3AInt32%29-class-method" class="signature"><strong>.new</strong>(num_glyphs : Int32)</a>
         
           <div class="summary"><p>Allocates an array of <code><a href="../Cairo/Glyph.html">Glyph</a></code>'s.</p></div>
         
@@ -492,7 +492,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#[]=(index:Int,glyph:Glyph)-instance-method" class="signature"><strong>#[]=</strong>(index : Int, glyph : Glyph)</a>
+        <a href="#%5B%5D%3D%28index%3AInt%2Cglyph%3AGlyph%29-instance-method" class="signature"><strong>#[]=</strong>(index : Int, glyph : Glyph)</a>
         
       </li>
     
@@ -502,19 +502,19 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#size:Int32-instance-method" class="signature"><strong>#size</strong> : Int32</a>
+        <a href="#size%3AInt32-instance-method" class="signature"><strong>#size</strong> : Int32</a>
         
           <div class="summary"><p>Returns the number of elements in this container.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PGlyphT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PGlyphT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APGlyphT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PGlyphT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#unsafe_fetch(index:Int)-instance-method" class="signature"><strong>#unsafe_fetch</strong>(index : Int)</a>
+        <a href="#unsafe_fetch%28index%3AInt%29-instance-method" class="signature"><strong>#unsafe_fetch</strong>(index : Int)</a>
         
           <div class="summary"><p>Returns the element at the given <em>index</em>, without doing any bounds check.</p></div>
         
@@ -595,13 +595,13 @@
         
         def self.<strong>new</strong>(glyphs : LibCairo::PGlyphT, num_glyphs : Int32)
 
-        <a class="method-permalink" href="#new(glyphs:LibCairo::PGlyphT,num_glyphs:Int32)-class-method">#</a>
+        <a class="method-permalink" href="#new%28glyphs%3ALibCairo%3A%3APGlyphT%2Cnum_glyphs%3AInt32%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/glyph_array.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/glyph_array.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -611,34 +611,24 @@
         
         def self.<strong>new</strong>(num_glyphs : Int32)
 
-        <a class="method-permalink" href="#new(num_glyphs:Int32)-class-method">#</a>
+        <a class="method-permalink" href="#new%28num_glyphs%3AInt32%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Allocates an array of <code><a href="../Cairo/Glyph.html">Glyph</a></code>'s.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li>*<strong>num_glyphs</strong> number of glyphs to allocate</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The newly allocated array of glyphs that should be freed using <code><a href="../Cairo/GlyphArray.html#finalize-instance-method">GlyphArray#finalize</a></code></p>
+<p>###Parameters</p>
+<ul>
+<li>*<strong>num_glyphs</strong> number of glyphs to allocate</li>
+</ul>
+<p>###Returns
+The newly allocated array of glyphs that should be freed using <code><a href="../Cairo/GlyphArray.html#finalize-instance-method">GlyphArray#finalize</a></code></p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/glyph_array.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/glyph_array.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -662,13 +652,13 @@
         
         def <strong>[]=</strong>(index : Int, glyph : <a href="../Cairo/Glyph.html">Glyph</a>)
 
-        <a class="method-permalink" href="#[]=(index:Int,glyph:Glyph)-instance-method">#</a>
+        <a class="method-permalink" href="#%5B%5D%3D%28index%3AInt%2Cglyph%3AGlyph%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/glyph_array.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/glyph_array.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -684,7 +674,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/glyph_array.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/glyph_array.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -694,7 +684,7 @@
         
         def <strong>size</strong> : Int32
 
-        <a class="method-permalink" href="#size:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#size%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -705,7 +695,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/glyph_array.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/glyph_array.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -715,13 +705,13 @@
         
         def <strong>to_unsafe</strong> : LibCairo::PGlyphT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PGlyphT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APGlyphT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/glyph_array.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/glyph_array.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -731,19 +721,16 @@
         
         def <strong>unsafe_fetch</strong>(index : Int)
 
-        <a class="method-permalink" href="#unsafe_fetch(index:Int)-instance-method">#</a>
+        <a class="method-permalink" href="#unsafe_fetch%28index%3AInt%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Returns the element at the given <em>index</em>, without doing any bounds check.</p>
-
-<p><code>Indexable</code> makes sure to invoke this method with <em>index</em> in <code>0..<a href="../Cairo/GlyphArray.html#size:Int32-instance-method">.size</a></code>,
+<p><code>Indexable</code> makes sure to invoke this method with <em>index</em> in <code>0..<a href="../Cairo/GlyphArray.html#size%3AInt32-instance-method">.size</a></code>,
 so converting negative indices to positive ones is not needed here.</p>
-
 <p>Clients never invoke this method directly. Instead, they access
 elements with <code>#[](index)</code> and <code>#[]?(index)</code>.</p>
-
 <p>This method should only be directly invoked if you are absolutely
 sure the index is in bounds, to avoid a bounds check for a small boost
 of performance.</p>
@@ -752,7 +739,7 @@ of performance.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/glyph_array.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/glyph_array.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>

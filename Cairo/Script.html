@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -441,7 +441,7 @@ tools under the util/cairo-script directory, or with cairo-perf-trace.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/script.cr#L5" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/script.cr#L5" target="_blank">
         cairo/script.cr
       </a>
     
@@ -463,14 +463,14 @@ tools under the util/cairo-script directory, or with cairo-perf-trace.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void))-class-method" class="signature"><strong>.new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void))</a>
+        <a href="#new%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29-class-method" class="signature"><strong>.new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void))</a>
         
           <div class="summary"><p>Creates a output device for emitting the script, used when creating the individual surfaces.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(filename:String)-class-method" class="signature"><strong>.new</strong>(filename : String)</a>
+        <a href="#new%28filename%3AString%29-class-method" class="signature"><strong>.new</strong>(filename : String)</a>
         
           <div class="summary"><p>Creates a output device for emitting the script, used when creating the individual surfaces.</p></div>
         
@@ -493,42 +493,42 @@ tools under the util/cairo-script directory, or with cairo-perf-trace.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create_script_surface(content:Content,width:Float64,height:Float64):Surface-instance-method" class="signature"><strong>#create_script_surface</strong>(content : Content, width : Float64, height : Float64) : Surface</a>
+        <a href="#create_script_surface%28content%3AContent%2Cwidth%3AFloat64%2Cheight%3AFloat64%29%3ASurface-instance-method" class="signature"><strong>#create_script_surface</strong>(content : Content, width : Float64, height : Float64) : Surface</a>
         
           <div class="summary"><p>Create a new surface that will emit its rendering through script.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_script_surface_for_target(target:Surface):Surface-instance-method" class="signature"><strong>#create_script_surface_for_target</strong>(target : Surface) : Surface</a>
+        <a href="#create_script_surface_for_target%28target%3ASurface%29%3ASurface-instance-method" class="signature"><strong>#create_script_surface_for_target</strong>(target : Surface) : Surface</a>
         
           <div class="summary"><p>Create a pxoy surface that will render to <em>target</em> and record the operations to <em>device</em>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#from_recording_surface(recording_surface:Surface):Status-instance-method" class="signature"><strong>#from_recording_surface</strong>(recording_surface : Surface) : Status</a>
+        <a href="#from_recording_surface%28recording_surface%3ASurface%29%3AStatus-instance-method" class="signature"><strong>#from_recording_surface</strong>(recording_surface : Surface) : Status</a>
         
           <div class="summary"><p>Converts the record operations in <em>recording_surface</em> into a script.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mode:ScriptMode-instance-method" class="signature"><strong>#mode</strong> : ScriptMode</a>
+        <a href="#mode%3AScriptMode-instance-method" class="signature"><strong>#mode</strong> : ScriptMode</a>
         
           <div class="summary"><p>Queries the script for its current output mode.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mode=(mode:ScriptMode)-instance-method" class="signature"><strong>#mode=</strong>(mode : ScriptMode)</a>
+        <a href="#mode%3D%28mode%3AScriptMode%29-instance-method" class="signature"><strong>#mode=</strong>(mode : ScriptMode)</a>
         
           <div class="summary"><p>Change the output mode of the script.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#write_comment(comment:String,len:Int32=-1)-instance-method" class="signature"><strong>#write_comment</strong>(comment : String, len : Int32 = <span class="n">-1</span>)</a>
+        <a href="#write_comment%28comment%3AString%2Clen%3AInt32%3D-1%29-instance-method" class="signature"><strong>#write_comment</strong>(comment : String, len : Int32 = <span class="n">-1</span>)</a>
         
           <div class="summary"><p>Emit a string verbatim into the script.</p></div>
         
@@ -547,7 +547,7 @@ tools under the util/cairo-script directory, or with cairo-perf-trace.</p>
   <h3>Instance methods inherited from class <code><a href="../Cairo/Device.html">Cairo::Device</a></code></h3>
   
   
-    <a href="../Cairo/Device.html#acquire:Status-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#acquire%3AStatus-instance-method" class="tooltip">
       <span>acquire : Status</span>
     acquire</a>, 
     
@@ -567,47 +567,47 @@ tools under the util/cairo-script directory, or with cairo-perf-trace.</p>
     flush</a>, 
     
   
-    <a href="../Cairo/Device.html#observer_elapsed:Float64-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#observer_elapsed%3AFloat64-instance-method" class="tooltip">
       <span>observer_elapsed : Float64</span>
     observer_elapsed</a>, 
     
   
-    <a href="../Cairo/Device.html#observer_fill_elapsed:Float64-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#observer_fill_elapsed%3AFloat64-instance-method" class="tooltip">
       <span>observer_fill_elapsed : Float64</span>
     observer_fill_elapsed</a>, 
     
   
-    <a href="../Cairo/Device.html#observer_glyphs_elapsed:Float64-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#observer_glyphs_elapsed%3AFloat64-instance-method" class="tooltip">
       <span>observer_glyphs_elapsed : Float64</span>
     observer_glyphs_elapsed</a>, 
     
   
-    <a href="../Cairo/Device.html#observer_mask_elapsed:Float64-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#observer_mask_elapsed%3AFloat64-instance-method" class="tooltip">
       <span>observer_mask_elapsed : Float64</span>
     observer_mask_elapsed</a>, 
     
   
-    <a href="../Cairo/Device.html#observer_paint_elapsed:Float64-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#observer_paint_elapsed%3AFloat64-instance-method" class="tooltip">
       <span>observer_paint_elapsed : Float64</span>
     observer_paint_elapsed</a>, 
     
   
-    <a href="../Cairo/Device.html#observer_print(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#observer_print%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_print(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</span>
     observer_print</a>, 
     
   
-    <a href="../Cairo/Device.html#observer_stroke_elapsed:Float64-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#observer_stroke_elapsed%3AFloat64-instance-method" class="tooltip">
       <span>observer_stroke_elapsed : Float64</span>
     observer_stroke_elapsed</a>, 
     
   
-    <a href="../Cairo/Device.html#reference:Device-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#reference%3ADevice-instance-method" class="tooltip">
       <span>reference : Device</span>
     reference</a>, 
     
   
-    <a href="../Cairo/Device.html#reference_count:UInt32-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#reference_count%3AUInt32-instance-method" class="tooltip">
       <span>reference_count : UInt32</span>
     reference_count</a>, 
     
@@ -617,27 +617,27 @@ tools under the util/cairo-script directory, or with cairo-perf-trace.</p>
     release</a>, 
     
   
-    <a href="../Cairo/Device.html#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method" class="tooltip">
       <span>set_user_data(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</span>
     set_user_data</a>, 
     
   
-    <a href="../Cairo/Device.html#status:Status-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#status%3AStatus-instance-method" class="tooltip">
       <span>status : Status</span>
     status</a>, 
     
   
-    <a href="../Cairo/Device.html#to_unsafe:LibCairo::PDeviceT-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#to_unsafe%3ALibCairo%3A%3APDeviceT-instance-method" class="tooltip">
       <span>to_unsafe : LibCairo::PDeviceT</span>
     to_unsafe</a>, 
     
   
-    <a href="../Cairo/Device.html#type:DeviceType-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#type%3ADeviceType-instance-method" class="tooltip">
       <span>type : DeviceType</span>
     type</a>, 
     
   
-    <a href="../Cairo/Device.html#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="tooltip">
+    <a href="../Cairo/Device.html#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method" class="tooltip">
       <span>user_data(key : UserDataKey) : Pointer(Void)</span>
     user_data</a>
     
@@ -649,7 +649,7 @@ tools under the util/cairo-script directory, or with cairo-perf-trace.</p>
   <h3>Constructor methods inherited from class <code><a href="../Cairo/Device.html">Cairo::Device</a></code></h3>
   
   
-    <a href="../Cairo/Device.html#new(device:LibCairo::PDeviceT)-class-method" class="tooltip">
+    <a href="../Cairo/Device.html#new%28device%3ALibCairo%3A%3APDeviceT%29-class-method" class="tooltip">
       <span>new(device : LibCairo::PDeviceT)</span>
     new</a>
     
@@ -697,40 +697,30 @@ tools under the util/cairo-script directory, or with cairo-perf-trace.</p>
         
         def self.<strong>new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void))
 
-        <a class="method-permalink" href="#new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void))-class-method">#</a>
+        <a class="method-permalink" href="#new%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a output device for emitting the script,
 used when creating the individual surfaces.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>write_func</strong> callback function passed the bytes written to the script</li><li><strong>closure</strong> user data to be passed to the callback</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The newly created device. The caller owns the surface and
+<p>###Parameters</p>
+<ul>
+<li><strong>write_func</strong> callback function passed the bytes written to the script</li>
+<li><strong>closure</strong> user data to be passed to the callback</li>
+</ul>
+<p>###Returns
+The newly created device. The caller owns the surface and
 should call <code>Script#finalze</code> when done with it.</p>
-
 <p>This function always returns a valid pointer,
 but it will return a pointer to a <code>nil</code> device if an error such
-as out of memory occurs. You can use <code><a href="../Cairo/Context.html#status:Status-instance-method">Context#status</a></code> to check for this.</p>
+as out of memory occurs. You can use <code><a href="../Cairo/Context.html#status%3AStatus-instance-method">Context#status</a></code> to check for this.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/script.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/script.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -740,40 +730,29 @@ as out of memory occurs. You can use <code><a href="../Cairo/Context.html#status
         
         def self.<strong>new</strong>(filename : String)
 
-        <a class="method-permalink" href="#new(filename:String)-class-method">#</a>
+        <a class="method-permalink" href="#new%28filename%3AString%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a output device for emitting the script,
 used when creating the individual surfaces.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>filename</strong> the name (path) of the file to write the script to</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The newly created Script-Surface. The caller owns the surface
+<p>###Parameters</p>
+<ul>
+<li><strong>filename</strong> the name (path) of the file to write the script to</li>
+</ul>
+<p>###Returns
+The newly created Script-Surface. The caller owns the surface
 and should call <code>Script#finalize</code> when done with it.</p>
-
 <p>This function always returns a valid pointer,
 but it will return a pointer to a <code>nil</code> device if an error such
-as out of memory occurs. You can use <code><a href="../Cairo/Context.html#status:Status-instance-method">Context#status</a></code> to check for this.</p>
+as out of memory occurs. You can use <code><a href="../Cairo/Context.html#status%3AStatus-instance-method">Context#status</a></code> to check for this.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/script.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/script.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -797,39 +776,30 @@ as out of memory occurs. You can use <code><a href="../Cairo/Context.html#status
         
         def <strong>create_script_surface</strong>(content : <a href="../Cairo/Content.html">Content</a>, width : Float64, height : Float64) : <a href="../Cairo/Surface.html">Surface</a>
 
-        <a class="method-permalink" href="#create_script_surface(content:Content,width:Float64,height:Float64):Surface-instance-method">#</a>
+        <a class="method-permalink" href="#create_script_surface%28content%3AContent%2Cwidth%3AFloat64%2Cheight%3AFloat64%29%3ASurface-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Create a new surface that will emit its rendering through script.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>content</strong> the content of the surface</li><li><strong>width</strong> width in pixels</li><li><strong>height</strong> height in pixels</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly created <code><a href="../Cairo/Surface.html">Surface</a></code>. The caller owns the surface and
+<p>###Parameters</p>
+<ul>
+<li><strong>content</strong> the content of the surface</li>
+<li><strong>width</strong> width in pixels</li>
+<li><strong>height</strong> height in pixels</li>
+</ul>
+<p>###Returns
+A pointer to the newly created <code><a href="../Cairo/Surface.html">Surface</a></code>. The caller owns the surface and
 should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
-
 <p>This function always returns a valid pointer, but it will return a pointer
 to a <code>nil</code> surface if an error such as out of memory occurs.
-You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> to check for this.</p>
+You can use <code><a href="../Cairo/Surface.html#status%3AStatus-instance-method">Surface#status</a></code> to check for this.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/script.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/script.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -839,39 +809,28 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
         
         def <strong>create_script_surface_for_target</strong>(target : <a href="../Cairo/Surface.html">Surface</a>) : <a href="../Cairo/Surface.html">Surface</a>
 
-        <a class="method-permalink" href="#create_script_surface_for_target(target:Surface):Surface-instance-method">#</a>
+        <a class="method-permalink" href="#create_script_surface_for_target%28target%3ASurface%29%3ASurface-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Create a pxoy surface that will render to <em>target</em> and record the operations to <em>device</em>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>target</strong> a target surface to wrap</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly created <code><a href="../Cairo/Surface.html">Surface</a></code>. The caller owns the surface and
+<p>###Parameters</p>
+<ul>
+<li><strong>target</strong> a target surface to wrap</li>
+</ul>
+<p>###Returns
+A pointer to the newly created <code><a href="../Cairo/Surface.html">Surface</a></code>. The caller owns the surface and
 should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
-
 <p>This function always returns a valid pointer, but it will return a pointer
 to a <code>nil</code> surface if an error such as out of memory occurs.
-You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> to check for this.</p>
+You can use <code><a href="../Cairo/Surface.html#status%3AStatus-instance-method">Surface#status</a></code> to check for this.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/script.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/script.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -881,34 +840,25 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
         
         def <strong>from_recording_surface</strong>(recording_surface : <a href="../Cairo/Surface.html">Surface</a>) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#from_recording_surface(recording_surface:Surface):Status-instance-method">#</a>
+        <a class="method-permalink" href="#from_recording_surface%28recording_surface%3ASurface%29%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Converts the record operations in <em>recording_surface</em> into a script.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>script</strong> the script (output device)</li><li><strong>recording_surface</strong> the recording surface to replay</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> on successful completion or an error code.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>script</strong> the script (output device)</li>
+<li><strong>recording_surface</strong> the recording surface to replay</li>
+</ul>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code> on successful completion or an error code.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/script.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/script.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -918,26 +868,20 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
         
         def <strong>mode</strong> : <a href="../Cairo/ScriptMode.html">ScriptMode</a>
 
-        <a class="method-permalink" href="#mode:ScriptMode-instance-method">#</a>
+        <a class="method-permalink" href="#mode%3AScriptMode-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Queries the script for its current output mode.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The current output mode of the script.</p>
+<p>###Returns
+The current output mode of the script.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/script.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/script.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -947,26 +891,22 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
         
         def <strong>mode=</strong>(mode : <a href="../Cairo/ScriptMode.html">ScriptMode</a>)
 
-        <a class="method-permalink" href="#mode=(mode:ScriptMode)-instance-method">#</a>
+        <a class="method-permalink" href="#mode%3D%28mode%3AScriptMode%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Change the output mode of the script.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>mode</strong> the new mode</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>mode</strong> the new mode</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/script.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/script.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -976,26 +916,23 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
         
         def <strong>write_comment</strong>(comment : String, len : Int32 = <span class="n">-1</span>)
 
-        <a class="method-permalink" href="#write_comment(comment:String,len:Int32=-1)-instance-method">#</a>
+        <a class="method-permalink" href="#write_comment%28comment%3AString%2Clen%3AInt32%3D-1%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Emit a string verbatim into the script.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>comment</strong> the string to emit</li><li><strong>len</strong> the length of the sting to write, or -1 to use <code>comment.size</code></li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>comment</strong> the string to emit</li>
+<li><strong>len</strong> the length of the sting to write, or -1 to use <code>comment.size</code></li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/script.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/script.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>

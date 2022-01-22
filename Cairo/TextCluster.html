@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -415,16 +415,13 @@
   </h2>
 
   <p>Wrapper for LibCairo::TextClusterT.</p>
-
 <p>The <code><a href="../Cairo/TextCluster.html">TextCluster</a></code> class holds information about a single <em>text cluster</em>.
 A text cluster is a minimal mapping of some glyphs corresponding to some UTF-8 text.</p>
-
 <p>For a cluster to be valid, both <em>num_bytes</em> and <em>num_glyphs</em> should be non-negative,
 and at least one should be non-zero. Note that clusters with zero glyphs are not as
 well supported as normal clusters. For example, PDF rendering applications typically
 ignore those clusters when PDF text is being selected.</p>
-
-<p>See <code><a href="../Cairo/Context.html#show_text_glyphs(text:String,glyphs:GlyphArray,clusters:TextClusterArray,cluster_flags:TextClusterFlags)-instance-method">Context#show_text_glyphs</a></code> for how clusters are used in advanced text operations.</p>
+<p>See <code><a href="../Cairo/Context.html#show_text_glyphs%28text%3AString%2Cglyphs%3AGlyphArray%2Cclusters%3ATextClusterArray%2Ccluster_flags%3ATextClusterFlags%29-instance-method">Context#show_text_glyphs</a></code> for how clusters are used in advanced text operations.</p>
 
 
 
@@ -449,7 +446,7 @@ ignore those clusters when PDF text is being selected.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L17" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L17" target="_blank">
         cairo/text_cluster.cr
       </a>
     
@@ -471,17 +468,17 @@ ignore those clusters when PDF text is being selected.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(num_bytes:Int32,num_glyphs:Int32)-class-method" class="signature"><strong>.new</strong>(num_bytes : Int32, num_glyphs : Int32)</a>
+        <a href="#new%28num_bytes%3AInt32%2Cnum_glyphs%3AInt32%29-class-method" class="signature"><strong>.new</strong>(num_bytes : Int32, num_glyphs : Int32)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(cluster:LibCairo::TextClusterT)-class-method" class="signature"><strong>.new</strong>(cluster : LibCairo::TextClusterT)</a>
+        <a href="#new%28cluster%3ALibCairo%3A%3ATextClusterT%29-class-method" class="signature"><strong>.new</strong>(cluster : LibCairo::TextClusterT)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(cluster:LibCairo::PTextClusterT)-class-method" class="signature"><strong>.new</strong>(cluster : LibCairo::PTextClusterT)</a>
+        <a href="#new%28cluster%3ALibCairo%3A%3APTextClusterT%29-class-method" class="signature"><strong>.new</strong>(cluster : LibCairo::PTextClusterT)</a>
         
       </li>
     
@@ -507,36 +504,36 @@ ignore those clusters when PDF text is being selected.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#num_bytes:Int32-instance-method" class="signature"><strong>#num_bytes</strong> : Int32</a>
+        <a href="#num_bytes%3AInt32-instance-method" class="signature"><strong>#num_bytes</strong> : Int32</a>
         
           <div class="summary"><p>The number of bytes of UTF-8 text covered by cluster.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#num_bytes=(num_bytes:Int32)-instance-method" class="signature"><strong>#num_bytes=</strong>(num_bytes : Int32)</a>
+        <a href="#num_bytes%3D%28num_bytes%3AInt32%29-instance-method" class="signature"><strong>#num_bytes=</strong>(num_bytes : Int32)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#num_glyphs:Int32-instance-method" class="signature"><strong>#num_glyphs</strong> : Int32</a>
+        <a href="#num_glyphs%3AInt32-instance-method" class="signature"><strong>#num_glyphs</strong> : Int32</a>
         
           <div class="summary"><p>The number of glyphs covered by cluster.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#num_glyphs=(num_glyphs:Int32)-instance-method" class="signature"><strong>#num_glyphs=</strong>(num_glyphs : Int32)</a>
+        <a href="#num_glyphs%3D%28num_glyphs%3AInt32%29-instance-method" class="signature"><strong>#num_glyphs=</strong>(num_glyphs : Int32)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_cairo_cluster:LibCairo::TextClusterT-instance-method" class="signature"><strong>#to_cairo_cluster</strong> : LibCairo::TextClusterT</a>
+        <a href="#to_cairo_cluster%3ALibCairo%3A%3ATextClusterT-instance-method" class="signature"><strong>#to_cairo_cluster</strong> : LibCairo::TextClusterT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PTextClusterT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PTextClusterT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APTextClusterT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PTextClusterT</a>
         
       </li>
     
@@ -595,13 +592,13 @@ ignore those clusters when PDF text is being selected.</p>
         
         def self.<strong>new</strong>(num_bytes : Int32, num_glyphs : Int32)
 
-        <a class="method-permalink" href="#new(num_bytes:Int32,num_glyphs:Int32)-class-method">#</a>
+        <a class="method-permalink" href="#new%28num_bytes%3AInt32%2Cnum_glyphs%3AInt32%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -611,13 +608,13 @@ ignore those clusters when PDF text is being selected.</p>
         
         def self.<strong>new</strong>(cluster : LibCairo::TextClusterT)
 
-        <a class="method-permalink" href="#new(cluster:LibCairo::TextClusterT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28cluster%3ALibCairo%3A%3ATextClusterT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -627,13 +624,13 @@ ignore those clusters when PDF text is being selected.</p>
         
         def self.<strong>new</strong>(cluster : LibCairo::PTextClusterT)
 
-        <a class="method-permalink" href="#new(cluster:LibCairo::PTextClusterT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28cluster%3ALibCairo%3A%3APTextClusterT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -649,7 +646,7 @@ ignore those clusters when PDF text is being selected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -673,7 +670,7 @@ ignore those clusters when PDF text is being selected.</p>
         
         def <strong>num_bytes</strong> : Int32
 
-        <a class="method-permalink" href="#num_bytes:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#num_bytes%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -684,7 +681,7 @@ ignore those clusters when PDF text is being selected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -694,13 +691,13 @@ ignore those clusters when PDF text is being selected.</p>
         
         def <strong>num_bytes=</strong>(num_bytes : Int32)
 
-        <a class="method-permalink" href="#num_bytes=(num_bytes:Int32)-instance-method">#</a>
+        <a class="method-permalink" href="#num_bytes%3D%28num_bytes%3AInt32%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -710,7 +707,7 @@ ignore those clusters when PDF text is being selected.</p>
         
         def <strong>num_glyphs</strong> : Int32
 
-        <a class="method-permalink" href="#num_glyphs:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#num_glyphs%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -721,7 +718,7 @@ ignore those clusters when PDF text is being selected.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L48" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -731,13 +728,13 @@ ignore those clusters when PDF text is being selected.</p>
         
         def <strong>num_glyphs=</strong>(num_glyphs : Int32)
 
-        <a class="method-permalink" href="#num_glyphs=(num_glyphs:Int32)-instance-method">#</a>
+        <a class="method-permalink" href="#num_glyphs%3D%28num_glyphs%3AInt32%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -747,13 +744,13 @@ ignore those clusters when PDF text is being selected.</p>
         
         def <strong>to_cairo_cluster</strong> : LibCairo::TextClusterT
 
-        <a class="method-permalink" href="#to_cairo_cluster:LibCairo::TextClusterT-instance-method">#</a>
+        <a class="method-permalink" href="#to_cairo_cluster%3ALibCairo%3A%3ATextClusterT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L56" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -763,13 +760,13 @@ ignore those clusters when PDF text is being selected.</p>
         
         def <strong>to_unsafe</strong> : LibCairo::PTextClusterT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PTextClusterT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APTextClusterT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/text_cluster.cr#L60" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/text_cluster.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>

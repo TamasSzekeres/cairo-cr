@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -416,16 +416,13 @@
 
   <p><code><a href="../Cairo/FontFace.html">FontFace</a></code> represents a particular font at a particular weight, slant,
 and other characteristic but no size, transformation, or size.</p>
-
 <p>A <code><a href="../Cairo/FontFace.html">FontFace</a></code> specifies all aspects of a font other than the size or font matrix
 (a font matrix is used to distort a font by shearing it or scaling it unequally in the two directions).
-A font face can be set on a <code><a href="../Cairo/Context.html">Context</a></code> by using <code><a href="../Cairo/Context.html#font_face=(font_face:FontFace?)-instance-method">Context#font_face=</a></code>;
-the size and font matrix are set with <code><a href="../Cairo/Context.html#font_size=(size:Float64)-instance-method">Context#font_size=</a></code> and <code><a href="../Cairo/Context.html#font_matrix=(matrix:Matrix)-instance-method">Context#font_matrix=</a></code>.</p>
-
+A font face can be set on a <code><a href="../Cairo/Context.html">Context</a></code> by using <code><a href="../Cairo/Context.html#font_face%3D%28font_face%3AFontFace%3F%29-instance-method">Context#font_face=</a></code>;
+the size and font matrix are set with <code><a href="../Cairo/Context.html#font_size%3D%28size%3AFloat64%29-instance-method">Context#font_size=</a></code> and <code><a href="../Cairo/Context.html#font_matrix%3D%28matrix%3AMatrix%29-instance-method">Context#font_matrix=</a></code>.</p>
 <p>There are various types of font faces, depending on the font backend they use.
-The type of a font face can be queried using <code><a href="../Cairo/FontFace.html#type:FontType-instance-method">FontFace#type</a></code>.</p>
-
-<p>Memory management of <code><a href="../Cairo/FontFace.html">FontFace</a></code> is done with <code><a href="../Cairo/FontFace.html#reference:FontFace-instance-method">FontFace#reference</a></code> and <code><a href="../Cairo/FontFace.html#finalize-instance-method">FontFace#finalize</a></code>.</p>
+The type of a font face can be queried using <code><a href="../Cairo/FontFace.html#type%3AFontType-instance-method">FontFace#type</a></code>.</p>
+<p>Memory management of <code><a href="../Cairo/FontFace.html">FontFace</a></code> is done with <code><a href="../Cairo/FontFace.html#reference%3AFontFace-instance-method">FontFace#reference</a></code> and <code><a href="../Cairo/FontFace.html#finalize-instance-method">FontFace#finalize</a></code>.</p>
 
 
 
@@ -450,7 +447,7 @@ The type of a font face can be queried using <code><a href="../Cairo/FontFace.ht
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L16" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L16" target="_blank">
         cairo/font_face.cr
       </a>
     
@@ -472,14 +469,14 @@ The type of a font face can be queried using <code><a href="../Cairo/FontFace.ht
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(family:String,slant:FontSlant,weight:FontWeight)-class-method" class="signature"><strong>.new</strong>(family : String, slant : FontSlant, weight : FontWeight)</a>
+        <a href="#new%28family%3AString%2Cslant%3AFontSlant%2Cweight%3AFontWeight%29-class-method" class="signature"><strong>.new</strong>(family : String, slant : FontSlant, weight : FontWeight)</a>
         
           <div class="summary"><p>Creates a font face from a triplet of <em>family</em>, <em>slant</em>, and <em>weight</em>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(font_face:LibCairo::PFontFaceT)-class-method" class="signature"><strong>.new</strong>(font_face : LibCairo::PFontFaceT)</a>
+        <a href="#new%28font_face%3ALibCairo%3A%3APFontFaceT%29-class-method" class="signature"><strong>.new</strong>(font_face : LibCairo::PFontFaceT)</a>
         
       </li>
     
@@ -505,12 +502,12 @@ The type of a font face can be queried using <code><a href="../Cairo/FontFace.ht
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create_scaled_font(font_matrix:Matrix,ctm:Matrix,options:FontOptions):ScaledFont-instance-method" class="signature"><strong>#create_scaled_font</strong>(font_matrix : Matrix, ctm : Matrix, options : FontOptions) : ScaledFont</a>
+        <a href="#create_scaled_font%28font_matrix%3AMatrix%2Cctm%3AMatrix%2Coptions%3AFontOptions%29%3AScaledFont-instance-method" class="signature"><strong>#create_scaled_font</strong>(font_matrix : Matrix, ctm : Matrix, options : FontOptions) : ScaledFont</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#family:String-instance-method" class="signature"><strong>#family</strong> : String</a>
+        <a href="#family%3AString-instance-method" class="signature"><strong>#family</strong> : String</a>
         
           <div class="summary"><p>Gets the familly name of a toy font.</p></div>
         
@@ -524,117 +521,117 @@ The type of a font face can be queried using <code><a href="../Cairo/FontFace.ht
       </li>
     
       <li class="entry-summary">
-        <a href="#init_func:LibCairo::UserScaledFontInitFuncT-instance-method" class="signature"><strong>#init_func</strong> : LibCairo::UserScaledFontInitFuncT</a>
+        <a href="#init_func%3ALibCairo%3A%3AUserScaledFontInitFuncT-instance-method" class="signature"><strong>#init_func</strong> : LibCairo::UserScaledFontInitFuncT</a>
         
           <div class="summary"><p>Gets the scaled-font initialization function of a user-font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#init_func=(init_func:LibCairo::UserScaledFontInitFuncT)-instance-method" class="signature"><strong>#init_func=</strong>(init_func : LibCairo::UserScaledFontInitFuncT)</a>
+        <a href="#init_func%3D%28init_func%3ALibCairo%3A%3AUserScaledFontInitFuncT%29-instance-method" class="signature"><strong>#init_func=</strong>(init_func : LibCairo::UserScaledFontInitFuncT)</a>
         
           <div class="summary"><p>Sets the scaled-font initialization function of a user-font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference:FontFace-instance-method" class="signature"><strong>#reference</strong> : FontFace</a>
+        <a href="#reference%3AFontFace-instance-method" class="signature"><strong>#reference</strong> : FontFace</a>
         
           <div class="summary"><p>Increases the reference count on <code><a href="../Cairo/FontFace.html">FontFace</a></code> by one.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference_count:UInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
+        <a href="#reference_count%3AUInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
         
           <div class="summary"><p>Returns the current reference count of <code><a href="../Cairo/FontFace.html">FontFace</a></code> .</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#render_glyph_func:LibCairo::UserScaledFontRenderGlyphFuncT-instance-method" class="signature"><strong>#render_glyph_func</strong> : LibCairo::UserScaledFontRenderGlyphFuncT</a>
+        <a href="#render_glyph_func%3ALibCairo%3A%3AUserScaledFontRenderGlyphFuncT-instance-method" class="signature"><strong>#render_glyph_func</strong> : LibCairo::UserScaledFontRenderGlyphFuncT</a>
         
           <div class="summary"><p>Gets the glyph rendering function of a user-font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#render_glyph_func=(render_glyph_func:LibCairo::UserScaledFontRenderGlyphFuncT)-instance-method" class="signature"><strong>#render_glyph_func=</strong>(render_glyph_func : LibCairo::UserScaledFontRenderGlyphFuncT)</a>
+        <a href="#render_glyph_func%3D%28render_glyph_func%3ALibCairo%3A%3AUserScaledFontRenderGlyphFuncT%29-instance-method" class="signature"><strong>#render_glyph_func=</strong>(render_glyph_func : LibCairo::UserScaledFontRenderGlyphFuncT)</a>
         
           <div class="summary"><p>Sets the glyph rendering function of a user-font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</a>
+        <a href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</a>
         
           <div class="summary"><p>Attach user data to <code><a href="../Cairo/FontFace.html">FontFace</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#slant:FontSlant-instance-method" class="signature"><strong>#slant</strong> : FontSlant</a>
+        <a href="#slant%3AFontSlant-instance-method" class="signature"><strong>#slant</strong> : FontSlant</a>
         
           <div class="summary"><p>Gets the slant a toy font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status:Status-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        <a href="#status%3AStatus-instance-method" class="signature"><strong>#status</strong> : Status</a>
         
           <div class="summary"><p>Checks whether an error has previously occurred for this font face.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#text_to_glyphs_func:LibCairo::UserScaledFontTextToGlyphFuncT-instance-method" class="signature"><strong>#text_to_glyphs_func</strong> : LibCairo::UserScaledFontTextToGlyphFuncT</a>
+        <a href="#text_to_glyphs_func%3ALibCairo%3A%3AUserScaledFontTextToGlyphFuncT-instance-method" class="signature"><strong>#text_to_glyphs_func</strong> : LibCairo::UserScaledFontTextToGlyphFuncT</a>
         
           <div class="summary"><p>Gets the text-to-glyphs conversion function of a user-font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#text_to_glyphs_func=(text_to_glyphs_func:LibCairo::UserScaledFontTextToGlyphFuncT)-instance-method" class="signature"><strong>#text_to_glyphs_func=</strong>(text_to_glyphs_func : LibCairo::UserScaledFontTextToGlyphFuncT)</a>
+        <a href="#text_to_glyphs_func%3D%28text_to_glyphs_func%3ALibCairo%3A%3AUserScaledFontTextToGlyphFuncT%29-instance-method" class="signature"><strong>#text_to_glyphs_func=</strong>(text_to_glyphs_func : LibCairo::UserScaledFontTextToGlyphFuncT)</a>
         
           <div class="summary"><p>Sets th text-to-glyphs conversion function of a user-font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PFontFaceT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PFontFaceT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APFontFaceT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PFontFaceT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#type:FontType-instance-method" class="signature"><strong>#type</strong> : FontType</a>
+        <a href="#type%3AFontType-instance-method" class="signature"><strong>#type</strong> : FontType</a>
         
           <div class="summary"><p>This function returns the type of the backend used to create a font face.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#unicode_to_glyph_func=(unicode_to_glyph_func:LibCairo::UserScaledFontUnicodeToGlyphFuncT)-instance-method" class="signature"><strong>#unicode_to_glyph_func=</strong>(unicode_to_glyph_func : LibCairo::UserScaledFontUnicodeToGlyphFuncT)</a>
+        <a href="#unicode_to_glyph_func%3D%28unicode_to_glyph_func%3ALibCairo%3A%3AUserScaledFontUnicodeToGlyphFuncT%29-instance-method" class="signature"><strong>#unicode_to_glyph_func=</strong>(unicode_to_glyph_func : LibCairo::UserScaledFontUnicodeToGlyphFuncT)</a>
         
           <div class="summary"><p>Sets the unicode-to-glyph conversion function of a user-font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
+        <a href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
         
           <div class="summary"><p>Return user data previously attached to <code><a href="../Cairo/FontFace.html">FontFace</a></code> using the specified key.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user_font_face_get_unicode_to_glyph_func:LibCairo::UserScaledFontUnicodeToGlyphFuncT-instance-method" class="signature"><strong>#user_font_face_get_unicode_to_glyph_func</strong> : LibCairo::UserScaledFontUnicodeToGlyphFuncT</a>
+        <a href="#user_font_face_get_unicode_to_glyph_func%3ALibCairo%3A%3AUserScaledFontUnicodeToGlyphFuncT-instance-method" class="signature"><strong>#user_font_face_get_unicode_to_glyph_func</strong> : LibCairo::UserScaledFontUnicodeToGlyphFuncT</a>
         
           <div class="summary"><p>Gets the unicode-to-glyph conversion function of a user-font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#weight:FontWeight-instance-method" class="signature"><strong>#weight</strong> : FontWeight</a>
+        <a href="#weight%3AFontWeight-instance-method" class="signature"><strong>#weight</strong> : FontWeight</a>
         
           <div class="summary"><p>Gets the weight a toy font.</p></div>
         
@@ -685,41 +682,31 @@ The type of a font face can be queried using <code><a href="../Cairo/FontFace.ht
         
         def self.<strong>new</strong>(family : String, slant : <a href="../Cairo/FontSlant.html">FontSlant</a>, weight : <a href="../Cairo/FontWeight.html">FontWeight</a>)
 
-        <a class="method-permalink" href="#new(family:String,slant:FontSlant,weight:FontWeight)-class-method">#</a>
+        <a class="method-permalink" href="#new%28family%3AString%2Cslant%3AFontSlant%2Cweight%3AFontWeight%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a font face from a triplet of <em>family</em>, <em>slant</em>, and <em>weight</em>.
-These font faces are used in implementation of the the <code><a href="../Cairo/Context.html">Context</a></code> "toy" font API.</p>
-
-<p>If family is the zero-length string "", the platform-specific default family is assumed.
-The default family then can be queried using <code><a href="../Cairo/FontFace.html#family:String-instance-method">FontFace#family</a></code>.</p>
-
-<p>The <code><a href="../Cairo/Context.html#select_font_face(family:String,slant:FontSlant,weight:FontWeight)-instance-method">Context#select_font_face</a></code> function uses this to create font faces.
+These font faces are used in implementation of the the <code><a href="../Cairo/Context.html">Context</a></code> &quot;toy&quot; font API.</p>
+<p>If family is the zero-length string &quot;&quot;, the platform-specific default family is assumed.
+The default family then can be queried using <code><a href="../Cairo/FontFace.html#family%3AString-instance-method">FontFace#family</a></code>.</p>
+<p>The <code><a href="../Cairo/Context.html#select_font_face%28family%3AString%2Cslant%3AFontSlant%2Cweight%3AFontWeight%29-instance-method">Context#select_font_face</a></code> function uses this to create font faces.
 See that function for limitations and other details of toy font faces.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>family</strong> a font family name, encoded in UTF-8</li><li><strong>slant</strong> the slant for the font</li><li><strong>weight</strong> the weight for the font</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A newly created <code><a href="../Cairo/FontFace.html">FontFace</a></code>. Free with <code><a href="../Cairo/FontFace.html#finalize-instance-method">FontFace#finalize</a></code> when you are done using it.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>family</strong> a font family name, encoded in UTF-8</li>
+<li><strong>slant</strong> the slant for the font</li>
+<li><strong>weight</strong> the weight for the font</li>
+</ul>
+<p>###Returns
+A newly created <code><a href="../Cairo/FontFace.html">FontFace</a></code>. Free with <code><a href="../Cairo/FontFace.html#finalize-instance-method">FontFace#finalize</a></code> when you are done using it.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L117" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L117" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -729,13 +716,13 @@ See that function for limitations and other details of toy font faces.</p>
         
         def self.<strong>new</strong>(font_face : LibCairo::PFontFaceT)
 
-        <a class="method-permalink" href="#new(font_face:LibCairo::PFontFaceT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28font_face%3ALibCairo%3A%3APFontFaceT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -751,7 +738,7 @@ See that function for limitations and other details of toy font faces.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -775,13 +762,13 @@ See that function for limitations and other details of toy font faces.</p>
         
         def <strong>create_scaled_font</strong>(font_matrix : <a href="../Cairo/Matrix.html">Matrix</a>, ctm : <a href="../Cairo/Matrix.html">Matrix</a>, options : <a href="../Cairo/FontOptions.html">FontOptions</a>) : <a href="../Cairo/ScaledFont.html">ScaledFont</a>
 
-        <a class="method-permalink" href="#create_scaled_font(font_matrix:Matrix,ctm:Matrix,options:FontOptions):ScaledFont-instance-method">#</a>
+        <a class="method-permalink" href="#create_scaled_font%28font_matrix%3AMatrix%2Cctm%3AMatrix%2Coptions%3AFontOptions%29%3AScaledFont-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L97" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -791,26 +778,20 @@ See that function for limitations and other details of toy font faces.</p>
         
         def <strong>family</strong> : String
 
-        <a class="method-permalink" href="#family:String-instance-method">#</a>
+        <a class="method-permalink" href="#family%3AString-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the familly name of a toy font.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The family name. This string is owned by the font face and remains valid as long as the font face is alive (referenced).</p>
+<p>###Returns
+The family name. This string is owned by the font face and remains valid as long as the font face is alive (referenced).</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L127" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L127" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -827,13 +808,13 @@ See that function for limitations and other details of toy font faces.</p>
           
           <p>Decreases the reference count on <code><a href="../Cairo/FontFace.html">FontFace</a></code> by one.
 If the result is zero, then <code><a href="../Cairo/FontFace.html">FontFace</a></code> and all associated resources are freed.
-See <code><a href="../Cairo/FontFace.html#reference:FontFace-instance-method">FontFace#reference</a></code>.</p>
+See <code><a href="../Cairo/FontFace.html#reference%3AFontFace-instance-method">FontFace#reference</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -843,27 +824,21 @@ See <code><a href="../Cairo/FontFace.html#reference:FontFace-instance-method">Fo
         
         def <strong>init_func</strong> : LibCairo::UserScaledFontInitFuncT
 
-        <a class="method-permalink" href="#init_func:LibCairo::UserScaledFontInitFuncT-instance-method">#</a>
+        <a class="method-permalink" href="#init_func%3ALibCairo%3A%3AUserScaledFontInitFuncT-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the scaled-font initialization function of a user-font.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The init callback of <code><a href="../Cairo/FontFace.html">FontFace</a></code> or <code>nil</code>
+<p>###Returns
+The init callback of <code><a href="../Cairo/FontFace.html">FontFace</a></code> or <code>nil</code>
 if none set or an error has occurred.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L152" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L152" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -873,30 +848,25 @@ if none set or an error has occurred.</p>
         
         def <strong>init_func=</strong>(init_func : LibCairo::UserScaledFontInitFuncT)
 
-        <a class="method-permalink" href="#init_func=(init_func:LibCairo::UserScaledFontInitFuncT)-instance-method">#</a>
+        <a class="method-permalink" href="#init_func%3D%28init_func%3ALibCairo%3A%3AUserScaledFontInitFuncT%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Sets the scaled-font initialization function of a user-font.
 See <code>LibCairo::UserScaledFontInitFuncT</code> for details of how the callback works.</p>
-
 <p>The font-face should not be immutable or a <code>Status#UserFontImmutable</code> error
 will occur. A user font-face is immutable as soon as a scaled-font is created from it.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>init_func</strong> The init callback, or <code>nil</code></li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>init_func</strong> The init callback, or <code>nil</code></li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L164" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L164" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -906,7 +876,7 @@ will occur. A user font-face is immutable as soon as a scaled-font is created fr
         
         def <strong>reference</strong> : <a href="../Cairo/FontFace.html">FontFace</a>
 
-        <a class="method-permalink" href="#reference:FontFace-instance-method">#</a>
+        <a class="method-permalink" href="#reference%3AFontFace-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -914,22 +884,15 @@ will occur. A user font-face is immutable as soon as a scaled-font is created fr
           <p>Increases the reference count on <code><a href="../Cairo/FontFace.html">FontFace</a></code> by one.
 This prevents <code><a href="../Cairo/FontFace.html">FontFace</a></code> from being destroyed until a matching call
 to <code><a href="../Cairo/Context.html#finalize-instance-method">Context#finalize</a></code> is made.</p>
-
-<p>Use <code><a href="../Cairo/Context.html#reference_count:UInt32-instance-method">Context#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/FontFace.html">FontFace</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The referenced <code><a href="../Cairo/FontFace.html">FontFace</a></code>.</p>
+<p>Use <code><a href="../Cairo/Context.html#reference_count%3AUInt32-instance-method">Context#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/FontFace.html">FontFace</a></code>.</p>
+<p>###Returns
+The referenced <code><a href="../Cairo/FontFace.html">FontFace</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -939,26 +902,20 @@ to <code><a href="../Cairo/Context.html#finalize-instance-method">Context#finali
         
         def <strong>reference_count</strong> : UInt32
 
-        <a class="method-permalink" href="#reference_count:UInt32-instance-method">#</a>
+        <a class="method-permalink" href="#reference_count%3AUInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Returns the current reference count of <code><a href="../Cairo/FontFace.html">FontFace</a></code> .</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>Tthe current reference count of <code><a href="../Cairo/FontFace.html">FontFace</a></code>. If the object is a nil object, 0 will be returned.</p>
+<p>###Returns
+Tthe current reference count of <code><a href="../Cairo/FontFace.html">FontFace</a></code>. If the object is a nil object, 0 will be returned.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -968,27 +925,21 @@ to <code><a href="../Cairo/Context.html#finalize-instance-method">Context#finali
         
         def <strong>render_glyph_func</strong> : LibCairo::UserScaledFontRenderGlyphFuncT
 
-        <a class="method-permalink" href="#render_glyph_func:LibCairo::UserScaledFontRenderGlyphFuncT-instance-method">#</a>
+        <a class="method-permalink" href="#render_glyph_func%3ALibCairo%3A%3AUserScaledFontRenderGlyphFuncT-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the glyph rendering function of a user-font.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The <em>render_glyph</em> callback of <code><a href="../Cairo/FontFace.html">FontFace</a></code> or <code>nil</code>
+<p>###Returns
+The <em>render_glyph</em> callback of <code><a href="../Cairo/FontFace.html">FontFace</a></code> or <code>nil</code>
 if none set or an error has occurred.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L174" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L174" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -998,7 +949,7 @@ if none set or an error has occurred.</p>
         
         def <strong>render_glyph_func=</strong>(render_glyph_func : LibCairo::UserScaledFontRenderGlyphFuncT)
 
-        <a class="method-permalink" href="#render_glyph_func=(render_glyph_func:LibCairo::UserScaledFontRenderGlyphFuncT)-instance-method">#</a>
+        <a class="method-permalink" href="#render_glyph_func%3D%28render_glyph_func%3ALibCairo%3A%3AUserScaledFontRenderGlyphFuncT%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1006,28 +957,22 @@ if none set or an error has occurred.</p>
           <p>Sets the glyph rendering function of a user-font.
 See `LibCairo::UserScaledFontRenderGlyphFuncT for
 details of how the callback works.</p>
-
 <p>The font-face should not be immutable or a <code>Status#UserFontImmutable</code>
 error will occur. A user font-face is immutable as soon as
 a scaled-font is created from it.</p>
-
 <p>The <em>render_glyph</em> callback is the only mandatory callback of a user-font.
 If the callback is <code>nil</code> and a glyph is tried to be rendered using
 <code><a href="../Cairo/FontFace.html">FontFace</a></code>, a <code>Status#UserFontError</code> will occur.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>render_glyph_func</strong> The <em>render_glyph</em> callback, or <code>nil</code></li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>render_glyph_func</strong> The <em>render_glyph</em> callback, or <code>nil</code></li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L192" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L192" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1037,36 +982,28 @@ If the callback is <code>nil</code> and a glyph is tried to be rendered using
         
         def <strong>set_user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method">#</a>
+        <a class="method-permalink" href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Attach user data to <code><a href="../Cairo/FontFace.html">FontFace</a></code>. To remove user data from a font face,
 call this function with the key that was used to set it and <code>Nil</code> for data.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li><li><strong>user_data</strong> the user data to attach to the font face</li><li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the font
-face is destroyed or when new user data is attached using the same key</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li>
+<li><strong>user_data</strong> the user data to attach to the font face</li>
+<li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the font
+face is destroyed or when new user data is attached using the same key</li>
+</ul>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L93" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1076,26 +1013,20 @@ face is destroyed or when new user data is attached using the same key</li></ul>
         
         def <strong>slant</strong> : <a href="../Cairo/FontSlant.html">FontSlant</a>
 
-        <a class="method-permalink" href="#slant:FontSlant-instance-method">#</a>
+        <a class="method-permalink" href="#slant%3AFontSlant-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the slant a toy font.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The slant value.</p>
+<p>###Returns
+The slant value.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L135" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L135" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1105,26 +1036,20 @@ face is destroyed or when new user data is attached using the same key</li></ul>
         
         def <strong>status</strong> : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#status:Status-instance-method">#</a>
+        <a class="method-permalink" href="#status%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Checks whether an error has previously occurred for this font face.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or another error such as <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or another error such as <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L57" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1134,26 +1059,20 @@ face is destroyed or when new user data is attached using the same key</li></ul>
         
         def <strong>text_to_glyphs_func</strong> : LibCairo::UserScaledFontTextToGlyphFuncT
 
-        <a class="method-permalink" href="#text_to_glyphs_func:LibCairo::UserScaledFontTextToGlyphFuncT-instance-method">#</a>
+        <a class="method-permalink" href="#text_to_glyphs_func%3ALibCairo%3A%3AUserScaledFontTextToGlyphFuncT-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the text-to-glyphs conversion function of a user-font.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The <em>text_to_glyphs</em> callback of <code><a href="../Cairo/FontFace.html">FontFace</a></code> or <code>nil</code> if none set or an error occurred.</p>
+<p>###Returns
+The <em>text_to_glyphs</em> callback of <code><a href="../Cairo/FontFace.html">FontFace</a></code> or <code>nil</code> if none set or an error occurred.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L201" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L201" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1163,7 +1082,7 @@ face is destroyed or when new user data is attached using the same key</li></ul>
         
         def <strong>text_to_glyphs_func=</strong>(text_to_glyphs_func : LibCairo::UserScaledFontTextToGlyphFuncT)
 
-        <a class="method-permalink" href="#text_to_glyphs_func=(text_to_glyphs_func:LibCairo::UserScaledFontTextToGlyphFuncT)-instance-method">#</a>
+        <a class="method-permalink" href="#text_to_glyphs_func%3D%28text_to_glyphs_func%3ALibCairo%3A%3AUserScaledFontTextToGlyphFuncT%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1171,24 +1090,19 @@ face is destroyed or when new user data is attached using the same key</li></ul>
           <p>Sets th text-to-glyphs conversion function of a user-font.
 See <code>LibCairo::UserScaledFontTextToGlyphsFuncT</code>
 for details of how the callback works.</p>
-
 <p>The font-face should not be immutable or a <code>Status#UserFontImmutable</code>
 error will occur. A user font-face is immutable as soon as a
 scaled-font is created from it.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>text_to_glyphs_func</strong> The <em>text_to_glyphs</em> callback, or <code>nil</code></li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>text_to_glyphs_func</strong> The <em>text_to_glyphs</em> callback, or <code>nil</code></li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L215" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L215" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1198,13 +1112,13 @@ scaled-font is created from it.</p>
         
         def <strong>to_unsafe</strong> : LibCairo::PFontFaceT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PFontFaceT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APFontFaceT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L244" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L244" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1214,27 +1128,21 @@ scaled-font is created from it.</p>
         
         def <strong>type</strong> : <a href="../Cairo/FontType.html">FontType</a>
 
-        <a class="method-permalink" href="#type:FontType-instance-method">#</a>
+        <a class="method-permalink" href="#type%3AFontType-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>This function returns the type of the backend used to create a font face.
 See <code><a href="../Cairo/FontType.html">FontType</a></code> for available types.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The type of <code><a href="../Cairo/FontFace.html">FontFace</a></code>.</p>
+<p>###Returns
+The type of <code><a href="../Cairo/FontFace.html">FontFace</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1244,7 +1152,7 @@ See <code><a href="../Cairo/FontType.html">FontType</a></code> for available typ
         
         def <strong>unicode_to_glyph_func=</strong>(unicode_to_glyph_func : LibCairo::UserScaledFontUnicodeToGlyphFuncT)
 
-        <a class="method-permalink" href="#unicode_to_glyph_func=(unicode_to_glyph_func:LibCairo::UserScaledFontUnicodeToGlyphFuncT)-instance-method">#</a>
+        <a class="method-permalink" href="#unicode_to_glyph_func%3D%28unicode_to_glyph_func%3ALibCairo%3A%3AUserScaledFontUnicodeToGlyphFuncT%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1252,24 +1160,19 @@ See <code><a href="../Cairo/FontType.html">FontType</a></code> for available typ
           <p>Sets the unicode-to-glyph conversion function of a user-font.
 See <code>LibCairo::UserScaledFontUnicodeToGlyphFuncT</code>
 for details of how the callback works.</p>
-
 <p>The font-face should not be immutable or a <code><a href="../Cairo/Status.html#UserFontImmutable">Status::UserFontImmutable</a></code>
 error will occur. A user font-face is immutable as soon as a
 scaled-font is created from it.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>unicode_to_glyph_func</strong> The <em>unicode_to_glyph</em> callback, or <code>nil</code></li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>unicode_to_glyph_func</strong> The <em>unicode_to_glyph</em> callback, or <code>nil</code></li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L239" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1279,35 +1182,25 @@ scaled-font is created from it.</p>
         
         def <strong>user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>) : Pointer(Void)
 
-        <a class="method-permalink" href="#user_data(key:UserDataKey):Pointer(Void)-instance-method">#</a>
+        <a class="method-permalink" href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Return user data previously attached to <code><a href="../Cairo/FontFace.html">FontFace</a></code> using the specified key.
 If no user data has been attached with the given key this function returns <code>Nil</code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of the <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> the user data was attached to</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The user data previously attached or <code>Nil</code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of the <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> the user data was attached to</li>
+</ul>
+<p>###Returns
+The user data previously attached or <code>Nil</code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1317,27 +1210,21 @@ If no user data has been attached with the given key this function returns <code
         
         def <strong>user_font_face_get_unicode_to_glyph_func</strong> : LibCairo::UserScaledFontUnicodeToGlyphFuncT
 
-        <a class="method-permalink" href="#user_font_face_get_unicode_to_glyph_func:LibCairo::UserScaledFontUnicodeToGlyphFuncT-instance-method">#</a>
+        <a class="method-permalink" href="#user_font_face_get_unicode_to_glyph_func%3ALibCairo%3A%3AUserScaledFontUnicodeToGlyphFuncT-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the unicode-to-glyph conversion function of a user-font.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The <em>unicode_to_glyph</em> callback of <code><a href="../Cairo/FontFace.html">FontFace</a></code> or <code>nil</code>
+<p>###Returns
+The <em>unicode_to_glyph</em> callback of <code><a href="../Cairo/FontFace.html">FontFace</a></code> or <code>nil</code>
 if none set or an error occurred.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L225" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L225" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1347,26 +1234,20 @@ if none set or an error occurred.</p>
         
         def <strong>weight</strong> : <a href="../Cairo/FontWeight.html">FontWeight</a>
 
-        <a class="method-permalink" href="#weight:FontWeight-instance-method">#</a>
+        <a class="method-permalink" href="#weight%3AFontWeight-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the weight a toy font.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The weight value.</p>
+<p>###Returns
+The weight value.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_face.cr#L143" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_face.cr#L143" target="_blank">View source</a>]
         
       </div>
     </div>

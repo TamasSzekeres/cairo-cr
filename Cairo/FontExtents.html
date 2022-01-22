@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -416,7 +416,6 @@
 
   <p>The <code><a href="../Cairo/FontExtents.html">FontExtents</a></code> structure stores metric information for a font.
 Values are given in the current user-space coordinate system.</p>
-
 <p>Because font metrics are in user-space coordinates, they are mostly,
 but not entirely, independent of the current transformation matrix.
 If you call <code>context.scale(2.0, 2.0)</code>, text will be drawn twice as big,
@@ -447,7 +446,7 @@ but otherwise will remain unchanged.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L15" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L15" target="_blank">
         cairo/font_extents.cr
       </a>
     
@@ -469,12 +468,12 @@ but otherwise will remain unchanged.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(ascent:Float64,descent:Float64,height:Float64,max_x_advance:Float64,max_y_advance:Float64)-class-method" class="signature"><strong>.new</strong>(ascent : Float64, descent : Float64, height : Float64, max_x_advance : Float64, max_y_advance : Float64)</a>
+        <a href="#new%28ascent%3AFloat64%2Cdescent%3AFloat64%2Cheight%3AFloat64%2Cmax_x_advance%3AFloat64%2Cmax_y_advance%3AFloat64%29-class-method" class="signature"><strong>.new</strong>(ascent : Float64, descent : Float64, height : Float64, max_x_advance : Float64, max_y_advance : Float64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(font_extents:LibCairo::FontExtentsT)-class-method" class="signature"><strong>.new</strong>(font_extents : LibCairo::FontExtentsT)</a>
+        <a href="#new%28font_extents%3ALibCairo%3A%3AFontExtentsT%29-class-method" class="signature"><strong>.new</strong>(font_extents : LibCairo::FontExtentsT)</a>
         
       </li>
     
@@ -500,72 +499,72 @@ but otherwise will remain unchanged.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#ascent:Float64-instance-method" class="signature"><strong>#ascent</strong> : Float64</a>
+        <a href="#ascent%3AFloat64-instance-method" class="signature"><strong>#ascent</strong> : Float64</a>
         
           <div class="summary"><p>The distance that the font extends above the baseline.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#ascent=(ascent:Float64)-instance-method" class="signature"><strong>#ascent=</strong>(ascent : Float64)</a>
+        <a href="#ascent%3D%28ascent%3AFloat64%29-instance-method" class="signature"><strong>#ascent=</strong>(ascent : Float64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#descent:Float64-instance-method" class="signature"><strong>#descent</strong> : Float64</a>
+        <a href="#descent%3AFloat64-instance-method" class="signature"><strong>#descent</strong> : Float64</a>
         
           <div class="summary"><p>The distance that the font extends below the baseline.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#descent=(descent:Float64)-instance-method" class="signature"><strong>#descent=</strong>(descent : Float64)</a>
+        <a href="#descent%3D%28descent%3AFloat64%29-instance-method" class="signature"><strong>#descent=</strong>(descent : Float64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height:Float64-instance-method" class="signature"><strong>#height</strong> : Float64</a>
+        <a href="#height%3AFloat64-instance-method" class="signature"><strong>#height</strong> : Float64</a>
         
           <div class="summary"><p>The recommended vertical distance between baselines when setting consecutive lines of text with the font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height=(height:Float64)-instance-method" class="signature"><strong>#height=</strong>(height : Float64)</a>
+        <a href="#height%3D%28height%3AFloat64%29-instance-method" class="signature"><strong>#height=</strong>(height : Float64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_x_advance:Float64-instance-method" class="signature"><strong>#max_x_advance</strong> : Float64</a>
+        <a href="#max_x_advance%3AFloat64-instance-method" class="signature"><strong>#max_x_advance</strong> : Float64</a>
         
           <div class="summary"><p>The maximum distance in the X direction that the origin is advanced for any glyph in the font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_x_advance=(max_x_advance:Float64)-instance-method" class="signature"><strong>#max_x_advance=</strong>(max_x_advance : Float64)</a>
+        <a href="#max_x_advance%3D%28max_x_advance%3AFloat64%29-instance-method" class="signature"><strong>#max_x_advance=</strong>(max_x_advance : Float64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_y_advance:Float64-instance-method" class="signature"><strong>#max_y_advance</strong> : Float64</a>
+        <a href="#max_y_advance%3AFloat64-instance-method" class="signature"><strong>#max_y_advance</strong> : Float64</a>
         
           <div class="summary"><p>The maximum distance in the Y direction that the origin is advanced for any glyph in the font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#max_y_advance=(max_y_advance:Float64)-instance-method" class="signature"><strong>#max_y_advance=</strong>(max_y_advance : Float64)</a>
+        <a href="#max_y_advance%3D%28max_y_advance%3AFloat64%29-instance-method" class="signature"><strong>#max_y_advance=</strong>(max_y_advance : Float64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_cairo_font_extents:LibCairo::FontExtentsT-instance-method" class="signature"><strong>#to_cairo_font_extents</strong> : LibCairo::FontExtentsT</a>
+        <a href="#to_cairo_font_extents%3ALibCairo%3A%3AFontExtentsT-instance-method" class="signature"><strong>#to_cairo_font_extents</strong> : LibCairo::FontExtentsT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PFontExtentsT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PFontExtentsT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APFontExtentsT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PFontExtentsT</a>
         
       </li>
     
@@ -614,13 +613,13 @@ but otherwise will remain unchanged.</p>
         
         def self.<strong>new</strong>(ascent : Float64, descent : Float64, height : Float64, max_x_advance : Float64, max_y_advance : Float64)
 
-        <a class="method-permalink" href="#new(ascent:Float64,descent:Float64,height:Float64,max_x_advance:Float64,max_y_advance:Float64)-class-method">#</a>
+        <a class="method-permalink" href="#new%28ascent%3AFloat64%2Cdescent%3AFloat64%2Cheight%3AFloat64%2Cmax_x_advance%3AFloat64%2Cmax_y_advance%3AFloat64%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -630,13 +629,13 @@ but otherwise will remain unchanged.</p>
         
         def self.<strong>new</strong>(font_extents : LibCairo::FontExtentsT)
 
-        <a class="method-permalink" href="#new(font_extents:LibCairo::FontExtentsT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28font_extents%3ALibCairo%3A%3AFontExtentsT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -652,7 +651,7 @@ but otherwise will remain unchanged.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -676,13 +675,12 @@ but otherwise will remain unchanged.</p>
         
         def <strong>ascent</strong> : Float64
 
-        <a class="method-permalink" href="#ascent:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#ascent%3AFloat64-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>The distance that the font extends above the baseline.</p>
-
 <p><span class="flag purple">NOTE</span>  that this is not always exactly equal to the maximum of the extents of all the glyphs in the font,
 but rather is picked to express the font designer's intent as to how the font should align with elements above it.</p>
         </div>
@@ -690,7 +688,7 @@ but rather is picked to express the font designer's intent as to how the font sh
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -700,13 +698,13 @@ but rather is picked to express the font designer's intent as to how the font sh
         
         def <strong>ascent=</strong>(ascent : Float64)
 
-        <a class="method-permalink" href="#ascent=(ascent:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#ascent%3D%28ascent%3AFloat64%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -716,15 +714,13 @@ but rather is picked to express the font designer's intent as to how the font sh
         
         def <strong>descent</strong> : Float64
 
-        <a class="method-permalink" href="#descent:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#descent%3AFloat64-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>The distance that the font extends below the baseline.</p>
-
 <p>This value is positive for typical fonts that include portions below the baseline.</p>
-
 <p><span class="flag purple">NOTE</span>  that this is not always exactly equal to the maximum of the extents of all the glyphs in the font,
 but rather is picked to express the font designer's intent as to how the font should align with elements below it.</p>
         </div>
@@ -732,7 +728,7 @@ but rather is picked to express the font designer's intent as to how the font sh
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L53" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -742,13 +738,13 @@ but rather is picked to express the font designer's intent as to how the font sh
         
         def <strong>descent=</strong>(descent : Float64)
 
-        <a class="method-permalink" href="#descent=(descent:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#descent%3D%28descent%3AFloat64%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L58" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L58" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -758,13 +754,12 @@ but rather is picked to express the font designer's intent as to how the font sh
         
         def <strong>height</strong> : Float64
 
-        <a class="method-permalink" href="#height:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#height%3AFloat64-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>The recommended vertical distance between baselines when setting consecutive lines of text with the font.</p>
-
 <p>This is greater than <em>ascent+descent</em> by a quantity known as the line spacing or external leading.
 When space is at a premium, most fonts can be set with only a distance of <em>ascent+descent</em> between lines.</p>
         </div>
@@ -772,7 +767,7 @@ When space is at a premium, most fonts can be set with only a distance of <em>as
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L67" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -782,13 +777,13 @@ When space is at a premium, most fonts can be set with only a distance of <em>as
         
         def <strong>height=</strong>(height : Float64)
 
-        <a class="method-permalink" href="#height=(height:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#height%3D%28height%3AFloat64%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -798,7 +793,7 @@ When space is at a premium, most fonts can be set with only a distance of <em>as
         
         def <strong>max_x_advance</strong> : Float64
 
-        <a class="method-permalink" href="#max_x_advance:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#max_x_advance%3AFloat64-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -809,7 +804,7 @@ When space is at a premium, most fonts can be set with only a distance of <em>as
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -819,13 +814,13 @@ When space is at a premium, most fonts can be set with only a distance of <em>as
         
         def <strong>max_x_advance=</strong>(max_x_advance : Float64)
 
-        <a class="method-permalink" href="#max_x_advance=(max_x_advance:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#max_x_advance%3D%28max_x_advance%3AFloat64%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L83" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -835,20 +830,19 @@ When space is at a premium, most fonts can be set with only a distance of <em>as
         
         def <strong>max_y_advance</strong> : Float64
 
-        <a class="method-permalink" href="#max_y_advance:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#max_y_advance%3AFloat64-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>The maximum distance in the Y direction that the origin is advanced for any glyph in the font.</p>
-
 <p>This will be zero for normal fonts used for horizontal writing. (The scripts of East Asia are sometimes written vertically.)</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L91" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L91" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -858,13 +852,13 @@ When space is at a premium, most fonts can be set with only a distance of <em>as
         
         def <strong>max_y_advance=</strong>(max_y_advance : Float64)
 
-        <a class="method-permalink" href="#max_y_advance=(max_y_advance:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#max_y_advance%3D%28max_y_advance%3AFloat64%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L96" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L96" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -874,13 +868,13 @@ When space is at a premium, most fonts can be set with only a distance of <em>as
         
         def <strong>to_cairo_font_extents</strong> : LibCairo::FontExtentsT
 
-        <a class="method-permalink" href="#to_cairo_font_extents:LibCairo::FontExtentsT-instance-method">#</a>
+        <a class="method-permalink" href="#to_cairo_font_extents%3ALibCairo%3A%3AFontExtentsT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L100" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L100" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -890,13 +884,13 @@ When space is at a premium, most fonts can be set with only a distance of <em>as
         
         def <strong>to_unsafe</strong> : LibCairo::PFontExtentsT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PFontExtentsT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APFontExtentsT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_extents.cr#L104" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_extents.cr#L104" target="_blank">View source</a>]
         
       </div>
     </div>

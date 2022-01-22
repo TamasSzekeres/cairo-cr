@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -440,7 +440,7 @@ although they can also be used as masks, that is, as the brush too.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L8" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L8" target="_blank">
         cairo/pattern.cr
       </a>
     
@@ -462,49 +462,49 @@ although they can also be used as masks, that is, as the brush too.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create_for_surface(surface:Surface):Pattern-class-method" class="signature"><strong>.create_for_surface</strong>(surface : Surface) : Pattern</a>
+        <a href="#create_for_surface%28surface%3ASurface%29%3APattern-class-method" class="signature"><strong>.create_for_surface</strong>(surface : Surface) : Pattern</a>
         
           <div class="summary"><p>Create a new <code><a href="../Cairo/Pattern.html">Pattern</a></code> for the given surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_linear(x0:Float64,y0:Float64,x1:Float64,y1:Float64):Pattern-class-method" class="signature"><strong>.create_linear</strong>(x0 : Float64, y0 : Float64, x1 : Float64, y1 : Float64) : Pattern</a>
+        <a href="#create_linear%28x0%3AFloat64%2Cy0%3AFloat64%2Cx1%3AFloat64%2Cy1%3AFloat64%29%3APattern-class-method" class="signature"><strong>.create_linear</strong>(x0 : Float64, y0 : Float64, x1 : Float64, y1 : Float64) : Pattern</a>
         
           <div class="summary"><p>Create a new linear gradient <code><a href="../Cairo/Pattern.html">Pattern</a></code> along the line defined by <em>(x0, y0)</em> and <em>(x1, y1)</em>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_mesh:Pattern-class-method" class="signature"><strong>.create_mesh</strong> : Pattern</a>
+        <a href="#create_mesh%3APattern-class-method" class="signature"><strong>.create_mesh</strong> : Pattern</a>
         
           <div class="summary"><p>Create a new mesh pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_radial(cx0:Float64,cy0:Float64,radius0:Float64,cx1:Float64,cy1:Float64,radius1:Float64):Pattern-class-method" class="signature"><strong>.create_radial</strong>(cx0 : Float64, cy0 : Float64, radius0 : Float64, cx1 : Float64, cy1 : Float64, radius1 : Float64) : Pattern</a>
+        <a href="#create_radial%28cx0%3AFloat64%2Ccy0%3AFloat64%2Cradius0%3AFloat64%2Ccx1%3AFloat64%2Ccy1%3AFloat64%2Cradius1%3AFloat64%29%3APattern-class-method" class="signature"><strong>.create_radial</strong>(cx0 : Float64, cy0 : Float64, radius0 : Float64, cx1 : Float64, cy1 : Float64, radius1 : Float64) : Pattern</a>
         
           <div class="summary"><p>Creates a new radial gradient <code><a href="../Cairo/Pattern.html">Pattern</a></code> between the two circles defined by <em>(cx0, cy0, radius0)</em> and <em>(cx1, cy1, radius1)</em>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_raster_source(user_data:Pointer(Void),content:Content,width:Int32,height:Int32):Pattern-class-method" class="signature"><strong>.create_raster_source</strong>(user_data : Pointer(Void), content : Content, width : Int32, height : Int32) : Pattern</a>
+        <a href="#create_raster_source%28user_data%3APointer%28Void%29%2Ccontent%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3APattern-class-method" class="signature"><strong>.create_raster_source</strong>(user_data : Pointer(Void), content : Content, width : Int32, height : Int32) : Pattern</a>
         
           <div class="summary"><p>Creates a new user pattern for providing pixel data.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_rgb(red:Float64,green:Float64,blue:Float64):Pattern-class-method" class="signature"><strong>.create_rgb</strong>(red : Float64, green : Float64, blue : Float64) : Pattern</a>
+        <a href="#create_rgb%28red%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%29%3APattern-class-method" class="signature"><strong>.create_rgb</strong>(red : Float64, green : Float64, blue : Float64) : Pattern</a>
         
           <div class="summary"><p>Creates a new <code><a href="../Cairo/Pattern.html">Pattern</a></code> corresponding to an opaque color.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(pattern:LibCairo::PPatternT)-class-method" class="signature"><strong>.new</strong>(pattern : LibCairo::PPatternT)</a>
+        <a href="#new%28pattern%3ALibCairo%3A%3APPatternT%29-class-method" class="signature"><strong>.new</strong>(pattern : LibCairo::PPatternT)</a>
         
       </li>
     
@@ -525,23 +525,23 @@ although they can also be used as masks, that is, as the brush too.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#acquire:NamedTuple()-instance-method" class="signature"><strong>#acquire</strong> : NamedTuple()</a>
+        <a href="#acquire%3ANamedTuple%28acquire%3ALibCairo%3A%3ARasterSourceAcquireFuncT%2Crelease%3ALibCairo%3A%3ARasterSourceReleaseFuncT%29-instance-method" class="signature"><strong>#acquire</strong> : NamedTuple(acquire: LibCairo::RasterSourceAcquireFuncT, release: LibCairo::RasterSourceReleaseFuncT)</a>
         
           <div class="summary"><p>Queries the current acquire and release callbacks.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#add_color_stop(offset:Float64,red:Float64,green:Float64,blue:Float64)-instance-method" class="signature"><strong>#add_color_stop</strong>(offset : Float64, red : Float64, green : Float64, blue : Float64)</a>
+        <a href="#add_color_stop%28offset%3AFloat64%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29-instance-method" class="signature"><strong>#add_color_stop</strong>(offset : Float64, red : Float64, green : Float64, blue : Float64, alpha : Float64)</a>
         
-          <div class="summary"><p>Adds an opaque color stop to a gradient pattern.</p></div>
+          <div class="summary"><p>Adds a translucent color stop to a gradient pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#add_color_stop(offset:Float64,red:Float64,green:Float64,blue:Float64,alpha:Float64)-instance-method" class="signature"><strong>#add_color_stop</strong>(offset : Float64, red : Float64, green : Float64, blue : Float64, alpha : Float64)</a>
+        <a href="#add_color_stop%28offset%3AFloat64%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%29-instance-method" class="signature"><strong>#add_color_stop</strong>(offset : Float64, red : Float64, green : Float64, blue : Float64)</a>
         
-          <div class="summary"><p>Adds a translucent color stop to a gradient pattern.</p></div>
+          <div class="summary"><p>Adds an opaque color stop to a gradient pattern.</p></div>
         
       </li>
     
@@ -553,70 +553,70 @@ although they can also be used as masks, that is, as the brush too.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#callback_data:Pointer(Void)-instance-method" class="signature"><strong>#callback_data</strong> : Pointer(Void)</a>
+        <a href="#callback_data%3APointer%28Void%29-instance-method" class="signature"><strong>#callback_data</strong> : Pointer(Void)</a>
         
           <div class="summary"><p>Queries the current user data.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#callback_data=(data:Pointer(Void))-instance-method" class="signature"><strong>#callback_data=</strong>(data : Pointer(Void))</a>
+        <a href="#callback_data%3D%28data%3APointer%28Void%29%29-instance-method" class="signature"><strong>#callback_data=</strong>(data : Pointer(Void))</a>
         
           <div class="summary"><p>Updates the user data that is provided to all callbacks.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_stop(index:Int32):ColorStop-instance-method" class="signature"><strong>#color_stop</strong>(index : Int32) : ColorStop</a>
+        <a href="#color_stop%28index%3AInt32%29%3AColorStop-instance-method" class="signature"><strong>#color_stop</strong>(index : Int32) : ColorStop</a>
         
           <div class="summary"><p>Gets the color and offset information at the given index for a gradient pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_stop_count:Int32-instance-method" class="signature"><strong>#color_stop_count</strong> : Int32</a>
+        <a href="#color_stop_count%3AInt32-instance-method" class="signature"><strong>#color_stop_count</strong> : Int32</a>
         
           <div class="summary"><p>Gets the number of color stops specified in the given gradient pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#control_point(pattern:PPatternT,patch_num:UInt32,point_num:UInt32,x:Pointer(Float64),y:Pointer(Float64)):StatusT-instance-method" class="signature"><strong>#control_point</strong>(pattern : PPatternT, patch_num : UInt32, point_num : UInt32, x : Pointer(Float64), y : Pointer(Float64)) : StatusT</a>
+        <a href="#control_point%28pattern%3APPatternT%2Cpatch_num%3AUInt32%2Cpoint_num%3AUInt32%2Cx%3APointer%28Float64%29%2Cy%3APointer%28Float64%29%29%3AStatusT-instance-method" class="signature"><strong>#control_point</strong>(pattern : PPatternT, patch_num : UInt32, point_num : UInt32, x : Pointer(Float64), y : Pointer(Float64)) : StatusT</a>
         
           <div class="summary"><p>Gets the control point <em>point_num</em> of patch patch_num for a mesh pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#copy:LibCairo::RasterSourceCopyFuncT-instance-method" class="signature"><strong>#copy</strong> : LibCairo::RasterSourceCopyFuncT</a>
+        <a href="#copy%3ALibCairo%3A%3ARasterSourceCopyFuncT-instance-method" class="signature"><strong>#copy</strong> : LibCairo::RasterSourceCopyFuncT</a>
         
           <div class="summary"><p>Queries the current copy callback.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#copy=(copy:LibCairo::RasterSourceCopyFuncT)-instance-method" class="signature"><strong>#copy=</strong>(copy : LibCairo::RasterSourceCopyFuncT)</a>
+        <a href="#copy%3D%28copy%3ALibCairo%3A%3ARasterSourceCopyFuncT%29-instance-method" class="signature"><strong>#copy=</strong>(copy : LibCairo::RasterSourceCopyFuncT)</a>
         
           <div class="summary"><p>Updates the copy callback which is used whenever a temporary copy of the pattern is taken.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#corner_color(patch_num:UInt32,corner_num:UInt32):RGBA-instance-method" class="signature"><strong>#corner_color</strong>(patch_num : UInt32, corner_num : UInt32) : RGBA</a>
+        <a href="#corner_color%28patch_num%3AUInt32%2Ccorner_num%3AUInt32%29%3ARGBA-instance-method" class="signature"><strong>#corner_color</strong>(patch_num : UInt32, corner_num : UInt32) : RGBA</a>
         
           <div class="summary"><p>Gets the color information in corner <em>corner_num</em> of patch <em>patch_num</em> for a mesh pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_rgba(red:Float64,green:Float64,blue:Float64,alpha:Float64):Pattern-instance-method" class="signature"><strong>#create_rgba</strong>(red : Float64, green : Float64, blue : Float64, alpha : Float64) : Pattern</a>
+        <a href="#create_rgba%28red%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29%3APattern-instance-method" class="signature"><strong>#create_rgba</strong>(red : Float64, green : Float64, blue : Float64, alpha : Float64) : Pattern</a>
         
           <div class="summary"><p>Creates a new <code><a href="../Cairo/Pattern.html">Pattern</a></code> corresponding to a translucent color.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#curve_to(x1:Float64,y1:Float64,x2:Float64,y2:Float64,x3:Float64,y3:Float64)-instance-method" class="signature"><strong>#curve_to</strong>(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64, x3 : Float64, y3 : Float64)</a>
+        <a href="#curve_to%28x1%3AFloat64%2Cy1%3AFloat64%2Cx2%3AFloat64%2Cy2%3AFloat64%2Cx3%3AFloat64%2Cy3%3AFloat64%29-instance-method" class="signature"><strong>#curve_to</strong>(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64, x3 : Float64, y3 : Float64)</a>
         
           <div class="summary"><p>Adds a cubic Bézier spline to the current patch from the current point to position <em>(x3, y3)</em> in pattern-space coordinates, using <em>(x1, y1)</em> and <em>(x2, y2)</em> as the control points.</p></div>
         
@@ -630,28 +630,28 @@ although they can also be used as masks, that is, as the brush too.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#extend:Extend-instance-method" class="signature"><strong>#extend</strong> : Extend</a>
+        <a href="#extend%3AExtend-instance-method" class="signature"><strong>#extend</strong> : Extend</a>
         
           <div class="summary"><p>Gets the current extend mode for a pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#extend=(ex:Extend)-instance-method" class="signature"><strong>#extend=</strong>(ex : Extend)</a>
+        <a href="#extend%3D%28ex%3AExtend%29-instance-method" class="signature"><strong>#extend=</strong>(ex : Extend)</a>
         
           <div class="summary"><p>Sets the mode to be used for drawing outside the area of a pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#filter:Filter-instance-method" class="signature"><strong>#filter</strong> : Filter</a>
+        <a href="#filter%3AFilter-instance-method" class="signature"><strong>#filter</strong> : Filter</a>
         
           <div class="summary"><p>Gets the current filter for a pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#filter=(filter:Filter)-instance-method" class="signature"><strong>#filter=</strong>(filter : Filter)</a>
+        <a href="#filter%3D%28filter%3AFilter%29-instance-method" class="signature"><strong>#filter=</strong>(filter : Filter)</a>
         
           <div class="summary"><p>Sets the filter to be used for resizing when using this pattern.</p></div>
         
@@ -665,173 +665,173 @@ although they can also be used as masks, that is, as the brush too.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#finish:LibCairo::RasterSourceFinishFuncT-instance-method" class="signature"><strong>#finish</strong> : LibCairo::RasterSourceFinishFuncT</a>
+        <a href="#finish%3ALibCairo%3A%3ARasterSourceFinishFuncT-instance-method" class="signature"><strong>#finish</strong> : LibCairo::RasterSourceFinishFuncT</a>
         
           <div class="summary"><p>Queries the current finish callback.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#finish=(finish:LibCairo::RasterSourceFinishFuncT)-instance-method" class="signature"><strong>#finish=</strong>(finish : LibCairo::RasterSourceFinishFuncT)</a>
+        <a href="#finish%3D%28finish%3ALibCairo%3A%3ARasterSourceFinishFuncT%29-instance-method" class="signature"><strong>#finish=</strong>(finish : LibCairo::RasterSourceFinishFuncT)</a>
         
           <div class="summary"><p>Updates the finish callback which is used whenever a pattern (or a copy thereof) will no longer be used.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#line_to(x:Float64,y:Float64)-instance-method" class="signature"><strong>#line_to</strong>(x : Float64, y : Float64)</a>
+        <a href="#line_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method" class="signature"><strong>#line_to</strong>(x : Float64, y : Float64)</a>
         
           <div class="summary"><p>Adds a line to the current patch from the current point to position <em>(x, y)</em> in pattern-space coordinates.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#linear_points:NamedTuple()-instance-method" class="signature"><strong>#linear_points</strong> : NamedTuple()</a>
+        <a href="#linear_points%3ANamedTuple%28x0%3AFloat64%2Cy0%3AFloat64%2Cx1%3AFloat64%2Cy1%3AFloat64%29-instance-method" class="signature"><strong>#linear_points</strong> : NamedTuple(x0: Float64, y0: Float64, x1: Float64, y1: Float64)</a>
         
           <div class="summary"><p>Gets the gradient endpoints for a linear gradient.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#matrix:Matrix-instance-method" class="signature"><strong>#matrix</strong> : Matrix</a>
+        <a href="#matrix%3AMatrix-instance-method" class="signature"><strong>#matrix</strong> : Matrix</a>
         
           <div class="summary"><p>Returns the pattern's transformation matrix.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#matrix=(matrix:Matrix)-instance-method" class="signature"><strong>#matrix=</strong>(matrix : Matrix)</a>
+        <a href="#matrix%3D%28matrix%3AMatrix%29-instance-method" class="signature"><strong>#matrix=</strong>(matrix : Matrix)</a>
         
           <div class="summary"><p>Sets the pattern's transformation matrix to matrix.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#move_to(x:Float64,y:Float64)-instance-method" class="signature"><strong>#move_to</strong>(x : Float64, y : Float64)</a>
+        <a href="#move_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method" class="signature"><strong>#move_to</strong>(x : Float64, y : Float64)</a>
         
           <div class="summary"><p>Define the first point of the current patch in a mesh pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#patch_count:UInt32-instance-method" class="signature"><strong>#patch_count</strong> : UInt32</a>
+        <a href="#patch_count%3AUInt32-instance-method" class="signature"><strong>#patch_count</strong> : UInt32</a>
         
           <div class="summary"><p>Gets the number of patches specified in the given mesh pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#path(patch_num:UInt32):Path-instance-method" class="signature"><strong>#path</strong>(patch_num : UInt32) : Path</a>
+        <a href="#path%28patch_num%3AUInt32%29%3APath-instance-method" class="signature"><strong>#path</strong>(patch_num : UInt32) : Path</a>
         
           <div class="summary"><p>Gets path defining the patch <em>patch_num</em> for a mesh pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#radial_circles:NamedTuple()-instance-method" class="signature"><strong>#radial_circles</strong> : NamedTuple()</a>
+        <a href="#radial_circles%3ANamedTuple%28x0%3AFloat64%2Cy0%3AFloat64%2Cr0%3AFloat64%2Cx1%3AFloat64%2Cy1%3AFloat64%2Cr1%3AFloat64%29-instance-method" class="signature"><strong>#radial_circles</strong> : NamedTuple(x0: Float64, y0: Float64, r0: Float64, x1: Float64, y1: Float64, r1: Float64)</a>
         
           <div class="summary"><p>Gets the gradient endpoint circles for a radial gradient, each specified as a center coordinate and a radius.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference:Pattern-instance-method" class="signature"><strong>#reference</strong> : Pattern</a>
+        <a href="#reference%3APattern-instance-method" class="signature"><strong>#reference</strong> : Pattern</a>
         
           <div class="summary"><p>Increases the reference count on pattern by one.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference_count:UInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
+        <a href="#reference_count%3AUInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
         
           <div class="summary"><p>Returns the current reference count of pattern .</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#rgba:RGBA-instance-method" class="signature"><strong>#rgba</strong> : RGBA</a>
+        <a href="#rgba%3ARGBA-instance-method" class="signature"><strong>#rgba</strong> : RGBA</a>
         
           <div class="summary"><p>Gets the solid color for a solid color pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_acquire(acquire:LibCairo::RasterSourceAcquireFuncT,release:LibCairo::RasterSourceReleaseFuncT)-instance-method" class="signature"><strong>#set_acquire</strong>(acquire : LibCairo::RasterSourceAcquireFuncT, release : LibCairo::RasterSourceReleaseFuncT)</a>
+        <a href="#set_acquire%28acquire%3ALibCairo%3A%3ARasterSourceAcquireFuncT%2Crelease%3ALibCairo%3A%3ARasterSourceReleaseFuncT%29-instance-method" class="signature"><strong>#set_acquire</strong>(acquire : LibCairo::RasterSourceAcquireFuncT, release : LibCairo::RasterSourceReleaseFuncT)</a>
         
           <div class="summary"><p>Specifies the callbacks used to generate the image surface for a rendering operation (acquire) and the function used to cleanup that surface afterwards.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_control_point(point_num:UInt32,x:Float64,y:Float64)-instance-method" class="signature"><strong>#set_control_point</strong>(point_num : UInt32, x : Float64, y : Float64)</a>
+        <a href="#set_control_point%28point_num%3AUInt32%2Cx%3AFloat64%2Cy%3AFloat64%29-instance-method" class="signature"><strong>#set_control_point</strong>(point_num : UInt32, x : Float64, y : Float64)</a>
         
           <div class="summary"><p>Set an internal control point of the current patch.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_corner_color(corner_num:UInt32,red:Float64,green:Float64,blue:Float64)-instance-method" class="signature"><strong>#set_corner_color</strong>(corner_num : UInt32, red : Float64, green : Float64, blue : Float64)</a>
+        <a href="#set_corner_color%28corner_num%3AUInt32%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%29-instance-method" class="signature"><strong>#set_corner_color</strong>(corner_num : UInt32, red : Float64, green : Float64, blue : Float64)</a>
         
           <div class="summary"><p>Sets the color of a corner of the current patch in a mesh pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_corner_color_rgba(corner_num:UInt32,red:Float64,green:Float64,blue:Float64,alpha:Float64)-instance-method" class="signature"><strong>#set_corner_color_rgba</strong>(corner_num : UInt32, red : Float64, green : Float64, blue : Float64, alpha : Float64)</a>
+        <a href="#set_corner_color_rgba%28corner_num%3AUInt32%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29-instance-method" class="signature"><strong>#set_corner_color_rgba</strong>(corner_num : UInt32, red : Float64, green : Float64, blue : Float64, alpha : Float64)</a>
         
           <div class="summary"><p>Sets the color of a corner of the current patch in a mesh pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</a>
+        <a href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</a>
         
           <div class="summary"><p>Attach user data to pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#snapshot:LibCairo::RasterSourceSnapshotFuncT-instance-method" class="signature"><strong>#snapshot</strong> : LibCairo::RasterSourceSnapshotFuncT</a>
+        <a href="#snapshot%3ALibCairo%3A%3ARasterSourceSnapshotFuncT-instance-method" class="signature"><strong>#snapshot</strong> : LibCairo::RasterSourceSnapshotFuncT</a>
         
           <div class="summary"><p>Queries the current snapshot callback.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#snapshot=(snapshot:LibCairo::RasterSourceSnapshotFuncT)-instance-method" class="signature"><strong>#snapshot=</strong>(snapshot : LibCairo::RasterSourceSnapshotFuncT)</a>
+        <a href="#snapshot%3D%28snapshot%3ALibCairo%3A%3ARasterSourceSnapshotFuncT%29-instance-method" class="signature"><strong>#snapshot=</strong>(snapshot : LibCairo::RasterSourceSnapshotFuncT)</a>
         
           <div class="summary"><p>Sets the callback that will be used whenever a snapshot is taken of the pattern, that is whenever the current contents of the pattern should be preserved for later use.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status:Status-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        <a href="#status%3AStatus-instance-method" class="signature"><strong>#status</strong> : Status</a>
         
           <div class="summary"><p>Checks whether an error has previously occurred for this pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#surface:Surface-instance-method" class="signature"><strong>#surface</strong> : Surface</a>
+        <a href="#surface%3ASurface-instance-method" class="signature"><strong>#surface</strong> : Surface</a>
         
           <div class="summary"><p>Gets the surface of a surface pattern.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PPatternT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PPatternT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APPatternT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PPatternT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#type:PatternType-instance-method" class="signature"><strong>#type</strong> : PatternType</a>
+        <a href="#type%3APatternType-instance-method" class="signature"><strong>#type</strong> : PatternType</a>
         
           <div class="summary"><p>Get the pattern's type.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
+        <a href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
         
           <div class="summary"><p>Return user data previously attached to pattern using the specified key.</p></div>
         
@@ -882,38 +882,27 @@ although they can also be used as masks, that is, as the brush too.</p>
         
         def self.<strong>create_for_surface</strong>(surface : <a href="../Cairo/Surface.html">Surface</a>) : <a href="../Cairo/Pattern.html">Pattern</a>
 
-        <a class="method-permalink" href="#create_for_surface(surface:Surface):Pattern-class-method">#</a>
+        <a class="method-permalink" href="#create_for_surface%28surface%3ASurface%29%3APattern-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Create a new <code><a href="../Cairo/Pattern.html">Pattern</a></code> for the given surface.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>surface</strong> the surface</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
+<p>###Parameters</p>
+<ul>
+<li><strong>surface</strong> the surface</li>
+</ul>
+<p>###Returns
+The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
 The caller owns the returned object and should call <code><a href="../Cairo/Pattern.html#finalize-instance-method">Pattern#finalize</a></code> when finished with it.</p>
-
 <p>This function will always return a valid <code><a href="../Cairo/Pattern.html">Pattern</a></code>, but if an error occurred the pattern status will be set to an error.
-To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#status:Status-instance-method">Pattern#status</a></code>.</p>
+To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#status%3AStatus-instance-method">Pattern#status</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L81" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -923,43 +912,34 @@ To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#stat
         
         def self.<strong>create_linear</strong>(x0 : Float64, y0 : Float64, x1 : Float64, y1 : Float64) : <a href="../Cairo/Pattern.html">Pattern</a>
 
-        <a class="method-permalink" href="#create_linear(x0:Float64,y0:Float64,x1:Float64,y1:Float64):Pattern-class-method">#</a>
+        <a class="method-permalink" href="#create_linear%28x0%3AFloat64%2Cy0%3AFloat64%2Cx1%3AFloat64%2Cy1%3AFloat64%29%3APattern-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Create a new linear gradient <code><a href="../Cairo/Pattern.html">Pattern</a></code> along the line defined by <em>(x0, y0)</em> and <em>(x1, y1)</em>.
 Before using the gradient pattern, a number of color stops should be defined
-using <code><a href="../Cairo/Pattern.html#add_color_stop(offset:Float64,red:Float64,green:Float64,blue:Float64)-instance-method">Pattern#add_color_stop</a></code>.</p>
-
+using <code><a href="../Cairo/Pattern.html#add_color_stop%28offset%3AFloat64%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29-instance-method">Pattern#add_color_stop</a></code>.</p>
 <p><span class="flag purple">NOTE</span>  The coordinates here are in pattern space. For a new pattern, pattern space is identical to user space,
-but the relationship between the spaces can be changed with <code><a href="../Cairo/Pattern.html#matrix=(matrix:Matrix)-instance-method">Pattern#matrix=</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>x0</strong> x coordinate of the start point</li><li><strong>y0</strong> y coordinate of the start point</li><li><strong>x1</strong> x coordinate of the end point</li><li><strong>y1</strong> y coordinate of the end point</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
+but the relationship between the spaces can be changed with <code><a href="../Cairo/Pattern.html#matrix%3D%28matrix%3AMatrix%29-instance-method">Pattern#matrix=</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>x0</strong> x coordinate of the start point</li>
+<li><strong>y0</strong> y coordinate of the start point</li>
+<li><strong>x1</strong> x coordinate of the end point</li>
+<li><strong>y1</strong> y coordinate of the end point</li>
+</ul>
+<p>###Returns
+The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
 The caller owns the returned object and should call <code><a href="../Cairo/Pattern.html#finalize-instance-method">Pattern#finalize</a></code> when finished with it.</p>
-
 <p>This function will always return a valid pointer, but if an error occurred the pattern status will be set to an error.
-To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#status:Status-instance-method">Pattern#status</a></code>.</p>
+To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#status%3AStatus-instance-method">Pattern#status</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L104" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L104" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -969,28 +949,23 @@ To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#stat
         
         def self.<strong>create_mesh</strong> : <a href="../Cairo/Pattern.html">Pattern</a>
 
-        <a class="method-permalink" href="#create_mesh:Pattern-class-method">#</a>
+        <a class="method-permalink" href="#create_mesh%3APattern-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Create a new mesh pattern.</p>
-
 <p>Mesh patterns are tensor-product patch meshes (type 7 shadings in PDF).
 Mesh patterns may also be used to create other types of shadings that are special cases of
 tensor-product patch meshes such as Coons patch meshes (type 6 shading in PDF) and
 Gouraud-shaded triangle meshes (type 4 and 5 shadings in PDF).</p>
-
 <p>Mesh patterns consist of one or more tensor-product patches, which should be defined before using the mesh pattern.
 Using a mesh pattern with a partially defined patch as source or mask will put the context in an error status with
 a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
-
 <p>A tensor-product patch is defined by 4 Bézier curves (side 0, 1, 2, 3) and by 4 additional control points (P0, P1, P2, P3)
 that provide further control over the patch and complete the definition of the tensor-product patch.
 The corner C0 is the first point of the patch.</p>
-
 <p>Degenerate sides are permitted so straight lines may be used. A zero length line on one side may be used to create 3 sided patches.</p>
-
 <pre><code class="language-text">    C1       Side 1      C2
        +---------------+
        |               |
@@ -1003,34 +978,25 @@ Side 0 |               | Side 2
        |               |
        +---------------+
     C0       Side 3      C3</code></pre>
-
-<p>Each patch is constructed by first calling <code><a href="../Cairo/Pattern.html#begin_patch-instance-method">Pattern#begin_patch</a></code>, then <code><a href="../Cairo/Pattern.html#move_to(x:Float64,y:Float64)-instance-method">Pattern#move_to</a></code> to specify the first point in the patch (C0).
-Then the sides are specified with calls to <code><a href="../Cairo/Pattern.html#curve_to(x1:Float64,y1:Float64,x2:Float64,y2:Float64,x3:Float64,y3:Float64)-instance-method">Pattern#curve_to</a></code> and <code><a href="../Cairo/Pattern.html#line_to(x:Float64,y:Float64)-instance-method">Pattern#line_to</a></code>.</p>
-
-<p>The four additional control points (P0, P1, P2, P3) in a patch can be specified with <code><a href="../Cairo/Pattern.html#set_control_point(point_num:UInt32,x:Float64,y:Float64)-instance-method">Pattern#set_control_point</a></code>.</p>
-
-<p>At each corner of the patch (C0, C1, C2, C3) a color may be specified with <code>Pattern#set_corner_color_rgb</code> or <code><a href="../Cairo/Pattern.html#set_corner_color_rgba(corner_num:UInt32,red:Float64,green:Float64,blue:Float64,alpha:Float64)-instance-method">Pattern#set_corner_color_rgba</a></code>.
+<p>Each patch is constructed by first calling <code><a href="../Cairo/Pattern.html#begin_patch-instance-method">Pattern#begin_patch</a></code>, then <code><a href="../Cairo/Pattern.html#move_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Pattern#move_to</a></code> to specify the first point in the patch (C0).
+Then the sides are specified with calls to <code><a href="../Cairo/Pattern.html#curve_to%28x1%3AFloat64%2Cy1%3AFloat64%2Cx2%3AFloat64%2Cy2%3AFloat64%2Cx3%3AFloat64%2Cy3%3AFloat64%29-instance-method">Pattern#curve_to</a></code> and <code><a href="../Cairo/Pattern.html#line_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Pattern#line_to</a></code>.</p>
+<p>The four additional control points (P0, P1, P2, P3) in a patch can be specified with <code><a href="../Cairo/Pattern.html#set_control_point%28point_num%3AUInt32%2Cx%3AFloat64%2Cy%3AFloat64%29-instance-method">Pattern#set_control_point</a></code>.</p>
+<p>At each corner of the patch (C0, C1, C2, C3) a color may be specified with <code>Pattern#set_corner_color_rgb</code> or <code><a href="../Cairo/Pattern.html#set_corner_color_rgba%28corner_num%3AUInt32%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29-instance-method">Pattern#set_corner_color_rgba</a></code>.
 Any corner whose color is not explicitly specified defaults to transparent black.</p>
-
 <p>A Coons patch is a special case of the tensor-product patch where the control points are implicitly defined by the sides of the patch.
 The default value for any control point not specified is the implicit value for a Coons patch,
 i.e. if no control points are specified the patch is a Coons patch.</p>
-
 <p>A triangle is a special case of the tensor-product patch where the control points are implicitly defined by the sides of the patch,
 all the sides are lines and one of them has length 0, i.e. if the patch is specified using just 3 lines, it is a triangle.
 If the corners connected by the 0-length side have the same color, the patch is a Gouraud-shaded triangle.</p>
-
 <p>Patches may be oriented differently to the above diagram. For example the first point could be at the top left.
 The diagram only shows the relationship between the sides, corners and control points. Regardless of where the first point is located,
 when specifying colors, corner 0 will always be the first point, corner 1 the point between side 0 and side 1 etc.</p>
-
 <p>Calling <code><a href="../Cairo/Pattern.html#end_patch-instance-method">Pattern#end_patch</a></code> completes the current patch. If less than 4 sides have been defined,
 the first missing side is defined as a line from the current point to the first point of the patch (C0)
 and the other sides are degenerate lines from C0 to C0. The corners between the added sides will all be coincident
 with C0 of the patch and their color will be set to be the same as the color of C0.</p>
-
 <p>Additional patches may be added with additional calls to <code><a href="../Cairo/Pattern.html#begin_patch-instance-method">Pattern#begin_patch</a></code>/<code><a href="../Cairo/Pattern.html#end_patch-instance-method">Pattern#end_patch</a></code>.</p>
-
 <pre><code class="language-crystal">pattern <span class="o">=</span> <span class="t">Pattern</span>.create_mesh
 
 <span class="c"># Add a Coons patch</span>
@@ -1057,39 +1023,27 @@ pattern
   .set_corner_color(<span class="n">1</span>, <span class="n">0</span>, <span class="n">1</span>, <span class="n">0</span>)
   .set_corner_color(<span class="n">2</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">1</span>)
   .end_patch</code></pre>
-
 <p>When two patches overlap, the last one that has been added is drawn over the first one.</p>
-
 <p>When a patch folds over itself, points are sorted depending on their parameter coordinates inside the patch.
 The <em>v</em> coordinate ranges from 0 to 1 when moving from side 3 to side 1; the <em>u</em> coordinate ranges from 0 to 1 when going from side 0 to side 1.</p>
-
 <p>Points with higher <em>v</em> coordinate hide points with lower <em>v</em> coordinate. When two points have the same <em>v</em> coordinate,
 the one with higher <em>u</em> coordinate is above. This means that points nearer to side 1 are above points nearer to side 3;
 when this is not sufficient to decide which point is above (for example when both points belong to side 1 or side 3)
 points nearer to side 2 are above points nearer to side 0.</p>
-
 <p>For a complete definition of tensor-product patches, see the PDF specification (ISO32000), which describes the parametrization in detail.</p>
-
 <p><span class="flag purple">NOTE</span>  The coordinates are always in pattern space. For a new pattern, pattern space is identical to user space,
-but the relationship between the spaces can be changed with <code><a href="../Cairo/Pattern.html#matrix=(matrix:Matrix)-instance-method">Pattern#matrix=</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
+but the relationship between the spaces can be changed with <code><a href="../Cairo/Pattern.html#matrix%3D%28matrix%3AMatrix%29-instance-method">Pattern#matrix=</a></code>.</p>
+<p>###Returns
+The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
 The caller owns the returned object and should call <code><a href="../Cairo/Pattern.html#finalize-instance-method">Pattern#finalize</a></code> when finished with it.</p>
-
 <p>This function will always return a valid pointer, but if an error occurred the pattern status will be set to an error.
-To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#status:Status-instance-method">Pattern#status</a></code>.</p>
+To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#status%3AStatus-instance-method">Pattern#status</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L239" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L239" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1099,42 +1053,35 @@ To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#stat
         
         def self.<strong>create_radial</strong>(cx0 : Float64, cy0 : Float64, radius0 : Float64, cx1 : Float64, cy1 : Float64, radius1 : Float64) : <a href="../Cairo/Pattern.html">Pattern</a>
 
-        <a class="method-permalink" href="#create_radial(cx0:Float64,cy0:Float64,radius0:Float64,cx1:Float64,cy1:Float64,radius1:Float64):Pattern-class-method">#</a>
+        <a class="method-permalink" href="#create_radial%28cx0%3AFloat64%2Ccy0%3AFloat64%2Cradius0%3AFloat64%2Ccx1%3AFloat64%2Ccy1%3AFloat64%2Cradius1%3AFloat64%29%3APattern-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a new radial gradient <code><a href="../Cairo/Pattern.html">Pattern</a></code> between the two circles defined by <em>(cx0, cy0, radius0)</em> and <em>(cx1, cy1, radius1)</em>.
-Before using the gradient pattern, a number of color stops should be defined using <code><a href="../Cairo/Pattern.html#add_color_stop(offset:Float64,red:Float64,green:Float64,blue:Float64)-instance-method">Pattern#add_color_stop</a></code>.</p>
-
+Before using the gradient pattern, a number of color stops should be defined using <code><a href="../Cairo/Pattern.html#add_color_stop%28offset%3AFloat64%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29-instance-method">Pattern#add_color_stop</a></code>.</p>
 <p><span class="flag purple">NOTE</span>  The coordinates here are in pattern space. For a new pattern, pattern space is identical to user space,
-but the relationship between the spaces can be changed with <code><a href="../Cairo/Pattern.html#matrix=(matrix:Matrix)-instance-method">Pattern#matrix=</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>cx0</strong> x coordinate for the center of the start circle</li><li><strong>cy0</strong> y coordinate for the center of the start circle</li><li><strong>radius0</strong> radius of the start circle</li><li><strong>cx1</strong> x coordinate for the center of the end circle</li><li><strong>cy1</strong> y coordinate for the center of the end circle</li><li><strong>radius1</strong> radius of the end circle</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
+but the relationship between the spaces can be changed with <code><a href="../Cairo/Pattern.html#matrix%3D%28matrix%3AMatrix%29-instance-method">Pattern#matrix=</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>cx0</strong> x coordinate for the center of the start circle</li>
+<li><strong>cy0</strong> y coordinate for the center of the start circle</li>
+<li><strong>radius0</strong> radius of the start circle</li>
+<li><strong>cx1</strong> x coordinate for the center of the end circle</li>
+<li><strong>cy1</strong> y coordinate for the center of the end circle</li>
+<li><strong>radius1</strong> radius of the end circle</li>
+</ul>
+<p>###Returns</p>
 <p>The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
 The caller owns the returned object and should call <code><a href="../Cairo/Pattern.html#finalize-instance-method">Pattern#finalize</a></code> when finished with it.</p>
-
 <p>This function will always return a valid pointer, but if an error occurred the pattern status will be set to an error.
-To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#status:Status-instance-method">Pattern#status</a></code>.</p>
+To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#status%3AStatus-instance-method">Pattern#status</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L129" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L129" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1144,37 +1091,29 @@ To inspect the status of a pattern use <code><a href="../Cairo/Pattern.html#stat
         
         def self.<strong>create_raster_source</strong>(user_data : Pointer(Void), content : <a href="../Cairo/Content.html">Content</a>, width : Int32, height : Int32) : <a href="../Cairo/Pattern.html">Pattern</a>
 
-        <a class="method-permalink" href="#create_raster_source(user_data:Pointer(Void),content:Content,width:Int32,height:Int32):Pattern-class-method">#</a>
+        <a class="method-permalink" href="#create_raster_source%28user_data%3APointer%28Void%29%2Ccontent%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3APattern-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a new user pattern for providing pixel data.</p>
-
 <p>Use the setter functions to associate callbacks with the returned pattern. The only mandatory callback is acquire.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>user_data</strong> the user data to be passed to all callbacks</li><li><strong>content</strong> content type for the pixel data that will be returned.
-Knowing the content type ahead of time is used for analysing the operation and picking the appropriate rendering path.</li><li><strong>width</strong> maximum size of the sample area</li><li><strong>height</strong> maximum size of the sample area</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code>. Free with <code><a href="../Cairo/Pattern.html#finalize-instance-method">Pattern#finalize</a></code> when you are done using it.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>user_data</strong> the user data to be passed to all callbacks</li>
+<li><strong>content</strong> content type for the pixel data that will be returned.
+Knowing the content type ahead of time is used for analysing the operation and picking the appropriate rendering path.</li>
+<li><strong>width</strong> maximum size of the sample area</li>
+<li><strong>height</strong> maximum size of the sample area</li>
+</ul>
+<p>###Returns
+A newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code>. Free with <code><a href="../Cairo/Pattern.html#finalize-instance-method">Pattern#finalize</a></code> when you are done using it.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1184,28 +1123,20 @@ Knowing the content type ahead of time is used for analysing the operation and p
         
         def self.<strong>create_rgb</strong>(red : Float64, green : Float64, blue : Float64) : <a href="../Cairo/Pattern.html">Pattern</a>
 
-        <a class="method-permalink" href="#create_rgb(red:Float64,green:Float64,blue:Float64):Pattern-class-method">#</a>
+        <a class="method-permalink" href="#create_rgb%28red%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%29%3APattern-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a new <code><a href="../Cairo/Pattern.html">Pattern</a></code> corresponding to an opaque color. The color components are floating point numbers in the range <em>0</em> to <em>1</em>.
 If the values passed in are outside that range, they will be clamped.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>red</strong> red component of the color</li><li><strong>green</strong> green component of the color</li><li><strong>blue</strong> blue component of the color</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
+<p>###Parameters</p>
+<ul>
+<li><strong>red</strong> red component of the color</li>
+<li><strong>green</strong> green component of the color</li>
+<li><strong>blue</strong> blue component of the color</li>
+</ul>
+<p>###Returns</p>
 <p>The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
 The caller owns the returned object and should call <code><a href="../Cairo/Pattern.html#finalize-instance-method">Pattern#finalize</a></code> when finished with it.</p>
         </div>
@@ -1213,7 +1144,7 @@ The caller owns the returned object and should call <code><a href="../Cairo/Patt
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1223,13 +1154,13 @@ The caller owns the returned object and should call <code><a href="../Cairo/Patt
         
         def self.<strong>new</strong>(pattern : LibCairo::PPatternT)
 
-        <a class="method-permalink" href="#new(pattern:LibCairo::PPatternT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28pattern%3ALibCairo%3A%3APPatternT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1248,71 +1179,28 @@ The caller owns the returned object and should call <code><a href="../Cairo/Patt
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="acquire:NamedTuple()-instance-method">
+    <div class="entry-detail" id="acquire:NamedTuple(acquire:LibCairo::RasterSourceAcquireFuncT,release:LibCairo::RasterSourceReleaseFuncT)-instance-method">
       <div class="signature">
         
-        def <strong>acquire</strong> : NamedTuple()
+        def <strong>acquire</strong> : NamedTuple(acquire: LibCairo::RasterSourceAcquireFuncT, release: LibCairo::RasterSourceReleaseFuncT)
 
-        <a class="method-permalink" href="#acquire:NamedTuple()-instance-method">#</a>
+        <a class="method-permalink" href="#acquire%3ANamedTuple%28acquire%3ALibCairo%3A%3ARasterSourceAcquireFuncT%2Crelease%3ALibCairo%3A%3ARasterSourceReleaseFuncT%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Queries the current acquire and release callbacks.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<ul><li><strong>acquire</strong> the current acquire callback</li><li><strong>release</strong> the current release callback</li></ul>
+<p>###Returns</p>
+<ul>
+<li><strong>acquire</strong> the current acquire callback</li>
+<li><strong>release</strong> the current release callback</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L265" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="add_color_stop(offset:Float64,red:Float64,green:Float64,blue:Float64)-instance-method">
-      <div class="signature">
-        
-        def <strong>add_color_stop</strong>(offset : Float64, red : Float64, green : Float64, blue : Float64)
-
-        <a class="method-permalink" href="#add_color_stop(offset:Float64,red:Float64,green:Float64,blue:Float64)-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Adds an opaque color stop to a gradient pattern. The offset specifies the location along the gradient's control vector.
-For example, a linear gradient's control vector is from <em>(x0, y0)</em> to <em>(x1, y1)</em> while a radial gradient's control
-vector is from any point on the start circle to the corresponding point on the end circle.</p>
-
-<p>The color is specified in the same way as in <code><a href="../Cairo/Context.html#set_source_rgb(red:Float64,green:Float64,blue:Float64)-instance-method">Context#set_source_rgb</a></code>.</p>
-
-<p>If two (or more) stops are specified with identical offset values, they will be sorted according to the order
-in which the stops are added, (stops added earlier will compare less than stops added later).
-This can be useful for reliably making sharp color transitions instead of the typical blend.</p>
-
-<p><span class="flag purple">NOTE</span>  If the pattern is not a gradient pattern, (eg. a linear or radial pattern),
-then the pattern will be put into an error status with a status of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>offset</strong> an offset in the range [0.0 .. 1.0]</li><li><strong>red</strong> red component of color</li><li><strong>green</strong> green component of color</li><li><strong>blue</strong> blue component of color</li></ul>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L413" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L265" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1322,7 +1210,7 @@ then the pattern will be put into an error status with a status of <code><a href
         
         def <strong>add_color_stop</strong>(offset : Float64, red : Float64, green : Float64, blue : Float64, alpha : Float64)
 
-        <a class="method-permalink" href="#add_color_stop(offset:Float64,red:Float64,green:Float64,blue:Float64,alpha:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#add_color_stop%28offset%3AFloat64%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1330,29 +1218,62 @@ then the pattern will be put into an error status with a status of <code><a href
           <p>Adds a translucent color stop to a gradient pattern. The offset specifies the location along the gradient's control vector.
 For example, a linear gradient's control vector is from <em>(x0, y0)</em> to <em>(x1, y1)</em> while a radial gradient's
 control vector is from any point on the start circle to the corresponding point on the end circle.</p>
-
-<p>The color is specified in the same way as in <code><a href="../Cairo/Context.html#set_source_rgba(red:Float64,green:Float64,blue:Float64,alpha:Float64)-instance-method">Context#set_source_rgba</a></code>.</p>
-
+<p>The color is specified in the same way as in <code><a href="../Cairo/Context.html#set_source_rgba%28red%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29-instance-method">Context#set_source_rgba</a></code>.</p>
 <p>If two (or more) stops are specified with identical offset values, they will be sorted according to the order in which the stops are added,
 (stops added earlier will compare less than stops added later). This can be useful for reliably making sharp color transitions
 instead of the typical blend.</p>
-
 <p><span class="flag purple">NOTE</span>  If the pattern is not a gradient pattern, (eg. a linear or radial pattern), then the pattern will be put into an
 error status with a status of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>offset</strong> an offset in the range [0.0 .. 1.0]</li><li><strong>red</strong> red component of color</li><li><strong>green</strong> green component of color</li><li><strong>blue</strong> blue component of color</li><li><strong>alpha</strong> alpha component of color</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>offset</strong> an offset in the range [0.0 .. 1.0]</li>
+<li><strong>red</strong> red component of color</li>
+<li><strong>green</strong> green component of color</li>
+<li><strong>blue</strong> blue component of color</li>
+<li><strong>alpha</strong> alpha component of color</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L437" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L437" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="add_color_stop(offset:Float64,red:Float64,green:Float64,blue:Float64)-instance-method">
+      <div class="signature">
+        
+        def <strong>add_color_stop</strong>(offset : Float64, red : Float64, green : Float64, blue : Float64)
+
+        <a class="method-permalink" href="#add_color_stop%28offset%3AFloat64%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Adds an opaque color stop to a gradient pattern. The offset specifies the location along the gradient's control vector.
+For example, a linear gradient's control vector is from <em>(x0, y0)</em> to <em>(x1, y1)</em> while a radial gradient's control
+vector is from any point on the start circle to the corresponding point on the end circle.</p>
+<p>The color is specified in the same way as in <code><a href="../Cairo/Context.html#set_source_rgb%28red%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%29-instance-method">Context#set_source_rgb</a></code>.</p>
+<p>If two (or more) stops are specified with identical offset values, they will be sorted according to the order
+in which the stops are added, (stops added earlier will compare less than stops added later).
+This can be useful for reliably making sharp color transitions instead of the typical blend.</p>
+<p><span class="flag purple">NOTE</span>  If the pattern is not a gradient pattern, (eg. a linear or radial pattern),
+then the pattern will be put into an error status with a status of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>offset</strong> an offset in the range [0.0 .. 1.0]</li>
+<li><strong>red</strong> red component of color</li>
+<li><strong>green</strong> green component of color</li>
+<li><strong>blue</strong> blue component of color</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L413" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1368,11 +1289,8 @@ error status with a status of <code><a href="../Cairo/Status.html#PatternTypeMis
         <div class="doc">
           
           <p>Begin a patch in a mesh pattern.</p>
-
-<p>After calling this function, the patch shape should be defined with <code><a href="../Cairo/Pattern.html#move_to(x:Float64,y:Float64)-instance-method">Pattern#move_to</a></code>, <code><a href="../Cairo/Pattern.html#line_to(x:Float64,y:Float64)-instance-method">Pattern#line_to</a></code> and <code><a href="../Cairo/Pattern.html#curve_to(x1:Float64,y1:Float64,x2:Float64,y2:Float64,x3:Float64,y3:Float64)-instance-method">Pattern#curve_to</a></code>.</p>
-
+<p>After calling this function, the patch shape should be defined with <code><a href="../Cairo/Pattern.html#move_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Pattern#move_to</a></code>, <code><a href="../Cairo/Pattern.html#line_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Pattern#line_to</a></code> and <code><a href="../Cairo/Pattern.html#curve_to%28x1%3AFloat64%2Cy1%3AFloat64%2Cx2%3AFloat64%2Cy2%3AFloat64%2Cx3%3AFloat64%2Cy3%3AFloat64%29-instance-method">Pattern#curve_to</a></code>.</p>
 <p>After defining the patch, <code><a href="../Cairo/Pattern.html#end_patch-instance-method">Pattern#end_patch</a></code> must be called before using pattern as a source or mask.</p>
-
 <p><span class="flag purple">NOTE</span>  If pattern is not a mesh pattern then pattern will be put into an error status with a status
 of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>. If pattern already has a current patch, it will be put into an error status
 with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
@@ -1381,7 +1299,7 @@ with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">St
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L451" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L451" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1391,26 +1309,20 @@ with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">St
         
         def <strong>callback_data</strong> : Pointer(Void)
 
-        <a class="method-permalink" href="#callback_data:Pointer(Void)-instance-method">#</a>
+        <a class="method-permalink" href="#callback_data%3APointer%28Void%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Queries the current user data.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The current user-data passed to each callback.</p>
+<p>###Returns
+The current user-data passed to each callback.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L247" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L247" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1420,26 +1332,22 @@ with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">St
         
         def <strong>callback_data=</strong>(data : Pointer(Void))
 
-        <a class="method-permalink" href="#callback_data=(data:Pointer(Void))-instance-method">#</a>
+        <a class="method-permalink" href="#callback_data%3D%28data%3APointer%28Void%29%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Updates the user data that is provided to all callbacks.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>data</strong> the user data to be passed to all callbacks</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>data</strong> the user data to be passed to all callbacks</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L255" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L255" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1449,44 +1357,30 @@ with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">St
         
         def <strong>color_stop</strong>(index : Int32) : <a href="../Cairo/ColorStop.html">ColorStop</a>
 
-        <a class="method-permalink" href="#color_stop(index:Int32):ColorStop-instance-method">#</a>
+        <a class="method-permalink" href="#color_stop%28index%3AInt32%29%3AColorStop-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the color and offset information at the given index for a gradient pattern.
-Values of index range from <em>0</em> to <em>n-1</em> where <em>n</em> is the number returned by <code><a href="../Cairo/Pattern.html#color_stop_count:Int32-instance-method">Pattern#color_stop_count</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>index</strong> index of the stop to return data for</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/ColorStop.html">ColorStop</a></code> object.</p>
-
-<h3><a id="raises" class="anchor" href="#raises">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Raises</h3>
-
-<ul><li><code><a href="../Cairo/StatusException.html">StatusException</a></code> whith <em>status</em> of <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code> if index is not valid for the given pattern.
-   If the pattern is not a gradient pattern, <em>status</em> is <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>.</li></ul>
+Values of index range from <em>0</em> to <em>n-1</em> where <em>n</em> is the number returned by <code><a href="../Cairo/Pattern.html#color_stop_count%3AInt32-instance-method">Pattern#color_stop_count</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>index</strong> index of the stop to return data for</li>
+</ul>
+<p>###Returns
+<code><a href="../Cairo/ColorStop.html">ColorStop</a></code> object.</p>
+<p>###Raises</p>
+<ul>
+<li><code><a href="../Cairo/StatusException.html">StatusException</a></code> whith <em>status</em> of <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code> if index is not valid for the given pattern.
+If the pattern is not a gradient pattern, <em>status</em> is <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>.</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L706" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L706" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1496,34 +1390,24 @@ Values of index range from <em>0</em> to <em>n-1</em> where <em>n</em> is the nu
         
         def <strong>color_stop_count</strong> : Int32
 
-        <a class="method-permalink" href="#color_stop_count:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#color_stop_count%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the number of color stops specified in the given gradient pattern.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The number of color stops.</p>
-
-<h3><a id="raises" class="anchor" href="#raises">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Raises</h3>
-
-<ul><li><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if pattern is not a gradient pattern.</li></ul>
+<p>###Returns
+The number of color stops.</p>
+<p>###Raises</p>
+<ul>
+<li><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if pattern is not a gradient pattern.</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L720" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L720" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1533,47 +1417,30 @@ Values of index range from <em>0</em> to <em>n-1</em> where <em>n</em> is the nu
         
         def <strong>control_point</strong>(pattern : PPatternT, patch_num : UInt32, point_num : UInt32, x : Pointer(Float64), y : Pointer(Float64)) : StatusT
 
-        <a class="method-permalink" href="#control_point(pattern:PPatternT,patch_num:UInt32,point_num:UInt32,x:Pointer(Float64),y:Pointer(Float64)):StatusT-instance-method">#</a>
+        <a class="method-permalink" href="#control_point%28pattern%3APPatternT%2Cpatch_num%3AUInt32%2Cpoint_num%3AUInt32%2Cx%3APointer%28Float64%29%2Cy%3APointer%28Float64%29%29%3AStatusT-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the control point <em>point_num</em> of patch patch_num for a mesh pattern.</p>
-
-<p><em>patch_num</em> can range from <em>0</em> to <em>n-1</em> where <em>n</em> is the number returned by <code><a href="../Cairo/Pattern.html#patch_count:UInt32-instance-method">Pattern#patch_count</a></code>.</p>
-
-<p>Valid values for point_num are from <em>0</em> to <em>3</em> and identify the control points as explained in <code><a href="../Cairo/Pattern.html#create_mesh:Pattern-class-method">Pattern#create_mesh</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>patch_num</strong> the patch number to return data for</li><li><strong>point_num</strong> the control point number to return data for</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The control point.</p>
-
-<h3><a id="raises" class="anchor" href="#raises">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Raises</h3>
-
-<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code> if <em>patch_num</em> or <em>point_num</em> is not valid for pattern.
+<p><em>patch_num</em> can range from <em>0</em> to <em>n-1</em> where <em>n</em> is the number returned by <code><a href="../Cairo/Pattern.html#patch_count%3AUInt32-instance-method">Pattern#patch_count</a></code>.</p>
+<p>Valid values for point_num are from <em>0</em> to <em>3</em> and identify the control points as explained in <code><a href="../Cairo/Pattern.html#create_mesh%3APattern-class-method">Pattern#create_mesh</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>patch_num</strong> the patch number to return data for</li>
+<li><strong>point_num</strong> the control point number to return data for</li>
+</ul>
+<p>###Returns
+The control point.</p>
+<p>###Raises
+<code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code> if <em>patch_num</em> or <em>point_num</em> is not valid for pattern.
 If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> is returned.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L831" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L831" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1583,26 +1450,20 @@ If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTyp
         
         def <strong>copy</strong> : LibCairo::RasterSourceCopyFuncT
 
-        <a class="method-permalink" href="#copy:LibCairo::RasterSourceCopyFuncT-instance-method">#</a>
+        <a class="method-permalink" href="#copy%3ALibCairo%3A%3ARasterSourceCopyFuncT-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Queries the current copy callback.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The current copy callback.</p>
+<p>###Returns
+The current copy callback.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L310" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L310" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1612,26 +1473,22 @@ If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTyp
         
         def <strong>copy=</strong>(copy : LibCairo::RasterSourceCopyFuncT)
 
-        <a class="method-permalink" href="#copy=(copy:LibCairo::RasterSourceCopyFuncT)-instance-method">#</a>
+        <a class="method-permalink" href="#copy%3D%28copy%3ALibCairo%3A%3ARasterSourceCopyFuncT%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Updates the copy callback which is used whenever a temporary copy of the pattern is taken.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>copy</strong> the copy callback</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>copy</strong> the copy callback</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L318" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L318" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1641,47 +1498,30 @@ If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTyp
         
         def <strong>corner_color</strong>(patch_num : UInt32, corner_num : UInt32) : <a href="../Cairo/RGBA.html">RGBA</a>
 
-        <a class="method-permalink" href="#corner_color(patch_num:UInt32,corner_num:UInt32):RGBA-instance-method">#</a>
+        <a class="method-permalink" href="#corner_color%28patch_num%3AUInt32%2Ccorner_num%3AUInt32%29%3ARGBA-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the color information in corner <em>corner_num</em> of patch <em>patch_num</em> for a mesh pattern.</p>
-
-<p><em>patch_num</em> can range from <em>0</em> to <em>n-1</em> where <em>n</em> is the number returned by <code><a href="../Cairo/Pattern.html#patch_count:UInt32-instance-method">Pattern#patch_count</a></code>.</p>
-
-<p>Valid values for <em>corner_num</em> are from <em>0</em> to <em>3</em> and identify the corners as explained in <code><a href="../Cairo/Pattern.html#create_mesh:Pattern-class-method">Pattern#create_mesh</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>patch_num</strong> the patch number to return data for</li><li><strong>corner_num</strong> the corner number to return data for</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The color structure.</p>
-
-<h3><a id="raises" class="anchor" href="#raises">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Raises</h3>
-
-<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code> if <em>patch_num</em> or <em>corner_num</em> is not valid for pattern.
+<p><em>patch_num</em> can range from <em>0</em> to <em>n-1</em> where <em>n</em> is the number returned by <code><a href="../Cairo/Pattern.html#patch_count%3AUInt32-instance-method">Pattern#patch_count</a></code>.</p>
+<p>Valid values for <em>corner_num</em> are from <em>0</em> to <em>3</em> and identify the corners as explained in <code><a href="../Cairo/Pattern.html#create_mesh%3APattern-class-method">Pattern#create_mesh</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>patch_num</strong> the patch number to return data for</li>
+<li><strong>corner_num</strong> the corner number to return data for</li>
+</ul>
+<p>###Returns
+The color structure.</p>
+<p>###Raises
+<code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code> if <em>patch_num</em> or <em>corner_num</em> is not valid for pattern.
 If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> is returned.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L808" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L808" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1691,36 +1531,29 @@ If pattern is not a mesh pattern, <code><a href="../Cairo/Status.html#PatternTyp
         
         def <strong>create_rgba</strong>(red : Float64, green : Float64, blue : Float64, alpha : Float64) : <a href="../Cairo/Pattern.html">Pattern</a>
 
-        <a class="method-permalink" href="#create_rgba(red:Float64,green:Float64,blue:Float64,alpha:Float64):Pattern-instance-method">#</a>
+        <a class="method-permalink" href="#create_rgba%28red%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29%3APattern-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a new <code><a href="../Cairo/Pattern.html">Pattern</a></code> corresponding to a translucent color. The color components are floating point numbers in the range <em>0</em> to <em>1</em>-
 If the values passed in are outside that range, they will be clamped.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>red</strong> red component of the color</li><li><strong>green</strong> green component of the color</li><li><strong>blue</strong> blue component of the color</li><li><strong>alpha</strong> alpha component of the color</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
+<p>###Parameters</p>
+<ul>
+<li><strong>red</strong> red component of the color</li>
+<li><strong>green</strong> green component of the color</li>
+<li><strong>blue</strong> blue component of the color</li>
+<li><strong>alpha</strong> alpha component of the color</li>
+</ul>
+<p>###Returns
+The newly created <code><a href="../Cairo/Pattern.html">Pattern</a></code> if successful, or an error pattern in case of no memory.
 The caller owns the returned object and should call <code><a href="../Cairo/Pattern.html#finalize-instance-method">Pattern#finalize</a></code> when finished with it.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1730,36 +1563,34 @@ The caller owns the returned object and should call <code><a href="../Cairo/Patt
         
         def <strong>curve_to</strong>(x1 : Float64, y1 : Float64, x2 : Float64, y2 : Float64, x3 : Float64, y3 : Float64)
 
-        <a class="method-permalink" href="#curve_to(x1:Float64,y1:Float64,x2:Float64,y2:Float64,x3:Float64,y3:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#curve_to%28x1%3AFloat64%2Cy1%3AFloat64%2Cx2%3AFloat64%2Cy2%3AFloat64%2Cx3%3AFloat64%2Cy3%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Adds a cubic Bézier spline to the current patch from the current point to position <em>(x3, y3)</em> in pattern-space coordinates,
 using <em>(x1, y1)</em> and <em>(x2, y2)</em> as the control points.</p>
-
-<p>If the current patch has no current point before the call to <code><a href="../Cairo/Pattern.html#curve_to(x1:Float64,y1:Float64,x2:Float64,y2:Float64,x3:Float64,y3:Float64)-instance-method">Pattern#curve_to</a></code>,
-this function will behave as if preceded by a call to <code><a href="../Cairo/Pattern.html#move_to(x:Float64,y:Float64)-instance-method">Pattern#move_to</a></code>.</p>
-
+<p>If the current patch has no current point before the call to <code><a href="../Cairo/Pattern.html#curve_to%28x1%3AFloat64%2Cy1%3AFloat64%2Cx2%3AFloat64%2Cy2%3AFloat64%2Cx3%3AFloat64%2Cy3%3AFloat64%29-instance-method">Pattern#curve_to</a></code>,
+this function will behave as if preceded by a call to <code><a href="../Cairo/Pattern.html#move_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Pattern#move_to</a></code>.</p>
 <p>After this call the current point will be <em>(x3, y3)</em>.</p>
-
 <p><span class="flag purple">NOTE</span>  If pattern is not a mesh pattern then pattern will be put into an error status with a status
 of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>. If pattern has no current patch or the current patch already has 4 sides,
 pattern will be put into an error status with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>x1</strong> the X coordinate of the first control point</li><li><strong>y1</strong> the Y coordinate of the first control point</li><li><strong>x2</strong> the X coordinate of the second control point</li><li><strong>y2</strong> the Y coordinate of the second control point</li><li><strong>x3</strong> the X coordinate of the end of the curve</li><li><strong>y3</strong> the Y coordinate of the end of the curve</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>x1</strong> the X coordinate of the first control point</li>
+<li><strong>y1</strong> the Y coordinate of the first control point</li>
+<li><strong>x2</strong> the X coordinate of the second control point</li>
+<li><strong>y2</strong> the Y coordinate of the second control point</li>
+<li><strong>x3</strong> the X coordinate of the end of the curve</li>
+<li><strong>y3</strong> the Y coordinate of the end of the curve</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L488" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L488" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1775,10 +1606,8 @@ pattern will be put into an error status with a status of <code><a href="../Cair
         <div class="doc">
           
           <p>Indicates the end of the current patch in a mesh pattern.</p>
-
 <p>If the current patch has less than 4 sides, it is closed with a straight line from the current point to
-the first point of the patch as if <code><a href="../Cairo/Pattern.html#line_to(x:Float64,y:Float64)-instance-method">Pattern#line_to</a></code> was used.</p>
-
+the first point of the patch as if <code><a href="../Cairo/Pattern.html#line_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Pattern#line_to</a></code> was used.</p>
 <p><span class="flag purple">NOTE</span>  If pattern is not a mesh pattern then pattern will be put into an error status with a status
 of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>. If pattern has no current patch or the current patch has no current point,
 pattern will be put into an error status with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
@@ -1787,7 +1616,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L464" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L464" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1797,26 +1626,20 @@ pattern will be put into an error status with a status of <code><a href="../Cair
         
         def <strong>extend</strong> : <a href="../Cairo/Extend.html">Extend</a>
 
-        <a class="method-permalink" href="#extend:Extend-instance-method">#</a>
+        <a class="method-permalink" href="#extend%3AExtend-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the current extend mode for a pattern. See <code><a href="../Cairo/Extend.html">Extend</a></code> for details on the semantics of each extend strategy.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The current extend strategy used for drawing the pattern.</p>
+<p>###Returns
+The current extend strategy used for drawing the pattern.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L626" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L626" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1826,29 +1649,24 @@ pattern will be put into an error status with a status of <code><a href="../Cair
         
         def <strong>extend=</strong>(ex : <a href="../Cairo/Extend.html">Extend</a>)
 
-        <a class="method-permalink" href="#extend=(ex:Extend)-instance-method">#</a>
+        <a class="method-permalink" href="#extend%3D%28ex%3AExtend%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Sets the mode to be used for drawing outside the area of a pattern.
 See <code><a href="../Cairo/Extend.html">Extend</a></code> for details on the semantics of each extend strategy.</p>
-
 <p>The default extend mode is <code><a href="../Cairo/Extend.html#None">Extend::None</a></code> for surface patterns and <code><a href="../Cairo/Extend.html#Pad">Extend::Pad</a></code> for gradient patterns.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>ex</strong> a <code><a href="../Cairo/Extend.html">Extend</a></code> describing how the area outside of the pattern will be drawn</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>ex</strong> a <code><a href="../Cairo/Extend.html">Extend</a></code> describing how the area outside of the pattern will be drawn</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L637" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L637" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1858,26 +1676,20 @@ See <code><a href="../Cairo/Extend.html">Extend</a></code> for details on the se
         
         def <strong>filter</strong> : <a href="../Cairo/Filter.html">Filter</a>
 
-        <a class="method-permalink" href="#filter:Filter-instance-method">#</a>
+        <a class="method-permalink" href="#filter%3AFilter-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the current filter for a pattern. See <code><a href="../Cairo/Filter.html">Filter</a></code> for details on each filter.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The current filter used for resizing the pattern.</p>
+<p>###Returns
+The current filter used for resizing the pattern.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L646" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L646" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1887,33 +1699,27 @@ See <code><a href="../Cairo/Extend.html">Extend</a></code> for details on the se
         
         def <strong>filter=</strong>(filter : <a href="../Cairo/Filter.html">Filter</a>)
 
-        <a class="method-permalink" href="#filter=(filter:Filter)-instance-method">#</a>
+        <a class="method-permalink" href="#filter%3D%28filter%3AFilter%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Sets the filter to be used for resizing when using this pattern. See <code><a href="../Cairo/Filter.html">Filter</a></code> for details on each filter.</p>
-
 <p><span class="flag purple">NOTE</span>  that you might want to control filtering even when you do not have an explicit <code><a href="../Cairo/Pattern.html">Pattern</a></code> object,
-(for example when using <code><a href="../Cairo/Context.html#set_source_surface(surface:Surface,x:Float64,y:Float64)-instance-method">Context#set_source_surface</a></code>). In these cases, it is convenient to use <code>Context#get_source</code>
+(for example when using <code><a href="../Cairo/Context.html#set_source_surface%28surface%3ASurface%2Cx%3AFloat64%2Cy%3AFloat64%29-instance-method">Context#set_source_surface</a></code>). In these cases, it is convenient to use <code>Context#get_source</code>
 to get access to the pattern that cairo creates implicitly. For example:</p>
-
 <pre><code class="language-crystal">context.set_source_surface(image, x, y)
 context.source.filter <span class="o">=</span> <span class="t">Filter</span><span class="t">::</span><span class="t">Nearest</span></code></pre>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>filter</strong> a <code><a href="../Cairo/Filter.html">Filter</a></code> describing the filter to use for resizing the pattern</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>filter</strong> a <code><a href="../Cairo/Filter.html">Filter</a></code> describing the filter to use for resizing the pattern</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L662" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L662" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1929,13 +1735,13 @@ context.source.filter <span class="o">=</span> <span class="t">Filter</span><spa
         <div class="doc">
           
           <p>Decreases the reference count on pattern by one. If the result is zero, then pattern and all associated resources are freed.
-See <code><a href="../Cairo/Pattern.html#reference:Pattern-instance-method">Pattern#reference</a></code>.</p>
+See <code><a href="../Cairo/Pattern.html#reference%3APattern-instance-method">Pattern#reference</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1945,26 +1751,20 @@ See <code><a href="../Cairo/Pattern.html#reference:Pattern-instance-method">Patt
         
         def <strong>finish</strong> : LibCairo::RasterSourceFinishFuncT
 
-        <a class="method-permalink" href="#finish:LibCairo::RasterSourceFinishFuncT-instance-method">#</a>
+        <a class="method-permalink" href="#finish%3ALibCairo%3A%3ARasterSourceFinishFuncT-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Queries the current finish callback.</p>
-
-<h2><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h2>
-
-<p>The current finish callback.</p>
+<p>##Returns
+The current finish callback.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L327" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L327" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1974,26 +1774,22 @@ See <code><a href="../Cairo/Pattern.html#reference:Pattern-instance-method">Patt
         
         def <strong>finish=</strong>(finish : LibCairo::RasterSourceFinishFuncT)
 
-        <a class="method-permalink" href="#finish=(finish:LibCairo::RasterSourceFinishFuncT)-instance-method">#</a>
+        <a class="method-permalink" href="#finish%3D%28finish%3ALibCairo%3A%3ARasterSourceFinishFuncT%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Updates the finish callback which is used whenever a pattern (or a copy thereof) will no longer be used.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>finish</strong> the finish callback</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>finish</strong> the finish callback</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L335" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L335" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2003,71 +1799,60 @@ See <code><a href="../Cairo/Pattern.html#reference:Pattern-instance-method">Patt
         
         def <strong>line_to</strong>(x : Float64, y : Float64)
 
-        <a class="method-permalink" href="#line_to(x:Float64,y:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#line_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Adds a line to the current patch from the current point to position <em>(x, y)</em> in pattern-space coordinates.</p>
-
-<p>If there is no current point before the call to <code><a href="../Cairo/Pattern.html#line_to(x:Float64,y:Float64)-instance-method">Pattern#line_to</a></code> this function will behave as <code><a href="../Cairo/Pattern.html#move_to(x:Float64,y:Float64)-instance-method">Pattern#move_to</a></code>.</p>
-
+<p>If there is no current point before the call to <code><a href="../Cairo/Pattern.html#line_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Pattern#line_to</a></code> this function will behave as <code><a href="../Cairo/Pattern.html#move_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Pattern#move_to</a></code>.</p>
 <p>After this call the current point will be <em>(x, y)</em>.</p>
-
 <p><span class="flag purple">NOTE</span>  If pattern is not a mesh pattern then pattern will be put into an error status with a status
 of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>. If pattern has no current patch or the current patch already has 4 sides,
 pattern will be put into an error status with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>x</strong> the X coordinate of the end of the new line</li><li><strong>y</strong> the Y coordinate of the end of the new line</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>x</strong> the X coordinate of the end of the new line</li>
+<li><strong>y</strong> the Y coordinate of the end of the new line</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L506" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L506" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="linear_points:NamedTuple()-instance-method">
+    <div class="entry-detail" id="linear_points:NamedTuple(x0:Float64,y0:Float64,x1:Float64,y1:Float64)-instance-method">
       <div class="signature">
         
-        def <strong>linear_points</strong> : NamedTuple()
+        def <strong>linear_points</strong> : NamedTuple(x0: Float64, y0: Float64, x1: Float64, y1: Float64)
 
-        <a class="method-permalink" href="#linear_points:NamedTuple()-instance-method">#</a>
+        <a class="method-permalink" href="#linear_points%3ANamedTuple%28x0%3AFloat64%2Cy0%3AFloat64%2Cx1%3AFloat64%2Cy1%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the gradient endpoints for a linear gradient.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<ul><li><strong>x0</strong> return value for the x coordinate of the first point</li><li><strong>y0</strong> return value for the y coordinate of the first point</li><li><strong>x1</strong> return value for the x coordinate of the second point</li><li><strong>y1</strong> return value for the y coordinate of the second point</li></ul>
-
-<h3><a id="raises" class="anchor" href="#raises">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Raises</h3>
-
-<ul><li><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if pattern is not a linear gradient pattern.</li></ul>
+<p>###Returns</p>
+<ul>
+<li><strong>x0</strong> return value for the x coordinate of the first point</li>
+<li><strong>y0</strong> return value for the y coordinate of the first point</li>
+<li><strong>x1</strong> return value for the x coordinate of the second point</li>
+<li><strong>y1</strong> return value for the y coordinate of the second point</li>
+</ul>
+<p>###Raises</p>
+<ul>
+<li><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if pattern is not a linear gradient pattern.</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L736" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L736" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2077,7 +1862,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
         
         def <strong>matrix</strong> : <a href="../Cairo/Matrix.html">Matrix</a>
 
-        <a class="method-permalink" href="#matrix:Matrix-instance-method">#</a>
+        <a class="method-permalink" href="#matrix%3AMatrix-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2088,7 +1873,7 @@ pattern will be put into an error status with a status of <code><a href="../Cair
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L589" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L589" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2098,43 +1883,33 @@ pattern will be put into an error status with a status of <code><a href="../Cair
         
         def <strong>matrix=</strong>(matrix : <a href="../Cairo/Matrix.html">Matrix</a>)
 
-        <a class="method-permalink" href="#matrix=(matrix:Matrix)-instance-method">#</a>
+        <a class="method-permalink" href="#matrix%3D%28matrix%3AMatrix%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Sets the pattern's transformation matrix to matrix.
 This matrix is a transformation from user space to pattern space.</p>
-
 <p>When a pattern is first created it always has the identity matrix for its transformation matrix,
 which means that pattern space is initially identical to user space.</p>
-
 <p>Important: Please NOTE that the direction of this transformation matrix is from user space to pattern space.
 This means that if you imagine the flow from a pattern to user space (and on to device space),
 then coordinates in that flow will be transformed by the inverse of the pattern matrix.</p>
-
 <p>For example, if you want to make a pattern appear twice as large as it does by default the correct code to use is:</p>
-
 <pre><code class="language-crystal">matrix.init_scale(<span class="n">0.5</span>, <span class="n">0.5</span>)
 pattern.matrix <span class="o">=</span> matrix</code></pre>
-
 <p>Meanwhile, using values of 2.0 rather than 0.5 in the code above would cause the pattern to appear at half of its default size.</p>
-
-<p>Also, please note the discussion of the user-space locking semantics of <code><a href="../Cairo/Context.html#source=(source:Pattern)-instance-method">Context#source=</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>matrix</strong> a <code><a href="../Cairo/Matrix.html">Matrix</a></code></li></ul>
+<p>Also, please note the discussion of the user-space locking semantics of <code><a href="../Cairo/Context.html#source%3D%28source%3APattern%29-instance-method">Context#source=</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>matrix</strong> a <code><a href="../Cairo/Matrix.html">Matrix</a></code></li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L617" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L617" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2144,32 +1919,27 @@ pattern.matrix <span class="o">=</span> matrix</code></pre>
         
         def <strong>move_to</strong>(x : Float64, y : Float64)
 
-        <a class="method-permalink" href="#move_to(x:Float64,y:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#move_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Define the first point of the current patch in a mesh pattern.</p>
-
 <p>After this call the current point will be <em>(x, y)</em>.</p>
-
 <p><span class="flag purple">NOTE</span>  If pattern is not a mesh pattern then pattern will be put into an error status with a status
 of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>. If pattern has no current patch or the current patch already has at least one side,
 pattern will be put into an error status with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>x</strong> the X coordinate of the new position</li><li><strong>y</strong> the Y coordinate of the new position</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>x</strong> the X coordinate of the new position</li>
+<li><strong>y</strong> the Y coordinate of the new position</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L522" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L522" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2179,37 +1949,26 @@ pattern will be put into an error status with a status of <code><a href="../Cair
         
         def <strong>patch_count</strong> : UInt32
 
-        <a class="method-permalink" href="#patch_count:UInt32-instance-method">#</a>
+        <a class="method-permalink" href="#patch_count%3AUInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the number of patches specified in the given mesh pattern.</p>
-
 <p>The number only includes patches which have been finished by calling <code><a href="../Cairo/Pattern.html#end_patch-instance-method">Pattern#end_patch</a></code>.
 For example it will be 0 during the definition of the first patch.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The number patches</p>
-
-<h3><a id="raises" class="anchor" href="#raises">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Raises</h3>
-
-<ul><li><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if pattern is not a mesh pattern.</li></ul>
+<p>###Returns
+The number patches</p>
+<p>###Raises</p>
+<ul>
+<li><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if pattern is not a mesh pattern.</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L772" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L772" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2219,74 +1978,60 @@ For example it will be 0 during the definition of the first patch.</p>
         
         def <strong>path</strong>(patch_num : UInt32) : <a href="../Cairo/Path.html">Path</a>
 
-        <a class="method-permalink" href="#path(patch_num:UInt32):Path-instance-method">#</a>
+        <a class="method-permalink" href="#path%28patch_num%3AUInt32%29%3APath-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets path defining the patch <em>patch_num</em> for a mesh pattern.</p>
-
-<p><em>patch_num</em> can range from 0 to n-1 where n is the number returned by <code><a href="../Cairo/Pattern.html#patch_count:UInt32-instance-method">Pattern#patch_count</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>patch_num</strong> the patch number to return data for</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The path defining the patch, or a path with status <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code> if <em>patch_num</em> or <em>point_num</em> is not valid for pattern.
+<p><em>patch_num</em> can range from 0 to n-1 where n is the number returned by <code><a href="../Cairo/Pattern.html#patch_count%3AUInt32-instance-method">Pattern#patch_count</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>patch_num</strong> the patch number to return data for</li>
+</ul>
+<p>###Returns
+The path defining the patch, or a path with status <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code> if <em>patch_num</em> or <em>point_num</em> is not valid for pattern.
 If pattern is not a mesh pattern, a path with status <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> is returned.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L788" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L788" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="radial_circles:NamedTuple()-instance-method">
+    <div class="entry-detail" id="radial_circles:NamedTuple(x0:Float64,y0:Float64,r0:Float64,x1:Float64,y1:Float64,r1:Float64)-instance-method">
       <div class="signature">
         
-        def <strong>radial_circles</strong> : NamedTuple()
+        def <strong>radial_circles</strong> : NamedTuple(x0: Float64, y0: Float64, r0: Float64, x1: Float64, y1: Float64, r1: Float64)
 
-        <a class="method-permalink" href="#radial_circles:NamedTuple()-instance-method">#</a>
+        <a class="method-permalink" href="#radial_circles%3ANamedTuple%28x0%3AFloat64%2Cy0%3AFloat64%2Cr0%3AFloat64%2Cx1%3AFloat64%2Cy1%3AFloat64%2Cr1%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the gradient endpoint circles for a radial gradient, each specified as a center coordinate and a radius.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<ul><li><strong>x0</strong> return value for the x coordinate of the center of the first circle</li><li><strong>y0</strong> return value for the y coordinate of the center of the first circle</li><li><strong>r0</strong> return value for the radius of the first circle</li><li><strong>x1</strong> return value for the x coordinate of the center of the second circle</li><li><strong>y1</strong> return value for the y coordinate of the center of the second circle</li><li><strong>r1</strong> return value for the radius of the second circle</li></ul>
-
-<h3><a id="raises" class="anchor" href="#raises">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Raises</h3>
-
-<ul><li><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if pattern is not a radial gradient pattern.</li></ul>
+<p>###Returns</p>
+<ul>
+<li><strong>x0</strong> return value for the x coordinate of the center of the first circle</li>
+<li><strong>y0</strong> return value for the y coordinate of the center of the first circle</li>
+<li><strong>r0</strong> return value for the radius of the first circle</li>
+<li><strong>x1</strong> return value for the x coordinate of the center of the second circle</li>
+<li><strong>y1</strong> return value for the y coordinate of the center of the second circle</li>
+<li><strong>r1</strong> return value for the radius of the second circle</li>
+</ul>
+<p>###Raises</p>
+<ul>
+<li><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if pattern is not a radial gradient pattern.</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L755" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L755" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2296,29 +2041,22 @@ If pattern is not a mesh pattern, a path with status <code><a href="../Cairo/Sta
         
         def <strong>reference</strong> : <a href="../Cairo/Pattern.html">Pattern</a>
 
-        <a class="method-permalink" href="#reference:Pattern-instance-method">#</a>
+        <a class="method-permalink" href="#reference%3APattern-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Increases the reference count on pattern by one.
 This prevents pattern from being destroyed until a matching call to <code><a href="../Cairo/Pattern.html#finalize-instance-method">Pattern#finalize</a></code> is made.</p>
-
-<p>Use <code><a href="../Cairo/Pattern.html#reference_count:UInt32-instance-method">Pattern#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/Pattern.html">Pattern</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The referenced <code><a href="../Cairo/Pattern.html">Pattern</a></code>.</p>
+<p>Use <code><a href="../Cairo/Pattern.html#reference_count%3AUInt32-instance-method">Pattern#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/Pattern.html">Pattern</a></code>.</p>
+<p>###Returns
+The referenced <code><a href="../Cairo/Pattern.html">Pattern</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L347" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L347" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2328,7 +2066,7 @@ This prevents pattern from being destroyed until a matching call to <code><a hre
         
         def <strong>reference_count</strong> : UInt32
 
-        <a class="method-permalink" href="#reference_count:UInt32-instance-method">#</a>
+        <a class="method-permalink" href="#reference_count%3AUInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2339,7 +2077,7 @@ This prevents pattern from being destroyed until a matching call to <code><a hre
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L352" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L352" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2349,34 +2087,22 @@ This prevents pattern from being destroyed until a matching call to <code><a hre
         
         def <strong>rgba</strong> : <a href="../Cairo/RGBA.html">RGBA</a>
 
-        <a class="method-permalink" href="#rgba:RGBA-instance-method">#</a>
+        <a class="method-permalink" href="#rgba%3ARGBA-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the solid color for a solid color pattern.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/RGBA.html">RGBA</a></code> structure.</p>
-
-<h3><a id="raises" class="anchor" href="#raises">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Raises</h3>
-
-<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if the pattern is not a solid color pattern.</p>
+<p>###Returns
+<code><a href="../Cairo/RGBA.html">RGBA</a></code> structure.</p>
+<p>###Raises
+<code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if the pattern is not a solid color pattern.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L674" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L674" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2386,33 +2112,29 @@ This prevents pattern from being destroyed until a matching call to <code><a hre
         
         def <strong>set_acquire</strong>(acquire : LibCairo::RasterSourceAcquireFuncT, release : LibCairo::RasterSourceReleaseFuncT)
 
-        <a class="method-permalink" href="#set_acquire(acquire:LibCairo::RasterSourceAcquireFuncT,release:LibCairo::RasterSourceReleaseFuncT)-instance-method">#</a>
+        <a class="method-permalink" href="#set_acquire%28acquire%3ALibCairo%3A%3ARasterSourceAcquireFuncT%2Crelease%3ALibCairo%3A%3ARasterSourceReleaseFuncT%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Specifies the callbacks used to generate the image surface for a rendering operation (acquire)
 and the function used to cleanup that surface afterwards.</p>
-
 <p>The acquire callback should create a surface (preferably an image surface created to match
-the target using <code><a href="../Cairo/Surface.html#create_similar_image(format:Format,width:Int32,height:Int32):Surface-instance-method">Surface#create_similar_image</a></code>) that defines at least the region of interest
+the target using <code><a href="../Cairo/Surface.html#create_similar_image%28format%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method">Surface#create_similar_image</a></code>) that defines at least the region of interest
 specified by extents. The surface is allowed to be the entire sample area, but if it does contain
 a subsection of the sample area, the surface extents should be provided by setting the device offset
-(along with its width and height) using <code><a href="../Cairo/Surface.html#set_device_offset(x_offset:Float64,y_offset:Float64)-instance-method">Surface#set_device_offset</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>acquire</strong> acquire callback</li><li><strong>release</strong> release callback</li></ul>
+(along with its width and height) using <code><a href="../Cairo/Surface.html#set_device_offset%28x_offset%3AFloat64%2Cy_offset%3AFloat64%29-instance-method">Surface#set_device_offset</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>acquire</strong> acquire callback</li>
+<li><strong>release</strong> release callback</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L282" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L282" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2422,33 +2144,29 @@ a subsection of the sample area, the surface extents should be provided by setti
         
         def <strong>set_control_point</strong>(point_num : UInt32, x : Float64, y : Float64)
 
-        <a class="method-permalink" href="#set_control_point(point_num:UInt32,x:Float64,y:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#set_control_point%28point_num%3AUInt32%2Cx%3AFloat64%2Cy%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Set an internal control point of the current patch.</p>
-
-<p>Valid values for <em>point_num</em> are from 0 to 3 and identify the control points as explained in <code><a href="../Cairo/Pattern.html#create_mesh:Pattern-class-method">Pattern#create_mesh</a></code>.</p>
-
+<p>Valid values for <em>point_num</em> are from 0 to 3 and identify the control points as explained in <code><a href="../Cairo/Pattern.html#create_mesh%3APattern-class-method">Pattern#create_mesh</a></code>.</p>
 <p><span class="flag purple">NOTE</span>  If pattern is not a mesh pattern then pattern will be put into an error status with a status
 of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>. If <em>point_num</em> is not valid, pattern will be put into an error status with a status
 of <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code>. If pattern has no current patch, pattern will be put into an error status with a status
 of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>point_num</strong> the control point to set the position for</li><li><strong>x</strong> the X coordinate of the control point</li><li><strong>y</strong> the Y coordinate of the control point</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>point_num</strong> the control point to set the position for</li>
+<li><strong>x</strong> the X coordinate of the control point</li>
+<li><strong>y</strong> the Y coordinate of the control point</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L540" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L540" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2458,35 +2176,31 @@ of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidM
         
         def <strong>set_corner_color</strong>(corner_num : UInt32, red : Float64, green : Float64, blue : Float64)
 
-        <a class="method-permalink" href="#set_corner_color(corner_num:UInt32,red:Float64,green:Float64,blue:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#set_corner_color%28corner_num%3AUInt32%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Sets the color of a corner of the current patch in a mesh pattern.</p>
-
-<p>The color is specified in the same way as in <code><a href="../Cairo/Context.html#source=(source:Pattern)-instance-method">Context#source=</a></code>.</p>
-
-<p>Valid values for <em>corner_num</em> are from 0 to 3 and identify the corners as explained in <code><a href="../Cairo/Pattern.html#create_mesh:Pattern-class-method">Pattern#create_mesh</a></code>.</p>
-
+<p>The color is specified in the same way as in <code><a href="../Cairo/Context.html#source%3D%28source%3APattern%29-instance-method">Context#source=</a></code>.</p>
+<p>Valid values for <em>corner_num</em> are from 0 to 3 and identify the corners as explained in <code><a href="../Cairo/Pattern.html#create_mesh%3APattern-class-method">Pattern#create_mesh</a></code>.</p>
 <p><span class="flag purple">NOTE</span>  If pattern is not a mesh pattern then pattern will be put into an error status with a status of
 <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>. If <em>corner_num</em> is not valid, pattern will be put into an error status with
 a status of <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code>. If pattern has no current patch, pattern will be put into an error
 status with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>corner_num</strong> the corner to set the color for</li><li><strong>red</strong> red component of color</li><li><strong>green</strong> green component of color</li><li><strong>blue</strong> blue component of color</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>corner_num</strong> the corner to set the color for</li>
+<li><strong>red</strong> red component of color</li>
+<li><strong>green</strong> green component of color</li>
+<li><strong>blue</strong> blue component of color</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L561" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L561" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2496,35 +2210,32 @@ status with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruct
         
         def <strong>set_corner_color_rgba</strong>(corner_num : UInt32, red : Float64, green : Float64, blue : Float64, alpha : Float64)
 
-        <a class="method-permalink" href="#set_corner_color_rgba(corner_num:UInt32,red:Float64,green:Float64,blue:Float64,alpha:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#set_corner_color_rgba%28corner_num%3AUInt32%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Sets the color of a corner of the current patch in a mesh pattern.</p>
-
-<p>The color is specified in the same way as in <code><a href="../Cairo/Context.html#source=(source:Pattern)-instance-method">Context#source=</a></code>.</p>
-
-<p>Valid values for <em>corner_num</em> are from 0 to 3 and identify the corners as explained in <code><a href="../Cairo/Pattern.html#create_mesh:Pattern-class-method">Pattern#create_mesh</a></code>.</p>
-
+<p>The color is specified in the same way as in <code><a href="../Cairo/Context.html#source%3D%28source%3APattern%29-instance-method">Context#source=</a></code>.</p>
+<p>Valid values for <em>corner_num</em> are from 0 to 3 and identify the corners as explained in <code><a href="../Cairo/Pattern.html#create_mesh%3APattern-class-method">Pattern#create_mesh</a></code>.</p>
 <p><span class="flag purple">NOTE</span>  If pattern is not a mesh pattern then pattern will be put into an error status with a status of
 <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>. If <em>corner_num</em> is not valid, pattern will be put into an error status with
 a status of <code><a href="../Cairo/Status.html#InvalidIndex">Status::InvalidIndex</a></code>. If pattern has no current patch, pattern will be put into an error status
 with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>corner_num</strong> the corner to set the color for</li><li><strong>red</strong> red component of color</li><li><strong>green</strong> green component of color</li><li><strong>blue</strong> blue component of color</li><li><strong>alpha</strong> alpha component of color</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>corner_num</strong> the corner to set the color for</li>
+<li><strong>red</strong> red component of color</li>
+<li><strong>green</strong> green component of color</li>
+<li><strong>blue</strong> blue component of color</li>
+<li><strong>alpha</strong> alpha component of color</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L583" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L583" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2534,35 +2245,27 @@ with a status of <code><a href="../Cairo/Status.html#InvalidMeshConstruction">St
         
         def <strong>set_user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method">#</a>
+        <a class="method-permalink" href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Attach user data to pattern. To remove user data from a surface, call this function with the key that was used to set it and Nil for data.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li><li><strong>user_data</strong> the user data to attach to the <code><a href="../Cairo/Pattern.html">Pattern</a></code></li><li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the <code><a href="../Cairo/Context.html">Context</a></code> is destroyed
-or when new user data is attached using the same key.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li>
+<li><strong>user_data</strong> the user data to attach to the <code><a href="../Cairo/Pattern.html">Pattern</a></code></li>
+<li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the <code><a href="../Cairo/Context.html">Context</a></code> is destroyed
+or when new user data is attached using the same key.</li>
+</ul>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L386" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L386" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2572,26 +2275,20 @@ or when new user data is attached using the same key.</li></ul>
         
         def <strong>snapshot</strong> : LibCairo::RasterSourceSnapshotFuncT
 
-        <a class="method-permalink" href="#snapshot:LibCairo::RasterSourceSnapshotFuncT-instance-method">#</a>
+        <a class="method-permalink" href="#snapshot%3ALibCairo%3A%3ARasterSourceSnapshotFuncT-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Queries the current snapshot callback.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The current snapshot callback.</p>
+<p>###Returns
+The current snapshot callback.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L291" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L291" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2601,7 +2298,7 @@ or when new user data is attached using the same key.</li></ul>
         
         def <strong>snapshot=</strong>(snapshot : LibCairo::RasterSourceSnapshotFuncT)
 
-        <a class="method-permalink" href="#snapshot=(snapshot:LibCairo::RasterSourceSnapshotFuncT)-instance-method">#</a>
+        <a class="method-permalink" href="#snapshot%3D%28snapshot%3ALibCairo%3A%3ARasterSourceSnapshotFuncT%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2609,20 +2306,16 @@ or when new user data is attached using the same key.</li></ul>
           <p>Sets the callback that will be used whenever a snapshot is taken of the pattern,
 that is whenever the current contents of the pattern should be preserved for later use.
 This is typically invoked whilst printing.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>snapshot</strong> snapshot callback</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>snapshot</strong> snapshot callback</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L301" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L301" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2632,26 +2325,20 @@ This is typically invoked whilst printing.</p>
         
         def <strong>status</strong> : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#status:Status-instance-method">#</a>
+        <a class="method-permalink" href="#status%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Checks whether an error has previously occurred for this pattern.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code>, <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>, <code><a href="../Cairo/Status.html#InvalidMatrix">Status::InvalidMatrix</a></code>, <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>, or <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code>, <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>, <code><a href="../Cairo/Status.html#InvalidMatrix">Status::InvalidMatrix</a></code>, <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code>, or <code><a href="../Cairo/Status.html#InvalidMeshConstruction">Status::InvalidMeshConstruction</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L360" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L360" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2661,35 +2348,23 @@ This is typically invoked whilst printing.</p>
         
         def <strong>surface</strong> : <a href="../Cairo/Surface.html">Surface</a>
 
-        <a class="method-permalink" href="#surface:Surface-instance-method">#</a>
+        <a class="method-permalink" href="#surface%3ASurface-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the surface of a surface pattern. The reference returned in surface is owned by the pattern;
-the caller should call <code><a href="../Cairo/Surface.html#reference:Surface-instance-method">Surface#reference</a></code> if the surface is to be retained.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Surface.html">Surface</a></code> object.</p>
-
-<h3><a id="raises" class="anchor" href="#raises">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Raises</h3>
-
-<p><code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if the pattern is not a surface pattern.</p>
+the caller should call <code><a href="../Cairo/Surface.html#reference%3ASurface-instance-method">Surface#reference</a></code> if the surface is to be retained.</p>
+<p>###Returns
+<code><a href="../Cairo/Surface.html">Surface</a></code> object.</p>
+<p>###Raises
+<code><a href="../Cairo/StatusException.html">StatusException</a></code> with <em>status</em> of <code><a href="../Cairo/Status.html#PatternTypeMismatch">Status::PatternTypeMismatch</a></code> if the pattern is not a surface pattern.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L688" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L688" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2699,13 +2374,13 @@ the caller should call <code><a href="../Cairo/Surface.html#reference:Surface-in
         
         def <strong>to_unsafe</strong> : LibCairo::PPatternT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PPatternT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APPatternT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L843" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L843" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2715,7 +2390,7 @@ the caller should call <code><a href="../Cairo/Surface.html#reference:Surface-in
         
         def <strong>type</strong> : <a href="../Cairo/PatternType.html">PatternType</a>
 
-        <a class="method-permalink" href="#type:PatternType-instance-method">#</a>
+        <a class="method-permalink" href="#type%3APatternType-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2726,7 +2401,7 @@ the caller should call <code><a href="../Cairo/Surface.html#reference:Surface-in
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L391" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L391" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2736,35 +2411,25 @@ the caller should call <code><a href="../Cairo/Surface.html#reference:Surface-in
         
         def <strong>user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>) : Pointer(Void)
 
-        <a class="method-permalink" href="#user_data(key:UserDataKey):Pointer(Void)-instance-method">#</a>
+        <a class="method-permalink" href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Return user data previously attached to pattern using the specified key.
 If no user data has been attached with the given key this function returns Nil.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of the <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> the user data was attached to</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The user data previously attached or Nil.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of the <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> the user data was attached to</li>
+</ul>
+<p>###Returns
+The user data previously attached or Nil.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern.cr#L372" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern.cr#L372" target="_blank">View source</a>]
         
       </div>
     </div>

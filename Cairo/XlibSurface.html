@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -416,7 +416,6 @@
 
   <p>The Xlib surface is used to render cairo graphics to
 X Window System windows and pixmaps using the XLib library.</p>
-
 <p><span class="flag purple">NOTE</span>  that the XLib surface automatically takes advantage
 of X render extension if it is available.</p>
 
@@ -443,7 +442,7 @@ of X render extension if it is available.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">
         cairo/xlib_surface.cr
       </a>
     
@@ -465,14 +464,14 @@ of X render extension if it is available.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(dpy:Display,drawable:Drawable,visual:Visual,width:Int32,height:Int32)-class-method" class="signature"><strong>.new</strong>(dpy : Display, drawable : Drawable, visual : Visual, width : Int32, height : Int32)</a>
+        <a href="#new%28dpy%3ADisplay%2Cdrawable%3ADrawable%2Cvisual%3AVisual%2Cwidth%3AInt32%2Cheight%3AInt32%29-class-method" class="signature"><strong>.new</strong>(dpy : Display, drawable : Drawable, visual : Visual, width : Int32, height : Int32)</a>
         
           <div class="summary"><p>Creates an Xlib surface that draws to the given drawable.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(dpy:Display,bitmap:Pixmap,screen:Screen,width:Int32,height:Int32)-class-method" class="signature"><strong>.new</strong>(dpy : Display, bitmap : Pixmap, screen : Screen, width : Int32, height : Int32)</a>
+        <a href="#new%28dpy%3ADisplay%2Cbitmap%3APixmap%2Cscreen%3AScreen%2Cwidth%3AInt32%2Cheight%3AInt32%29-class-method" class="signature"><strong>.new</strong>(dpy : Display, bitmap : Pixmap, screen : Screen, width : Int32, height : Int32)</a>
         
           <div class="summary"><p>Creates an Xlib surface that draws to the given bitmap.</p></div>
         
@@ -495,63 +494,63 @@ of X render extension if it is available.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#depth:Int32-instance-method" class="signature"><strong>#depth</strong> : Int32</a>
+        <a href="#depth%3AInt32-instance-method" class="signature"><strong>#depth</strong> : Int32</a>
         
           <div class="summary"><p>Get the number of bits used to represent each pixel value.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#display:Display-instance-method" class="signature"><strong>#display</strong> : Display</a>
+        <a href="#display%3ADisplay-instance-method" class="signature"><strong>#display</strong> : Display</a>
         
           <div class="summary"><p>Get the X Display for the underlying X Drawable.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#drawable:Drawable-instance-method" class="signature"><strong>#drawable</strong> : Drawable</a>
+        <a href="#drawable%3ADrawable-instance-method" class="signature"><strong>#drawable</strong> : Drawable</a>
         
           <div class="summary"><p>Get the underlying X Drawable used for the surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height:Int32-instance-method" class="signature"><strong>#height</strong> : Int32</a>
+        <a href="#height%3AInt32-instance-method" class="signature"><strong>#height</strong> : Int32</a>
         
           <div class="summary"><p>Get the height of the X Drawable underlying the surface in pixels.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#screen:Screen-instance-method" class="signature"><strong>#screen</strong> : Screen</a>
+        <a href="#screen%3AScreen-instance-method" class="signature"><strong>#screen</strong> : Screen</a>
         
           <div class="summary"><p>Get the X Screen for the underlying X Drawable.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_drawable(drawable:Drawable,width:Int32,height:Int32)-instance-method" class="signature"><strong>#set_drawable</strong>(drawable : Drawable, width : Int32, height : Int32)</a>
+        <a href="#set_drawable%28drawable%3ADrawable%2Cwidth%3AInt32%2Cheight%3AInt32%29-instance-method" class="signature"><strong>#set_drawable</strong>(drawable : Drawable, width : Int32, height : Int32)</a>
         
           <div class="summary"><p>Informs cairo of a new X Drawable underlying the surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_size(width:Int32,height:Int32)-instance-method" class="signature"><strong>#set_size</strong>(width : Int32, height : Int32)</a>
+        <a href="#set_size%28width%3AInt32%2Cheight%3AInt32%29-instance-method" class="signature"><strong>#set_size</strong>(width : Int32, height : Int32)</a>
         
           <div class="summary"><p>Informs cairo of the new size of the X Drawable underlying the surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#visual:Visual-instance-method" class="signature"><strong>#visual</strong> : Visual</a>
+        <a href="#visual%3AVisual-instance-method" class="signature"><strong>#visual</strong> : Visual</a>
         
           <div class="summary"><p>Gets the X Visual associated with <em>surface</em>, suitable for use with the underlying X Drawable.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width:Int32-instance-method" class="signature"><strong>#width</strong> : Int32</a>
+        <a href="#width%3AInt32-instance-method" class="signature"><strong>#width</strong> : Int32</a>
         
           <div class="summary"><p>Get the width of the X Drawable underlying the surface in pixels.</p></div>
         
@@ -570,7 +569,7 @@ of X render extension if it is available.</p>
   <h3>Instance methods inherited from class <code><a href="../Cairo/Surface.html">Cairo::Surface</a></code></h3>
   
   
-    <a href="../Cairo/Surface.html#content:Content-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#content%3AContent-instance-method" class="tooltip">
       <span>content : Content</span>
     content</a>, 
     
@@ -580,67 +579,67 @@ of X render extension if it is available.</p>
     copy_page</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_for_rectangle(x:Float64,y:Float64,width:Float64,height:Float64):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_for_rectangle%28x%3AFloat64%2Cy%3AFloat64%2Cwidth%3AFloat64%2Cheight%3AFloat64%29%3ASurface-instance-method" class="tooltip">
       <span>create_for_rectangle(x : Float64, y : Float64, width : Float64, height : Float64) : Surface</span>
     create_for_rectangle</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_observer(mode:SurfaceObserverMode):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_observer%28mode%3ASurfaceObserverMode%29%3ASurface-instance-method" class="tooltip">
       <span>create_observer(mode : SurfaceObserverMode) : Surface</span>
     create_observer</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_similar%28content%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method" class="tooltip">
       <span>create_similar(content : Content, width : Int32, height : Int32) : Surface</span>
     create_similar</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_similar_image(format:Format,width:Int32,height:Int32):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_similar_image%28format%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method" class="tooltip">
       <span>create_similar_image(format : Format, width : Int32, height : Int32) : Surface</span>
     create_similar_image</a>, 
     
   
-    <a href="../Cairo/Surface.html#data:Pointer(UInt8)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#data%3APointer%28UInt8%29-instance-method" class="tooltip">
       <span>data : Pointer(UInt8)</span>
     data</a>, 
     
   
-    <a href="../Cairo/Surface.html#device:Device-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device%3ADevice-instance-method" class="tooltip">
       <span>device : Device</span>
     device</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_offset:Point-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_offset%3APoint-instance-method" class="tooltip">
       <span>device_offset : Point</span>
     device_offset</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_offset=(offset:Point)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_offset%3D%28offset%3APoint%29-instance-method" class="tooltip">
       <span>device_offset=(offset : Point)</span>
     device_offset=</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_scale:Point-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_scale%3APoint-instance-method" class="tooltip">
       <span>device_scale : Point</span>
     device_scale</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_scale=(scale:Point)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_scale%3D%28scale%3APoint%29-instance-method" class="tooltip">
       <span>device_scale=(scale : Point)</span>
     device_scale=</a>, 
     
   
-    <a href="../Cairo/Surface.html#extents:NamedTuple()-instance-method" class="tooltip">
-      <span>extents : NamedTuple()</span>
+    <a href="../Cairo/Surface.html#extents%3ANamedTuple%28extents%3ARectangle%2Cbounded%3ABool%29-instance-method" class="tooltip">
+      <span>extents : NamedTuple(extents: Rectangle, bounded: Bool)</span>
     extents</a>, 
     
   
-    <a href="../Cairo/Surface.html#fallback_resolution:Point-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#fallback_resolution%3APoint-instance-method" class="tooltip">
       <span>fallback_resolution : Point</span>
     fallback_resolution</a>, 
     
   
-    <a href="../Cairo/Surface.html#fallback_resolution=(res:Point)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#fallback_resolution%3D%28res%3APoint%29-instance-method" class="tooltip">
       <span>fallback_resolution=(res : Point)</span>
     fallback_resolution=</a>, 
     
@@ -660,32 +659,32 @@ of X render extension if it is available.</p>
     flush</a>, 
     
   
-    <a href="../Cairo/Surface.html#font_options:FontOptions-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#font_options%3AFontOptions-instance-method" class="tooltip">
       <span>font_options : FontOptions</span>
     font_options</a>, 
     
   
-    <a href="../Cairo/Surface.html#format:Format-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#format%3AFormat-instance-method" class="tooltip">
       <span>format : Format</span>
     format</a>, 
     
   
-    <a href="../Cairo/Surface.html#has_show_text_glyphs?:Bool-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#has_show_text_glyphs%3F%3ABool-instance-method" class="tooltip">
       <span>has_show_text_glyphs? : Bool</span>
     has_show_text_glyphs?</a>, 
     
   
-    <a href="../Cairo/Surface.html#height:Int32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#height%3AInt32-instance-method" class="tooltip">
       <span>height : Int32</span>
     height</a>, 
     
   
-    <a href="../Cairo/Surface.html#ink_extents:Rectangle-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#ink_extents%3ARectangle-instance-method" class="tooltip">
       <span>ink_extents : Rectangle</span>
     ink_extents</a>, 
     
   
-    <a href="../Cairo/Surface.html#map_to_image(extents:RectangleInt?):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#map_to_image%28extents%3ARectangleInt%3F%29%3ASurface-instance-method" class="tooltip">
       <span>map_to_image(extents : RectangleInt?) : Surface</span>
     map_to_image</a>, 
     
@@ -695,107 +694,107 @@ of X render extension if it is available.</p>
     mark_dirty</a>, 
     
   
-    <a href="../Cairo/Surface.html#mark_dirty_rectangle(x:Int32,y:Int32,width:Int32,height:Int32)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#mark_dirty_rectangle%28x%3AInt32%2Cy%3AInt32%2Cwidth%3AInt32%2Cheight%3AInt32%29-instance-method" class="tooltip">
       <span>mark_dirty_rectangle(x : Int32, y : Int32, width : Int32, height : Int32)</span>
     mark_dirty_rectangle</a>, 
     
   
-    <a href="../Cairo/Surface.html#mime_data(mime_type:String):Bytes-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#mime_data%28mime_type%3AString%29%3ABytes-instance-method" class="tooltip">
       <span>mime_data(mime_type : String) : Bytes</span>
     mime_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_fill_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_fill_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_fill_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_fill_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_finish_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_finish_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_finish_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_finish_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_flush_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_flush_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_flush_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_flush_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_glyphs_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_glyphs_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_glyphs_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_glyphs_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_mask_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_mask_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_mask_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_mask_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_paint_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_paint_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_paint_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_paint_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_stroke_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_stroke_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_stroke_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_stroke_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_elapsed:Float64-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_elapsed%3AFloat64-instance-method" class="tooltip">
       <span>observer_elapsed : Float64</span>
     observer_elapsed</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_print(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_print%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_print(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</span>
     observer_print</a>, 
     
   
-    <a href="../Cairo/Surface.html#reference:Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#reference%3ASurface-instance-method" class="tooltip">
       <span>reference : Surface</span>
     reference</a>, 
     
   
-    <a href="../Cairo/Surface.html#reference_count:UInt32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#reference_count%3AUInt32-instance-method" class="tooltip">
       <span>reference_count : UInt32</span>
     reference_count</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_device_offset(x_offset:Float64,y_offset:Float64)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_device_offset%28x_offset%3AFloat64%2Cy_offset%3AFloat64%29-instance-method" class="tooltip">
       <span>set_device_offset(x_offset : Float64, y_offset : Float64)</span>
     set_device_offset</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_device_scale(x_scale:Float64,y_scale:Float64)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_device_scale%28x_scale%3AFloat64%2Cy_scale%3AFloat64%29-instance-method" class="tooltip">
       <span>set_device_scale(x_scale : Float64, y_scale : Float64)</span>
     set_device_scale</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_fallback_resolution(x_pixels_per_inch:Float64,y_pixels_per_inch:Float64)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_fallback_resolution%28x_pixels_per_inch%3AFloat64%2Cy_pixels_per_inch%3AFloat64%29-instance-method" class="tooltip">
       <span>set_fallback_resolution(x_pixels_per_inch : Float64, y_pixels_per_inch : Float64)</span>
     set_fallback_resolution</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_mime_data(mime_type:String,data:Bytes,destroy:LibCairo::DestroyFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_mime_data%28mime_type%3AString%2Cdata%3ABytes%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>set_mime_data(mime_type : String, data : Bytes, destroy : LibCairo::DestroyFuncT, closure : Pointer(Void)) : Status</span>
     set_mime_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method" class="tooltip">
       <span>set_user_data(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</span>
     set_user_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#status:Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#status%3AStatus-instance-method" class="tooltip">
       <span>status : Status</span>
     status</a>, 
     
   
-    <a href="../Cairo/Surface.html#stride:Int32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#stride%3AInt32-instance-method" class="tooltip">
       <span>stride : Int32</span>
     stride</a>, 
     
   
-    <a href="../Cairo/Surface.html#supports_mime_type?(mime_type:String):Bool-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#supports_mime_type%3F%28mime_type%3AString%29%3ABool-instance-method" class="tooltip">
       <span>supports_mime_type?(mime_type : String) : Bool</span>
     supports_mime_type?</a>, 
     
@@ -805,37 +804,37 @@ of X render extension if it is available.</p>
     surface_show_page</a>, 
     
   
-    <a href="../Cairo/Surface.html#to_unsafe:LibCairo::PSurfaceT-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#to_unsafe%3ALibCairo%3A%3APSurfaceT-instance-method" class="tooltip">
       <span>to_unsafe : LibCairo::PSurfaceT</span>
     to_unsafe</a>, 
     
   
-    <a href="../Cairo/Surface.html#type:SurfaceType-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#type%3ASurfaceType-instance-method" class="tooltip">
       <span>type : SurfaceType</span>
     type</a>, 
     
   
-    <a href="../Cairo/Surface.html#unmap_image(image:Surface)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#unmap_image%28image%3ASurface%29-instance-method" class="tooltip">
       <span>unmap_image(image : Surface)</span>
     unmap_image</a>, 
     
   
-    <a href="../Cairo/Surface.html#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method" class="tooltip">
       <span>user_data(key : UserDataKey) : Pointer(Void)</span>
     user_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#width:Int32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#width%3AInt32-instance-method" class="tooltip">
       <span>width : Int32</span>
     width</a>, 
     
   
-    <a href="../Cairo/Surface.html#write_to_png(filename:String):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#write_to_png%28filename%3AString%29%3AStatus-instance-method" class="tooltip">
       <span>write_to_png(filename : String) : Status</span>
     write_to_png</a>, 
     
   
-    <a href="../Cairo/Surface.html#write_to_png_stream(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#write_to_png_stream%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>write_to_png_stream(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</span>
     write_to_png_stream</a>
     
@@ -847,7 +846,7 @@ of X render extension if it is available.</p>
   <h3>Constructor methods inherited from class <code><a href="../Cairo/Surface.html">Cairo::Surface</a></code></h3>
   
   
-    <a href="../Cairo/Surface.html#new(data:Bytes,format:Format,width:Int32,height:Int32,stride:Int32)-class-method" class="tooltip">
+    <a href="../Cairo/Surface.html#new%28data%3ABytes%2Cformat%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%2Cstride%3AInt32%29-class-method" class="tooltip">
       <span>new(data : Bytes, format : Format, width : Int32, height : Int32, stride : Int32)<br/>new(format : Format, width : Int32, height : Int32)<br/>new(read_func : LibCairo::ReadFuncT, closure : Pointer(Void))<br/>new(content : Content, extents : Rectangle?)<br/>new(surface : LibCairo::PSurfaceT)<br/>new(filename : String)</span>
     new</a>
     
@@ -895,44 +894,36 @@ of X render extension if it is available.</p>
         
         def self.<strong>new</strong>(dpy : Display, drawable : Drawable, visual : Visual, width : Int32, height : Int32)
 
-        <a class="method-permalink" href="#new(dpy:Display,drawable:Drawable,visual:Visual,width:Int32,height:Int32)-class-method">#</a>
+        <a class="method-permalink" href="#new%28dpy%3ADisplay%2Cdrawable%3ADrawable%2Cvisual%3AVisual%2Cwidth%3AInt32%2Cheight%3AInt32%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates an Xlib surface that draws to the given drawable. The way that
 colors are represented in the drawable is specified by the provided visual.</p>
-
-<p><span class="flag purple">NOTE</span>  If drawable is a Window, then the function <code><a href="../Cairo/XlibSurface.html#set_size(width:Int32,height:Int32)-instance-method">XlibSurface#set_size</a></code>
+<p><span class="flag purple">NOTE</span>  If drawable is a Window, then the function <code><a href="../Cairo/XlibSurface.html#set_size%28width%3AInt32%2Cheight%3AInt32%29-instance-method">XlibSurface#set_size</a></code>
 must be called whenever the size of the window changes.</p>
-
 <p>When drawable is a Window containing child windows then drawing to the
 created surface will be clipped by those child windows. When the created
 surface is used as a source, the contents of the children will be included.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>dpy</strong> an X Display</li><li><strong>drawable</strong> an X Drawable, (a <code>Pixmap</code> or a <code>Window</code>)</li><li><strong>visual</strong> the visual to use for drawing to <em>drawable</em>.
+<p>###Parameters</p>
+<ul>
+<li><strong>dpy</strong> an X Display</li>
+<li><strong>drawable</strong> an X Drawable, (a <code>Pixmap</code> or a <code>Window</code>)</li>
+<li><strong>visual</strong> the visual to use for drawing to <em>drawable</em>.
 The depth of the visual must match the depth of the drawable.
-Currently, only TrueColor visuals are fully supported.</li><li><strong>width</strong> the current width of <em>drawable</em>.</li><li><strong>height</strong> the current height of <em>drawable</em>.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The newly created surface.</p>
+Currently, only TrueColor visuals are fully supported.</li>
+<li><strong>width</strong> the current width of <em>drawable</em>.</li>
+<li><strong>height</strong> the current height of <em>drawable</em>.</li>
+</ul>
+<p>###Returns
+The newly created surface.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -942,35 +933,29 @@ Currently, only TrueColor visuals are fully supported.</li><li><strong>width</st
         
         def self.<strong>new</strong>(dpy : Display, bitmap : Pixmap, screen : Screen, width : Int32, height : Int32)
 
-        <a class="method-permalink" href="#new(dpy:Display,bitmap:Pixmap,screen:Screen,width:Int32,height:Int32)-class-method">#</a>
+        <a class="method-permalink" href="#new%28dpy%3ADisplay%2Cbitmap%3APixmap%2Cscreen%3AScreen%2Cwidth%3AInt32%2Cheight%3AInt32%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates an Xlib surface that draws to the given bitmap.
 This will be drawn to as a <code><a href="../Cairo/Format.html#A1">Format::A1</a></code> object.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>dpy</strong> an X Display</li><li><strong>bitmap</strong> an X Drawable, (a depth-1 <code>Pixmap</code>)</li><li><strong>screen</strong> the X Screen associated with bitmap</li><li><strong>width</strong> the current width of <em>bitmap</em>.</li><li><strong>height</strong> the current height of <em>bitmap</em>.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The newly created surface.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>dpy</strong> an X Display</li>
+<li><strong>bitmap</strong> an X Drawable, (a depth-1 <code>Pixmap</code>)</li>
+<li><strong>screen</strong> the X Screen associated with bitmap</li>
+<li><strong>width</strong> the current width of <em>bitmap</em>.</li>
+<li><strong>height</strong> the current height of <em>bitmap</em>.</li>
+</ul>
+<p>###Returns
+The newly created surface.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -994,26 +979,20 @@ This will be drawn to as a <code><a href="../Cairo/Format.html#A1">Format::A1</a
         
         def <strong>depth</strong> : Int32
 
-        <a class="method-permalink" href="#depth:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#depth%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the number of bits used to represent each pixel value.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The depth of the surface in bits.</p>
+<p>###Returns
+The depth of the surface in bits.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1023,26 +1002,20 @@ This will be drawn to as a <code><a href="../Cairo/Format.html#A1">Format::A1</a
         
         def <strong>display</strong> : Display
 
-        <a class="method-permalink" href="#display:Display-instance-method">#</a>
+        <a class="method-permalink" href="#display%3ADisplay-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the X Display for the underlying X Drawable.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The display.</p>
+<p>###Returns
+The display.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1052,26 +1025,20 @@ This will be drawn to as a <code><a href="../Cairo/Format.html#A1">Format::A1</a
         
         def <strong>drawable</strong> : Drawable
 
-        <a class="method-permalink" href="#drawable:Drawable-instance-method">#</a>
+        <a class="method-permalink" href="#drawable%3ADrawable-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the underlying X Drawable used for the surface.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The drawable.</p>
+<p>###Returns
+The drawable.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1081,26 +1048,20 @@ This will be drawn to as a <code><a href="../Cairo/Format.html#A1">Format::A1</a
         
         def <strong>height</strong> : Int32
 
-        <a class="method-permalink" href="#height:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#height%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the height of the X Drawable underlying the surface in pixels.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The height of the surface in pixels.</p>
+<p>###Returns
+The height of the surface in pixels.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1110,26 +1071,20 @@ This will be drawn to as a <code><a href="../Cairo/Format.html#A1">Format::A1</a
         
         def <strong>screen</strong> : Screen
 
-        <a class="method-permalink" href="#screen:Screen-instance-method">#</a>
+        <a class="method-permalink" href="#screen%3AScreen-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the X Screen for the underlying X Drawable.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The screen.</p>
+<p>###Returns
+The screen.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1139,7 +1094,7 @@ This will be drawn to as a <code><a href="../Cairo/Format.html#A1">Format::A1</a
         
         def <strong>set_drawable</strong>(drawable : Drawable, width : Int32, height : Int32)
 
-        <a class="method-permalink" href="#set_drawable(drawable:Drawable,width:Int32,height:Int32)-instance-method">#</a>
+        <a class="method-permalink" href="#set_drawable%28drawable%3ADrawable%2Cwidth%3AInt32%2Cheight%3AInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1148,20 +1103,18 @@ This will be drawn to as a <code><a href="../Cairo/Format.html#A1">Format::A1</a
 The drawable must match the display, screen and format of the existing
 drawable or the application will get X protocol errors and will probably
 terminate. No checks are done by this function to ensure this compatibility.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>drawable</strong> the new drawable for the surface</li><li><strong>width</strong> the width of the new drawable</li><li><strong>height</strong> the height of the new drawable</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>drawable</strong> the new drawable for the surface</li>
+<li><strong>width</strong> the width of the new drawable</li>
+<li><strong>height</strong> the height of the new drawable</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1171,7 +1124,7 @@ terminate. No checks are done by this function to ensure this compatibility.</p>
         
         def <strong>set_size</strong>(width : Int32, height : Int32)
 
-        <a class="method-permalink" href="#set_size(width:Int32,height:Int32)-instance-method">#</a>
+        <a class="method-permalink" href="#set_size%28width%3AInt32%2Cheight%3AInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1181,23 +1134,19 @@ For a surface created for a Window (rather than a <code>Pixmap</code>),
 this function must be called each time the size of the window changes.
 (For a subwindow, you are normally resizing the window yourself, but for
 a toplevel window, it is necessary to listen for ConfigureNotify events.)</p>
-
 <p>A <code>Pixmap</code> can never change size, so it is never necessary to call this
 function on a surface created for a <code>Pixmap</code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>width</strong> the new width of the surface</li><li><strong>height</strong> the new height of the surface</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>width</strong> the new width of the surface</li>
+<li><strong>height</strong> the new height of the surface</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1207,7 +1156,7 @@ function on a surface created for a <code>Pixmap</code>.</p>
         
         def <strong>visual</strong> : Visual
 
-        <a class="method-permalink" href="#visual:Visual-instance-method">#</a>
+        <a class="method-permalink" href="#visual%3AVisual-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1216,20 +1165,14 @@ function on a surface created for a <code>Pixmap</code>.</p>
 the underlying X Drawable. If <em>surface</em> was created by
 <code>XlibSurface#initialize</code>, the return value is the Visual passed
 to that constructor.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The Visual or <code>nil</code> if there is no appropriate Visual for <em>surface</em>.</p>
+<p>###Returns
+The Visual or <code>nil</code> if there is no appropriate Visual for <em>surface</em>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1239,26 +1182,20 @@ to that constructor.</p>
         
         def <strong>width</strong> : Int32
 
-        <a class="method-permalink" href="#width:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#width%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the width of the X Drawable underlying the surface in pixels.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The width of the surface in pixels.</p>
+<p>###Returns
+The width of the surface in pixels.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/xlib_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>

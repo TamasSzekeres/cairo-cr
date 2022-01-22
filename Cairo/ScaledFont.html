@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -417,11 +417,9 @@
   <p>A <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> is a font scaled to a particular size and device resolution.
 A <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> is most useful for low-level font usage where a library or
 application wants to cache a reference to a scaled font to speed up the computation of metrics.</p>
-
 <p>There are various types of scaled fonts, depending on the font backend they use.
-The type of a scaled font can be queried using <code><a href="../Cairo/ScaledFont.html#type:FontType-instance-method">ScaledFont#type</a></code>.</p>
-
-<p>Memory management of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> is done with <code><a href="../Cairo/ScaledFont.html#reference:ScaledFont-instance-method">ScaledFont#reference</a></code> and <code><a href="../Cairo/ScaledFont.html#finalize-instance-method">ScaledFont#finalize</a></code>.</p>
+The type of a scaled font can be queried using <code><a href="../Cairo/ScaledFont.html#type%3AFontType-instance-method">ScaledFont#type</a></code>.</p>
+<p>Memory management of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> is done with <code><a href="../Cairo/ScaledFont.html#reference%3AScaledFont-instance-method">ScaledFont#reference</a></code> and <code><a href="../Cairo/ScaledFont.html#finalize-instance-method">ScaledFont#finalize</a></code>.</p>
 
 
 
@@ -446,7 +444,7 @@ The type of a scaled font can be queried using <code><a href="../Cairo/ScaledFon
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L16" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L16" target="_blank">
         cairo/scaled_font.cr
       </a>
     
@@ -468,14 +466,14 @@ The type of a scaled font can be queried using <code><a href="../Cairo/ScaledFon
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(font_face:FontFace,font_matrix:Matrix,ctm:Matrix,options:FontOptions)-class-method" class="signature"><strong>.new</strong>(font_face : FontFace, font_matrix : Matrix, ctm : Matrix, options : FontOptions)</a>
+        <a href="#new%28font_face%3AFontFace%2Cfont_matrix%3AMatrix%2Cctm%3AMatrix%2Coptions%3AFontOptions%29-class-method" class="signature"><strong>.new</strong>(font_face : FontFace, font_matrix : Matrix, ctm : Matrix, options : FontOptions)</a>
         
           <div class="summary"><p>Creates a <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> object from a font face and matrices that describe the size of the font and the environment in which it will be used.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(scaled_font:LibCairo::PScaledFontT)-class-method" class="signature"><strong>.new</strong>(scaled_font : LibCairo::PScaledFontT)</a>
+        <a href="#new%28scaled_font%3ALibCairo%3A%3APScaledFontT%29-class-method" class="signature"><strong>.new</strong>(scaled_font : LibCairo::PScaledFontT)</a>
         
       </li>
     
@@ -496,14 +494,14 @@ The type of a scaled font can be queried using <code><a href="../Cairo/ScaledFon
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#ctm:Matrix-instance-method" class="signature"><strong>#ctm</strong> : Matrix</a>
+        <a href="#ctm%3AMatrix-instance-method" class="signature"><strong>#ctm</strong> : Matrix</a>
         
           <div class="summary"><p>Stores the CTM with which <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> was created into <em>ctm</em>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#extents:FontExtents-instance-method" class="signature"><strong>#extents</strong> : FontExtents</a>
+        <a href="#extents%3AFontExtents-instance-method" class="signature"><strong>#extents</strong> : FontExtents</a>
         
           <div class="summary"><p>Gets the metrics for a <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p></div>
         
@@ -517,96 +515,96 @@ The type of a scaled font can be queried using <code><a href="../Cairo/ScaledFon
       </li>
     
       <li class="entry-summary">
-        <a href="#font_face:FontFace-instance-method" class="signature"><strong>#font_face</strong> : FontFace</a>
+        <a href="#font_face%3AFontFace-instance-method" class="signature"><strong>#font_face</strong> : FontFace</a>
         
           <div class="summary"><p>Gets the font face that this scaled font uses.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#font_matrix:Matrix-instance-method" class="signature"><strong>#font_matrix</strong> : Matrix</a>
+        <a href="#font_matrix%3AMatrix-instance-method" class="signature"><strong>#font_matrix</strong> : Matrix</a>
         
           <div class="summary"><p>Stores the font matrix with which scaled_font was created into matrix.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#font_options:FontOptions-instance-method" class="signature"><strong>#font_options</strong> : FontOptions</a>
+        <a href="#font_options%3AFontOptions-instance-method" class="signature"><strong>#font_options</strong> : FontOptions</a>
         
           <div class="summary"><p>Stores the font options with which <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> was created into options.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#glyph_extents(glyphs:GlyphArray):TextExtents-instance-method" class="signature"><strong>#glyph_extents</strong>(glyphs : GlyphArray) : TextExtents</a>
+        <a href="#glyph_extents%28glyphs%3AGlyphArray%29%3ATextExtents-instance-method" class="signature"><strong>#glyph_extents</strong>(glyphs : GlyphArray) : TextExtents</a>
         
           <div class="summary"><p>Gets the extents for an array of glyphs.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference:ScaledFont-instance-method" class="signature"><strong>#reference</strong> : ScaledFont</a>
+        <a href="#reference%3AScaledFont-instance-method" class="signature"><strong>#reference</strong> : ScaledFont</a>
         
           <div class="summary"><p>Increases the reference count on <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> by one.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference_count:UInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
+        <a href="#reference_count%3AUInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
         
           <div class="summary"><p>Returns the current reference count of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#scale_matrix:Matrix-instance-method" class="signature"><strong>#scale_matrix</strong> : Matrix</a>
+        <a href="#scale_matrix%3AMatrix-instance-method" class="signature"><strong>#scale_matrix</strong> : Matrix</a>
         
           <div class="summary"><p>Stores the scale matrix of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> into matrix.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:DestroyFuncT):Status-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : DestroyFuncT) : Status</a>
+        <a href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ADestroyFuncT%29%3AStatus-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : DestroyFuncT) : Status</a>
         
           <div class="summary"><p>Attach user data to <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status:Status-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        <a href="#status%3AStatus-instance-method" class="signature"><strong>#status</strong> : Status</a>
         
           <div class="summary"><p>Checks whether an error has previously occurred for this <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#text_extents(text:String):TextExtents-instance-method" class="signature"><strong>#text_extents</strong>(text : String) : TextExtents</a>
+        <a href="#text_extents%28text%3AString%29%3ATextExtents-instance-method" class="signature"><strong>#text_extents</strong>(text : String) : TextExtents</a>
         
           <div class="summary"><p>Gets the extents for a string of text.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#text_to_glyphs(x:Float64,y:Float64,text:String):NamedTuple()-instance-method" class="signature"><strong>#text_to_glyphs</strong>(x : Float64, y : Float64, text : String) : NamedTuple()</a>
+        <a href="#text_to_glyphs%28x%3AFloat64%2Cy%3AFloat64%2Ctext%3AString%29%3ANamedTuple%28glyphs%3AGlyphArray%2Cclusters%3ATextClusterArray%2Ccluster_flags%3ATextClusterFlags%2Cstatus%3AStatus%29-instance-method" class="signature"><strong>#text_to_glyphs</strong>(x : Float64, y : Float64, text : String) : NamedTuple(glyphs: GlyphArray, clusters: TextClusterArray, cluster_flags: TextClusterFlags, status: Status)</a>
         
           <div class="summary"><p>Converts UTF-8 text to an array of glyphs.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PScaledFontT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PScaledFontT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APScaledFontT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PScaledFontT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#type:FontType-instance-method" class="signature"><strong>#type</strong> : FontType</a>
+        <a href="#type%3AFontType-instance-method" class="signature"><strong>#type</strong> : FontType</a>
         
           <div class="summary"><p>This function returns the type of the backend used to create a scaled font.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
+        <a href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
         
           <div class="summary"><p>Return user data previously attached to <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> using the specified key.</p></div>
         
@@ -657,36 +655,29 @@ The type of a scaled font can be queried using <code><a href="../Cairo/ScaledFon
         
         def self.<strong>new</strong>(font_face : <a href="../Cairo/FontFace.html">FontFace</a>, font_matrix : <a href="../Cairo/Matrix.html">Matrix</a>, ctm : <a href="../Cairo/Matrix.html">Matrix</a>, options : <a href="../Cairo/FontOptions.html">FontOptions</a>)
 
-        <a class="method-permalink" href="#new(font_face:FontFace,font_matrix:Matrix,ctm:Matrix,options:FontOptions)-class-method">#</a>
+        <a class="method-permalink" href="#new%28font_face%3AFontFace%2Cfont_matrix%3AMatrix%2Cctm%3AMatrix%2Coptions%3AFontOptions%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> object from a font face and matrices that describe the size of the font and the environment in which it will be used.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>font_face</strong> a <code><a href="../Cairo/FontFace.html">FontFace</a></code></li><li><strong>font_matrix</strong> font space to user space transformation matrix for the font.
+<p>###Parameters</p>
+<ul>
+<li><strong>font_face</strong> a <code><a href="../Cairo/FontFace.html">FontFace</a></code></li>
+<li><strong>font_matrix</strong> font space to user space transformation matrix for the font.
 In the simplest case of a N point font, this matrix is just a scale by N,
-but it can also be used to shear the font or stretch it unequally along the two axes. See <code><a href="../Cairo/Context.html#font_matrix=(matrix:Matrix)-instance-method">Context#font_matrix=</a></code>.</li><li><strong>ctm</strong> user to device transformation matrix with which the font will be used.</li><li><strong>options</strong> options to use when getting metrics for the font and rendering with it.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A newly created <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>. Destroy with <code><a href="../Cairo/ScaledFont.html#finalize-instance-method">ScaledFont#finalize</a></code>.</p>
+but it can also be used to shear the font or stretch it unequally along the two axes. See <code><a href="../Cairo/Context.html#font_matrix%3D%28matrix%3AMatrix%29-instance-method">Context#font_matrix=</a></code>.</li>
+<li><strong>ctm</strong> user to device transformation matrix with which the font will be used.</li>
+<li><strong>options</strong> options to use when getting metrics for the font and rendering with it.</li>
+</ul>
+<p>###Returns
+A newly created <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>. Destroy with <code><a href="../Cairo/ScaledFont.html#finalize-instance-method">ScaledFont#finalize</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -696,13 +687,13 @@ but it can also be used to shear the font or stretch it unequally along the two 
         
         def self.<strong>new</strong>(scaled_font : LibCairo::PScaledFontT)
 
-        <a class="method-permalink" href="#new(scaled_font:LibCairo::PScaledFontT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28scaled_font%3ALibCairo%3A%3APScaledFontT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -726,29 +717,22 @@ but it can also be used to shear the font or stretch it unequally along the two 
         
         def <strong>ctm</strong> : <a href="../Cairo/Matrix.html">Matrix</a>
 
-        <a class="method-permalink" href="#ctm:Matrix-instance-method">#</a>
+        <a class="method-permalink" href="#ctm%3AMatrix-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Stores the CTM with which <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> was created into <em>ctm</em>.</p>
-
 <p><span class="flag purple">NOTE</span>  that the translation offsets <em>(x0, y0)</em> of the CTM are ignored by <code>ScaledFont#initialize</code>.
 So, the matrix this function returns always has <em>0,0</em> as <em>x0,y0</em>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The value for the CTM.</p>
+<p>###Returns
+The value for the CTM.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L205" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L205" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -758,26 +742,20 @@ So, the matrix this function returns always has <em>0,0</em> as <em>x0,y0</em>.<
         
         def <strong>extents</strong> : <a href="../Cairo/FontExtents.html">FontExtents</a>
 
-        <a class="method-permalink" href="#extents:FontExtents-instance-method">#</a>
+        <a class="method-permalink" href="#extents%3AFontExtents-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the metrics for a <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A <code><a href="../Cairo/FontExtents.html">FontExtents</a></code> which to store the retrieved extents.</p>
+<p>###Returns
+A <code><a href="../Cairo/FontExtents.html">FontExtents</a></code> which to store the retrieved extents.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L111" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L111" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -793,13 +771,13 @@ So, the matrix this function returns always has <em>0,0</em> as <em>x0,y0</em>.<
         <div class="doc">
           
           <p>Decreases the reference count on font by one. If the result is zero,
-then font and all associated resources are freed. See <code><a href="../Cairo/ScaledFont.html#reference:ScaledFont-instance-method">ScaledFont#reference</a></code>.</p>
+then font and all associated resources are freed. See <code><a href="../Cairo/ScaledFont.html#reference%3AScaledFont-instance-method">ScaledFont#reference</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -809,28 +787,22 @@ then font and all associated resources are freed. See <code><a href="../Cairo/Sc
         
         def <strong>font_face</strong> : <a href="../Cairo/FontFace.html">FontFace</a>
 
-        <a class="method-permalink" href="#font_face:FontFace-instance-method">#</a>
+        <a class="method-permalink" href="#font_face%3AFontFace-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the font face that this scaled font uses. This might be the font face passed to <code>ScaledFont#initialize</code>,
 but this does not hold true for all possible cases.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The <code><a href="../Cairo/FontFace.html">FontFace</a></code> with which <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> was created. This object is owned by cairo.
-To keep a reference to it, you must call <code><a href="../Cairo/ScaledFont.html#reference:ScaledFont-instance-method">ScaledFont#reference</a></code>.</p>
+<p>###Returns
+The <code><a href="../Cairo/FontFace.html">FontFace</a></code> with which <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> was created. This object is owned by cairo.
+To keep a reference to it, you must call <code><a href="../Cairo/ScaledFont.html#reference%3AScaledFont-instance-method">ScaledFont#reference</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L186" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L186" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -840,26 +812,20 @@ To keep a reference to it, you must call <code><a href="../Cairo/ScaledFont.html
         
         def <strong>font_matrix</strong> : <a href="../Cairo/Matrix.html">Matrix</a>
 
-        <a class="method-permalink" href="#font_matrix:Matrix-instance-method">#</a>
+        <a class="method-permalink" href="#font_matrix%3AMatrix-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Stores the font matrix with which scaled_font was created into matrix.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The value for the matrix.</p>
+<p>###Returns
+The value for the matrix.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L194" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L194" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -869,26 +835,20 @@ To keep a reference to it, you must call <code><a href="../Cairo/ScaledFont.html
         
         def <strong>font_options</strong> : <a href="../Cairo/FontOptions.html">FontOptions</a>
 
-        <a class="method-permalink" href="#font_options:FontOptions-instance-method">#</a>
+        <a class="method-permalink" href="#font_options%3AFontOptions-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Stores the font options with which <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> was created into options.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The value for the font options.</p>
+<p>###Returns
+The value for the font options.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L225" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L225" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -898,40 +858,29 @@ To keep a reference to it, you must call <code><a href="../Cairo/ScaledFont.html
         
         def <strong>glyph_extents</strong>(glyphs : <a href="../Cairo/GlyphArray.html">GlyphArray</a>) : <a href="../Cairo/TextExtents.html">TextExtents</a>
 
-        <a class="method-permalink" href="#glyph_extents(glyphs:GlyphArray):TextExtents-instance-method">#</a>
+        <a class="method-permalink" href="#glyph_extents%28glyphs%3AGlyphArray%29%3ATextExtents-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the extents for an array of glyphs. The extents describe a user-space rectangle
-that encloses the "inked" portion of the glyphs, (as they would be drawn by <code><a href="../Cairo/Context.html#show_glyphs(glyphs:GlyphArray)-instance-method">Context#show_glyphs</a></code>
-if the cairo graphics state were set to the same <code><a href="../Cairo/ScaledFont.html#font_face:FontFace-instance-method">#font_face</a></code>, <code><a href="../Cairo/ScaledFont.html#font_matrix:Matrix-instance-method">#font_matrix</a></code>, <code><a href="../Cairo/ScaledFont.html#ctm:Matrix-instance-method">#ctm</a></code>, and <code><a href="../Cairo/ScaledFont.html#font_options:FontOptions-instance-method">#font_options</a></code>).
+that encloses the &quot;inked&quot; portion of the glyphs, (as they would be drawn by <code><a href="../Cairo/Context.html#show_glyphs%28glyphs%3AGlyphArray%29-instance-method">Context#show_glyphs</a></code>
+if the cairo graphics state were set to the same <code><a href="../Cairo/ScaledFont.html#font_face%3AFontFace-instance-method">#font_face</a></code>, <code><a href="../Cairo/ScaledFont.html#font_matrix%3AMatrix-instance-method">#font_matrix</a></code>, <code><a href="../Cairo/ScaledFont.html#ctm%3AMatrix-instance-method">#ctm</a></code>, and <code><a href="../Cairo/ScaledFont.html#font_options%3AFontOptions-instance-method">#font_options</a></code>).
 Additionally, the <code>x_advance</code> and <code>y_advance</code> values indicate the amount by which the current
-point would be advanced by <code><a href="../Cairo/Context.html#show_glyphs(glyphs:GlyphArray)-instance-method">Context#show_glyphs</a></code>.</p>
-
+point would be advanced by <code><a href="../Cairo/Context.html#show_glyphs%28glyphs%3AGlyphArray%29-instance-method">Context#show_glyphs</a></code>.</p>
 <p><span class="flag purple">NOTE</span>  that whitespace glyphs do not contribute to the size of the rectangle (<code>extents.width</code> and <code>extents.height</code>).</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>glyphs</strong> an array of glyph IDs with X and Y offsets.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A <code><a href="../Cairo/TextExtents.html">TextExtents</a></code> which to store the retrieved extents.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>glyphs</strong> an array of glyph IDs with X and Y offsets.</li>
+</ul>
+<p>###Returns
+A <code><a href="../Cairo/TextExtents.html">TextExtents</a></code> which to store the retrieved extents.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L150" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L150" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -941,29 +890,22 @@ point would be advanced by <code><a href="../Cairo/Context.html#show_glyphs(glyp
         
         def <strong>reference</strong> : <a href="../Cairo/ScaledFont.html">ScaledFont</a>
 
-        <a class="method-permalink" href="#reference:ScaledFont-instance-method">#</a>
+        <a class="method-permalink" href="#reference%3AScaledFont-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Increases the reference count on <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> by one. This prevents scaled_font from being destroyed
 until a matching call to <code><a href="../Cairo/ScaledFont.html#finalize-instance-method">ScaledFont#finalize</a></code> is made.</p>
-
-<p>Use <code><a href="../Cairo/ScaledFont.html#reference_count:UInt32-instance-method">ScaledFont#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The referenced <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p>
+<p>Use <code><a href="../Cairo/ScaledFont.html#reference_count%3AUInt32-instance-method">ScaledFont#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p>
+<p>###Returns
+The referenced <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -973,26 +915,20 @@ until a matching call to <code><a href="../Cairo/ScaledFont.html#finalize-instan
         
         def <strong>reference_count</strong> : UInt32
 
-        <a class="method-permalink" href="#reference_count:UInt32-instance-method">#</a>
+        <a class="method-permalink" href="#reference_count%3AUInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Returns the current reference count of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The current reference count of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>. If the object is a <em>nil</em> object, 0 will be returned.</p>
+<p>###Returns
+The current reference count of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>. If the object is a <em>nil</em> object, 0 will be returned.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L60" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1002,7 +938,7 @@ until a matching call to <code><a href="../Cairo/ScaledFont.html#finalize-instan
         
         def <strong>scale_matrix</strong> : <a href="../Cairo/Matrix.html">Matrix</a>
 
-        <a class="method-permalink" href="#scale_matrix:Matrix-instance-method">#</a>
+        <a class="method-permalink" href="#scale_matrix%3AMatrix-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1010,20 +946,14 @@ until a matching call to <code><a href="../Cairo/ScaledFont.html#finalize-instan
           <p>Stores the scale matrix of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> into matrix.
 The scale matrix is product of the font matrix and the <em>ctm</em> associated with the scaled font,
 and hence is the matrix mapping from font space to device space.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The value for the matrix.</p>
+<p>###Returns
+The value for the matrix.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L216" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L216" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1033,35 +963,27 @@ and hence is the matrix mapping from font space to device space.</p>
         
         def <strong>set_user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>, user_data : Pointer(Void), destroy : DestroyFuncT) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:DestroyFuncT):Status-instance-method">#</a>
+        <a class="method-permalink" href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ADestroyFuncT%29%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Attach user data to <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>. To remove user data from a surface,
 call this function with the key that was used to set it and <em>Nil</em> for data .</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li><li><strong>user_data</strong> the user data to attach to the <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code></li><li><strong>destroy</strong> a <code>DestroyFuncT</code> which will be called when the <code><a href="../Cairo/Context.html">Context</a></code> is destroyed or when new user data is attached using the same key.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li>
+<li><strong>user_data</strong> the user data to attach to the <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code></li>
+<li><strong>destroy</strong> a <code>DestroyFuncT</code> which will be called when the <code><a href="../Cairo/Context.html">Context</a></code> is destroyed or when new user data is attached using the same key.</li>
+</ul>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1071,26 +993,20 @@ call this function with the key that was used to set it and <em>Nil</em> for dat
         
         def <strong>status</strong> : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#status:Status-instance-method">#</a>
+        <a class="method-permalink" href="#status%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Checks whether an error has previously occurred for this <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or another error such as <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or another error such as <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1100,81 +1016,67 @@ call this function with the key that was used to set it and <em>Nil</em> for dat
         
         def <strong>text_extents</strong>(text : String) : <a href="../Cairo/TextExtents.html">TextExtents</a>
 
-        <a class="method-permalink" href="#text_extents(text:String):TextExtents-instance-method">#</a>
+        <a class="method-permalink" href="#text_extents%28text%3AString%29%3ATextExtents-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Gets the extents for a string of text. The extents describe a user-space rectangle
-that encloses the "inked" portion of the text drawn at the origin (0,0)
-(as it would be drawn by <code><a href="../Cairo/Context.html#show_text(text:String)-instance-method">Context#show_text</a></code> if the cairo graphics state were set
-to the same <code><a href="../Cairo/ScaledFont.html#font_face:FontFace-instance-method">#font_face</a></code>, <code><a href="../Cairo/ScaledFont.html#font_matrix:Matrix-instance-method">#font_matrix</a></code>, <code><a href="../Cairo/ScaledFont.html#ctm:Matrix-instance-method">#ctm</a></code>, and <code><a href="../Cairo/ScaledFont.html#font_options:FontOptions-instance-method">#font_options</a></code>). Additionally,
-the <code>x_advance</code> and <code>y_advance</code> values indicate the amount by which the current point would be advanced by <code><a href="../Cairo/Context.html#show_text(text:String)-instance-method">Context#show_text</a></code>.</p>
-
+that encloses the &quot;inked&quot; portion of the text drawn at the origin (0,0)
+(as it would be drawn by <code><a href="../Cairo/Context.html#show_text%28text%3AString%29-instance-method">Context#show_text</a></code> if the cairo graphics state were set
+to the same <code><a href="../Cairo/ScaledFont.html#font_face%3AFontFace-instance-method">#font_face</a></code>, <code><a href="../Cairo/ScaledFont.html#font_matrix%3AMatrix-instance-method">#font_matrix</a></code>, <code><a href="../Cairo/ScaledFont.html#ctm%3AMatrix-instance-method">#ctm</a></code>, and <code><a href="../Cairo/ScaledFont.html#font_options%3AFontOptions-instance-method">#font_options</a></code>). Additionally,
+the <code>x_advance</code> and <code>y_advance</code> values indicate the amount by which the current point would be advanced by <code><a href="../Cairo/Context.html#show_text%28text%3AString%29-instance-method">Context#show_text</a></code>.</p>
 <p><span class="flag purple">NOTE</span>  that whitespace characters do not directly contribute to the size of the rectangle
 (<code>extents.width</code> and <code>extents.height</code>). They do contribute indirectly by changing the position
 of non-whitespace characters. In particular, trailing whitespace characters are likely to not affect
 the size of the rectangle, though they will affect the <code>x_advance</code> and <code>y_advance</code> values.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>text</strong> string of text</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A <code><a href="../Cairo/TextExtents.html">TextExtents</a></code> which to store the retrieved extents.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>text</strong> string of text</li>
+</ul>
+<p>###Returns
+A <code><a href="../Cairo/TextExtents.html">TextExtents</a></code> which to store the retrieved extents.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L132" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L132" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="text_to_glyphs(x:Float64,y:Float64,text:String):NamedTuple()-instance-method">
+    <div class="entry-detail" id="text_to_glyphs(x:Float64,y:Float64,text:String):NamedTuple(glyphs:GlyphArray,clusters:TextClusterArray,cluster_flags:TextClusterFlags,status:Status)-instance-method">
       <div class="signature">
         
-        def <strong>text_to_glyphs</strong>(x : Float64, y : Float64, text : String) : NamedTuple()
+        def <strong>text_to_glyphs</strong>(x : Float64, y : Float64, text : String) : NamedTuple(glyphs: <a href="../Cairo/GlyphArray.html">GlyphArray</a>, clusters: <a href="../Cairo/TextClusterArray.html">TextClusterArray</a>, cluster_flags: <a href="../Cairo/TextClusterFlags.html">TextClusterFlags</a>, status: <a href="../Cairo/Status.html">Status</a>)
 
-        <a class="method-permalink" href="#text_to_glyphs(x:Float64,y:Float64,text:String):NamedTuple()-instance-method">#</a>
+        <a class="method-permalink" href="#text_to_glyphs%28x%3AFloat64%2Cy%3AFloat64%2Ctext%3AString%29%3ANamedTuple%28glyphs%3AGlyphArray%2Cclusters%3ATextClusterArray%2Ccluster_flags%3ATextClusterFlags%2Cstatus%3AStatus%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Converts UTF-8 text to an array of glyphs.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>x</strong> X position to place first glyph</li><li><strong>y</strong> Y position to place first glyph</li><li><strong>text</strong> a string of text encoded in UTF-8</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<ul><li><strong>glyphs</strong> array of glyphs to fill</li><li><strong>clusters</strong> array of cluster mapping information to fill</li><li><strong>cluster_flags</strong> cluster flags corresponding to the output clusters</li><li><strong>status</strong> <code><a href="../Cairo/Status.html#Success">Status::Success</a></code> upon success, or an error status if the input values are wrong or if conversion failed.
-If the input values are correct but the conversion failed, the error status is also set on <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>x</strong> X position to place first glyph</li>
+<li><strong>y</strong> Y position to place first glyph</li>
+<li><strong>text</strong> a string of text encoded in UTF-8</li>
+</ul>
+<p>###Returns</p>
+<ul>
+<li><strong>glyphs</strong> array of glyphs to fill</li>
+<li><strong>clusters</strong> array of cluster mapping information to fill</li>
+<li><strong>cluster_flags</strong> cluster flags corresponding to the output clusters</li>
+<li><strong>status</strong> <code><a href="../Cairo/Status.html#Success">Status::Success</a></code> upon success, or an error status if the input values are wrong or if conversion failed.
+If the input values are correct but the conversion failed, the error status is also set on <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L168" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L168" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1184,13 +1086,13 @@ If the input values are correct but the conversion failed, the error status is a
         
         def <strong>to_unsafe</strong> : LibCairo::PScaledFontT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PScaledFontT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APScaledFontT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L231" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L231" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1200,27 +1102,21 @@ If the input values are correct but the conversion failed, the error status is a
         
         def <strong>type</strong> : <a href="../Cairo/FontType.html">FontType</a>
 
-        <a class="method-permalink" href="#type:FontType-instance-method">#</a>
+        <a class="method-permalink" href="#type%3AFontType-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>This function returns the type of the backend used to create a scaled font.
 See <code><a href="../Cairo/FontType.html">FontType</a></code> for available types. However, this function never returns <code><a href="../Cairo/FontType.html#Toy">FontType::Toy</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The type of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p>
+<p>###Returns
+The type of <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1230,35 +1126,25 @@ See <code><a href="../Cairo/FontType.html">FontType</a></code> for available typ
         
         def <strong>user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>) : Pointer(Void)
 
-        <a class="method-permalink" href="#user_data(key:UserDataKey):Pointer(Void)-instance-method">#</a>
+        <a class="method-permalink" href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Return user data previously attached to <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> using the specified key.
 If no user data has been attached with the given key this function returns <em>Nil</em>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of the <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> the user data was attached to</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The user data previously attached or <em>Nil</em>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of the <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> the user data was attached to</li>
+</ul>
+<p>###Returns
+The user data previously attached or <em>Nil</em>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/scaled_font.cr#L89" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/scaled_font.cr#L89" target="_blank">View source</a>]
         
       </div>
     </div>

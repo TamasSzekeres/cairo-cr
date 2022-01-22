@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -415,12 +415,9 @@
   </h2>
 
   <p>Paths are the most basic drawing tools and are primarily used to implicitly generate simple masks.</p>
-
 <p>Path is a data structure for holding a path. This data structure serves as the return value for
-`Context#copy_path˙ and <code><a href="../Cairo/Context.html#copy_path_flat:Path-instance-method">Context#copy_path_flat</a></code> as well the input value for <code><a href="../Cairo/Context.html#append(path:Path)-instance-method">Context#append</a></code>.</p>
-
+<code><a href="../Cairo/Context.html#copy_path%3APath-instance-method">Context#copy_path</a>˙ and</code>Context#copy_path_flat<code>as well the input value for</code>Context#append`.</p>
 <p>See <code><a href="../Cairo/PathDataType.html">PathDataType</a></code> for hints on how to iterate over the actual data within the path.</p>
-
 <p>The num_data function gives the number of elements in the data array.
 This number is larger than the number of independent path portions (defined in <code><a href="../Cairo/PathDataType.html">PathDataType</a></code>),
 since the data includes both headers and coordinates for each portion.</p>
@@ -448,7 +445,7 @@ since the data includes both headers and coordinates for each portion.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path.cr#L14" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path.cr#L14" target="_blank">
         cairo/path.cr
       </a>
     
@@ -470,7 +467,7 @@ since the data includes both headers and coordinates for each portion.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(path:LibCairo::PPathT)-class-method" class="signature"><strong>.new</strong>(path : LibCairo::PPathT)</a>
+        <a href="#new%28path%3ALibCairo%3A%3APPathT%29-class-method" class="signature"><strong>.new</strong>(path : LibCairo::PPathT)</a>
         
       </li>
     
@@ -491,7 +488,7 @@ since the data includes both headers and coordinates for each portion.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#[](index:Int):PathData-instance-method" class="signature"><strong>#[]</strong>(index : Int) : PathData</a>
+        <a href="#%5B%5D%28index%3AInt%29%3APathData-instance-method" class="signature"><strong>#[]</strong>(index : Int) : PathData</a>
         
       </li>
     
@@ -503,31 +500,31 @@ since the data includes both headers and coordinates for each portion.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#num_data:Int32-instance-method" class="signature"><strong>#num_data</strong> : Int32</a>
+        <a href="#num_data%3AInt32-instance-method" class="signature"><strong>#num_data</strong> : Int32</a>
         
           <div class="summary"><p>Returns the number of elements in the path.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status:Status-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        <a href="#status%3AStatus-instance-method" class="signature"><strong>#status</strong> : Status</a>
         
           <div class="summary"><p>Returns the current error status.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status=(status:Status)-instance-method" class="signature"><strong>#status=</strong>(status : Status)</a>
+        <a href="#status%3D%28status%3AStatus%29-instance-method" class="signature"><strong>#status=</strong>(status : Status)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_cairo_path:LibCairo::PathT-instance-method" class="signature"><strong>#to_cairo_path</strong> : LibCairo::PathT</a>
+        <a href="#to_cairo_path%3ALibCairo%3A%3APathT-instance-method" class="signature"><strong>#to_cairo_path</strong> : LibCairo::PathT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PPathT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PPathT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APPathT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PPathT</a>
         
       </li>
     
@@ -576,13 +573,13 @@ since the data includes both headers and coordinates for each portion.</p>
         
         def self.<strong>new</strong>(path : LibCairo::PPathT)
 
-        <a class="method-permalink" href="#new(path:LibCairo::PPathT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28path%3ALibCairo%3A%3APPathT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -606,13 +603,13 @@ since the data includes both headers and coordinates for each portion.</p>
         
         def <strong>[]</strong>(index : Int) : <a href="../Cairo/PathData.html">PathData</a>
 
-        <a class="method-permalink" href="#[](index:Int):PathData-instance-method">#</a>
+        <a class="method-permalink" href="#%5B%5D%28index%3AInt%29%3APathData-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -629,7 +626,6 @@ since the data includes both headers and coordinates for each portion.</p>
           
           <p>Immediately releases all memory associated with path.
 After a call to <code><a href="../Cairo/Path.html#finalize-instance-method">Path#finalize</a></code> the path pointer is no longer valid and should not be used further.</p>
-
 <p><span class="flag purple">NOTE</span>  should only be called <code><a href="../Cairo/Path.html">Path</a></code> returned by a <code><a href="../Cairo/Context.html">Context</a></code> function.
 Any path that is created manually (ie. outside of <code><a href="../Cairo/Context.html">Context</a></code>) should be destroyed manually as well.</p>
         </div>
@@ -637,7 +633,7 @@ Any path that is created manually (ie. outside of <code><a href="../Cairo/Contex
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -647,7 +643,7 @@ Any path that is created manually (ie. outside of <code><a href="../Cairo/Contex
         
         def <strong>num_data</strong> : Int32
 
-        <a class="method-permalink" href="#num_data:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#num_data%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -658,7 +654,7 @@ Any path that is created manually (ie. outside of <code><a href="../Cairo/Contex
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -668,7 +664,7 @@ Any path that is created manually (ie. outside of <code><a href="../Cairo/Contex
         
         def <strong>status</strong> : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#status:Status-instance-method">#</a>
+        <a class="method-permalink" href="#status%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -679,7 +675,7 @@ Any path that is created manually (ie. outside of <code><a href="../Cairo/Contex
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -689,13 +685,13 @@ Any path that is created manually (ie. outside of <code><a href="../Cairo/Contex
         
         def <strong>status=</strong>(status : <a href="../Cairo/Status.html">Status</a>)
 
-        <a class="method-permalink" href="#status=(status:Status)-instance-method">#</a>
+        <a class="method-permalink" href="#status%3D%28status%3AStatus%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -705,13 +701,13 @@ Any path that is created manually (ie. outside of <code><a href="../Cairo/Contex
         
         def <strong>to_cairo_path</strong> : LibCairo::PathT
 
-        <a class="method-permalink" href="#to_cairo_path:LibCairo::PathT-instance-method">#</a>
+        <a class="method-permalink" href="#to_cairo_path%3ALibCairo%3A%3APathT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -721,13 +717,13 @@ Any path that is created manually (ie. outside of <code><a href="../Cairo/Contex
         
         def <strong>to_unsafe</strong> : LibCairo::PPathT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PPathT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APPathT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>

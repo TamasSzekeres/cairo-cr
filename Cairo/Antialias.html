@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -413,17 +413,17 @@
   </h2>
 
   <p>Specifies the type of antialiasing to do when rendering text or shapes.</p>
-
 <p>As it is not necessarily clear from the above what advantages a particular antialias method provides,
 there is also a set of hints:</p>
-
-<ul><li><code><a href="../Cairo/Antialias.html#Fast">Antialias::Fast</a></code> : Allow the backend to degrade raster quality for speed</li><li><code><a href="../Cairo/Antialias.html#Good">Antialias::Good</a></code> : A balance between speed and quality</li><li><code><a href="../Cairo/Antialias.html#Best">Antialias::Best</a></code> : A high-fidelity, but potentially slow, raster mode</li></ul>
-
+<ul>
+<li><code><a href="../Cairo/Antialias.html#Fast">Antialias::Fast</a></code> : Allow the backend to degrade raster quality for speed</li>
+<li><code><a href="../Cairo/Antialias.html#Good">Antialias::Good</a></code> : A balance between speed and quality</li>
+<li><code><a href="../Cairo/Antialias.html#Best">Antialias::Best</a></code> : A high-fidelity, but potentially slow, raster mode</li>
+</ul>
 <p>These make no guarantee on how the backend will perform its rasterisation (if it even rasterises!),
 nor that they have any differing effect other than to enable some form of antialiasing.
 In the case of glyph rendering, <code><a href="../Cairo/Antialias.html#Fast">Antialias::Fast</a></code> and <code><a href="../Cairo/Antialias.html#Good">Antialias::Good</a></code> will be mapped to <code><a href="../Cairo/Antialias.html#Gray">Antialias::Gray</a></code>,
 with <code><a href="../Cairo/Antialias.html#Best">Antialias::Best</a></code> being equivalent to <code><a href="../Cairo/Antialias.html#Subpixel">Antialias::Subpixel</a></code>.</p>
-
 <p>The interpretation of <code><a href="../Cairo/Antialias.html#Default">Antialias::Default</a></code> is left entirely up to the backend,
 typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">Antialias::Good</a></code> .</p>
 
@@ -450,7 +450,7 @@ typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">A
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/antialias.cr#L17" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/antialias.cr#L17" target="_blank">
         cairo/antialias.cr
       </a>
     
@@ -553,37 +553,37 @@ typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">A
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#best?-instance-method" class="signature"><strong>#best?</strong></a>
+        <a href="#best%3F-instance-method" class="signature"><strong>#best?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#default?-instance-method" class="signature"><strong>#default?</strong></a>
+        <a href="#default%3F-instance-method" class="signature"><strong>#default?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#fast?-instance-method" class="signature"><strong>#fast?</strong></a>
+        <a href="#fast%3F-instance-method" class="signature"><strong>#fast?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#good?-instance-method" class="signature"><strong>#good?</strong></a>
+        <a href="#good%3F-instance-method" class="signature"><strong>#good?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#gray?-instance-method" class="signature"><strong>#gray?</strong></a>
+        <a href="#gray%3F-instance-method" class="signature"><strong>#gray?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#none?-instance-method" class="signature"><strong>#none?</strong></a>
+        <a href="#none%3F-instance-method" class="signature"><strong>#none?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#subpixel?-instance-method" class="signature"><strong>#subpixel?</strong></a>
+        <a href="#subpixel%3F-instance-method" class="signature"><strong>#subpixel?</strong></a>
         
       </li>
     
@@ -656,13 +656,13 @@ typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">A
         
         def <strong>best?</strong>
 
-        <a class="method-permalink" href="#best?-instance-method">#</a>
+        <a class="method-permalink" href="#best%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/antialias.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/antialias.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -672,13 +672,13 @@ typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">A
         
         def <strong>default?</strong>
 
-        <a class="method-permalink" href="#default?-instance-method">#</a>
+        <a class="method-permalink" href="#default%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/antialias.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/antialias.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -688,13 +688,13 @@ typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">A
         
         def <strong>fast?</strong>
 
-        <a class="method-permalink" href="#fast?-instance-method">#</a>
+        <a class="method-permalink" href="#fast%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/antialias.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/antialias.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -704,13 +704,13 @@ typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">A
         
         def <strong>good?</strong>
 
-        <a class="method-permalink" href="#good?-instance-method">#</a>
+        <a class="method-permalink" href="#good%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/antialias.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/antialias.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -720,13 +720,13 @@ typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">A
         
         def <strong>gray?</strong>
 
-        <a class="method-permalink" href="#gray?-instance-method">#</a>
+        <a class="method-permalink" href="#gray%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/antialias.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/antialias.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -736,13 +736,13 @@ typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">A
         
         def <strong>none?</strong>
 
-        <a class="method-permalink" href="#none?-instance-method">#</a>
+        <a class="method-permalink" href="#none%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/antialias.cr#L22" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/antialias.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -752,13 +752,13 @@ typically this will be similar to <code><a href="../Cairo/Antialias.html#Good">A
         
         def <strong>subpixel?</strong>
 
-        <a class="method-permalink" href="#subpixel?-instance-method">#</a>
+        <a class="method-permalink" href="#subpixel%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/antialias.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/antialias.cr#L28" target="_blank">View source</a>]
         
       </div>
     </div>

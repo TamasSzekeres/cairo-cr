@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -416,37 +416,35 @@
 
   <p>The PostScript surface is used to render cairo graphics to Adobe PostScript
 files and is a multi-page vector surface backend.</p>
-
 <p>The following mime types are supported:</p>
-
-<ul><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_JPEG">LibCairo::MIME_TYPE_JPEG</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_UNIQUE_ID">LibCairo::MIME_TYPE_UNIQUE_ID</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX">LibCairo::MIME_TYPE_CCITT_FAX</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX_PARAMS">LibCairo::MIME_TYPE_CCITT_FAX_PARAMS</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX">LibCairo::MIME_TYPE_CCITT_FAX</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX_PARAMS">LibCairo::MIME_TYPE_CCITT_FAX_PARAMS</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_EPS">LibCairo::MIME_TYPE_EPS</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_EPS_PARAMS">LibCairo::MIME_TYPE_EPS_PARAMS</a></code>.</li></ul>
-
+<ul>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_JPEG">LibCairo::MIME_TYPE_JPEG</a></code>,</li>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_UNIQUE_ID">LibCairo::MIME_TYPE_UNIQUE_ID</a></code>,</li>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX">LibCairo::MIME_TYPE_CCITT_FAX</a></code>,</li>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX_PARAMS">LibCairo::MIME_TYPE_CCITT_FAX_PARAMS</a></code>,</li>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX">LibCairo::MIME_TYPE_CCITT_FAX</a></code>,</li>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX_PARAMS">LibCairo::MIME_TYPE_CCITT_FAX_PARAMS</a></code>,</li>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_EPS">LibCairo::MIME_TYPE_EPS</a></code>,</li>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_EPS_PARAMS">LibCairo::MIME_TYPE_EPS_PARAMS</a></code>.</li>
+</ul>
 <p>Source surfaces used by the PostScript surface that have a
 <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_UNIQUE_ID">LibCairo::MIME_TYPE_UNIQUE_ID</a></code> mime type will be stored in
 PostScript printer memory for the duration of the print job.
 <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_UNIQUE_ID">LibCairo::MIME_TYPE_UNIQUE_ID</a></code> should only be used for small
 frequently used sources.</p>
-
 <p>The <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX">LibCairo::MIME_TYPE_CCITT_FAX</a></code> and
 <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX_PARAMS">LibCairo::MIME_TYPE_CCITT_FAX_PARAMS</a></code> mime types are documented in
 <a href="https://cairographics.org/manual/cairo-PDF-Surfaces.html#ccitt">CCITT Fax Images</a>.</p>
-
-<h2><a id="embedding-eps-files" class="anchor" href="#embedding-eps-files">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Embedding EPS files</h2>
-
-<p>Encapsulated PostScript files can be embedded in the PS output by setting the
+<p>##Embedding EPS files
+Encapsulated PostScript files can be embedded in the PS output by setting the
 <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_EPS">LibCairo::MIME_TYPE_EPS</a></code> mime data on a surface to the EPS data
 and painting the surface. The EPS will be scaled and translated to the
 extents of the surface the EPS data is attached to.</p>
-
 <p>The <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_EPS">LibCairo::MIME_TYPE_EPS</a></code> mime type requires the
 <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_EPS_PARAMS">LibCairo::MIME_TYPE_EPS_PARAMS</a></code> mime data to also be provided
 in order to specify the embeddding parameters.
 <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_EPS_PARAMS">LibCairo::MIME_TYPE_EPS_PARAMS</a></code> mime data must contain a string
-of the form <code>"bbox=[llx lly urx ury]"</code> that specifies the bounding box
+of the form <code>&quot;bbox=[llx lly urx ury]&quot;</code> that specifies the bounding box
 (in PS coordinates) of the EPS graphics. The parameters are: lower left x,
 lower left y, upper right x, upper right y. Normally the bbox data is
 identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
@@ -474,7 +472,7 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">
         cairo/ps_surface.cr
       </a>
     
@@ -496,14 +494,14 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void),width_in_points:Float64,height_in_points:Float64)-class-method" class="signature"><strong>.new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void), width_in_points : Float64, height_in_points : Float64)</a>
+        <a href="#new%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%2Cwidth_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-class-method" class="signature"><strong>.new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void), width_in_points : Float64, height_in_points : Float64)</a>
         
           <div class="summary"><p>Creates a PostScript surface of the specified size in points to be written incrementally to the stream represented by <em>write_func</em> and closure.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(filename:String,width_in_points:Float64,height_in_points:Float64)-class-method" class="signature"><strong>.new</strong>(filename : String, width_in_points : Float64, height_in_points : Float64)</a>
+        <a href="#new%28filename%3AString%2Cwidth_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-class-method" class="signature"><strong>.new</strong>(filename : String, width_in_points : Float64, height_in_points : Float64)</a>
         
           <div class="summary"><p>Creates a PostScript surface of the specified size in points to be written to filename.</p></div>
         
@@ -524,7 +522,7 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#levels:Array(PsLevel)-class-method" class="signature"><strong>.levels</strong> : Array(PsLevel)</a>
+        <a href="#levels%3AArray%28PsLevel%29-class-method" class="signature"><strong>.levels</strong> : Array(PsLevel)</a>
         
           <div class="summary"><p>Used to retrieve the list of supported levels.</p></div>
         
@@ -547,47 +545,47 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
       <li class="entry-summary">
         <a href="#dsc_begin_page_setup-instance-method" class="signature"><strong>#dsc_begin_page_setup</strong></a>
         
-          <div class="summary"><p>This function indicates that subsequent calls to <code><a href="../Cairo/PsSurface.html#dsc_comment(comment:String)-instance-method">PsSurface#dsc_comment</a></code> should direct comments to the PageSetup section of the PostScript output.</p></div>
+          <div class="summary"><p>This function indicates that subsequent calls to <code><a href="../Cairo/PsSurface.html#dsc_comment%28comment%3AString%29-instance-method">PsSurface#dsc_comment</a></code> should direct comments to the PageSetup section of the PostScript output.</p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#dsc_begin_setup-instance-method" class="signature"><strong>#dsc_begin_setup</strong></a>
         
-          <div class="summary"><p>This function indicates that subsequent calls to <code><a href="../Cairo/PsSurface.html#dsc_comment(comment:String)-instance-method">PsSurface#dsc_comment</a></code> should direct comments to the Setup section of the PostScript output.</p></div>
+          <div class="summary"><p>This function indicates that subsequent calls to <code><a href="../Cairo/PsSurface.html#dsc_comment%28comment%3AString%29-instance-method">PsSurface#dsc_comment</a></code> should direct comments to the Setup section of the PostScript output.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dsc_comment(comment:String)-instance-method" class="signature"><strong>#dsc_comment</strong>(comment : String)</a>
+        <a href="#dsc_comment%28comment%3AString%29-instance-method" class="signature"><strong>#dsc_comment</strong>(comment : String)</a>
         
           <div class="summary"><p>Emit a comment into the PostScript output for the given surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#eps:Bool-instance-method" class="signature"><strong>#eps</strong> : Bool</a>
+        <a href="#eps%3ABool-instance-method" class="signature"><strong>#eps</strong> : Bool</a>
         
           <div class="summary"><p>Check whether the PostScript surface will output Encapsulated PostScript.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#eps=(eps:Bool)-instance-method" class="signature"><strong>#eps=</strong>(eps : Bool)</a>
+        <a href="#eps%3D%28eps%3ABool%29-instance-method" class="signature"><strong>#eps=</strong>(eps : Bool)</a>
         
           <div class="summary"><p>If eps is <code>true</code>, the PostScript surface will output Encapsulated PostScript.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#restrict_to_level(level:PsLevel)-instance-method" class="signature"><strong>#restrict_to_level</strong>(level : PsLevel)</a>
+        <a href="#restrict_to_level%28level%3APsLevel%29-instance-method" class="signature"><strong>#restrict_to_level</strong>(level : PsLevel)</a>
         
           <div class="summary"><p>Restricts the generated PostSript file to level.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_size(width_in_points:Float64,height_in_points:Float64)-instance-method" class="signature"><strong>#set_size</strong>(width_in_points : Float64, height_in_points : Float64)</a>
+        <a href="#set_size%28width_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-instance-method" class="signature"><strong>#set_size</strong>(width_in_points : Float64, height_in_points : Float64)</a>
         
           <div class="summary"><p>Changes the size of a PostScript surface for the current (and subsequent) pages.</p></div>
         
@@ -606,7 +604,7 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
   <h3>Instance methods inherited from class <code><a href="../Cairo/Surface.html">Cairo::Surface</a></code></h3>
   
   
-    <a href="../Cairo/Surface.html#content:Content-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#content%3AContent-instance-method" class="tooltip">
       <span>content : Content</span>
     content</a>, 
     
@@ -616,67 +614,67 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
     copy_page</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_for_rectangle(x:Float64,y:Float64,width:Float64,height:Float64):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_for_rectangle%28x%3AFloat64%2Cy%3AFloat64%2Cwidth%3AFloat64%2Cheight%3AFloat64%29%3ASurface-instance-method" class="tooltip">
       <span>create_for_rectangle(x : Float64, y : Float64, width : Float64, height : Float64) : Surface</span>
     create_for_rectangle</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_observer(mode:SurfaceObserverMode):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_observer%28mode%3ASurfaceObserverMode%29%3ASurface-instance-method" class="tooltip">
       <span>create_observer(mode : SurfaceObserverMode) : Surface</span>
     create_observer</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_similar%28content%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method" class="tooltip">
       <span>create_similar(content : Content, width : Int32, height : Int32) : Surface</span>
     create_similar</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_similar_image(format:Format,width:Int32,height:Int32):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_similar_image%28format%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method" class="tooltip">
       <span>create_similar_image(format : Format, width : Int32, height : Int32) : Surface</span>
     create_similar_image</a>, 
     
   
-    <a href="../Cairo/Surface.html#data:Pointer(UInt8)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#data%3APointer%28UInt8%29-instance-method" class="tooltip">
       <span>data : Pointer(UInt8)</span>
     data</a>, 
     
   
-    <a href="../Cairo/Surface.html#device:Device-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device%3ADevice-instance-method" class="tooltip">
       <span>device : Device</span>
     device</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_offset:Point-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_offset%3APoint-instance-method" class="tooltip">
       <span>device_offset : Point</span>
     device_offset</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_offset=(offset:Point)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_offset%3D%28offset%3APoint%29-instance-method" class="tooltip">
       <span>device_offset=(offset : Point)</span>
     device_offset=</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_scale:Point-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_scale%3APoint-instance-method" class="tooltip">
       <span>device_scale : Point</span>
     device_scale</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_scale=(scale:Point)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_scale%3D%28scale%3APoint%29-instance-method" class="tooltip">
       <span>device_scale=(scale : Point)</span>
     device_scale=</a>, 
     
   
-    <a href="../Cairo/Surface.html#extents:NamedTuple()-instance-method" class="tooltip">
-      <span>extents : NamedTuple()</span>
+    <a href="../Cairo/Surface.html#extents%3ANamedTuple%28extents%3ARectangle%2Cbounded%3ABool%29-instance-method" class="tooltip">
+      <span>extents : NamedTuple(extents: Rectangle, bounded: Bool)</span>
     extents</a>, 
     
   
-    <a href="../Cairo/Surface.html#fallback_resolution:Point-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#fallback_resolution%3APoint-instance-method" class="tooltip">
       <span>fallback_resolution : Point</span>
     fallback_resolution</a>, 
     
   
-    <a href="../Cairo/Surface.html#fallback_resolution=(res:Point)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#fallback_resolution%3D%28res%3APoint%29-instance-method" class="tooltip">
       <span>fallback_resolution=(res : Point)</span>
     fallback_resolution=</a>, 
     
@@ -696,32 +694,32 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
     flush</a>, 
     
   
-    <a href="../Cairo/Surface.html#font_options:FontOptions-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#font_options%3AFontOptions-instance-method" class="tooltip">
       <span>font_options : FontOptions</span>
     font_options</a>, 
     
   
-    <a href="../Cairo/Surface.html#format:Format-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#format%3AFormat-instance-method" class="tooltip">
       <span>format : Format</span>
     format</a>, 
     
   
-    <a href="../Cairo/Surface.html#has_show_text_glyphs?:Bool-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#has_show_text_glyphs%3F%3ABool-instance-method" class="tooltip">
       <span>has_show_text_glyphs? : Bool</span>
     has_show_text_glyphs?</a>, 
     
   
-    <a href="../Cairo/Surface.html#height:Int32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#height%3AInt32-instance-method" class="tooltip">
       <span>height : Int32</span>
     height</a>, 
     
   
-    <a href="../Cairo/Surface.html#ink_extents:Rectangle-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#ink_extents%3ARectangle-instance-method" class="tooltip">
       <span>ink_extents : Rectangle</span>
     ink_extents</a>, 
     
   
-    <a href="../Cairo/Surface.html#map_to_image(extents:RectangleInt?):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#map_to_image%28extents%3ARectangleInt%3F%29%3ASurface-instance-method" class="tooltip">
       <span>map_to_image(extents : RectangleInt?) : Surface</span>
     map_to_image</a>, 
     
@@ -731,107 +729,107 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
     mark_dirty</a>, 
     
   
-    <a href="../Cairo/Surface.html#mark_dirty_rectangle(x:Int32,y:Int32,width:Int32,height:Int32)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#mark_dirty_rectangle%28x%3AInt32%2Cy%3AInt32%2Cwidth%3AInt32%2Cheight%3AInt32%29-instance-method" class="tooltip">
       <span>mark_dirty_rectangle(x : Int32, y : Int32, width : Int32, height : Int32)</span>
     mark_dirty_rectangle</a>, 
     
   
-    <a href="../Cairo/Surface.html#mime_data(mime_type:String):Bytes-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#mime_data%28mime_type%3AString%29%3ABytes-instance-method" class="tooltip">
       <span>mime_data(mime_type : String) : Bytes</span>
     mime_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_fill_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_fill_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_fill_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_fill_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_finish_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_finish_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_finish_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_finish_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_flush_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_flush_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_flush_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_flush_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_glyphs_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_glyphs_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_glyphs_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_glyphs_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_mask_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_mask_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_mask_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_mask_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_paint_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_paint_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_paint_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_paint_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_stroke_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_stroke_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_stroke_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_stroke_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_elapsed:Float64-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_elapsed%3AFloat64-instance-method" class="tooltip">
       <span>observer_elapsed : Float64</span>
     observer_elapsed</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_print(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_print%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_print(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</span>
     observer_print</a>, 
     
   
-    <a href="../Cairo/Surface.html#reference:Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#reference%3ASurface-instance-method" class="tooltip">
       <span>reference : Surface</span>
     reference</a>, 
     
   
-    <a href="../Cairo/Surface.html#reference_count:UInt32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#reference_count%3AUInt32-instance-method" class="tooltip">
       <span>reference_count : UInt32</span>
     reference_count</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_device_offset(x_offset:Float64,y_offset:Float64)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_device_offset%28x_offset%3AFloat64%2Cy_offset%3AFloat64%29-instance-method" class="tooltip">
       <span>set_device_offset(x_offset : Float64, y_offset : Float64)</span>
     set_device_offset</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_device_scale(x_scale:Float64,y_scale:Float64)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_device_scale%28x_scale%3AFloat64%2Cy_scale%3AFloat64%29-instance-method" class="tooltip">
       <span>set_device_scale(x_scale : Float64, y_scale : Float64)</span>
     set_device_scale</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_fallback_resolution(x_pixels_per_inch:Float64,y_pixels_per_inch:Float64)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_fallback_resolution%28x_pixels_per_inch%3AFloat64%2Cy_pixels_per_inch%3AFloat64%29-instance-method" class="tooltip">
       <span>set_fallback_resolution(x_pixels_per_inch : Float64, y_pixels_per_inch : Float64)</span>
     set_fallback_resolution</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_mime_data(mime_type:String,data:Bytes,destroy:LibCairo::DestroyFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_mime_data%28mime_type%3AString%2Cdata%3ABytes%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>set_mime_data(mime_type : String, data : Bytes, destroy : LibCairo::DestroyFuncT, closure : Pointer(Void)) : Status</span>
     set_mime_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method" class="tooltip">
       <span>set_user_data(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</span>
     set_user_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#status:Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#status%3AStatus-instance-method" class="tooltip">
       <span>status : Status</span>
     status</a>, 
     
   
-    <a href="../Cairo/Surface.html#stride:Int32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#stride%3AInt32-instance-method" class="tooltip">
       <span>stride : Int32</span>
     stride</a>, 
     
   
-    <a href="../Cairo/Surface.html#supports_mime_type?(mime_type:String):Bool-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#supports_mime_type%3F%28mime_type%3AString%29%3ABool-instance-method" class="tooltip">
       <span>supports_mime_type?(mime_type : String) : Bool</span>
     supports_mime_type?</a>, 
     
@@ -841,37 +839,37 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
     surface_show_page</a>, 
     
   
-    <a href="../Cairo/Surface.html#to_unsafe:LibCairo::PSurfaceT-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#to_unsafe%3ALibCairo%3A%3APSurfaceT-instance-method" class="tooltip">
       <span>to_unsafe : LibCairo::PSurfaceT</span>
     to_unsafe</a>, 
     
   
-    <a href="../Cairo/Surface.html#type:SurfaceType-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#type%3ASurfaceType-instance-method" class="tooltip">
       <span>type : SurfaceType</span>
     type</a>, 
     
   
-    <a href="../Cairo/Surface.html#unmap_image(image:Surface)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#unmap_image%28image%3ASurface%29-instance-method" class="tooltip">
       <span>unmap_image(image : Surface)</span>
     unmap_image</a>, 
     
   
-    <a href="../Cairo/Surface.html#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method" class="tooltip">
       <span>user_data(key : UserDataKey) : Pointer(Void)</span>
     user_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#width:Int32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#width%3AInt32-instance-method" class="tooltip">
       <span>width : Int32</span>
     width</a>, 
     
   
-    <a href="../Cairo/Surface.html#write_to_png(filename:String):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#write_to_png%28filename%3AString%29%3AStatus-instance-method" class="tooltip">
       <span>write_to_png(filename : String) : Status</span>
     write_to_png</a>, 
     
   
-    <a href="../Cairo/Surface.html#write_to_png_stream(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#write_to_png_stream%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>write_to_png_stream(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</span>
     write_to_png_stream</a>
     
@@ -883,7 +881,7 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
   <h3>Constructor methods inherited from class <code><a href="../Cairo/Surface.html">Cairo::Surface</a></code></h3>
   
   
-    <a href="../Cairo/Surface.html#new(data:Bytes,format:Format,width:Int32,height:Int32,stride:Int32)-class-method" class="tooltip">
+    <a href="../Cairo/Surface.html#new%28data%3ABytes%2Cformat%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%2Cstride%3AInt32%29-class-method" class="tooltip">
       <span>new(data : Bytes, format : Format, width : Int32, height : Int32, stride : Int32)<br/>new(format : Format, width : Int32, height : Int32)<br/>new(read_func : LibCairo::ReadFuncT, closure : Pointer(Void))<br/>new(content : Content, extents : Rectangle?)<br/>new(surface : LibCairo::PSurfaceT)<br/>new(filename : String)</span>
     new</a>
     
@@ -931,7 +929,7 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
         
         def self.<strong>new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void), width_in_points : Float64, height_in_points : Float64)
 
-        <a class="method-permalink" href="#new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void),width_in_points:Float64,height_in_points:Float64)-class-method">#</a>
+        <a class="method-permalink" href="#new%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%2Cwidth_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -940,39 +938,30 @@ identical to the <code>%%BoundingBox</code> data in the EPS file.</p>
 written incrementally to the stream represented by <em>write_func</em> and
 closure. See <code>PsSurface#initialize</code> for a more convenient way to
 simply direct the PostScript output to a named file.</p>
-
 <p><span class="flag purple">NOTE</span>  that the size of individual pages of the PostScript output can vary.
-See <code><a href="../Cairo/PsSurface.html#set_size(width_in_points:Float64,height_in_points:Float64)-instance-method">PsSurface#set_size</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>write_func</strong> a <code><a href="../Cairo.html">Cairo</a>::C::LibCairo::WriteFuncT</code> to accept the output
+See <code><a href="../Cairo/PsSurface.html#set_size%28width_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-instance-method">PsSurface#set_size</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>write_func</strong> a <code><a href="../Cairo.html">Cairo</a>::C::LibCairo::WriteFuncT</code> to accept the output
 data, may be <code>nil</code> to indicate a no-op <em>write_func</em>.
 With a no-op <em>write_func</em>, the surface may be queried or used as a
-source without generating any temporary files.</li><li><strong>closure</strong> the closure argument for <em>write_func</em></li><li><strong>width_in_points</strong> width of the surface, in points (1 point == 1/72.0 inch)</li><li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly created surface. The caller owns the surface and
+source without generating any temporary files.</li>
+<li><strong>closure</strong> the closure argument for <em>write_func</em></li>
+<li><strong>width_in_points</strong> width of the surface, in points (1 point == 1/72.0 inch)</li>
+<li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li>
+</ul>
+<p>###Returns
+A pointer to the newly created surface. The caller owns the surface and
 should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
-
 <p>This function always returns a valid pointer, but it will return a pointer
-to a "nil" surface if an error such as out of memory occurs.
-You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> to check for this.</p>
+to a &quot;nil&quot; surface if an error such as out of memory occurs.
+You can use <code><a href="../Cairo/Surface.html#status%3AStatus-instance-method">Surface#status</a></code> to check for this.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -982,45 +971,35 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
         
         def self.<strong>new</strong>(filename : String, width_in_points : Float64, height_in_points : Float64)
 
-        <a class="method-permalink" href="#new(filename:String,width_in_points:Float64,height_in_points:Float64)-class-method">#</a>
+        <a class="method-permalink" href="#new%28filename%3AString%2Cwidth_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a PostScript surface of the specified size in points to be written
 to filename.</p>
-
 <p><span class="flag purple">NOTE</span>  that the size of individual pages of the PostScript output can vary.
-See <code><a href="../Cairo/PsSurface.html#set_size(width_in_points:Float64,height_in_points:Float64)-instance-method">PsSurface#set_size</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>filename</strong> a filename for the PS output (must be writable),
+See <code><a href="../Cairo/PsSurface.html#set_size%28width_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-instance-method">PsSurface#set_size</a></code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>filename</strong> a filename for the PS output (must be writable),
 <code>nil</code> may be used to specify no output. This will generate a PS surface
-that may be queried and used as a source, without generating a temporary file.</li><li><strong>width_in_points</strong>  width of the surface, in points (1 point == 1/72.0 inch)</li><li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly created surface. The caller owns the surface and
+that may be queried and used as a source, without generating a temporary file.</li>
+<li><strong>width_in_points</strong>  width of the surface, in points (1 point == 1/72.0 inch)</li>
+<li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li>
+</ul>
+<p>###Returns
+A pointer to the newly created surface. The caller owns the surface and
 should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
-
 <p>This function always returns a valid pointer, but it will return a
-pointer to a "nil" surface if an error such as out of memory occurs.
-You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> to check for this.</p>
+pointer to a &quot;nil&quot; surface if an error such as out of memory occurs.
+You can use <code><a href="../Cairo/Surface.html#status%3AStatus-instance-method">Surface#status</a></code> to check for this.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1042,27 +1021,21 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
         
         def self.<strong>levels</strong> : Array(<a href="../Cairo/PsLevel.html">PsLevel</a>)
 
-        <a class="method-permalink" href="#levels:Array(PsLevel)-class-method">#</a>
+        <a class="method-permalink" href="#levels%3AArray%28PsLevel%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Used to retrieve the list of supported levels.
-See <code><a href="../Cairo/PsSurface.html#restrict_to_level(level:PsLevel)-instance-method">PsSurface#restrict_to_level</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>Supported level list.</p>
+See <code><a href="../Cairo/PsSurface.html#restrict_to_level%28level%3APsLevel%29-instance-method">PsSurface#restrict_to_level</a></code>.</p>
+<p>###Returns
+Supported level list.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1090,20 +1063,18 @@ See <code><a href="../Cairo/PsSurface.html#restrict_to_level(level:PsLevel)-inst
         <div class="doc">
           
           <p>This function indicates that subsequent calls to
-<code><a href="../Cairo/PsSurface.html#dsc_comment(comment:String)-instance-method">PsSurface#dsc_comment</a></code> should direct comments to the
+<code><a href="../Cairo/PsSurface.html#dsc_comment%28comment%3AString%29-instance-method">PsSurface#dsc_comment</a></code> should direct comments to the
 PageSetup section of the PostScript output.</p>
-
 <p>This function call is only needed for the first page of a surface.
 It should be called after any call to <code><a href="../Cairo/PsSurface.html#dsc_begin_setup-instance-method">PsSurface#dsc_begin_setup</a></code>
 and before any drawing is performed to the surface.</p>
-
-<p>See <code><a href="../Cairo/PsSurface.html#dsc_comment(comment:String)-instance-method">PsSurface#dsc_comment</a></code> for more details.</p>
+<p>See <code><a href="../Cairo/PsSurface.html#dsc_comment%28comment%3AString%29-instance-method">PsSurface#dsc_comment</a></code> for more details.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1119,20 +1090,18 @@ and before any drawing is performed to the surface.</p>
         <div class="doc">
           
           <p>This function indicates that subsequent calls to
-<code><a href="../Cairo/PsSurface.html#dsc_comment(comment:String)-instance-method">PsSurface#dsc_comment</a></code> should direct comments to
+<code><a href="../Cairo/PsSurface.html#dsc_comment%28comment%3AString%29-instance-method">PsSurface#dsc_comment</a></code> should direct comments to
 the Setup section of the PostScript output.</p>
-
 <p>This function should be called at most once per surface,
 and must be called before any call to <code><a href="../Cairo/PsSurface.html#dsc_begin_page_setup-instance-method">PsSurface#dsc_begin_page_setup</a></code>
 and before any drawing is performed to the surface.</p>
-
-<p>See <code><a href="../Cairo/PsSurface.html#dsc_comment(comment:String)-instance-method">PsSurface#dsc_comment</a></code> for more details.</p>
+<p>See <code><a href="../Cairo/PsSurface.html#dsc_comment%28comment%3AString%29-instance-method">PsSurface#dsc_comment</a></code> for more details.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1142,65 +1111,50 @@ and before any drawing is performed to the surface.</p>
         
         def <strong>dsc_comment</strong>(comment : String)
 
-        <a class="method-permalink" href="#dsc_comment(comment:String)-instance-method">#</a>
+        <a class="method-permalink" href="#dsc_comment%28comment%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Emit a comment into the PostScript output for the given surface.</p>
-
 <p>The comment is expected to conform to the PostScript Language Document
 Structuring Conventions (DSC). Please see that manual for details on
 the available comments and their meanings. In particular,
 the <code>%%IncludeFeature</code> comment allows a device-independent means of
 controlling printer device features. So the PostScript Printer
 Description Files Specification will also be a useful reference.</p>
-
 <p>The comment string must begin with a percent character (%) and the total
 length of the string (including any initial percent characters) must not
 exceed 255 characters. Violating either of these conditions will place
 <em>surface</em> into an error state. But beyond these two conditions, this
 function will not enforce conformance of the comment with any particular specification.</p>
-
 <p>The comment string should not have a trailing newline.</p>
-
 <p>The DSC specifies different sections in which particular comments can
 appear. This function provides for comments to be emitted within three
 sections: the header, the Setup section, and the PageSetup section.
 Comments appearing in the first two sections apply to the entire document
 while comments in the BeginPageSetup section apply only to a single page.</p>
-
 <p>For comments to appear in the header section, this function should be
 called after the surface is created, but before a call to
 <code><a href="../Cairo/PsSurface.html#dsc_begin_setup-instance-method">PsSurface#dsc_begin_setup</a></code>.</p>
-
 <p>For comments to appear in the Setup section, this function should be
 called after a call to <code><a href="../Cairo/PsSurface.html#dsc_begin_setup-instance-method">PsSurface#dsc_begin_setup</a></code> but before a call
 to <code><a href="../Cairo/PsSurface.html#dsc_begin_page_setup-instance-method">PsSurface#dsc_begin_page_setup</a></code>.</p>
-
 <p>For comments to appear in the PageSetup section, this function should
 be called after a call to <code><a href="../Cairo/PsSurface.html#dsc_begin_page_setup-instance-method">PsSurface#dsc_begin_page_setup</a></code>.</p>
-
 <p><span class="flag purple">NOTE</span>  that it is only necessary to call <code><a href="../Cairo/PsSurface.html#dsc_begin_page_setup-instance-method">PsSurface#dsc_begin_page_setup</a></code>
 for the first page of any surface. After a call to <code><a href="../Cairo/Context.html#show_page-instance-method">Context#show_page</a></code> or
 <code><a href="../Cairo/Context.html#copy_page-instance-method">Context#copy_page</a></code> comments are unambiguously directed to the PageSetup
 section of the current page. But it doesn't hurt to call this function at
 the beginning of every page as that consistency may make the calling code simpler.</p>
-
 <p>As a final note, cairo automatically generates several comments on its own.
 As such, applications must not manually generate any of the following comments:</p>
-
 <p>Header section: <code>%!PS-Adobe-3.0</code>, <code>%%Creator</code>, <code>%%CreationDate</code>, <code>%%Pages</code>,
 <code>%%BoundingBox</code>, <code>%%DocumentData</code>, <code>%%LanguageLevel</code>, <code>%%EndComments</code>.</p>
-
 <p>Setup section: <code>%%BeginSetup</code>, <code>%%EndSetup</code></p>
-
 <p>PageSetup section: <code>%%BeginPageSetup</code>, <code>%%PageBoundingBox</code>, <code>%%EndPageSetup</code>.</p>
-
 <p>Other sections: <code>%%BeginProlog</code>, <code>%%EndProlog</code>, <code>%%Page</code>, <code>%%Trailer</code>, <code>%%EOF</code></p>
-
 <p>Here is an example sequence showing how this function might be used:</p>
-
 <pre><code class="language-crystal">surface <span class="o">=</span> <span class="t">PsSurface</span>.<span class="k">new</span>(filename, width, height)
 ...
 surface.dsc_comment(<span class="s">&quot;%%Title: My excellent document&quot;</span>)
@@ -1218,20 +1172,16 @@ surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *MediaColor Blue&quo
 cr.show_page
 ...
 surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *PageSize A5&quot;</span>)</code></pre>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>comment</strong> a comment string to be emitted into the PostScript output</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>comment</strong> a comment string to be emitted into the PostScript output</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1241,26 +1191,20 @@ surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *PageSize A5&quot;</
         
         def <strong>eps</strong> : Bool
 
-        <a class="method-permalink" href="#eps:Bool-instance-method">#</a>
+        <a class="method-permalink" href="#eps%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Check whether the PostScript surface will output Encapsulated PostScript.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code>true</code> if the surface will output Encapsulated PostScript.</p>
+<p>###Returns
+<code>true</code> if the surface will output Encapsulated PostScript.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1270,31 +1214,26 @@ surface.dsc_comment(<span class="s">&quot;%%IncludeFeature: *PageSize A5&quot;</
         
         def <strong>eps=</strong>(eps : Bool)
 
-        <a class="method-permalink" href="#eps=(eps:Bool)-instance-method">#</a>
+        <a class="method-permalink" href="#eps%3D%28eps%3ABool%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>If eps is <code>true</code>, the PostScript surface will output Encapsulated PostScript.</p>
-
 <p>This function should only be called before any drawing operations have been
 performed on the current page. The simplest way to do this is to call this
 function immediately after creating the surface. An Encapsulated PostScript
 file should never contain more than one page.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>eps</strong> <code>true</code> to output EPS format PostScript.</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>eps</strong> <code>true</code> to output EPS format PostScript.</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1304,31 +1243,26 @@ file should never contain more than one page.</p>
         
         def <strong>restrict_to_level</strong>(level : <a href="../Cairo/PsLevel.html">PsLevel</a>)
 
-        <a class="method-permalink" href="#restrict_to_level(level:PsLevel)-instance-method">#</a>
+        <a class="method-permalink" href="#restrict_to_level%28level%3APsLevel%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Restricts the generated PostSript file to level.
-See <code><a href="../Cairo/PsSurface.html#levels:Array(PsLevel)-class-method">PsSurface#levels</a></code> for a list of available level values that can be used here.</p>
-
+See <code><a href="../Cairo/PsSurface.html#levels%3AArray%28PsLevel%29-class-method">PsSurface#levels</a></code> for a list of available level values that can be used here.</p>
 <p>This function should only be called before any drawing operations have
 been performed on the given surface. The simplest way to do this is to
 call this function immediately after creating the surface.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>level</strong> PostScript level</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>level</strong> PostScript level</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1338,31 +1272,27 @@ call this function immediately after creating the surface.</p>
         
         def <strong>set_size</strong>(width_in_points : Float64, height_in_points : Float64)
 
-        <a class="method-permalink" href="#set_size(width_in_points:Float64,height_in_points:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#set_size%28width_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Changes the size of a PostScript surface for the current (and subsequent) pages.</p>
-
 <p>This function should only be called before any drawing operations have been
 performed on the current page. The simplest way to do this is to call this
 function immediately after creating the surface or immediately after
 completing a page with either <code><a href="../Cairo/Context.html#show_page-instance-method">Context#show_page</a></code> or <code><a href="../Cairo/Context.html#copy_page-instance-method">Context#copy_page</a></code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>width_in_points</strong> new surface width, in points (1 point == 1/72.0 inch)</li><li><strong>height_in_points</strong> new surface height, in points (1 point == 1/72.0 inch)</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>width_in_points</strong> new surface width, in points (1 point == 1/72.0 inch)</li>
+<li><strong>height_in_points</strong> new surface height, in points (1 point == 1/72.0 inch)</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/ps_surface.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>

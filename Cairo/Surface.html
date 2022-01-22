@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -416,31 +416,24 @@
 
   <p><code><a href="../Cairo/Surface.html">Surface</a></code> is the abstract type representing all different drawing targets that cairo can render to.
 The actual drawings are performed using a cairo context.</p>
-
 <p>A cairo surface is created by using backend-specific constructors, typically of the form <code>Surface#initialize</code>.</p>
-
 <p>Most surface types allow accessing the surface without using Cairo functions.
 If you do this, keep in mind that it is mandatory that you call <code><a href="../Cairo/Surface.html#flush-instance-method">Surface#flush</a></code> before
 reading from or writing to the surface and that you must use <code><a href="../Cairo/Surface.html#mark_dirty-instance-method">Surface#mark_dirty</a></code> after modifying it.</p>
-
 <p><span class="flag purple">NOTE</span>  that for other surface types it might be necessary to acquire the surface's device first.
-See <code><a href="../Cairo/Device.html#acquire:Status-instance-method">Device#acquire</a></code> for a discussion of devices.</p>
-
+See <code><a href="../Cairo/Device.html#acquire%3AStatus-instance-method">Device#acquire</a></code> for a discussion of devices.</p>
 <p>A <code><a href="../Cairo/Surface.html">Surface</a></code> represents an image, either as the destination of a drawing operation or as source when drawing onto another surface.
 To draw to a <code><a href="../Cairo/Surface.html">Surface</a></code>, create a cairo context with the surface as the target, using <code>Context#create(Surface)</code>.</p>
-
 <p>There are different subtypes of <code><a href="../Cairo/Surface.html">Surface</a></code> for different drawing backends; for example,
 <code>Surface#initialize(Format, Int32, Int32)</code> creates a bitmap image in memory.
-The type of a surface can be queried with <code><a href="../Cairo/Surface.html#type:SurfaceType-instance-method">Surface#type</a></code>.</p>
-
+The type of a surface can be queried with <code><a href="../Cairo/Surface.html#type%3ASurfaceType-instance-method">Surface#type</a></code>.</p>
 <p>The initial contents of a surface after creation depend upon the manner of its creation.
 If cairo creates the surface and backing storage for the user, it will be initially cleared;
-for example, <code>Surface#initialize(Format, Int32, Int32)</code> and <code><a href="../Cairo/Surface.html#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method">Surface#create_similar</a></code>.
+for example, <code>Surface#initialize(Format, Int32, Int32)</code> and <code><a href="../Cairo/Surface.html#create_similar%28content%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method">Surface#create_similar</a></code>.
 Alternatively, if the user passes in a reference to some backing storage and asks cairo to wrap
 that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the contents are not modified; for example,
 <code>Surface#initialize(Bytes, Format, Int32, Int32, Int32)</code> and <code>XlibSurface#initialize</code>.</p>
-
-<p>Memory management of <code><a href="../Cairo/Surface.html">Surface</a></code> is done with <code><a href="../Cairo/Surface.html#reference:Surface-instance-method">Surface#reference</a></code> and <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code>.</p>
+<p>Memory management of <code><a href="../Cairo/Surface.html">Surface</a></code> is done with <code><a href="../Cairo/Surface.html#reference%3ASurface-instance-method">Surface#reference</a></code> and <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code>.</p>
 
 
 
@@ -487,7 +480,7 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L35" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L35" target="_blank">
         cairo/surface.cr
       </a>
     
@@ -509,40 +502,40 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(data:Bytes,format:Format,width:Int32,height:Int32,stride:Int32)-class-method" class="signature"><strong>.new</strong>(data : Bytes, format : Format, width : Int32, height : Int32, stride : Int32)</a>
+        <a href="#new%28data%3ABytes%2Cformat%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%2Cstride%3AInt32%29-class-method" class="signature"><strong>.new</strong>(data : Bytes, format : Format, width : Int32, height : Int32, stride : Int32)</a>
         
           <div class="summary"><p>Creates an image surface for the provided pixel data.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(format:Format,width:Int32,height:Int32)-class-method" class="signature"><strong>.new</strong>(format : Format, width : Int32, height : Int32)</a>
+        <a href="#new%28format%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%29-class-method" class="signature"><strong>.new</strong>(format : Format, width : Int32, height : Int32)</a>
         
           <div class="summary"><p>Creates an image surface of the specified format and dimensions.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(read_func:LibCairo::ReadFuncT,closure:Pointer(Void))-class-method" class="signature"><strong>.new</strong>(read_func : LibCairo::ReadFuncT, closure : Pointer(Void))</a>
+        <a href="#new%28read_func%3ALibCairo%3A%3AReadFuncT%2Cclosure%3APointer%28Void%29%29-class-method" class="signature"><strong>.new</strong>(read_func : LibCairo::ReadFuncT, closure : Pointer(Void))</a>
         
           <div class="summary"><p>Creates a new image surface from PNG data read incrementally via the <em>read_func</em> function.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(content:Content,extents:Rectangle?)-class-method" class="signature"><strong>.new</strong>(content : Content, extents : Rectangle?)</a>
+        <a href="#new%28content%3AContent%2Cextents%3ARectangle%3F%29-class-method" class="signature"><strong>.new</strong>(content : Content, extents : Rectangle?)</a>
         
           <div class="summary"><p>Creates a recording-surface which can be used to record all drawing operations at the highest level (that is, the level of paint, mask, stroke, fill and show_text_glyphs).</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(surface:LibCairo::PSurfaceT)-class-method" class="signature"><strong>.new</strong>(surface : LibCairo::PSurfaceT)</a>
+        <a href="#new%28surface%3ALibCairo%3A%3APSurfaceT%29-class-method" class="signature"><strong>.new</strong>(surface : LibCairo::PSurfaceT)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(filename:String)-class-method" class="signature"><strong>.new</strong>(filename : String)</a>
+        <a href="#new%28filename%3AString%29-class-method" class="signature"><strong>.new</strong>(filename : String)</a>
         
           <div class="summary"><p>Creates a new image surface and initializes the contents to the given PNG file.</p></div>
         
@@ -565,7 +558,7 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#content:Content-instance-method" class="signature"><strong>#content</strong> : Content</a>
+        <a href="#content%3AContent-instance-method" class="signature"><strong>#content</strong> : Content</a>
         
           <div class="summary"><p>This function returns the content type of surface which indicates whether the surface contains color and/or alpha information.</p></div>
         
@@ -579,89 +572,89 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
       </li>
     
       <li class="entry-summary">
-        <a href="#create_for_rectangle(x:Float64,y:Float64,width:Float64,height:Float64):Surface-instance-method" class="signature"><strong>#create_for_rectangle</strong>(x : Float64, y : Float64, width : Float64, height : Float64) : Surface</a>
+        <a href="#create_for_rectangle%28x%3AFloat64%2Cy%3AFloat64%2Cwidth%3AFloat64%2Cheight%3AFloat64%29%3ASurface-instance-method" class="signature"><strong>#create_for_rectangle</strong>(x : Float64, y : Float64, width : Float64, height : Float64) : Surface</a>
         
           <div class="summary"><p>Create a new surface that is a rectangle within the target surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_observer(mode:SurfaceObserverMode):Surface-instance-method" class="signature"><strong>#create_observer</strong>(mode : SurfaceObserverMode) : Surface</a>
+        <a href="#create_observer%28mode%3ASurfaceObserverMode%29%3ASurface-instance-method" class="signature"><strong>#create_observer</strong>(mode : SurfaceObserverMode) : Surface</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method" class="signature"><strong>#create_similar</strong>(content : Content, width : Int32, height : Int32) : Surface</a>
+        <a href="#create_similar%28content%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method" class="signature"><strong>#create_similar</strong>(content : Content, width : Int32, height : Int32) : Surface</a>
         
           <div class="summary"><p>Create a new surface that is as compatible as possible with an existing surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#create_similar_image(format:Format,width:Int32,height:Int32):Surface-instance-method" class="signature"><strong>#create_similar_image</strong>(format : Format, width : Int32, height : Int32) : Surface</a>
+        <a href="#create_similar_image%28format%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method" class="signature"><strong>#create_similar_image</strong>(format : Format, width : Int32, height : Int32) : Surface</a>
         
           <div class="summary"><p>Create a new image surface that is as compatible as possible for uploading to and the use in conjunction with an existing surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#data:Pointer(UInt8)-instance-method" class="signature"><strong>#data</strong> : Pointer(UInt8)</a>
+        <a href="#data%3APointer%28UInt8%29-instance-method" class="signature"><strong>#data</strong> : Pointer(UInt8)</a>
         
           <div class="summary"><p>Get a pointer to the data of the image surface, for direct inspection or modification.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#device:Device-instance-method" class="signature"><strong>#device</strong> : Device</a>
+        <a href="#device%3ADevice-instance-method" class="signature"><strong>#device</strong> : Device</a>
         
           <div class="summary"><p>This function returns the device for a surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#device_offset:Point-instance-method" class="signature"><strong>#device_offset</strong> : Point</a>
+        <a href="#device_offset%3APoint-instance-method" class="signature"><strong>#device_offset</strong> : Point</a>
         
-          <div class="summary"><p>This function returns the previous device offset set by <code><a href="../Cairo/Surface.html#device_offset=(offset:Point)-instance-method">Surface#device_offset=</a></code>.</p></div>
+          <div class="summary"><p>This function returns the previous device offset set by <code><a href="../Cairo/Surface.html#device_offset%3D%28offset%3APoint%29-instance-method">Surface#device_offset=</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#device_offset=(offset:Point)-instance-method" class="signature"><strong>#device_offset=</strong>(offset : Point)</a>
+        <a href="#device_offset%3D%28offset%3APoint%29-instance-method" class="signature"><strong>#device_offset=</strong>(offset : Point)</a>
         
           <div class="summary"><p>Sets an offset that is added to the device coordinates determined by the CTM when drawing to surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#device_scale:Point-instance-method" class="signature"><strong>#device_scale</strong> : Point</a>
+        <a href="#device_scale%3APoint-instance-method" class="signature"><strong>#device_scale</strong> : Point</a>
         
-          <div class="summary"><p>This function returns the previous device offset set by <code><a href="../Cairo/Surface.html#device_scale=(scale:Point)-instance-method">Surface#device_scale=</a></code>.</p></div>
+          <div class="summary"><p>This function returns the previous device offset set by <code><a href="../Cairo/Surface.html#device_scale%3D%28scale%3APoint%29-instance-method">Surface#device_scale=</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#device_scale=(scale:Point)-instance-method" class="signature"><strong>#device_scale=</strong>(scale : Point)</a>
+        <a href="#device_scale%3D%28scale%3APoint%29-instance-method" class="signature"><strong>#device_scale=</strong>(scale : Point)</a>
         
           <div class="summary"><p>Sets a scale that is multiplied to the device coordinates determined by the CTM when drawing to surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#extents:NamedTuple()-instance-method" class="signature"><strong>#extents</strong> : NamedTuple()</a>
+        <a href="#extents%3ANamedTuple%28extents%3ARectangle%2Cbounded%3ABool%29-instance-method" class="signature"><strong>#extents</strong> : NamedTuple(extents: Rectangle, bounded: Bool)</a>
         
           <div class="summary"><p>Get the extents of the recording-surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#fallback_resolution:Point-instance-method" class="signature"><strong>#fallback_resolution</strong> : Point</a>
+        <a href="#fallback_resolution%3APoint-instance-method" class="signature"><strong>#fallback_resolution</strong> : Point</a>
         
-          <div class="summary"><p>This function returns the previous fallback resolution set by <code><a href="../Cairo/Surface.html#fallback_resolution=(res:Point)-instance-method">Surface#fallback_resolution=</a></code>, or default fallback resolution if never set.</p></div>
+          <div class="summary"><p>This function returns the previous fallback resolution set by <code><a href="../Cairo/Surface.html#fallback_resolution%3D%28res%3APoint%29-instance-method">Surface#fallback_resolution=</a></code>, or default fallback resolution if never set.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#fallback_resolution=(res:Point)-instance-method" class="signature"><strong>#fallback_resolution=</strong>(res : Point)</a>
+        <a href="#fallback_resolution%3D%28res%3APoint%29-instance-method" class="signature"><strong>#fallback_resolution=</strong>(res : Point)</a>
         
           <div class="summary"><p>Set the horizontal and vertical resolution for image fallbacks.</p></div>
         
@@ -689,42 +682,42 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
       </li>
     
       <li class="entry-summary">
-        <a href="#font_options:FontOptions-instance-method" class="signature"><strong>#font_options</strong> : FontOptions</a>
+        <a href="#font_options%3AFontOptions-instance-method" class="signature"><strong>#font_options</strong> : FontOptions</a>
         
           <div class="summary"><p>Retrieves the default font rendering options for the surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#format:Format-instance-method" class="signature"><strong>#format</strong> : Format</a>
+        <a href="#format%3AFormat-instance-method" class="signature"><strong>#format</strong> : Format</a>
         
           <div class="summary"><p>Get the format of the surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#has_show_text_glyphs?:Bool-instance-method" class="signature"><strong>#has_show_text_glyphs?</strong> : Bool</a>
+        <a href="#has_show_text_glyphs%3F%3ABool-instance-method" class="signature"><strong>#has_show_text_glyphs?</strong> : Bool</a>
         
-          <div class="summary"><p>Returns whether the surface supports sophisticated <code><a href="../Cairo/Context.html#show_text_glyphs(text:String,glyphs:GlyphArray,clusters:TextClusterArray,cluster_flags:TextClusterFlags)-instance-method">Context#show_text_glyphs</a></code> operations.</p></div>
+          <div class="summary"><p>Returns whether the surface supports sophisticated <code><a href="../Cairo/Context.html#show_text_glyphs%28text%3AString%2Cglyphs%3AGlyphArray%2Cclusters%3ATextClusterArray%2Ccluster_flags%3ATextClusterFlags%29-instance-method">Context#show_text_glyphs</a></code> operations.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height:Int32-instance-method" class="signature"><strong>#height</strong> : Int32</a>
+        <a href="#height%3AInt32-instance-method" class="signature"><strong>#height</strong> : Int32</a>
         
           <div class="summary"><p>Get the height of the image surface in pixels.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#ink_extents:Rectangle-instance-method" class="signature"><strong>#ink_extents</strong> : Rectangle</a>
+        <a href="#ink_extents%3ARectangle-instance-method" class="signature"><strong>#ink_extents</strong> : Rectangle</a>
         
           <div class="summary"><p>Measures the extents of the operations stored within the recording-surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#map_to_image(extents:RectangleInt?):Surface-instance-method" class="signature"><strong>#map_to_image</strong>(extents : RectangleInt?) : Surface</a>
+        <a href="#map_to_image%28extents%3ARectangleInt%3F%29%3ASurface-instance-method" class="signature"><strong>#map_to_image</strong>(extents : RectangleInt?) : Surface</a>
         
           <div class="summary"><p>Returns an image surface that is the most efficient mechanism for modifying the backing store of the target surface.</p></div>
         
@@ -738,127 +731,127 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
       </li>
     
       <li class="entry-summary">
-        <a href="#mark_dirty_rectangle(x:Int32,y:Int32,width:Int32,height:Int32)-instance-method" class="signature"><strong>#mark_dirty_rectangle</strong>(x : Int32, y : Int32, width : Int32, height : Int32)</a>
+        <a href="#mark_dirty_rectangle%28x%3AInt32%2Cy%3AInt32%2Cwidth%3AInt32%2Cheight%3AInt32%29-instance-method" class="signature"><strong>#mark_dirty_rectangle</strong>(x : Int32, y : Int32, width : Int32, height : Int32)</a>
         
           <div class="summary"><p>Like <code><a href="../Cairo/Surface.html#mark_dirty-instance-method">Surface#mark_dirty</a></code>, but drawing has been done only to the specified rectangle, so that cairo can retain cached contents for other parts of the surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mime_data(mime_type:String):Bytes-instance-method" class="signature"><strong>#mime_data</strong>(mime_type : String) : Bytes</a>
+        <a href="#mime_data%28mime_type%3AString%29%3ABytes-instance-method" class="signature"><strong>#mime_data</strong>(mime_type : String) : Bytes</a>
         
           <div class="summary"><p>Return mime data previously attached to surface using the specified mime type.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_add_fill_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="signature"><strong>#observer_add_fill_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
+        <a href="#observer_add_fill_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#observer_add_fill_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_add_finish_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="signature"><strong>#observer_add_finish_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
+        <a href="#observer_add_finish_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#observer_add_finish_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_add_flush_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="signature"><strong>#observer_add_flush_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
+        <a href="#observer_add_flush_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#observer_add_flush_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_add_glyphs_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="signature"><strong>#observer_add_glyphs_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
+        <a href="#observer_add_glyphs_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#observer_add_glyphs_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_add_mask_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="signature"><strong>#observer_add_mask_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
+        <a href="#observer_add_mask_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#observer_add_mask_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_add_paint_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="signature"><strong>#observer_add_paint_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
+        <a href="#observer_add_paint_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#observer_add_paint_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_add_stroke_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="signature"><strong>#observer_add_stroke_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
+        <a href="#observer_add_stroke_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#observer_add_stroke_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_elapsed:Float64-instance-method" class="signature"><strong>#observer_elapsed</strong> : Float64</a>
+        <a href="#observer_elapsed%3AFloat64-instance-method" class="signature"><strong>#observer_elapsed</strong> : Float64</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_print(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="signature"><strong>#observer_print</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</a>
+        <a href="#observer_print%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#observer_print</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference:Surface-instance-method" class="signature"><strong>#reference</strong> : Surface</a>
+        <a href="#reference%3ASurface-instance-method" class="signature"><strong>#reference</strong> : Surface</a>
         
           <div class="summary"><p>Increases the reference count on surface by one.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference_count:UInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
+        <a href="#reference_count%3AUInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
         
           <div class="summary"><p>Returns the current reference count of surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_device_offset(x_offset:Float64,y_offset:Float64)-instance-method" class="signature"><strong>#set_device_offset</strong>(x_offset : Float64, y_offset : Float64)</a>
+        <a href="#set_device_offset%28x_offset%3AFloat64%2Cy_offset%3AFloat64%29-instance-method" class="signature"><strong>#set_device_offset</strong>(x_offset : Float64, y_offset : Float64)</a>
         
           <div class="summary"><p>Sets an offset that is added to the device coordinates determined by the CTM when drawing to surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_device_scale(x_scale:Float64,y_scale:Float64)-instance-method" class="signature"><strong>#set_device_scale</strong>(x_scale : Float64, y_scale : Float64)</a>
+        <a href="#set_device_scale%28x_scale%3AFloat64%2Cy_scale%3AFloat64%29-instance-method" class="signature"><strong>#set_device_scale</strong>(x_scale : Float64, y_scale : Float64)</a>
         
           <div class="summary"><p>Sets a scale that is multiplied to the device coordinates determined by the CTM when drawing to <code><a href="../Cairo/Surface.html">Surface</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_fallback_resolution(x_pixels_per_inch:Float64,y_pixels_per_inch:Float64)-instance-method" class="signature"><strong>#set_fallback_resolution</strong>(x_pixels_per_inch : Float64, y_pixels_per_inch : Float64)</a>
+        <a href="#set_fallback_resolution%28x_pixels_per_inch%3AFloat64%2Cy_pixels_per_inch%3AFloat64%29-instance-method" class="signature"><strong>#set_fallback_resolution</strong>(x_pixels_per_inch : Float64, y_pixels_per_inch : Float64)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_mime_data(mime_type:String,data:Bytes,destroy:LibCairo::DestroyFuncT,closure:Pointer(Void)):Status-instance-method" class="signature"><strong>#set_mime_data</strong>(mime_type : String, data : Bytes, destroy : LibCairo::DestroyFuncT, closure : Pointer(Void)) : Status</a>
+        <a href="#set_mime_data%28mime_type%3AString%2Cdata%3ABytes%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#set_mime_data</strong>(mime_type : String, data : Bytes, destroy : LibCairo::DestroyFuncT, closure : Pointer(Void)) : Status</a>
         
           <div class="summary"><p>Attach an image in the format <em>mime_type</em> to surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</a>
+        <a href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</a>
         
           <div class="summary"><p>Attach user data to surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status:Status-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        <a href="#status%3AStatus-instance-method" class="signature"><strong>#status</strong> : Status</a>
         
           <div class="summary"><p>Checks whether an error has previously occurred for this surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#stride:Int32-instance-method" class="signature"><strong>#stride</strong> : Int32</a>
+        <a href="#stride%3AInt32-instance-method" class="signature"><strong>#stride</strong> : Int32</a>
         
           <div class="summary"><p>Get the stride of the image surface in bytes.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#supports_mime_type?(mime_type:String):Bool-instance-method" class="signature"><strong>#supports_mime_type?</strong>(mime_type : String) : Bool</a>
+        <a href="#supports_mime_type%3F%28mime_type%3AString%29%3ABool-instance-method" class="signature"><strong>#supports_mime_type?</strong>(mime_type : String) : Bool</a>
         
           <div class="summary"><p>Return whether surface supports <em>mime_type</em>.</p></div>
         
@@ -872,47 +865,47 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PSurfaceT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PSurfaceT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APSurfaceT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PSurfaceT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#type:SurfaceType-instance-method" class="signature"><strong>#type</strong> : SurfaceType</a>
+        <a href="#type%3ASurfaceType-instance-method" class="signature"><strong>#type</strong> : SurfaceType</a>
         
           <div class="summary"><p>This function returns the type of the backend used to create a surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#unmap_image(image:Surface)-instance-method" class="signature"><strong>#unmap_image</strong>(image : Surface)</a>
+        <a href="#unmap_image%28image%3ASurface%29-instance-method" class="signature"><strong>#unmap_image</strong>(image : Surface)</a>
         
-          <div class="summary"><p>Unmaps the image surface as returned from <code><a href="../Cairo/Surface.html#map_to_image(extents:RectangleInt?):Surface-instance-method">Surface#map_to_image</a></code>.</p></div>
+          <div class="summary"><p>Unmaps the image surface as returned from <code><a href="../Cairo/Surface.html#map_to_image%28extents%3ARectangleInt%3F%29%3ASurface-instance-method">Surface#map_to_image</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
+        <a href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
         
           <div class="summary"><p>Return user data previously attached to surface using the specified key.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width:Int32-instance-method" class="signature"><strong>#width</strong> : Int32</a>
+        <a href="#width%3AInt32-instance-method" class="signature"><strong>#width</strong> : Int32</a>
         
           <div class="summary"><p>Get the width of the image surface in pixels.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#write_to_png(filename:String):Status-instance-method" class="signature"><strong>#write_to_png</strong>(filename : String) : Status</a>
+        <a href="#write_to_png%28filename%3AString%29%3AStatus-instance-method" class="signature"><strong>#write_to_png</strong>(filename : String) : Status</a>
         
           <div class="summary"><p>Writes the contents of surface to a new file filename as a PNG image.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#write_to_png_stream(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="signature"><strong>#write_to_png_stream</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</a>
+        <a href="#write_to_png_stream%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#write_to_png_stream</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</a>
         
           <div class="summary"><p>Writes the image surface to the write function.</p></div>
         
@@ -963,7 +956,7 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
         
         def self.<strong>new</strong>(data : Bytes, format : <a href="../Cairo/Format.html">Format</a>, width : Int32, height : Int32, stride : Int32)
 
-        <a class="method-permalink" href="#new(data:Bytes,format:Format,width:Int32,height:Int32,stride:Int32)-class-method">#</a>
+        <a class="method-permalink" href="#new%28data%3ABytes%2Cformat%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%2Cstride%3AInt32%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -972,50 +965,41 @@ that in a <code><a href="../Cairo/Surface.html">Surface</a></code>, then the con
 must be kept around until the <code><a href="../Cairo/Surface.html">Surface</a></code> is destroyed or <code><a href="../Cairo/Surface.html#finish-instance-method">Surface#finish</a></code>
 is called on the surface. The initial contents of data will be used as
 the initial image contents; you must explicitly clear the buffer, using,
-for example, <code><a href="../Cairo/Context.html#rectangle(x:Float64,y:Float64,width:Float64,height:Float64)-instance-method">Context#rectangle</a></code> and <code><a href="../Cairo/Context.html#fill-instance-method">Context#fill</a></code> if you want it cleared.</p>
-
+for example, <code><a href="../Cairo/Context.html#rectangle%28x%3AFloat64%2Cy%3AFloat64%2Cwidth%3AFloat64%2Cheight%3AFloat64%29-instance-method">Context#rectangle</a></code> and <code><a href="../Cairo/Context.html#fill-instance-method">Context#fill</a></code> if you want it cleared.</p>
 <p><span class="flag purple">NOTE</span>  that the stride may be larger than <code>width * bytes_per_pixel</code> to
 provide proper alignment for each pixel and row. This alignment is
 required to allow high-performance rendering within cairo. The correct
-way to obtain a legal stride value is to call <code><a href="../Cairo/Format.html#stride_for_width(width:Int32):Int32-instance-method">Format#stride_for_width</a></code>
+way to obtain a legal stride value is to call <code><a href="../Cairo/Format.html#stride_for_width%28width%3AInt32%29%3AInt32-instance-method">Format#stride_for_width</a></code>
 with the desired format and maximum image width value, and then use the
 resulting stride value to allocate the data and to create the image surface.
-See <code><a href="../Cairo/Format.html#stride_for_width(width:Int32):Int32-instance-method">Format#stride_for_width</a></code> for example code.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>data</strong> a pointer to a buffer supplied by the application in which to
-write contents. This pointer must be suitably aligned for any kind of variable.</li><li><strong>format</strong> the format of pixels in the buffer</li><li><strong>width</strong> the width of the image to be stored in the buffer</li><li><strong>height</strong> the height of the image to be stored in the buffer</li><li><strong>stride</strong> the number of bytes between the start of rows in the
-buffer as allocated. This value should always be computed by <code><a href="../Cairo/Format.html#stride_for_width(width:Int32):Int32-instance-method">Format#stride_for_width</a></code>
-before allocating the data buffer.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly created surface. The caller owns the surface and
+See <code><a href="../Cairo/Format.html#stride_for_width%28width%3AInt32%29%3AInt32-instance-method">Format#stride_for_width</a></code> for example code.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>data</strong> a pointer to a buffer supplied by the application in which to
+write contents. This pointer must be suitably aligned for any kind of variable.</li>
+<li><strong>format</strong> the format of pixels in the buffer</li>
+<li><strong>width</strong> the width of the image to be stored in the buffer</li>
+<li><strong>height</strong> the height of the image to be stored in the buffer</li>
+<li><strong>stride</strong> the number of bytes between the start of rows in the
+buffer as allocated. This value should always be computed by <code><a href="../Cairo/Format.html#stride_for_width%28width%3AInt32%29%3AInt32-instance-method">Format#stride_for_width</a></code>
+before allocating the data buffer.</li>
+</ul>
+<p>###Returns
+A pointer to the newly created surface. The caller owns the surface and
 should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
-
 <p>This function always returns a valid pointer, but it will return a
-pointer to a "nil" surface in the case of an error such as out of memory
+pointer to a &quot;nil&quot; surface in the case of an error such as out of memory
 or an invalid stride value. In case of invalid stride value the error
 status of the returned surface will be <code><a href="../Cairo/Status.html#InvalidStride">Status::InvalidStride</a></code>.
-You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> to check for this.</p>
-
-<p>See <code><a href="../Cairo/Surface.html#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method">Surface#set_user_data</a></code> for a means of attaching a
+You can use <code><a href="../Cairo/Surface.html#status%3AStatus-instance-method">Surface#status</a></code> to check for this.</p>
+<p>See <code><a href="../Cairo/Surface.html#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method">Surface#set_user_data</a></code> for a means of attaching a
 destroy-notification fallback to the surface if necessary.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L98" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L98" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1025,7 +1009,7 @@ destroy-notification fallback to the surface if necessary.</p>
         
         def self.<strong>new</strong>(format : <a href="../Cairo/Format.html">Format</a>, width : Int32, height : Int32)
 
-        <a class="method-permalink" href="#new(format:Format,width:Int32,height:Int32)-class-method">#</a>
+        <a class="method-permalink" href="#new%28format%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -1034,33 +1018,24 @@ destroy-notification fallback to the surface if necessary.</p>
 Initially the surface contents are set to 0. (Specifically, within each pixel,
 each color or alpha channel belonging to format will be 0. The contents of
 bits within a pixel, but not belonging to the given format are undefined).</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>format</strong> format of pixels in the surface to create</li><li><strong>width</strong> width of the surface, in pixels</li><li><strong>height</strong> height of the surface, in pixels</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly created surface. The caller owns the surface and
+<p>###Parameters</p>
+<ul>
+<li><strong>format</strong> format of pixels in the surface to create</li>
+<li><strong>width</strong> width of the surface, in pixels</li>
+<li><strong>height</strong> height of the surface, in pixels</li>
+</ul>
+<p>###Returns
+A pointer to the newly created surface. The caller owns the surface and
 should call `Surface#finalize when done with it.</p>
-
 <p>This function always returns a valid pointer, but it will return a pointer
-to a "nil" surface if an error such as out of memory occurs.
-You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> to check for this.</p>
+to a &quot;nil&quot; surface if an error such as out of memory occurs.
+You can use <code><a href="../Cairo/Surface.html#status%3AStatus-instance-method">Surface#status</a></code> to check for this.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L58" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L58" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1070,44 +1045,33 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
         
         def self.<strong>new</strong>(read_func : LibCairo::ReadFuncT, closure : Pointer(Void))
 
-        <a class="method-permalink" href="#new(read_func:LibCairo::ReadFuncT,closure:Pointer(Void))-class-method">#</a>
+        <a class="method-permalink" href="#new%28read_func%3ALibCairo%3A%3AReadFuncT%2Cclosure%3APointer%28Void%29%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a new image surface from PNG data read incrementally via the
 <em>read_func</em> function.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>read_func</strong> function called to read the data of the file</li><li><strong>closure</strong> data to pass to <em>read_func</em>.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A new <code><a href="../Cairo/Surface.html">Surface</a></code> initialized with the contents of the PNG file or a "nil"
+<p>###Parameters</p>
+<ul>
+<li><strong>read_func</strong> function called to read the data of the file</li>
+<li><strong>closure</strong> data to pass to <em>read_func</em>.</li>
+</ul>
+<p>###Returns
+A new <code><a href="../Cairo/Surface.html">Surface</a></code> initialized with the contents of the PNG file or a &quot;nil&quot;
 surface if the data read is not a valid PNG image or memory could not be
 allocated for the operation. A nil surface can be checked for with
-<code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> which may return one of the following values:</p>
-
+<code><a href="../Cairo/Surface.html#status%3AStatus-instance-method">Surface#status</a></code> which may return one of the following values:</p>
 <p><code>Status#NoMemory</code> <code>Status#ReadError</code> <code>Status#PngError</code></p>
-
 <p>Alternatively, you can allow errors to propagate through the drawing
 operations and check the status on the context upon completion
-using <code><a href="../Cairo/Context.html#status:Status-instance-method">Context#status</a></code>.</p>
+using <code><a href="../Cairo/Context.html#status%3AStatus-instance-method">Context#status</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1117,7 +1081,7 @@ using <code><a href="../Cairo/Context.html#status:Status-instance-method">Contex
         
         def self.<strong>new</strong>(content : <a href="../Cairo/Content.html">Content</a>, extents : <a href="../Cairo/Rectangle.html">Rectangle</a>?)
 
-        <a class="method-permalink" href="#new(content:Content,extents:Rectangle?)-class-method">#</a>
+        <a class="method-permalink" href="#new%28content%3AContent%2Cextents%3ARectangle%3F%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -1125,34 +1089,24 @@ using <code><a href="../Cairo/Context.html#status:Status-instance-method">Contex
           <p>Creates a recording-surface which can be used to record all drawing
 operations at the highest level (that is, the level of paint, mask,
 stroke, fill and show_text_glyphs). The recording surface can then be
-"replayed" against any target surface by using it as a source
+&quot;replayed&quot; against any target surface by using it as a source
 to drawing operations.</p>
-
 <p>The recording phase of the recording surface is careful to snapshot all
 necessary objects (paths, patterns, etc.), in order to achieve accurate replay.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>content</strong> the content of the recording surface</li><li><strong>extents</strong> the extents to record in pixels, can be <code>nil</code> to record unbounded operations.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly created surface. The caller owns the surface and should
+<p>###Parameters</p>
+<ul>
+<li><strong>content</strong> the content of the recording surface</li>
+<li><strong>extents</strong> the extents to record in pixels, can be <code>nil</code> to record unbounded operations.</li>
+</ul>
+<p>###Returns
+A pointer to the newly created surface. The caller owns the surface and should
 call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L148" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L148" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1162,13 +1116,13 @@ call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#fina
         
         def self.<strong>new</strong>(surface : LibCairo::PSurfaceT)
 
-        <a class="method-permalink" href="#new(surface:LibCairo::PSurfaceT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28surface%3ALibCairo%3A%3APSurfaceT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1178,42 +1132,30 @@ call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#fina
         
         def self.<strong>new</strong>(filename : String)
 
-        <a class="method-permalink" href="#new(filename:String)-class-method">#</a>
+        <a class="method-permalink" href="#new%28filename%3AString%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a new image surface and initializes the contents to the given PNG file.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>filename</strong> name of PNG file to load. On Windows this filename is encoded in UTF-8.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A new <code><a href="../Cairo/Surface.html">Surface</a></code> initialized with the contents of the PNG file,
-or a "nil" surface if any error occurred. A nil surface can be checked
-for with <code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> which may return one of the following values:</p>
-
+<p>###Parameters</p>
+<ul>
+<li><strong>filename</strong> name of PNG file to load. On Windows this filename is encoded in UTF-8.</li>
+</ul>
+<p>###Returns
+A new <code><a href="../Cairo/Surface.html">Surface</a></code> initialized with the contents of the PNG file,
+or a &quot;nil&quot; surface if any error occurred. A nil surface can be checked
+for with <code><a href="../Cairo/Surface.html#status%3AStatus-instance-method">Surface#status</a></code> which may return one of the following values:</p>
 <p><code>Status#NoMemory</code> <code>Status#FileNotFound</code> <code>Status#ReadError</code> <code>Status#PngError</code></p>
-
 <p>Alternatively, you can allow errors to propagate through the drawing
 operations and check the status on the context upon completion using
-<code><a href="../Cairo/Context.html#status:Status-instance-method">Context#status</a></code>.</p>
+<code><a href="../Cairo/Context.html#status%3AStatus-instance-method">Context#status</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L103" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L103" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1237,27 +1179,21 @@ operations and check the status on the context upon completion using
         
         def <strong>content</strong> : <a href="../Cairo/Content.html">Content</a>
 
-        <a class="method-permalink" href="#content:Content-instance-method">#</a>
+        <a class="method-permalink" href="#content%3AContent-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>This function returns the content type of surface which indicates whether the
 surface contains color and/or alpha information. See <code><a href="../Cairo/Content.html">Content</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The content type of surface.</p>
+<p>###Returns
+The content type of surface.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L398" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L398" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1275,14 +1211,13 @@ surface contains color and/or alpha information. See <code><a href="../Cairo/Con
           <p>Emits the current page for backends that support multiple pages, but doesn't clear it,
 so that the contents of the current page will be retained for the next page.
 Use <code>Surface#show_page</code> if you want to get an empty page after the emission.</p>
-
 <p>There is a convenience function for this that takes a <code><a href="../Cairo/Context.html">Context</a></code>, namely <code><a href="../Cairo/Context.html#copy_page-instance-method">Context#copy_page</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L700" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L700" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1292,45 +1227,35 @@ Use <code>Surface#show_page</code> if you want to get an empty page after the em
         
         def <strong>create_for_rectangle</strong>(x : Float64, y : Float64, width : Float64, height : Float64) : <a href="../Cairo/Surface.html">Surface</a>
 
-        <a class="method-permalink" href="#create_for_rectangle(x:Float64,y:Float64,width:Float64,height:Float64):Surface-instance-method">#</a>
+        <a class="method-permalink" href="#create_for_rectangle%28x%3AFloat64%2Cy%3AFloat64%2Cwidth%3AFloat64%2Cheight%3AFloat64%29%3ASurface-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Create a new surface that is a rectangle within the target surface.</p>
-
 <p>All operations drawn to this surface are then clipped and translated onto the target surface.
 Nothing drawn via this sub-surface outside of its bounds is drawn onto the target surface,
 making this a useful method for passing constrained child surfaces to library routines that draw
 directly onto the parent surface, i.e. with no further backend allocations, double buffering or copies.</p>
-
 <p>The semantics of subsurfaces have not been finalized yet unless the rectangle is in full device units,
 is contained within the extents of the target surface, and the target or subsurface's device transforms are not changed.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>x</strong> the x-origin of the sub-surface from the top-left of the target surface (in device-space units)</li><li><strong>y</strong> the y-origin of the sub-surface from the top-left of the target surface (in device-space units)</li><li><strong>width</strong> width of the sub-surface (in device-space units)</li><li><strong>height</strong> height of the sub-surface (in device-space units)</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly allocated surface. The caller owns the surface and should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
-
-<p>This function always returns a valid pointer, but it will return a pointer to a "nil" surface
+<p>###Parameters</p>
+<ul>
+<li><strong>x</strong> the x-origin of the sub-surface from the top-left of the target surface (in device-space units)</li>
+<li><strong>y</strong> the y-origin of the sub-surface from the top-left of the target surface (in device-space units)</li>
+<li><strong>width</strong> width of the sub-surface (in device-space units)</li>
+<li><strong>height</strong> height of the sub-surface (in device-space units)</li>
+</ul>
+<p>###Returns
+A pointer to the newly allocated surface. The caller owns the surface and should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
+<p>This function always returns a valid pointer, but it will return a pointer to a &quot;nil&quot; surface
 if other is already in an error state or any other error occurs.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L292" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L292" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1340,13 +1265,13 @@ if other is already in an error state or any other error occurs.</p>
         
         def <strong>create_observer</strong>(mode : <a href="../Cairo/SurfaceObserverMode.html">SurfaceObserverMode</a>) : <a href="../Cairo/Surface.html">Surface</a>
 
-        <a class="method-permalink" href="#create_observer(mode:SurfaceObserverMode):Surface-instance-method">#</a>
+        <a class="method-permalink" href="#create_observer%28mode%3ASurfaceObserverMode%29%3ASurface-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L296" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L296" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1356,7 +1281,7 @@ if other is already in an error state or any other error occurs.</p>
         
         def <strong>create_similar</strong>(content : <a href="../Cairo/Content.html">Content</a>, width : Int32, height : Int32) : <a href="../Cairo/Surface.html">Surface</a>
 
-        <a class="method-permalink" href="#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method">#</a>
+        <a class="method-permalink" href="#create_similar%28content%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1365,37 +1290,26 @@ if other is already in an error state or any other error occurs.</p>
 For example the new surface will have the same device scale, fallback resolution
 and font options as <code>self</code>. Generally, the new surface will also use the same backend as <code>self</code>,
 unless that is not possible for some reason.
-The type of the returned surface may be examined with <code><a href="../Cairo/Surface.html#type:SurfaceType-instance-method">Surface#type</a></code>.</p>
-
+The type of the returned surface may be examined with <code><a href="../Cairo/Surface.html#type%3ASurfaceType-instance-method">Surface#type</a></code>.</p>
 <p>Initially the surface contents are all 0 (transparent if contents have transparency, black otherwise.)</p>
-
-<p>Use <code><a href="../Cairo/Surface.html#create_similar_image(format:Format,width:Int32,height:Int32):Surface-instance-method">Surface#create_similar_image</a></code> if you need an image surface which can be painted quickly to the target surface.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>content</strong> the content for the new surface</li><li><strong>width</strong> width of the new surface, (in device-space units)</li><li><strong>height</strong> height of the new surface (in device-space units)</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly allocated surface. The caller owns the surface and should
+<p>Use <code><a href="../Cairo/Surface.html#create_similar_image%28format%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method">Surface#create_similar_image</a></code> if you need an image surface which can be painted quickly to the target surface.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>content</strong> the content for the new surface</li>
+<li><strong>width</strong> width of the new surface, (in device-space units)</li>
+<li><strong>height</strong> height of the new surface (in device-space units)</li>
+</ul>
+<p>###Returns
+A pointer to the newly allocated surface. The caller owns the surface and should
 call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
-
-<p>This function always returns a valid pointer, but it will return a pointer to a "nil" surface
+<p>This function always returns a valid pointer, but it will return a pointer to a &quot;nil&quot; surface
 if other is already in an error state or any other error occurs.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L206" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L206" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1405,44 +1319,33 @@ if other is already in an error state or any other error occurs.</p>
         
         def <strong>create_similar_image</strong>(format : <a href="../Cairo/Format.html">Format</a>, width : Int32, height : Int32) : <a href="../Cairo/Surface.html">Surface</a>
 
-        <a class="method-permalink" href="#create_similar_image(format:Format,width:Int32,height:Int32):Surface-instance-method">#</a>
+        <a class="method-permalink" href="#create_similar_image%28format%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Create a new image surface that is as compatible as possible for uploading to and the use
 in conjunction with an existing surface. However, this surface can still be used like any
-normal image surface. Unlike <code><a href="../Cairo/Surface.html#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method">Surface#create_similar</a></code> the new image surface won't inherit the device scale from <code>self</code>.</p>
-
+normal image surface. Unlike <code><a href="../Cairo/Surface.html#create_similar%28content%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method">Surface#create_similar</a></code> the new image surface won't inherit the device scale from <code>self</code>.</p>
 <p>Initially the surface contents are all 0 (transparent if contents have transparency, black otherwise.)</p>
-
-<p>Use <code><a href="../Cairo/Surface.html#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method">Surface#create_similar</a></code> if you don't need an image surface.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>format</strong> the format for the new surface</li><li><strong>width</strong> width of the new surface, (in pixels)</li><li><strong>height</strong> height of the new surface (in pixels)</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly allocated image surface.
+<p>Use <code><a href="../Cairo/Surface.html#create_similar%28content%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method">Surface#create_similar</a></code> if you don't need an image surface.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>format</strong> the format for the new surface</li>
+<li><strong>width</strong> width of the new surface, (in pixels)</li>
+<li><strong>height</strong> height of the new surface (in pixels)</li>
+</ul>
+<p>###Returns
+A pointer to the newly allocated image surface.
 The caller owns the surface and should call <code>Surface#finalizte</code> when done with it.</p>
-
-<p>This function always returns a valid pointer, but it will return a pointer to a "nil" surface
+<p>This function always returns a valid pointer, but it will return a pointer to a &quot;nil&quot; surface
 if other is already in an error state or any other error occurs.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L229" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L229" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1452,32 +1355,25 @@ if other is already in an error state or any other error occurs.</p>
         
         def <strong>data</strong> : Pointer(UInt8)
 
-        <a class="method-permalink" href="#data:Pointer(UInt8)-instance-method">#</a>
+        <a class="method-permalink" href="#data%3APointer%28UInt8%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get a pointer to the data of the image surface, for direct inspection or
 modification.</p>
-
 <p>A call to <code><a href="../Cairo/Surface.html#flush-instance-method">Surface#flush</a></code> is required before accessing the pixel data to
 ensure that all pending drawing operations are finished. A call to
 <code><a href="../Cairo/Surface.html#mark_dirty-instance-method">Surface#mark_dirty</a></code> is required after the data is modified.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the image data of this surface or <code>nil</code> if surface is not
+<p>###Returns
+A pointer to the image data of this surface or <code>nil</code> if surface is not
 an image surface, or if <code><a href="../Cairo/Surface.html#finish-instance-method">Surface#finish</a></code> has been called.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L737" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L737" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1487,26 +1383,20 @@ an image surface, or if <code><a href="../Cairo/Surface.html#finish-instance-met
         
         def <strong>device</strong> : <a href="../Cairo/Device.html">Device</a>
 
-        <a class="method-permalink" href="#device:Device-instance-method">#</a>
+        <a class="method-permalink" href="#device%3ADevice-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>This function returns the device for a surface. See <code><a href="../Cairo/Device.html">Device</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The device for surface or <code>Nil</code> if the surface does not have an associated device.</p>
+<p>###Returns
+The device for surface or <code>Nil</code> if the surface does not have an associated device.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L364" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L364" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1516,26 +1406,20 @@ an image surface, or if <code><a href="../Cairo/Surface.html#finish-instance-met
         
         def <strong>device_offset</strong> : <a href="../Cairo/Point.html">Point</a>
 
-        <a class="method-permalink" href="#device_offset:Point-instance-method">#</a>
+        <a class="method-permalink" href="#device_offset%3APoint-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>This function returns the previous device offset set by <code><a href="../Cairo/Surface.html#device_offset=(offset:Point)-instance-method">Surface#device_offset=</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A <code><a href="../Cairo/Point.html">Point</a></code> contains <strong>x</strong> and <strong>y</strong> offset in device units</p>
+          <p>This function returns the previous device offset set by <code><a href="../Cairo/Surface.html#device_offset%3D%28offset%3APoint%29-instance-method">Surface#device_offset=</a></code>.</p>
+<p>###Returns
+A <code><a href="../Cairo/Point.html">Point</a></code> contains <strong>x</strong> and <strong>y</strong> offset in device units</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L633" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L633" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1545,7 +1429,7 @@ an image surface, or if <code><a href="../Cairo/Surface.html#finish-instance-met
         
         def <strong>device_offset=</strong>(offset : <a href="../Cairo/Point.html">Point</a>)
 
-        <a class="method-permalink" href="#device_offset=(offset:Point)-instance-method">#</a>
+        <a class="method-permalink" href="#device_offset%3D%28offset%3APoint%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1553,24 +1437,20 @@ an image surface, or if <code><a href="../Cairo/Surface.html#finish-instance-met
           <p>Sets an offset that is added to the device coordinates determined by the CTM when drawing to surface.
 One use case for this function is when we want to create a <code><a href="../Cairo/Surface.html">Surface</a></code> that redirects drawing for
 a portion of an onscreen surface to an offscreen surface in a way that is completely invisible
-to the user of the cairo API. Setting a transformation via <code><a href="../Cairo/Context.html#translate(tx:Float64,ty:Float64)-instance-method">Context#translate</a></code> isn't sufficient to do this,
-since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point):Point-instance-method">Context#device_to_user</a></code> will expose the hidden offset.</p>
-
+to the user of the cairo API. Setting a transformation via <code><a href="../Cairo/Context.html#translate%28tx%3AFloat64%2Cty%3AFloat64%29-instance-method">Context#translate</a></code> isn't sufficient to do this,
+since functions like <code><a href="../Cairo/Context.html#device_to_user%28p%3APoint%29%3APoint-instance-method">Context#device_to_user</a></code> will expose the hidden offset.</p>
 <p><span class="flag purple">NOTE</span>  that the offset affects drawing to the surface as well as using the surface in a source pattern.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>offset.x</strong> the offset in the X direction, in device units</li><li><strong>offset.y</strong> the offset in the Y direction, in device units</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>offset.x</strong> the offset in the X direction, in device units</li>
+<li><strong>offset.y</strong> the offset in the Y direction, in device units</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L649" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L649" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1580,26 +1460,20 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
         
         def <strong>device_scale</strong> : <a href="../Cairo/Point.html">Point</a>
 
-        <a class="method-permalink" href="#device_scale:Point-instance-method">#</a>
+        <a class="method-permalink" href="#device_scale%3APoint-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>This function returns the previous device offset set by <code><a href="../Cairo/Surface.html#device_scale=(scale:Point)-instance-method">Surface#device_scale=</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A <code><a href="../Cairo/Point.html">Point</a></code> contains <strong>x</strong> and <strong>y</strong> scale in device units</p>
+          <p>This function returns the previous device offset set by <code><a href="../Cairo/Surface.html#device_scale%3D%28scale%3APoint%29-instance-method">Surface#device_scale=</a></code>.</p>
+<p>###Returns
+A <code><a href="../Cairo/Point.html">Point</a></code> contains <strong>x</strong> and <strong>y</strong> scale in device units</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L592" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L592" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1609,7 +1483,7 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
         
         def <strong>device_scale=</strong>(scale : <a href="../Cairo/Point.html">Point</a>)
 
-        <a class="method-permalink" href="#device_scale=(scale:Point)-instance-method">#</a>
+        <a class="method-permalink" href="#device_scale%3D%28scale%3APoint%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1617,54 +1491,46 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
           <p>Sets a scale that is multiplied to the device coordinates determined by the CTM when drawing to surface.
 One common use for this is to render to very high resolution display devices at a scale factor,
 so that code that assumes 1 pixel will be a certain size will still work.
-Setting a transformation via Context#translate` isn't sufficient to do this,
-since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point):Point-instance-method">Context#device_to_user</a></code> will expose the hidden scale.</p>
-
+Setting a transformation via Context#translate<code>isn't sufficient to do this, since functions like</code>Context#device_to_user` will expose the hidden scale.</p>
 <p><span class="flag purple">NOTE</span>  that the scale affects drawing to the surface as well as using the surface in a source pattern.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>scale.x</strong> a scale factor in the X direction</li><li><strong>scale.y</strong> a scale factor in the Y direction</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>scale.x</strong> a scale factor in the X direction</li>
+<li><strong>scale.y</strong> a scale factor in the Y direction</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L608" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L608" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="extents:NamedTuple()-instance-method">
+    <div class="entry-detail" id="extents:NamedTuple(extents:Rectangle,bounded:Bool)-instance-method">
       <div class="signature">
         
-        def <strong>extents</strong> : NamedTuple()
+        def <strong>extents</strong> : NamedTuple(extents: <a href="../Cairo/Rectangle.html">Rectangle</a>, bounded: Bool)
 
-        <a class="method-permalink" href="#extents:NamedTuple()-instance-method">#</a>
+        <a class="method-permalink" href="#extents%3ANamedTuple%28extents%3ARectangle%2Cbounded%3ABool%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the extents of the recording-surface.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<ul><li><strong>extents</strong> the <code><a href="../Cairo/Rectangle.html">Rectangle</a></code> to be assigned the extents</li><li><strong>bounded</strong> <code>true</code> if the surface is bounded,
-of recording type, and not in an error state, otherwise <code>false</code></li></ul>
+<p>###Returns</p>
+<ul>
+<li><strong>extents</strong> the <code><a href="../Cairo/Rectangle.html">Rectangle</a></code> to be assigned the extents</li>
+<li><strong>bounded</strong> <code>true</code> if the surface is bounded,
+of recording type, and not in an error state, otherwise <code>false</code></li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L775" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L775" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1674,27 +1540,21 @@ of recording type, and not in an error state, otherwise <code>false</code></li><
         
         def <strong>fallback_resolution</strong> : <a href="../Cairo/Point.html">Point</a>
 
-        <a class="method-permalink" href="#fallback_resolution:Point-instance-method">#</a>
+        <a class="method-permalink" href="#fallback_resolution%3APoint-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>This function returns the previous fallback resolution set by
-<code><a href="../Cairo/Surface.html#fallback_resolution=(res:Point)-instance-method">Surface#fallback_resolution=</a></code>, or default fallback resolution if never set.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A <code><a href="../Cairo/Point.html">Point</a></code> contains <strong>x</strong> for horizontal and <strong>y</strong> for vertical pixels per inch.</p>
+<code><a href="../Cairo/Surface.html#fallback_resolution%3D%28res%3APoint%29-instance-method">Surface#fallback_resolution=</a></code>, or default fallback resolution if never set.</p>
+<p>###Returns
+A <code><a href="../Cairo/Point.html">Point</a></code> contains <strong>x</strong> for horizontal and <strong>y</strong> for vertical pixels per inch.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L664" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L664" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1704,42 +1564,34 @@ of recording type, and not in an error state, otherwise <code>false</code></li><
         
         def <strong>fallback_resolution=</strong>(res : <a href="../Cairo/Point.html">Point</a>)
 
-        <a class="method-permalink" href="#fallback_resolution=(res:Point)-instance-method">#</a>
+        <a class="method-permalink" href="#fallback_resolution%3D%28res%3APoint%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Set the horizontal and vertical resolution for image fallbacks.</p>
-
 <p>When certain operations aren't supported natively by a backend,
 cairo will fallback by rendering operations to an image and then overlaying that image onto the output.
 For backends that are natively vector-oriented, this function can be used to set the resolution used
 for these image fallbacks, (larger values will result in more detailed images, but also larger file sizes).</p>
-
 <p>Some examples of natively vector-oriented backends are the ps, pdf, and svg backends.</p>
-
 <p>For backends that are natively raster-oriented, image fallbacks are still possible,
 but they are always performed at the native device resolution. So this function has no effect on those backends.</p>
-
 <p><span class="flag purple">NOTE</span>  The fallback resolution only takes effect at the time of completing a page
 (with <code><a href="../Cairo/Context.html#show_page-instance-method">Context#show_page</a></code> or <code><a href="../Cairo/Context.html#copy_page-instance-method">Context#copy_page</a></code>) so there is currently no way to
 have more than one fallback resolution in effect on a single page.</p>
-
 <p>The default fallback resoultion is 300 pixels per inch in both dimensions.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>res.x</strong> horizontal setting for pixels per inch</li><li><strong>res.y</strong> vertical setting for pixels per inch</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>res.x</strong> horizontal setting for pixels per inch</li>
+<li><strong>res.y</strong> vertical setting for pixels per inch</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L690" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L690" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1755,13 +1607,13 @@ have more than one fallback resolution in effect on a single page.</p>
         <div class="doc">
           
           <p>Decreases the reference count on surface by one. If the result is zero,
-then surface and all associated resources are freed. See <code><a href="../Cairo/Surface.html#reference:Surface-instance-method">Surface#reference</a></code>.</p>
+then surface and all associated resources are freed. See <code><a href="../Cairo/Surface.html#reference%3ASurface-instance-method">Surface#reference</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L181" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L181" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1781,7 +1633,6 @@ For example, for the Xlib backend it means that cairo will no longer access the 
 which can be freed. After calling <code><a href="../Cairo/Surface.html#finish-instance-method">Surface#finish</a></code> the only valid operations on a surface
 are getting and setting user, referencing and destroying, and flushing and finishing it.
 Further drawing to the surface will not affect the surface but will instead trigger a <code><a href="../Cairo/Status.html#SurfaceFinished">Status::SurfaceFinished</a></code> error.</p>
-
 <p>When the last call to <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> decreases the reference count to zero, cairo will call
 <code><a href="../Cairo/Surface.html#finish-instance-method">Surface#finish</a></code> if it hasn't been called already, before freeing the resources associated with the surface.</p>
         </div>
@@ -1789,7 +1640,7 @@ Further drawing to the surface will not affect the surface but will instead trig
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L355" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L355" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1812,7 +1663,7 @@ or accessing its memory outside of Cairo. If the surface doesn't support direct 
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L541" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L541" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1822,7 +1673,7 @@ or accessing its memory outside of Cairo. If the surface doesn't support direct 
         
         def <strong>font_options</strong> : <a href="../Cairo/FontOptions.html">FontOptions</a>
 
-        <a class="method-permalink" href="#font_options:FontOptions-instance-method">#</a>
+        <a class="method-permalink" href="#font_options%3AFontOptions-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1831,20 +1682,14 @@ or accessing its memory outside of Cairo. If the surface doesn't support direct 
 This allows display surfaces to report the correct subpixel order for rendering on them,
 print surfaces to disable hinting of metrics and so forth.
 The result can then be used with <code>ScaledFont#initialize</code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A <code><a href="../Cairo/FontOptions.html">FontOptions</a></code> object into which to store the retrieved options. All existing values are overwritten.</p>
+<p>###Returns
+A <code><a href="../Cairo/FontOptions.html">FontOptions</a></code> object into which to store the retrieved options. All existing values are overwritten.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L532" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L532" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1854,26 +1699,20 @@ The result can then be used with <code>ScaledFont#initialize</code>.</p>
         
         def <strong>format</strong> : <a href="../Cairo/Format.html">Format</a>
 
-        <a class="method-permalink" href="#format:Format-instance-method">#</a>
+        <a class="method-permalink" href="#format%3AFormat-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the format of the surface.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The format of the surface.</p>
+<p>###Returns
+The format of the surface.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L745" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L745" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1883,31 +1722,24 @@ The result can then be used with <code>ScaledFont#initialize</code>.</p>
         
         def <strong>has_show_text_glyphs?</strong> : Bool
 
-        <a class="method-permalink" href="#has_show_text_glyphs?:Bool-instance-method">#</a>
+        <a class="method-permalink" href="#has_show_text_glyphs%3F%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Returns whether the surface supports sophisticated <code><a href="../Cairo/Context.html#show_text_glyphs(text:String,glyphs:GlyphArray,clusters:TextClusterArray,cluster_flags:TextClusterFlags)-instance-method">Context#show_text_glyphs</a></code> operations.
-That is, whether it actually uses the provided text and cluster data to a <code><a href="../Cairo/Context.html#show_text_glyphs(text:String,glyphs:GlyphArray,clusters:TextClusterArray,cluster_flags:TextClusterFlags)-instance-method">Context#show_text_glyphs</a></code> call.</p>
-
-<p><span class="flag purple">NOTE</span>  Even if this function returns <code>false</code>, a <code><a href="../Cairo/Context.html#show_text_glyphs(text:String,glyphs:GlyphArray,clusters:TextClusterArray,cluster_flags:TextClusterFlags)-instance-method">Context#show_text_glyphs</a></code> operation targeted at surface will
-still succeed. It just will act like a <code><a href="../Cairo/Context.html#show_glyphs(glyphs:GlyphArray)-instance-method">Context#show_glyphs</a></code> operation.
+          <p>Returns whether the surface supports sophisticated <code><a href="../Cairo/Context.html#show_text_glyphs%28text%3AString%2Cglyphs%3AGlyphArray%2Cclusters%3ATextClusterArray%2Ccluster_flags%3ATextClusterFlags%29-instance-method">Context#show_text_glyphs</a></code> operations.
+That is, whether it actually uses the provided text and cluster data to a <code><a href="../Cairo/Context.html#show_text_glyphs%28text%3AString%2Cglyphs%3AGlyphArray%2Cclusters%3ATextClusterArray%2Ccluster_flags%3ATextClusterFlags%29-instance-method">Context#show_text_glyphs</a></code> call.</p>
+<p><span class="flag purple">NOTE</span>  Even if this function returns <code>false</code>, a <code><a href="../Cairo/Context.html#show_text_glyphs%28text%3AString%2Cglyphs%3AGlyphArray%2Cclusters%3ATextClusterArray%2Ccluster_flags%3ATextClusterFlags%29-instance-method">Context#show_text_glyphs</a></code> operation targeted at surface will
+still succeed. It just will act like a <code><a href="../Cairo/Context.html#show_glyphs%28glyphs%3AGlyphArray%29-instance-method">Context#show_glyphs</a></code> operation.
 Users can use this function to avoid computing UTF-8 text and cluster mapping if the target surface does not use it.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code>true</code> if surface supports <code><a href="../Cairo/Context.html#show_text_glyphs(text:String,glyphs:GlyphArray,clusters:TextClusterArray,cluster_flags:TextClusterFlags)-instance-method">Context#show_text_glyphs</a></code>, <code>false</code> otherwise.</p>
+<p>###Returns
+<code>true</code> if surface supports <code><a href="../Cairo/Context.html#show_text_glyphs%28text%3AString%2Cglyphs%3AGlyphArray%2Cclusters%3ATextClusterArray%2Ccluster_flags%3ATextClusterFlags%29-instance-method">Context#show_text_glyphs</a></code>, <code>false</code> otherwise.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L723" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L723" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1917,26 +1749,20 @@ Users can use this function to avoid computing UTF-8 text and cluster mapping if
         
         def <strong>height</strong> : Int32
 
-        <a class="method-permalink" href="#height:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#height%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the height of the image surface in pixels.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The height of the surface in pixels.</p>
+<p>###Returns
+The height of the surface in pixels.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L761" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L761" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1946,7 +1772,7 @@ Users can use this function to avoid computing UTF-8 text and cluster mapping if
         
         def <strong>ink_extents</strong> : <a href="../Cairo/Rectangle.html">Rectangle</a>
 
-        <a class="method-permalink" href="#ink_extents:Rectangle-instance-method">#</a>
+        <a class="method-permalink" href="#ink_extents%3ARectangle-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1954,20 +1780,14 @@ Users can use this function to avoid computing UTF-8 text and cluster mapping if
           <p>Measures the extents of the operations stored within the recording-surface.
 This is useful to compute the required size of an image surface
 (or equivalent) into which to replay the full sequence of drawing operations.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A <code><a href="../Cairo/Rectangle.html">Rectangle</a></code> of ink bounding-box.</p>
+<p>###Returns
+A <code><a href="../Cairo/Rectangle.html">Rectangle</a></code> of ink bounding-box.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L775" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L775" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1977,36 +1797,24 @@ This is useful to compute the required size of an image surface
         
         def <strong>map_to_image</strong>(extents : <a href="../Cairo/RectangleInt.html">RectangleInt</a>?) : <a href="../Cairo/Surface.html">Surface</a>
 
-        <a class="method-permalink" href="#map_to_image(extents:RectangleInt?):Surface-instance-method">#</a>
+        <a class="method-permalink" href="#map_to_image%28extents%3ARectangleInt%3F%29%3ASurface-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Returns an image surface that is the most efficient mechanism for modifying the backing store of the target surface.
 The region retrieved may be limited to the extents or <code>nil</code> for the whole surface</p>
-
 <p><span class="flag purple">NOTE</span> , the use of the original surface as a target or source whilst it is mapped is undefined.
 The result of mapping the surface multiple times is undefined. Calling <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> or
 <code><a href="../Cairo/Surface.html#finish-instance-method">Surface#finish</a></code> on the resulting image surface results in undefined behavior.
 Changing the device transform of the image surface or of surface before the image surface is unmapped results in undefined behavior.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>extents</strong> limit the extraction to an rectangular region</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly allocated image surface. The caller must use <code><a href="../Cairo/Surface.html#unmap_image(image:Surface)-instance-method">Surface#unmap_image</a></code> to destroy this image surface.</p>
-
-<p>This function always returns a valid pointer, but it will return a pointer to a "nil" surface if other is already in
+<p>###Parameters</p>
+<ul>
+<li><strong>extents</strong> limit the extraction to an rectangular region</li>
+</ul>
+<p>###Returns
+A pointer to the newly allocated image surface. The caller must use <code><a href="../Cairo/Surface.html#unmap_image%28image%3ASurface%29-instance-method">Surface#unmap_image</a></code> to destroy this image surface.</p>
+<p>This function always returns a valid pointer, but it will return a pointer to a &quot;nil&quot; surface if other is already in
 an error state or any other error occurs. If the returned pointer does not have an error status,
 it is guaranteed to be an image surface whose format is not <code><a href="../Cairo/Format.html#Invalid">Format::Invalid</a></code>.</p>
         </div>
@@ -2014,7 +1822,7 @@ it is guaranteed to be an image surface whose format is not <code><a href="../Ca
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L250" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L250" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2031,14 +1839,13 @@ it is guaranteed to be an image surface whose format is not <code><a href="../Ca
           
           <p>Tells cairo that drawing has been done to surface using means other than cairo,
 and that cairo should reread any cached areas.</p>
-
 <p><span class="flag purple">NOTE</span>  that you must call <code><a href="../Cairo/Surface.html#flush-instance-method">Surface#flush</a></code> before doing such drawing.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L549" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L549" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2048,30 +1855,28 @@ and that cairo should reread any cached areas.</p>
         
         def <strong>mark_dirty_rectangle</strong>(x : Int32, y : Int32, width : Int32, height : Int32)
 
-        <a class="method-permalink" href="#mark_dirty_rectangle(x:Int32,y:Int32,width:Int32,height:Int32)-instance-method">#</a>
+        <a class="method-permalink" href="#mark_dirty_rectangle%28x%3AInt32%2Cy%3AInt32%2Cwidth%3AInt32%2Cheight%3AInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Like <code><a href="../Cairo/Surface.html#mark_dirty-instance-method">Surface#mark_dirty</a></code>, but drawing has been done only to the specified rectangle,
 so that cairo can retain cached contents for other parts of the surface.</p>
-
 <p>Any cached clip set on the surface will be reset by this function,
 to make sure that future cairo calls have the clip set that they expect.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>x</strong> X coordinate of dirty rectangle</li><li><strong>y</strong> Y coordinate of dirty rectangle</li><li><strong>width</strong> width of dirty rectangle</li><li><strong>height</strong> height of dirty rectangle</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>x</strong> X coordinate of dirty rectangle</li>
+<li><strong>y</strong> Y coordinate of dirty rectangle</li>
+<li><strong>width</strong> width of dirty rectangle</li>
+<li><strong>height</strong> height of dirty rectangle</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L565" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L565" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2081,35 +1886,25 @@ to make sure that future cairo calls have the clip set that they expect.</p>
         
         def <strong>mime_data</strong>(mime_type : String) : Bytes
 
-        <a class="method-permalink" href="#mime_data(mime_type:String):Bytes-instance-method">#</a>
+        <a class="method-permalink" href="#mime_data%28mime_type%3AString%29%3ABytes-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Return mime data previously attached to surface using the specified mime type.
 If no data has been attached with the given mime type, data is set empty.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>mime_type</strong> the mime type of the image data</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The image data to attached to the surface.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>mime_type</strong> the mime type of the image data</li>
+</ul>
+<p>###Returns
+The image data to attached to the surface.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L474" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L474" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2119,13 +1914,13 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>observer_add_fill_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#observer_add_fill_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#observer_add_fill_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L308" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L308" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2135,13 +1930,13 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>observer_add_finish_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#observer_add_finish_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#observer_add_finish_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L324" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L324" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2151,13 +1946,13 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>observer_add_flush_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#observer_add_flush_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#observer_add_flush_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L320" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L320" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2167,13 +1962,13 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>observer_add_glyphs_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#observer_add_glyphs_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#observer_add_glyphs_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L316" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L316" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2183,13 +1978,13 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>observer_add_mask_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#observer_add_mask_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#observer_add_mask_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L304" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L304" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2199,13 +1994,13 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>observer_add_paint_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#observer_add_paint_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#observer_add_paint_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L300" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L300" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2215,13 +2010,13 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>observer_add_stroke_callback</strong>(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#observer_add_stroke_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#observer_add_stroke_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L312" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L312" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2231,13 +2026,13 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>observer_elapsed</strong> : Float64
 
-        <a class="method-permalink" href="#observer_elapsed:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#observer_elapsed%3AFloat64-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L332" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L332" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2247,13 +2042,13 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>observer_print</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#observer_print(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#observer_print%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L328" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L328" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2263,29 +2058,22 @@ If no data has been attached with the given mime type, data is set empty.</p>
         
         def <strong>reference</strong> : <a href="../Cairo/Surface.html">Surface</a>
 
-        <a class="method-permalink" href="#reference:Surface-instance-method">#</a>
+        <a class="method-permalink" href="#reference%3ASurface-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Increases the reference count on surface by one.
 This prevents surface from being destroyed until a matching call to <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> is made.</p>
-
-<p>Use <code><a href="../Cairo/Surface.html#reference_count:UInt32-instance-method">Surface#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/Surface.html">Surface</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The referenced <code><a href="../Cairo/Surface.html">Surface</a></code>.</p>
+<p>Use <code><a href="../Cairo/Surface.html#reference_count%3AUInt32-instance-method">Surface#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/Surface.html">Surface</a></code>.</p>
+<p>###Returns
+The referenced <code><a href="../Cairo/Surface.html">Surface</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L343" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L343" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2295,26 +2083,20 @@ This prevents surface from being destroyed until a matching call to <code><a hre
         
         def <strong>reference_count</strong> : UInt32
 
-        <a class="method-permalink" href="#reference_count:UInt32-instance-method">#</a>
+        <a class="method-permalink" href="#reference_count%3AUInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Returns the current reference count of surface.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The current reference count of surface. If the object is a <code>nil</code> object, 0 will be returned.</p>
+<p>###Returns
+The current reference count of surface. If the object is a <code>nil</code> object, 0 will be returned.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L372" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L372" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2324,7 +2106,7 @@ This prevents surface from being destroyed until a matching call to <code><a hre
         
         def <strong>set_device_offset</strong>(x_offset : Float64, y_offset : Float64)
 
-        <a class="method-permalink" href="#set_device_offset(x_offset:Float64,y_offset:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#set_device_offset%28x_offset%3AFloat64%2Cy_offset%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2332,24 +2114,20 @@ This prevents surface from being destroyed until a matching call to <code><a hre
           <p>Sets an offset that is added to the device coordinates determined by the CTM when drawing to surface.
 One use case for this function is when we want to create a <code><a href="../Cairo/Surface.html">Surface</a></code> that redirects drawing for
 a portion of an onscreen surface to an offscreen surface in a way that is completely invisible
-to the user of the cairo API. Setting a transformation via <code><a href="../Cairo/Context.html#translate(tx:Float64,ty:Float64)-instance-method">Context#translate</a></code> isn't sufficient to do this,
-since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point):Point-instance-method">Context#device_to_user</a></code> will expose the hidden offset.</p>
-
+to the user of the cairo API. Setting a transformation via <code><a href="../Cairo/Context.html#translate%28tx%3AFloat64%2Cty%3AFloat64%29-instance-method">Context#translate</a></code> isn't sufficient to do this,
+since functions like <code><a href="../Cairo/Context.html#device_to_user%28p%3APoint%29%3APoint-instance-method">Context#device_to_user</a></code> will expose the hidden offset.</p>
 <p><span class="flag purple">NOTE</span>  that the offset affects drawing to the surface as well as using the surface in a source pattern.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>x_offset</strong> the offset in the X direction, in device units</li><li><strong>y_offset</strong> the offset in the Y direction, in device units</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>x_offset</strong> the offset in the X direction, in device units</li>
+<li><strong>y_offset</strong> the offset in the Y direction, in device units</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L624" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L624" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2359,7 +2137,7 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
         
         def <strong>set_device_scale</strong>(x_scale : Float64, y_scale : Float64)
 
-        <a class="method-permalink" href="#set_device_scale(x_scale:Float64,y_scale:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#set_device_scale%28x_scale%3AFloat64%2Cy_scale%3AFloat64%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -2368,25 +2146,21 @@ since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point
 the CTM when drawing to <code><a href="../Cairo/Surface.html">Surface</a></code>. One common use for this is to render
 to very high resolution display devices at a scale factor, so that code
 that assumes 1 pixel will be a certain size will still work. Setting a
-transformation via <code><a href="../Cairo/Context.html#translate(tx:Float64,ty:Float64)-instance-method">Context#translate</a></code> isn't sufficient to do this,
-since functions like <code><a href="../Cairo/Context.html#device_to_user(p:Point):Point-instance-method">Context#device_to_user</a></code> will expose the hidden scale.</p>
-
+transformation via <code><a href="../Cairo/Context.html#translate%28tx%3AFloat64%2Cty%3AFloat64%29-instance-method">Context#translate</a></code> isn't sufficient to do this,
+since functions like <code><a href="../Cairo/Context.html#device_to_user%28p%3APoint%29%3APoint-instance-method">Context#device_to_user</a></code> will expose the hidden scale.</p>
 <p><span class="flag purple">NOTE</span>  that the scale affects drawing to the surface as well as using
 the surface in a source pattern.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>x_scale</strong> a scale factor in the X direction</li><li><strong>y_scale</strong> a scale factor in the Y direction</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>x_scale</strong> a scale factor in the X direction</li>
+<li><strong>y_scale</strong> a scale factor in the Y direction</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L583" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L583" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2396,13 +2170,13 @@ the surface in a source pattern.</p>
         
         def <strong>set_fallback_resolution</strong>(x_pixels_per_inch : Float64, y_pixels_per_inch : Float64)
 
-        <a class="method-permalink" href="#set_fallback_resolution(x_pixels_per_inch:Float64,y_pixels_per_inch:Float64)-instance-method">#</a>
+        <a class="method-permalink" href="#set_fallback_resolution%28x_pixels_per_inch%3AFloat64%2Cy_pixels_per_inch%3AFloat64%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L654" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L654" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2412,54 +2186,43 @@ the surface in a source pattern.</p>
         
         def <strong>set_mime_data</strong>(mime_type : String, data : Bytes, destroy : LibCairo::DestroyFuncT, closure : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#set_mime_data(mime_type:String,data:Bytes,destroy:LibCairo::DestroyFuncT,closure:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#set_mime_data%28mime_type%3AString%2Cdata%3ABytes%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Attach an image in the format <em>mime_type</em> to surface.
 To remove the data from a surface, call this function with same mime type and empty <em>data</em>.</p>
-
 <p>The attached image (or filename) data can later be used by backends which support it
 (currently: PDF, PS, SVG and Win32 Printing surfaces) to emit this data instead of making a snapshot of the surface.
 This approach tends to be faster and requires less memory and disk space.</p>
-
 <p>The recognized MIME types are the following: <code><a href="../Cairo/C/LibCairo.html#MIME_TYPE_JPEG">LibCairo::MIME_TYPE_JPEG</a></code>, <code>LibCaito::MIME_TYPE_PNG</code>,
 <code><a href="../Cairo/C/LibCairo.html#MIME_TYPE_JP2">LibCairo::MIME_TYPE_JP2</a></code>, <code><a href="../Cairo/C/LibCairo.html#MIME_TYPE_URI">LibCairo::MIME_TYPE_URI</a></code>, <code><a href="../Cairo/C/LibCairo.html#MIME_TYPE_UNIQUE_ID">LibCairo::MIME_TYPE_UNIQUE_ID</a></code>,
 <code><a href="../Cairo/C/LibCairo.html#MIME_TYPE_JBIG2">LibCairo::MIME_TYPE_JBIG2</a></code>, <code><a href="../Cairo/C/LibCairo.html#MIME_TYPE_JBIG2_GLOBAL">LibCairo::MIME_TYPE_JBIG2_GLOBAL</a></code>, <code><a href="../Cairo/C/LibCairo.html#MIME_TYPE_JBIG2_GLOBAL_ID">LibCairo::MIME_TYPE_JBIG2_GLOBAL_ID</a></code>,
 <code><a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX">LibCairo::MIME_TYPE_CCITT_FAX</a></code>, <code><a href="../Cairo/C/LibCairo.html#MIME_TYPE_CCITT_FAX_PARAMS">LibCairo::MIME_TYPE_CCITT_FAX_PARAMS</a></code>.</p>
-
 <p>See corresponding backend surface docs for details about which MIME types it can handle.
 Caution: the associated MIME data will be discarded if you draw on the surface afterwards. Use this function with care.</p>
-
 <p>Even if a backend supports a MIME type, that does not mean cairo will always be able to use the attached MIME data.
 For example, if the backend does not natively support the compositing operation used to apply the MIME data to the backend.
 In that case, the MIME data will be ignored. Therefore, to apply an image in all cases, it is best to create an image surface
 which contains the decoded image data and then attach the MIME data to that.
 This ensures the image will always be used while still allowing the MIME data to be used whenever possible.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>mime_type</strong> the MIME type of the image data</li><li><strong>data</strong> the image data to attach to the surface</li><li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the surface is
-destroyed or when new image data is attached using the same mime type.</li><li><strong>closure</strong> the data to be passed to the destroy notifier</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>mime_type</strong> the MIME type of the image data</li>
+<li><strong>data</strong> the image data to attach to the surface</li>
+<li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the surface is
+destroyed or when new image data is attached using the same mime type.</li>
+<li><strong>closure</strong> the data to be passed to the destroy notifier</li>
+</ul>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L509" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L509" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2469,36 +2232,28 @@ destroyed or when new image data is attached using the same mime type.</li><li><
         
         def <strong>set_user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method">#</a>
+        <a class="method-permalink" href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Attach user data to surface. To remove user data from a surface,
 call this function with the key that was used to set it and <code>Nil</code> for data .</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li><li><strong>user_data</strong> the user data to attach to the surface</li><li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the surface is
-destroyed or when new user data is attached using the same key.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code>Status#Success</code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li>
+<li><strong>user_data</strong> the user data to attach to the surface</li>
+<li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the surface is
+destroyed or when new user data is attached using the same key.</li>
+</ul>
+<p>###Returns
+<code>Status#Success</code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L462" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L462" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2508,27 +2263,21 @@ destroyed or when new user data is attached using the same key.</li></ul>
         
         def <strong>status</strong> : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#status:Status-instance-method">#</a>
+        <a class="method-permalink" href="#status%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Checks whether an error has previously occurred for this surface.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code>, <code><a href="../Cairo/Status.html#NullPointer">Status::NullPointer</a></code>, <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>, <code><a href="../Cairo/Status.html#ReadError">Status::ReadError</a></code>,
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code>, <code><a href="../Cairo/Status.html#NullPointer">Status::NullPointer</a></code>, <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code>, <code><a href="../Cairo/Status.html#ReadError">Status::ReadError</a></code>,
 <code><a href="../Cairo/Status.html#InvalidContent">Status::InvalidContent</a></code>, <code><a href="../Cairo/Status.html#InvalidFormat">Status::InvalidFormat</a></code>, or <code><a href="../Cairo/Status.html#InvalidVisual">Status::InvalidVisual</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L381" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L381" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2538,20 +2287,14 @@ destroyed or when new user data is attached using the same key.</li></ul>
         
         def <strong>stride</strong> : Int32
 
-        <a class="method-permalink" href="#stride:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#stride%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the stride of the image surface in bytes.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The stride of the image surface in bytes (or 0 if <em>surface</em> is not
+<p>###Returns
+The stride of the image surface in bytes (or 0 if <em>surface</em> is not
 an image surface). The stride is the distance in bytes from the beginning
 of one row of the image data to the beginning of the next row.</p>
         </div>
@@ -2559,7 +2302,7 @@ of one row of the image data to the beginning of the next row.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L771" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L771" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2569,34 +2312,24 @@ of one row of the image data to the beginning of the next row.</p>
         
         def <strong>supports_mime_type?</strong>(mime_type : String) : Bool
 
-        <a class="method-permalink" href="#supports_mime_type?(mime_type:String):Bool-instance-method">#</a>
+        <a class="method-permalink" href="#supports_mime_type%3F%28mime_type%3AString%29%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Return whether surface supports <em>mime_type</em>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>mime_type</strong> the mime type</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code>true</code> if surface supports <em>mime_type</em>, <code>false</code> otherwise.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>mime_type</strong> the mime type</li>
+</ul>
+<p>###Returns
+<code>true</code> if surface supports <em>mime_type</em>, <code>false</code> otherwise.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L521" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L521" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2613,14 +2346,13 @@ of one row of the image data to the beginning of the next row.</p>
           
           <p>Emits and clears the current page for backends that support multiple pages.
 Use <code><a href="../Cairo/Surface.html#copy_page-instance-method">Surface#copy_page</a></code> if you don't want to clear the page.</p>
-
 <p>There is a convenience function for this that takes a cairo_t, namely <code><a href="../Cairo/Context.html#show_page-instance-method">Context#show_page</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L709" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L709" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2630,13 +2362,13 @@ Use <code><a href="../Cairo/Surface.html#copy_page-instance-method">Surface#copy
         
         def <strong>to_unsafe</strong> : LibCairo::PSurfaceT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PSurfaceT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APSurfaceT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L801" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L801" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2646,26 +2378,20 @@ Use <code><a href="../Cairo/Surface.html#copy_page-instance-method">Surface#copy
         
         def <strong>type</strong> : <a href="../Cairo/SurfaceType.html">SurfaceType</a>
 
-        <a class="method-permalink" href="#type:SurfaceType-instance-method">#</a>
+        <a class="method-permalink" href="#type%3ASurfaceType-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>This function returns the type of the backend used to create a surface. See <code><a href="../Cairo/SurfaceType.html">SurfaceType</a></code> for available types.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The type of surface.</p>
+<p>###Returns
+The type of surface.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L389" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L389" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2675,30 +2401,24 @@ Use <code><a href="../Cairo/Surface.html#copy_page-instance-method">Surface#copy
         
         def <strong>unmap_image</strong>(image : <a href="../Cairo/Surface.html">Surface</a>)
 
-        <a class="method-permalink" href="#unmap_image(image:Surface)-instance-method">#</a>
+        <a class="method-permalink" href="#unmap_image%28image%3ASurface%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Unmaps the image surface as returned from <code><a href="../Cairo/Surface.html#map_to_image(extents:RectangleInt?):Surface-instance-method">Surface#map_to_image</a></code>.</p>
-
+          <p>Unmaps the image surface as returned from <code><a href="../Cairo/Surface.html#map_to_image%28extents%3ARectangleInt%3F%29%3ASurface-instance-method">Surface#map_to_image</a></code>.</p>
 <p>The content of the image will be uploaded to the target surface. Afterwards, the image is destroyed.</p>
-
-<p>Using an image surface which wasn't returned by <code><a href="../Cairo/Surface.html#map_to_image(extents:RectangleInt?):Surface-instance-method">Surface#map_to_image</a></code> results in undefined behavior.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>image</strong> the currently mapped image</li></ul>
+<p>Using an image surface which wasn't returned by <code><a href="../Cairo/Surface.html#map_to_image%28extents%3ARectangleInt%3F%29%3ASurface-instance-method">Surface#map_to_image</a></code> results in undefined behavior.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>image</strong> the currently mapped image</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L266" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L266" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2708,35 +2428,25 @@ Use <code><a href="../Cairo/Surface.html#copy_page-instance-method">Surface#copy
         
         def <strong>user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>) : Pointer(Void)
 
-        <a class="method-permalink" href="#user_data(key:UserDataKey):Pointer(Void)-instance-method">#</a>
+        <a class="method-permalink" href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Return user data previously attached to surface using the specified key.
 If no user data has been attached with the given key this function returns <code>Nil</code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of the <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> the user data was attached to</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The user data previously attached or <code>Nil</code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of the <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> the user data was attached to</li>
+</ul>
+<p>###Returns
+The user data previously attached or <code>Nil</code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L447" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L447" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2746,26 +2456,20 @@ If no user data has been attached with the given key this function returns <code
         
         def <strong>width</strong> : Int32
 
-        <a class="method-permalink" href="#width:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#width%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the width of the image surface in pixels.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The width of the surface in pixels.</p>
+<p>###Returns
+The width of the surface in pixels.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L753" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L753" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2775,29 +2479,20 @@ If no user data has been attached with the given key this function returns <code
         
         def <strong>write_to_png</strong>(filename : String) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#write_to_png(filename:String):Status-instance-method">#</a>
+        <a class="method-permalink" href="#write_to_png%28filename%3AString%29%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Writes the contents of surface to a new file filename as a PNG image.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>surface</strong> a <code><a href="../Cairo/Surface.html">Surface</a></code> with pixel contents</li><li><strong>filename</strong> the name of a file to write to;
-on Windows this filename is encoded in UTF-8.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code>Status#success</code> if the PNG file was written successfully.
+<p>###Parameters</p>
+<ul>
+<li><strong>surface</strong> a <code><a href="../Cairo/Surface.html">Surface</a></code> with pixel contents</li>
+<li><strong>filename</strong> the name of a file to write to;
+on Windows this filename is encoded in UTF-8.</li>
+</ul>
+<p>###Returns
+<code>Status#success</code> if the PNG file was written successfully.
 Otherwise, <code>Status#NoMemory</code> if memory could not be allocated for the
 operation or <code>Status#SurfaceTypeMismatch</code> if the surface does not have
 pixel contents, or <code>Status#WriteError</code> if an I/O error occurs while
@@ -2807,7 +2502,7 @@ attempting to write the file, or <code>Status#PngError</code> if libpng returned
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L402" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L402" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -2817,28 +2512,20 @@ attempting to write the file, or <code>Status#PngError</code> if libpng returned
         
         def <strong>write_to_png_stream</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#write_to_png_stream(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#write_to_png_stream%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Writes the image surface to the write function.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>surface</strong> a <code><a href="../Cairo/Surface.html">Surface</a></code> with pixel contents</li><li><strong>write_func</strong> a <code><a href="../Cairo.html">Cairo</a>::C::LibCairo::WriteFuncT</code></li><li><strong>closure</strong> closure data for the write function</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code>Status#Success</code> if the PNG file was written successfully.
+<p>###Parameters</p>
+<ul>
+<li><strong>surface</strong> a <code><a href="../Cairo/Surface.html">Surface</a></code> with pixel contents</li>
+<li><strong>write_func</strong> a <code><a href="../Cairo.html">Cairo</a>::C::LibCairo::WriteFuncT</code></li>
+<li><strong>closure</strong> closure data for the write function</li>
+</ul>
+<p>###Returns
+<code>Status#Success</code> if the PNG file was written successfully.
 Otherwise, <code>Status#NoMemory</code> is returned if memory could not be allocated
 for the operation, <code>Status#SurfaceTypeMismatch</code> if the surface does not
 have pixel contents, or <code>Status#PngError</code> if libpng returned an error.</p>
@@ -2847,7 +2534,7 @@ have pixel contents, or <code>Status#PngError</code> if libpng returned an error
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface.cr#L402" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface.cr#L402" target="_blank">View source</a>]
         
       </div>
     </div>

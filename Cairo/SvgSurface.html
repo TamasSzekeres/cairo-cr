@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -440,7 +440,7 @@ multi-page vector surface backend.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/svg_surface.cr#L6" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/svg_surface.cr#L6" target="_blank">
         cairo/svg_surface.cr
       </a>
     
@@ -462,14 +462,14 @@ multi-page vector surface backend.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void),width_in_points:Float64,height_in_points:Float64)-class-method" class="signature"><strong>.new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void), width_in_points : Float64, height_in_points : Float64)</a>
+        <a href="#new%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%2Cwidth_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-class-method" class="signature"><strong>.new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void), width_in_points : Float64, height_in_points : Float64)</a>
         
           <div class="summary"><p>Creates a SVG surface of the specified size in points to be written incrementally to the stream represented by write_func and closure .</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(filename:String,width_in_points:Float64,height_in_points:Float64)-class-method" class="signature"><strong>.new</strong>(filename : String, width_in_points : Float64, height_in_points : Float64)</a>
+        <a href="#new%28filename%3AString%2Cwidth_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-class-method" class="signature"><strong>.new</strong>(filename : String, width_in_points : Float64, height_in_points : Float64)</a>
         
           <div class="summary"><p>Creates a SVG surface of the specified size in points to be written to <em>filename</em>.</p></div>
         
@@ -490,7 +490,7 @@ multi-page vector surface backend.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#versions:Array(SvgVersion)-class-method" class="signature"><strong>.versions</strong> : Array(SvgVersion)</a>
+        <a href="#versions%3AArray%28SvgVersion%29-class-method" class="signature"><strong>.versions</strong> : Array(SvgVersion)</a>
         
           <div class="summary"><p>Used to retrieve the list of supported versions.</p></div>
         
@@ -511,21 +511,21 @@ multi-page vector surface backend.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#document_unit:SvgUnit-instance-method" class="signature"><strong>#document_unit</strong> : SvgUnit</a>
+        <a href="#document_unit%3ASvgUnit-instance-method" class="signature"><strong>#document_unit</strong> : SvgUnit</a>
         
           <div class="summary"><p>Get the unit of the SVG surface.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#ducument_unit=(unit:SvgUnit)-instance-method" class="signature"><strong>#ducument_unit=</strong>(unit : SvgUnit)</a>
+        <a href="#ducument_unit%3D%28unit%3ASvgUnit%29-instance-method" class="signature"><strong>#ducument_unit=</strong>(unit : SvgUnit)</a>
         
           <div class="summary"><p>Use the specified unit for the width and height of the generated SVG file.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#restrict_to_version(version:SvgVersion)-instance-method" class="signature"><strong>#restrict_to_version</strong>(version : SvgVersion)</a>
+        <a href="#restrict_to_version%28version%3ASvgVersion%29-instance-method" class="signature"><strong>#restrict_to_version</strong>(version : SvgVersion)</a>
         
           <div class="summary"><p>Restricts the generated SVG file to version.</p></div>
         
@@ -544,7 +544,7 @@ multi-page vector surface backend.</p>
   <h3>Instance methods inherited from class <code><a href="../Cairo/Surface.html">Cairo::Surface</a></code></h3>
   
   
-    <a href="../Cairo/Surface.html#content:Content-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#content%3AContent-instance-method" class="tooltip">
       <span>content : Content</span>
     content</a>, 
     
@@ -554,67 +554,67 @@ multi-page vector surface backend.</p>
     copy_page</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_for_rectangle(x:Float64,y:Float64,width:Float64,height:Float64):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_for_rectangle%28x%3AFloat64%2Cy%3AFloat64%2Cwidth%3AFloat64%2Cheight%3AFloat64%29%3ASurface-instance-method" class="tooltip">
       <span>create_for_rectangle(x : Float64, y : Float64, width : Float64, height : Float64) : Surface</span>
     create_for_rectangle</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_observer(mode:SurfaceObserverMode):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_observer%28mode%3ASurfaceObserverMode%29%3ASurface-instance-method" class="tooltip">
       <span>create_observer(mode : SurfaceObserverMode) : Surface</span>
     create_observer</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_similar%28content%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method" class="tooltip">
       <span>create_similar(content : Content, width : Int32, height : Int32) : Surface</span>
     create_similar</a>, 
     
   
-    <a href="../Cairo/Surface.html#create_similar_image(format:Format,width:Int32,height:Int32):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#create_similar_image%28format%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method" class="tooltip">
       <span>create_similar_image(format : Format, width : Int32, height : Int32) : Surface</span>
     create_similar_image</a>, 
     
   
-    <a href="../Cairo/Surface.html#data:Pointer(UInt8)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#data%3APointer%28UInt8%29-instance-method" class="tooltip">
       <span>data : Pointer(UInt8)</span>
     data</a>, 
     
   
-    <a href="../Cairo/Surface.html#device:Device-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device%3ADevice-instance-method" class="tooltip">
       <span>device : Device</span>
     device</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_offset:Point-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_offset%3APoint-instance-method" class="tooltip">
       <span>device_offset : Point</span>
     device_offset</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_offset=(offset:Point)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_offset%3D%28offset%3APoint%29-instance-method" class="tooltip">
       <span>device_offset=(offset : Point)</span>
     device_offset=</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_scale:Point-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_scale%3APoint-instance-method" class="tooltip">
       <span>device_scale : Point</span>
     device_scale</a>, 
     
   
-    <a href="../Cairo/Surface.html#device_scale=(scale:Point)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#device_scale%3D%28scale%3APoint%29-instance-method" class="tooltip">
       <span>device_scale=(scale : Point)</span>
     device_scale=</a>, 
     
   
-    <a href="../Cairo/Surface.html#extents:NamedTuple()-instance-method" class="tooltip">
-      <span>extents : NamedTuple()</span>
+    <a href="../Cairo/Surface.html#extents%3ANamedTuple%28extents%3ARectangle%2Cbounded%3ABool%29-instance-method" class="tooltip">
+      <span>extents : NamedTuple(extents: Rectangle, bounded: Bool)</span>
     extents</a>, 
     
   
-    <a href="../Cairo/Surface.html#fallback_resolution:Point-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#fallback_resolution%3APoint-instance-method" class="tooltip">
       <span>fallback_resolution : Point</span>
     fallback_resolution</a>, 
     
   
-    <a href="../Cairo/Surface.html#fallback_resolution=(res:Point)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#fallback_resolution%3D%28res%3APoint%29-instance-method" class="tooltip">
       <span>fallback_resolution=(res : Point)</span>
     fallback_resolution=</a>, 
     
@@ -634,32 +634,32 @@ multi-page vector surface backend.</p>
     flush</a>, 
     
   
-    <a href="../Cairo/Surface.html#font_options:FontOptions-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#font_options%3AFontOptions-instance-method" class="tooltip">
       <span>font_options : FontOptions</span>
     font_options</a>, 
     
   
-    <a href="../Cairo/Surface.html#format:Format-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#format%3AFormat-instance-method" class="tooltip">
       <span>format : Format</span>
     format</a>, 
     
   
-    <a href="../Cairo/Surface.html#has_show_text_glyphs?:Bool-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#has_show_text_glyphs%3F%3ABool-instance-method" class="tooltip">
       <span>has_show_text_glyphs? : Bool</span>
     has_show_text_glyphs?</a>, 
     
   
-    <a href="../Cairo/Surface.html#height:Int32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#height%3AInt32-instance-method" class="tooltip">
       <span>height : Int32</span>
     height</a>, 
     
   
-    <a href="../Cairo/Surface.html#ink_extents:Rectangle-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#ink_extents%3ARectangle-instance-method" class="tooltip">
       <span>ink_extents : Rectangle</span>
     ink_extents</a>, 
     
   
-    <a href="../Cairo/Surface.html#map_to_image(extents:RectangleInt?):Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#map_to_image%28extents%3ARectangleInt%3F%29%3ASurface-instance-method" class="tooltip">
       <span>map_to_image(extents : RectangleInt?) : Surface</span>
     map_to_image</a>, 
     
@@ -669,107 +669,107 @@ multi-page vector surface backend.</p>
     mark_dirty</a>, 
     
   
-    <a href="../Cairo/Surface.html#mark_dirty_rectangle(x:Int32,y:Int32,width:Int32,height:Int32)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#mark_dirty_rectangle%28x%3AInt32%2Cy%3AInt32%2Cwidth%3AInt32%2Cheight%3AInt32%29-instance-method" class="tooltip">
       <span>mark_dirty_rectangle(x : Int32, y : Int32, width : Int32, height : Int32)</span>
     mark_dirty_rectangle</a>, 
     
   
-    <a href="../Cairo/Surface.html#mime_data(mime_type:String):Bytes-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#mime_data%28mime_type%3AString%29%3ABytes-instance-method" class="tooltip">
       <span>mime_data(mime_type : String) : Bytes</span>
     mime_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_fill_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_fill_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_fill_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_fill_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_finish_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_finish_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_finish_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_finish_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_flush_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_flush_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_flush_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_flush_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_glyphs_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_glyphs_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_glyphs_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_glyphs_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_mask_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_mask_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_mask_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_mask_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_paint_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_paint_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_paint_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_paint_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_add_stroke_callback(func:LibCairo::SurfaceObserverCallbackT,data:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_add_stroke_callback%28func%3ALibCairo%3A%3ASurfaceObserverCallbackT%2Cdata%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_add_stroke_callback(func : LibCairo::SurfaceObserverCallbackT, data : Pointer(Void)) : Status</span>
     observer_add_stroke_callback</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_elapsed:Float64-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_elapsed%3AFloat64-instance-method" class="tooltip">
       <span>observer_elapsed : Float64</span>
     observer_elapsed</a>, 
     
   
-    <a href="../Cairo/Surface.html#observer_print(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#observer_print%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>observer_print(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</span>
     observer_print</a>, 
     
   
-    <a href="../Cairo/Surface.html#reference:Surface-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#reference%3ASurface-instance-method" class="tooltip">
       <span>reference : Surface</span>
     reference</a>, 
     
   
-    <a href="../Cairo/Surface.html#reference_count:UInt32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#reference_count%3AUInt32-instance-method" class="tooltip">
       <span>reference_count : UInt32</span>
     reference_count</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_device_offset(x_offset:Float64,y_offset:Float64)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_device_offset%28x_offset%3AFloat64%2Cy_offset%3AFloat64%29-instance-method" class="tooltip">
       <span>set_device_offset(x_offset : Float64, y_offset : Float64)</span>
     set_device_offset</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_device_scale(x_scale:Float64,y_scale:Float64)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_device_scale%28x_scale%3AFloat64%2Cy_scale%3AFloat64%29-instance-method" class="tooltip">
       <span>set_device_scale(x_scale : Float64, y_scale : Float64)</span>
     set_device_scale</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_fallback_resolution(x_pixels_per_inch:Float64,y_pixels_per_inch:Float64)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_fallback_resolution%28x_pixels_per_inch%3AFloat64%2Cy_pixels_per_inch%3AFloat64%29-instance-method" class="tooltip">
       <span>set_fallback_resolution(x_pixels_per_inch : Float64, y_pixels_per_inch : Float64)</span>
     set_fallback_resolution</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_mime_data(mime_type:String,data:Bytes,destroy:LibCairo::DestroyFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_mime_data%28mime_type%3AString%2Cdata%3ABytes%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>set_mime_data(mime_type : String, data : Bytes, destroy : LibCairo::DestroyFuncT, closure : Pointer(Void)) : Status</span>
     set_mime_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method" class="tooltip">
       <span>set_user_data(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</span>
     set_user_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#status:Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#status%3AStatus-instance-method" class="tooltip">
       <span>status : Status</span>
     status</a>, 
     
   
-    <a href="../Cairo/Surface.html#stride:Int32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#stride%3AInt32-instance-method" class="tooltip">
       <span>stride : Int32</span>
     stride</a>, 
     
   
-    <a href="../Cairo/Surface.html#supports_mime_type?(mime_type:String):Bool-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#supports_mime_type%3F%28mime_type%3AString%29%3ABool-instance-method" class="tooltip">
       <span>supports_mime_type?(mime_type : String) : Bool</span>
     supports_mime_type?</a>, 
     
@@ -779,37 +779,37 @@ multi-page vector surface backend.</p>
     surface_show_page</a>, 
     
   
-    <a href="../Cairo/Surface.html#to_unsafe:LibCairo::PSurfaceT-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#to_unsafe%3ALibCairo%3A%3APSurfaceT-instance-method" class="tooltip">
       <span>to_unsafe : LibCairo::PSurfaceT</span>
     to_unsafe</a>, 
     
   
-    <a href="../Cairo/Surface.html#type:SurfaceType-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#type%3ASurfaceType-instance-method" class="tooltip">
       <span>type : SurfaceType</span>
     type</a>, 
     
   
-    <a href="../Cairo/Surface.html#unmap_image(image:Surface)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#unmap_image%28image%3ASurface%29-instance-method" class="tooltip">
       <span>unmap_image(image : Surface)</span>
     unmap_image</a>, 
     
   
-    <a href="../Cairo/Surface.html#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method" class="tooltip">
       <span>user_data(key : UserDataKey) : Pointer(Void)</span>
     user_data</a>, 
     
   
-    <a href="../Cairo/Surface.html#width:Int32-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#width%3AInt32-instance-method" class="tooltip">
       <span>width : Int32</span>
     width</a>, 
     
   
-    <a href="../Cairo/Surface.html#write_to_png(filename:String):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#write_to_png%28filename%3AString%29%3AStatus-instance-method" class="tooltip">
       <span>write_to_png(filename : String) : Status</span>
     write_to_png</a>, 
     
   
-    <a href="../Cairo/Surface.html#write_to_png_stream(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="tooltip">
+    <a href="../Cairo/Surface.html#write_to_png_stream%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="tooltip">
       <span>write_to_png_stream(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</span>
     write_to_png_stream</a>
     
@@ -821,7 +821,7 @@ multi-page vector surface backend.</p>
   <h3>Constructor methods inherited from class <code><a href="../Cairo/Surface.html">Cairo::Surface</a></code></h3>
   
   
-    <a href="../Cairo/Surface.html#new(data:Bytes,format:Format,width:Int32,height:Int32,stride:Int32)-class-method" class="tooltip">
+    <a href="../Cairo/Surface.html#new%28data%3ABytes%2Cformat%3AFormat%2Cwidth%3AInt32%2Cheight%3AInt32%2Cstride%3AInt32%29-class-method" class="tooltip">
       <span>new(data : Bytes, format : Format, width : Int32, height : Int32, stride : Int32)<br/>new(format : Format, width : Int32, height : Int32)<br/>new(read_func : LibCairo::ReadFuncT, closure : Pointer(Void))<br/>new(content : Content, extents : Rectangle?)<br/>new(surface : LibCairo::PSurfaceT)<br/>new(filename : String)</span>
     new</a>
     
@@ -869,34 +869,26 @@ multi-page vector surface backend.</p>
         
         def self.<strong>new</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void), width_in_points : Float64, height_in_points : Float64)
 
-        <a class="method-permalink" href="#new(write_func:LibCairo::WriteFuncT,closure:Pointer(Void),width_in_points:Float64,height_in_points:Float64)-class-method">#</a>
+        <a class="method-permalink" href="#new%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%2Cwidth_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a SVG surface of the specified size in points to be written
 incrementally to the stream represented by write_func and closure .</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>write_func</strong> a <code><a href="../Cairo.html">Cairo</a>::C::LibCairo::WriteFuncT</code> to accept the output
+<p>###Parameters</p>
+<ul>
+<li><strong>write_func</strong> a <code><a href="../Cairo.html">Cairo</a>::C::LibCairo::WriteFuncT</code> to accept the output
 data, may be <code>nil</code> to indicate a no-op <em>write_func</em>.
 With a no-op <em>write_func</em>, the surface may be queried or used as a source
-without generating any temporary files.</li><li><strong>closure</strong> the closure argument for <em>write_func</em></li><li><strong>width_in_points</strong> width of the surface, in points (1 point == 1/72.0 inch)</li><li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly created surface. The caller owns the surface and
+without generating any temporary files.</li>
+<li><strong>closure</strong> the closure argument for <em>write_func</em></li>
+<li><strong>width_in_points</strong> width of the surface, in points (1 point == 1/72.0 inch)</li>
+<li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li>
+</ul>
+<p>###Returns
+A pointer to the newly created surface. The caller owns the surface and
 should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
-
 <p>This function always returns a valid pointer, but it will return a pointer
 to a <code>nil</code> surface if an error such as out of memory occurs.
 You can use Surface#status` to check for this.</p>
@@ -905,7 +897,7 @@ You can use Surface#status` to check for this.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -915,63 +907,53 @@ You can use Surface#status` to check for this.</p>
         
         def self.<strong>new</strong>(filename : String, width_in_points : Float64, height_in_points : Float64)
 
-        <a class="method-permalink" href="#new(filename:String,width_in_points:Float64,height_in_points:Float64)-class-method">#</a>
+        <a class="method-permalink" href="#new%28filename%3AString%2Cwidth_in_points%3AFloat64%2Cheight_in_points%3AFloat64%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Creates a SVG surface of the specified size in
 points to be written to <em>filename</em>.</p>
-
 <p>The SVG surface backend recognizes the following MIME types for the data
-attached to a surface (see <code><a href="../Cairo/Surface.html#set_mime_data(mime_type:String,data:Bytes,destroy:LibCairo::DestroyFuncT,closure:Pointer(Void)):Status-instance-method">Surface#set_mime_data</a></code>) when it is used as a
+attached to a surface (see <code><a href="../Cairo/Surface.html#set_mime_data%28mime_type%3AString%2Cdata%3ABytes%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method">Surface#set_mime_data</a></code>) when it is used as a
 source pattern for drawing on this surface:</p>
-
-<ul><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_JPEG">LibCairo::MIME_TYPE_JPEG</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_PNG">LibCairo::MIME_TYPE_PNG</a></code>,</li><li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_URI">LibCairo::MIME_TYPE_URI</a></code>.
+<ul>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_JPEG">LibCairo::MIME_TYPE_JPEG</a></code>,</li>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_PNG">LibCairo::MIME_TYPE_PNG</a></code>,</li>
+<li><code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_URI">LibCairo::MIME_TYPE_URI</a></code>.
 If any of them is specified, the SVG backend emits a href with the content
 of MIME data instead of a surface snapshot (PNG, Base64-encoded)
-in the corresponding image tag.</li></ul>
-
+in the corresponding image tag.</li>
+</ul>
 <p>The unofficial MIME type <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_URI">LibCairo::MIME_TYPE_URI</a></code> is examined
 first. If present, the URI is emitted as is: assuring the correctness of
 URI is left to the client code.</p>
-
 <p>If <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_URI">LibCairo::MIME_TYPE_URI</a></code> is not present,
 but <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_JPEG">LibCairo::MIME_TYPE_JPEG</a></code> or
 <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_PNG">LibCairo::MIME_TYPE_PNG</a></code> is specified,
 the corresponding data is Base64-encoded and emitted.</p>
-
 <p>If <code><a href="../Cairo.html">Cairo</a>::C::<a href="../Cairo/C/LibCairo.html#MIME_TYPE_UNIQUE_ID">LibCairo::MIME_TYPE_UNIQUE_ID</a></code> is present, all surfaces
 with the same unique identifier will only be embedded once.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>filename</strong> a filename for the SVG output (must be writable),
+<p>###Parameters</p>
+<ul>
+<li><strong>filename</strong> a filename for the SVG output (must be writable),
 <code>nil</code> may be used to specify no output. This will generate a SVG surface
-that may be queried and used as a source, without generating a temporary file.</li><li><strong>width_in_points</strong> width of the surface, in points (1 point == 1/72.0 inch)</li><li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>A pointer to the newly created surface. The caller owns the surface and
+that may be queried and used as a source, without generating a temporary file.</li>
+<li><strong>width_in_points</strong> width of the surface, in points (1 point == 1/72.0 inch)</li>
+<li><strong>height_in_points</strong> height of the surface, in points (1 point == 1/72.0 inch)</li>
+</ul>
+<p>###Returns
+A pointer to the newly created surface. The caller owns the surface and
 should call <code><a href="../Cairo/Surface.html#finalize-instance-method">Surface#finalize</a></code> when done with it.</p>
-
 <p>This function always returns a valid pointer, but it will return a pointer
 to a <code>nil</code> surface if an error such as out of memory occurs.
-You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">Surface#status</a></code> to check for this.</p>
+You can use <code><a href="../Cairo/Surface.html#status%3AStatus-instance-method">Surface#status</a></code> to check for this.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -993,27 +975,21 @@ You can use <code><a href="../Cairo/Surface.html#status:Status-instance-method">
         
         def self.<strong>versions</strong> : Array(<a href="../Cairo/SvgVersion.html">SvgVersion</a>)
 
-        <a class="method-permalink" href="#versions:Array(SvgVersion)-class-method">#</a>
+        <a class="method-permalink" href="#versions%3AArray%28SvgVersion%29-class-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Used to retrieve the list of supported versions.
-See <code><a href="../Cairo/SvgSurface.html#restrict_to_version(version:SvgVersion)-instance-method">SvgSurface#restrict_to_version</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The supported version list.</p>
+See <code><a href="../Cairo/SvgSurface.html#restrict_to_version%28version%3ASvgVersion%29-instance-method">SvgSurface#restrict_to_version</a></code>.</p>
+<p>###Returns
+The supported version list.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1035,30 +1011,23 @@ See <code><a href="../Cairo/SvgSurface.html#restrict_to_version(version:SvgVersi
         
         def <strong>document_unit</strong> : <a href="../Cairo/SvgUnit.html">SvgUnit</a>
 
-        <a class="method-permalink" href="#document_unit:SvgUnit-instance-method">#</a>
+        <a class="method-permalink" href="#document_unit%3ASvgUnit-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Get the unit of the SVG surface.</p>
-
 <p>If the surface passed as an argument is not a SVG surface,
 the function sets the error status to
 <code><a href="../Cairo/Status.html#SurfaceTypeMismatch">Status::SurfaceTypeMismatch</a></code> and returns <code><a href="../Cairo/SvgUnit.html#User">SvgUnit::User</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The SVG unit of the SVG surface.</p>
+<p>###Returns
+The SVG unit of the SVG surface.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1068,39 +1037,31 @@ the function sets the error status to
         
         def <strong>ducument_unit=</strong>(unit : <a href="../Cairo/SvgUnit.html">SvgUnit</a>)
 
-        <a class="method-permalink" href="#ducument_unit=(unit:SvgUnit)-instance-method">#</a>
+        <a class="method-permalink" href="#ducument_unit%3D%28unit%3ASvgUnit%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Use the specified unit for the width and height of the generated SVG file.
 See <code><a href="../Cairo/SvgUnit.html">SvgUnit</a></code> for a list of available unit values that can be used here.</p>
-
 <p>This function can be called at any time before generating the SVG file.</p>
-
 <p>However to minimize the risk of ambiguities it's recommended to call it
 before any drawing operations have been performed on the given surface,
 to make it clearer what the unit used in the drawing operations is.</p>
-
 <p>The simplest way to do this is to call this function immediately after
 creating the SVG surface.</p>
-
 <p><span class="flag purple">NOTE</span>  if this function is never called, the default unit for SVG documents
-generated by cairo will be "pt". This is for historical reasons.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>unit</strong> SVG unit</li></ul>
+generated by cairo will be &quot;pt&quot;. This is for historical reasons.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>unit</strong> SVG unit</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1110,32 +1071,27 @@ generated by cairo will be "pt". This is for historical reasons.</p>
         
         def <strong>restrict_to_version</strong>(version : <a href="../Cairo/SvgVersion.html">SvgVersion</a>)
 
-        <a class="method-permalink" href="#restrict_to_version(version:SvgVersion)-instance-method">#</a>
+        <a class="method-permalink" href="#restrict_to_version%28version%3ASvgVersion%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Restricts the generated SVG file to version.
-See <code><a href="../Cairo/SvgSurface.html#versions:Array(SvgVersion)-class-method">SvgSurface#versions</a></code> for a list of available version
+See <code><a href="../Cairo/SvgSurface.html#versions%3AArray%28SvgVersion%29-class-method">SvgSurface#versions</a></code> for a list of available version
 values that can be used here.</p>
-
 <p>This function should only be called before any drawing operations have
 been performed on the given surface. The simplest way to do this is to
 call this function immediately after creating the surface.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>version</strong> SVG version</li></ul>
+<p>###Parameters</p>
+<ul>
+<li><strong>version</strong> SVG version</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/svg_surface.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>

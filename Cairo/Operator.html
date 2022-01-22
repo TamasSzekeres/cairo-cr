@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -413,12 +413,9 @@
   </h2>
 
   <p><code><a href="../Cairo/Operator.html">Operator</a></code> is used to set the compositing operator for all cairo drawing operations.</p>
-
 <p>The default operator is <code><a href="../Cairo/Operator.html#Over">Operator::Over</a></code>.</p>
-
 <p>The operators marked as unbounded modify their destination even outside of the mask layer
 (that is, their effect is not bound by the mask layer). However, their effect can still be limited by way of clipping.</p>
-
 <p>To keep things simple, the operator descriptions here document the behavior for when both source and destination are either fully transparent
 or fully opaque. The actual implementation works for translucent layers too.
 For a more detailed explanation of the effects of each operator, including the mathematical definitions,
@@ -447,7 +444,7 @@ see <a href="https://cairographics.org/operators/">https://cairographics.org/ope
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L13" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L13" target="_blank">
         cairo/operator.cr
       </a>
     
@@ -751,147 +748,147 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#add?-instance-method" class="signature"><strong>#add?</strong></a>
+        <a href="#add%3F-instance-method" class="signature"><strong>#add?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#atop?-instance-method" class="signature"><strong>#atop?</strong></a>
+        <a href="#atop%3F-instance-method" class="signature"><strong>#atop?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#clear?-instance-method" class="signature"><strong>#clear?</strong></a>
+        <a href="#clear%3F-instance-method" class="signature"><strong>#clear?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_burn?-instance-method" class="signature"><strong>#color_burn?</strong></a>
+        <a href="#color_burn%3F-instance-method" class="signature"><strong>#color_burn?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#color_dodge?-instance-method" class="signature"><strong>#color_dodge?</strong></a>
+        <a href="#color_dodge%3F-instance-method" class="signature"><strong>#color_dodge?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#darken?-instance-method" class="signature"><strong>#darken?</strong></a>
+        <a href="#darken%3F-instance-method" class="signature"><strong>#darken?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dest?-instance-method" class="signature"><strong>#dest?</strong></a>
+        <a href="#dest%3F-instance-method" class="signature"><strong>#dest?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dest_atop?-instance-method" class="signature"><strong>#dest_atop?</strong></a>
+        <a href="#dest_atop%3F-instance-method" class="signature"><strong>#dest_atop?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dest_in?-instance-method" class="signature"><strong>#dest_in?</strong></a>
+        <a href="#dest_in%3F-instance-method" class="signature"><strong>#dest_in?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dest_out?-instance-method" class="signature"><strong>#dest_out?</strong></a>
+        <a href="#dest_out%3F-instance-method" class="signature"><strong>#dest_out?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#dest_over?-instance-method" class="signature"><strong>#dest_over?</strong></a>
+        <a href="#dest_over%3F-instance-method" class="signature"><strong>#dest_over?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#difference?-instance-method" class="signature"><strong>#difference?</strong></a>
+        <a href="#difference%3F-instance-method" class="signature"><strong>#difference?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#exclusion?-instance-method" class="signature"><strong>#exclusion?</strong></a>
+        <a href="#exclusion%3F-instance-method" class="signature"><strong>#exclusion?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#hard_light?-instance-method" class="signature"><strong>#hard_light?</strong></a>
+        <a href="#hard_light%3F-instance-method" class="signature"><strong>#hard_light?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#hsl_color?-instance-method" class="signature"><strong>#hsl_color?</strong></a>
+        <a href="#hsl_color%3F-instance-method" class="signature"><strong>#hsl_color?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#hsl_hue?-instance-method" class="signature"><strong>#hsl_hue?</strong></a>
+        <a href="#hsl_hue%3F-instance-method" class="signature"><strong>#hsl_hue?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#hsl_luminosity?-instance-method" class="signature"><strong>#hsl_luminosity?</strong></a>
+        <a href="#hsl_luminosity%3F-instance-method" class="signature"><strong>#hsl_luminosity?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#hsl_saturation?-instance-method" class="signature"><strong>#hsl_saturation?</strong></a>
+        <a href="#hsl_saturation%3F-instance-method" class="signature"><strong>#hsl_saturation?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#in?-instance-method" class="signature"><strong>#in?</strong></a>
+        <a href="#in%3F-instance-method" class="signature"><strong>#in?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#lighten?-instance-method" class="signature"><strong>#lighten?</strong></a>
+        <a href="#lighten%3F-instance-method" class="signature"><strong>#lighten?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#multiply?-instance-method" class="signature"><strong>#multiply?</strong></a>
+        <a href="#multiply%3F-instance-method" class="signature"><strong>#multiply?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#out?-instance-method" class="signature"><strong>#out?</strong></a>
+        <a href="#out%3F-instance-method" class="signature"><strong>#out?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#over?-instance-method" class="signature"><strong>#over?</strong></a>
+        <a href="#over%3F-instance-method" class="signature"><strong>#over?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#overlay?-instance-method" class="signature"><strong>#overlay?</strong></a>
+        <a href="#overlay%3F-instance-method" class="signature"><strong>#overlay?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#saturate?-instance-method" class="signature"><strong>#saturate?</strong></a>
+        <a href="#saturate%3F-instance-method" class="signature"><strong>#saturate?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#screen?-instance-method" class="signature"><strong>#screen?</strong></a>
+        <a href="#screen%3F-instance-method" class="signature"><strong>#screen?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#soft_light?-instance-method" class="signature"><strong>#soft_light?</strong></a>
+        <a href="#soft_light%3F-instance-method" class="signature"><strong>#soft_light?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#source?-instance-method" class="signature"><strong>#source?</strong></a>
+        <a href="#source%3F-instance-method" class="signature"><strong>#source?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#xor?-instance-method" class="signature"><strong>#xor?</strong></a>
+        <a href="#xor%3F-instance-method" class="signature"><strong>#xor?</strong></a>
         
       </li>
     
@@ -964,13 +961,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>add?</strong>
 
-        <a class="method-permalink" href="#add?-instance-method">#</a>
+        <a class="method-permalink" href="#add%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -980,13 +977,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>atop?</strong>
 
-        <a class="method-permalink" href="#atop?-instance-method">#</a>
+        <a class="method-permalink" href="#atop%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L30" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -996,13 +993,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>clear?</strong>
 
-        <a class="method-permalink" href="#clear?-instance-method">#</a>
+        <a class="method-permalink" href="#clear%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1012,13 +1009,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>color_burn?</strong>
 
-        <a class="method-permalink" href="#color_burn?-instance-method">#</a>
+        <a class="method-permalink" href="#color_burn%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L75" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L75" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1028,13 +1025,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>color_dodge?</strong>
 
-        <a class="method-permalink" href="#color_dodge?-instance-method">#</a>
+        <a class="method-permalink" href="#color_dodge%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1044,13 +1041,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>darken?</strong>
 
-        <a class="method-permalink" href="#darken?-instance-method">#</a>
+        <a class="method-permalink" href="#darken%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L66" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1060,13 +1057,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>dest?</strong>
 
-        <a class="method-permalink" href="#dest?-instance-method">#</a>
+        <a class="method-permalink" href="#dest%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1076,13 +1073,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>dest_atop?</strong>
 
-        <a class="method-permalink" href="#dest_atop?-instance-method">#</a>
+        <a class="method-permalink" href="#dest_atop%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L45" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L45" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1092,13 +1089,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>dest_in?</strong>
 
-        <a class="method-permalink" href="#dest_in?-instance-method">#</a>
+        <a class="method-permalink" href="#dest_in%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1108,13 +1105,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>dest_out?</strong>
 
-        <a class="method-permalink" href="#dest_out?-instance-method">#</a>
+        <a class="method-permalink" href="#dest_out%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L42" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L42" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1124,13 +1121,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>dest_over?</strong>
 
-        <a class="method-permalink" href="#dest_over?-instance-method">#</a>
+        <a class="method-permalink" href="#dest_over%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1140,13 +1137,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>difference?</strong>
 
-        <a class="method-permalink" href="#difference?-instance-method">#</a>
+        <a class="method-permalink" href="#difference%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L84" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L84" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1156,13 +1153,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>exclusion?</strong>
 
-        <a class="method-permalink" href="#exclusion?-instance-method">#</a>
+        <a class="method-permalink" href="#exclusion%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L87" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L87" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1172,13 +1169,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>hard_light?</strong>
 
-        <a class="method-permalink" href="#hard_light?-instance-method">#</a>
+        <a class="method-permalink" href="#hard_light%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1188,13 +1185,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>hsl_color?</strong>
 
-        <a class="method-permalink" href="#hsl_color?-instance-method">#</a>
+        <a class="method-permalink" href="#hsl_color%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L98" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L98" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1204,13 +1201,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>hsl_hue?</strong>
 
-        <a class="method-permalink" href="#hsl_hue?-instance-method">#</a>
+        <a class="method-permalink" href="#hsl_hue%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L90" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L90" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1220,13 +1217,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>hsl_luminosity?</strong>
 
-        <a class="method-permalink" href="#hsl_luminosity?-instance-method">#</a>
+        <a class="method-permalink" href="#hsl_luminosity%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L102" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L102" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1236,13 +1233,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>hsl_saturation?</strong>
 
-        <a class="method-permalink" href="#hsl_saturation?-instance-method">#</a>
+        <a class="method-permalink" href="#hsl_saturation%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L94" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L94" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1252,13 +1249,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>in?</strong>
 
-        <a class="method-permalink" href="#in?-instance-method">#</a>
+        <a class="method-permalink" href="#in%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1268,13 +1265,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>lighten?</strong>
 
-        <a class="method-permalink" href="#lighten?-instance-method">#</a>
+        <a class="method-permalink" href="#lighten%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1284,13 +1281,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>multiply?</strong>
 
-        <a class="method-permalink" href="#multiply?-instance-method">#</a>
+        <a class="method-permalink" href="#multiply%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L57" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1300,13 +1297,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>out?</strong>
 
-        <a class="method-permalink" href="#out?-instance-method">#</a>
+        <a class="method-permalink" href="#out%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1316,13 +1313,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>over?</strong>
 
-        <a class="method-permalink" href="#over?-instance-method">#</a>
+        <a class="method-permalink" href="#over%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1332,13 +1329,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>overlay?</strong>
 
-        <a class="method-permalink" href="#overlay?-instance-method">#</a>
+        <a class="method-permalink" href="#overlay%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1348,13 +1345,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>saturate?</strong>
 
-        <a class="method-permalink" href="#saturate?-instance-method">#</a>
+        <a class="method-permalink" href="#saturate%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1364,13 +1361,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>screen?</strong>
 
-        <a class="method-permalink" href="#screen?-instance-method">#</a>
+        <a class="method-permalink" href="#screen%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L60" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L60" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1380,13 +1377,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>soft_light?</strong>
 
-        <a class="method-permalink" href="#soft_light?-instance-method">#</a>
+        <a class="method-permalink" href="#soft_light%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L81" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1396,13 +1393,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>source?</strong>
 
-        <a class="method-permalink" href="#source?-instance-method">#</a>
+        <a class="method-permalink" href="#source%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1412,13 +1409,13 @@ This produces an inverse effect to <code><a href="../Cairo/Operator.html#HslColo
         
         def <strong>xor?</strong>
 
-        <a class="method-permalink" href="#xor?-instance-method">#</a>
+        <a class="method-permalink" href="#xor%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/operator.cr#L48" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/operator.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>

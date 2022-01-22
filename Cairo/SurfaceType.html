@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -413,20 +413,15 @@
   </h2>
 
   <p><code><a href="../Cairo/SurfaceType.html">SurfaceType</a></code> is used to describe the type of a given surface.
-The surface types are also known as "backends" or "surface backends" within cairo.</p>
-
+The surface types are also known as &quot;backends&quot; or &quot;surface backends&quot; within cairo.</p>
 <p>The type of a surface is determined by the function used to create it,
-which will generally be of the form <code>Surface#initialize</code>, (though see <code><a href="../Cairo/Surface.html#create_similar(content:Content,width:Int32,height:Int32):Surface-instance-method">Surface#create_similar</a></code> as well).</p>
-
-<p>The surface type can be queried with <code><a href="../Cairo/Surface.html#type:SurfaceType-instance-method">Surface#type</a></code>.</p>
-
+which will generally be of the form <code>Surface#initialize</code>, (though see <code><a href="../Cairo/Surface.html#create_similar%28content%3AContent%2Cwidth%3AInt32%2Cheight%3AInt32%29%3ASurface-instance-method">Surface#create_similar</a></code> as well).</p>
+<p>The surface type can be queried with <code><a href="../Cairo/Surface.html#type%3ASurfaceType-instance-method">Surface#type</a></code>.</p>
 <p>The various <code><a href="../Cairo/Surface.html">Surface</a></code> functions can be used with surfaces of any type,
 but some backends also provide type-specific functions that must only
 be called with a surface of the appropriate type. These functions have names
-that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#width:Int32-instance-method">Surface#width</a></code>.</p>
-
+that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#width%3AInt32-instance-method">Surface#width</a></code>.</p>
 <p>The behavior of calling a type-specific function with a surface of the wrong type is undefined.</p>
-
 <p>New entries may be added in future versions.</p>
 
 
@@ -452,7 +447,7 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L18" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L18" target="_blank">
         cairo/surface_type.cr
       </a>
     
@@ -685,7 +680,7 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
       </dt>
       
       <dd class="entry-const-doc">
-        <p>The surface is a subsurface created with <code><a href="../Cairo/Surface.html#create_for_rectangle(x:Float64,y:Float64,width:Float64,height:Float64):Surface-instance-method">Surface#create_for_rectangle</a></code>.</p>
+        <p>The surface is a subsurface created with <code><a href="../Cairo/Surface.html#create_for_rectangle%28x%3AFloat64%2Cy%3AFloat64%2Cwidth%3AFloat64%2Cheight%3AFloat64%29%3ASurface-instance-method">Surface#create_for_rectangle</a></code>.</p>
       </dd>
       
     
@@ -717,127 +712,127 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#be_os?-instance-method" class="signature"><strong>#be_os?</strong></a>
+        <a href="#be_os%3F-instance-method" class="signature"><strong>#be_os?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#cogl?-instance-method" class="signature"><strong>#cogl?</strong></a>
+        <a href="#cogl%3F-instance-method" class="signature"><strong>#cogl?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#direct_fb?-instance-method" class="signature"><strong>#direct_fb?</strong></a>
+        <a href="#direct_fb%3F-instance-method" class="signature"><strong>#direct_fb?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#drm?-instance-method" class="signature"><strong>#drm?</strong></a>
+        <a href="#drm%3F-instance-method" class="signature"><strong>#drm?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#gl?-instance-method" class="signature"><strong>#gl?</strong></a>
+        <a href="#gl%3F-instance-method" class="signature"><strong>#gl?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#glitz?-instance-method" class="signature"><strong>#glitz?</strong></a>
+        <a href="#glitz%3F-instance-method" class="signature"><strong>#glitz?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#image?-instance-method" class="signature"><strong>#image?</strong></a>
+        <a href="#image%3F-instance-method" class="signature"><strong>#image?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#os2?-instance-method" class="signature"><strong>#os2?</strong></a>
+        <a href="#os2%3F-instance-method" class="signature"><strong>#os2?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#pdf?-instance-method" class="signature"><strong>#pdf?</strong></a>
+        <a href="#pdf%3F-instance-method" class="signature"><strong>#pdf?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#ps?-instance-method" class="signature"><strong>#ps?</strong></a>
+        <a href="#ps%3F-instance-method" class="signature"><strong>#ps?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#qt?-instance-method" class="signature"><strong>#qt?</strong></a>
+        <a href="#qt%3F-instance-method" class="signature"><strong>#qt?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#quartz?-instance-method" class="signature"><strong>#quartz?</strong></a>
+        <a href="#quartz%3F-instance-method" class="signature"><strong>#quartz?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#quartz_image?-instance-method" class="signature"><strong>#quartz_image?</strong></a>
+        <a href="#quartz_image%3F-instance-method" class="signature"><strong>#quartz_image?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#recording?-instance-method" class="signature"><strong>#recording?</strong></a>
+        <a href="#recording%3F-instance-method" class="signature"><strong>#recording?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#script?-instance-method" class="signature"><strong>#script?</strong></a>
+        <a href="#script%3F-instance-method" class="signature"><strong>#script?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#skia?-instance-method" class="signature"><strong>#skia?</strong></a>
+        <a href="#skia%3F-instance-method" class="signature"><strong>#skia?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#subsurface?-instance-method" class="signature"><strong>#subsurface?</strong></a>
+        <a href="#subsurface%3F-instance-method" class="signature"><strong>#subsurface?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#svg?-instance-method" class="signature"><strong>#svg?</strong></a>
+        <a href="#svg%3F-instance-method" class="signature"><strong>#svg?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#tee?-instance-method" class="signature"><strong>#tee?</strong></a>
+        <a href="#tee%3F-instance-method" class="signature"><strong>#tee?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#vg?-instance-method" class="signature"><strong>#vg?</strong></a>
+        <a href="#vg%3F-instance-method" class="signature"><strong>#vg?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#win32?-instance-method" class="signature"><strong>#win32?</strong></a>
+        <a href="#win32%3F-instance-method" class="signature"><strong>#win32?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#win32_printing?-instance-method" class="signature"><strong>#win32_printing?</strong></a>
+        <a href="#win32_printing%3F-instance-method" class="signature"><strong>#win32_printing?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#x_lib?-instance-method" class="signature"><strong>#x_lib?</strong></a>
+        <a href="#x_lib%3F-instance-method" class="signature"><strong>#x_lib?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#xcb?-instance-method" class="signature"><strong>#xcb?</strong></a>
+        <a href="#xcb%3F-instance-method" class="signature"><strong>#xcb?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#xml?-instance-method" class="signature"><strong>#xml?</strong></a>
+        <a href="#xml%3F-instance-method" class="signature"><strong>#xml?</strong></a>
         
       </li>
     
@@ -910,13 +905,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>be_os?</strong>
 
-        <a class="method-permalink" href="#be_os?-instance-method">#</a>
+        <a class="method-permalink" href="#be_os%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -926,13 +921,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>cogl?</strong>
 
-        <a class="method-permalink" href="#cogl?-instance-method">#</a>
+        <a class="method-permalink" href="#cogl%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L92" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L92" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -942,13 +937,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>direct_fb?</strong>
 
-        <a class="method-permalink" href="#direct_fb?-instance-method">#</a>
+        <a class="method-permalink" href="#direct_fb%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -958,13 +953,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>drm?</strong>
 
-        <a class="method-permalink" href="#drm?-instance-method">#</a>
+        <a class="method-permalink" href="#drm%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L77" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -974,13 +969,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>gl?</strong>
 
-        <a class="method-permalink" href="#gl?-instance-method">#</a>
+        <a class="method-permalink" href="#gl%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -990,13 +985,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>glitz?</strong>
 
-        <a class="method-permalink" href="#glitz?-instance-method">#</a>
+        <a class="method-permalink" href="#glitz%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L35" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1006,13 +1001,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>image?</strong>
 
-        <a class="method-permalink" href="#image?-instance-method">#</a>
+        <a class="method-permalink" href="#image%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1022,13 +1017,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>os2?</strong>
 
-        <a class="method-permalink" href="#os2?-instance-method">#</a>
+        <a class="method-permalink" href="#os2%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L53" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1038,13 +1033,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>pdf?</strong>
 
-        <a class="method-permalink" href="#pdf?-instance-method">#</a>
+        <a class="method-permalink" href="#pdf%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1054,13 +1049,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>ps?</strong>
 
-        <a class="method-permalink" href="#ps?-instance-method">#</a>
+        <a class="method-permalink" href="#ps%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L26" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1070,13 +1065,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>qt?</strong>
 
-        <a class="method-permalink" href="#qt?-instance-method">#</a>
+        <a class="method-permalink" href="#qt%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L65" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1086,13 +1081,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>quartz?</strong>
 
-        <a class="method-permalink" href="#quartz?-instance-method">#</a>
+        <a class="method-permalink" href="#quartz%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1102,13 +1097,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>quartz_image?</strong>
 
-        <a class="method-permalink" href="#quartz_image?-instance-method">#</a>
+        <a class="method-permalink" href="#quartz_image%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1118,13 +1113,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>recording?</strong>
 
-        <a class="method-permalink" href="#recording?-instance-method">#</a>
+        <a class="method-permalink" href="#recording%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1134,13 +1129,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>script?</strong>
 
-        <a class="method-permalink" href="#script?-instance-method">#</a>
+        <a class="method-permalink" href="#script%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1150,13 +1145,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>skia?</strong>
 
-        <a class="method-permalink" href="#skia?-instance-method">#</a>
+        <a class="method-permalink" href="#skia%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L86" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L86" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1166,13 +1161,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>subsurface?</strong>
 
-        <a class="method-permalink" href="#subsurface?-instance-method">#</a>
+        <a class="method-permalink" href="#subsurface%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L89" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L89" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1182,13 +1177,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>svg?</strong>
 
-        <a class="method-permalink" href="#svg?-instance-method">#</a>
+        <a class="method-permalink" href="#svg%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L50" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L50" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1198,13 +1193,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>tee?</strong>
 
-        <a class="method-permalink" href="#tee?-instance-method">#</a>
+        <a class="method-permalink" href="#tee%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L80" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L80" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1214,13 +1209,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>vg?</strong>
 
-        <a class="method-permalink" href="#vg?-instance-method">#</a>
+        <a class="method-permalink" href="#vg%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1230,13 +1225,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>win32?</strong>
 
-        <a class="method-permalink" href="#win32?-instance-method">#</a>
+        <a class="method-permalink" href="#win32%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1246,13 +1241,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>win32_printing?</strong>
 
-        <a class="method-permalink" href="#win32_printing?-instance-method">#</a>
+        <a class="method-permalink" href="#win32_printing%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L56" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1262,13 +1257,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>x_lib?</strong>
 
-        <a class="method-permalink" href="#x_lib?-instance-method">#</a>
+        <a class="method-permalink" href="#x_lib%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1278,13 +1273,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>xcb?</strong>
 
-        <a class="method-permalink" href="#xcb?-instance-method">#</a>
+        <a class="method-permalink" href="#xcb%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1294,13 +1289,13 @@ that begin with cairo_type_surface such as <code><a href="../Cairo/Surface.html#
         
         def <strong>xml?</strong>
 
-        <a class="method-permalink" href="#xml?-instance-method">#</a>
+        <a class="method-permalink" href="#xml%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/surface_type.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/surface_type.cr#L83" target="_blank">View source</a>]
         
       </div>
     </div>

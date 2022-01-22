@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -415,24 +415,18 @@
   </h2>
 
   <p>Devices are the abstraction Cairo employs for the rendering system used by a <code><a href="../Cairo/Surface.html">Surface</a></code>.
-You can get the device of a surface using <code><a href="../Cairo/Surface.html#device:Device-instance-method">Surface#device</a></code>.</p>
-
+You can get the device of a surface using <code><a href="../Cairo/Surface.html#device%3ADevice-instance-method">Surface#device</a></code>.</p>
 <p>Devices are created using custom functions specific to the rendering system you want to use.
 See the documentation for the surface types for those functions.</p>
-
 <p>An important function that devices fulfill is sharing access to the rendering system between
 Cairo and your application. If you want to access a device directly that you used to draw to with Cairo,
 you must first call <code><a href="../Cairo/Device.html#flush-instance-method">Device#flush</a></code> to ensure that Cairo finishes all operations on the device and resets it to a clean state.</p>
-
-<p>Cairo also provides the functions <code><a href="../Cairo/Device.html#acquire:Status-instance-method">Device#acquire</a></code> and <code><a href="../Cairo/Device.html#release-instance-method">Device#release</a></code> to synchronize access to the
+<p>Cairo also provides the functions <code><a href="../Cairo/Device.html#acquire%3AStatus-instance-method">Device#acquire</a></code> and <code><a href="../Cairo/Device.html#release-instance-method">Device#release</a></code> to synchronize access to the
 rendering system in a multithreaded environment. This is done internally, but can also be used by applications.</p>
-
 <p>A <code><a href="../Cairo/Device.html">Device</a></code> represents the driver interface for drawing operations to a <code><a href="../Cairo/Surface.html">Surface</a></code>.
 There are different subtypes of <code><a href="../Cairo/Device.html">Device</a></code> for different drawing backends.</p>
-
-<p>The type of a device can be queried with <code><a href="../Cairo/Device.html#type:DeviceType-instance-method">Device#type</a></code>.</p>
-
-<p>Memory management of <code><a href="../Cairo/Device.html">Device</a></code> is done with <code><a href="../Cairo/Device.html#reference:Device-instance-method">Device#reference</a></code> and <code><a href="../Cairo/Device.html#finalize-instance-method">Device#finalize</a></code>.</p>
+<p>The type of a device can be queried with <code><a href="../Cairo/Device.html#type%3ADeviceType-instance-method">Device#type</a></code>.</p>
+<p>Memory management of <code><a href="../Cairo/Device.html">Device</a></code> is done with <code><a href="../Cairo/Device.html#reference%3ADevice-instance-method">Device#reference</a></code> and <code><a href="../Cairo/Device.html#finalize-instance-method">Device#finalize</a></code>.</p>
 
 
 
@@ -471,7 +465,7 @@ There are different subtypes of <code><a href="../Cairo/Device.html">Device</a><
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L26" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L26" target="_blank">
         cairo/device.cr
       </a>
     
@@ -493,7 +487,7 @@ There are different subtypes of <code><a href="../Cairo/Device.html">Device</a><
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(device:LibCairo::PDeviceT)-class-method" class="signature"><strong>.new</strong>(device : LibCairo::PDeviceT)</a>
+        <a href="#new%28device%3ALibCairo%3A%3APDeviceT%29-class-method" class="signature"><strong>.new</strong>(device : LibCairo::PDeviceT)</a>
         
       </li>
     
@@ -514,7 +508,7 @@ There are different subtypes of <code><a href="../Cairo/Device.html">Device</a><
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#acquire:Status-instance-method" class="signature"><strong>#acquire</strong> : Status</a>
+        <a href="#acquire%3AStatus-instance-method" class="signature"><strong>#acquire</strong> : Status</a>
         
           <div class="summary"><p>Acquires the device for the current thread.</p></div>
         
@@ -542,49 +536,49 @@ There are different subtypes of <code><a href="../Cairo/Device.html">Device</a><
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_elapsed:Float64-instance-method" class="signature"><strong>#observer_elapsed</strong> : Float64</a>
+        <a href="#observer_elapsed%3AFloat64-instance-method" class="signature"><strong>#observer_elapsed</strong> : Float64</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_fill_elapsed:Float64-instance-method" class="signature"><strong>#observer_fill_elapsed</strong> : Float64</a>
+        <a href="#observer_fill_elapsed%3AFloat64-instance-method" class="signature"><strong>#observer_fill_elapsed</strong> : Float64</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_glyphs_elapsed:Float64-instance-method" class="signature"><strong>#observer_glyphs_elapsed</strong> : Float64</a>
+        <a href="#observer_glyphs_elapsed%3AFloat64-instance-method" class="signature"><strong>#observer_glyphs_elapsed</strong> : Float64</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_mask_elapsed:Float64-instance-method" class="signature"><strong>#observer_mask_elapsed</strong> : Float64</a>
+        <a href="#observer_mask_elapsed%3AFloat64-instance-method" class="signature"><strong>#observer_mask_elapsed</strong> : Float64</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_paint_elapsed:Float64-instance-method" class="signature"><strong>#observer_paint_elapsed</strong> : Float64</a>
+        <a href="#observer_paint_elapsed%3AFloat64-instance-method" class="signature"><strong>#observer_paint_elapsed</strong> : Float64</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_print(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method" class="signature"><strong>#observer_print</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</a>
+        <a href="#observer_print%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method" class="signature"><strong>#observer_print</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : Status</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#observer_stroke_elapsed:Float64-instance-method" class="signature"><strong>#observer_stroke_elapsed</strong> : Float64</a>
+        <a href="#observer_stroke_elapsed%3AFloat64-instance-method" class="signature"><strong>#observer_stroke_elapsed</strong> : Float64</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference:Device-instance-method" class="signature"><strong>#reference</strong> : Device</a>
+        <a href="#reference%3ADevice-instance-method" class="signature"><strong>#reference</strong> : Device</a>
         
           <div class="summary"><p>Increases the reference count on device by one.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#reference_count:UInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
+        <a href="#reference_count%3AUInt32-instance-method" class="signature"><strong>#reference_count</strong> : UInt32</a>
         
           <div class="summary"><p>Returns the current reference count of device.</p></div>
         
@@ -593,38 +587,38 @@ There are different subtypes of <code><a href="../Cairo/Device.html">Device</a><
       <li class="entry-summary">
         <a href="#release-instance-method" class="signature"><strong>#release</strong></a>
         
-          <div class="summary"><p>Releases a device previously acquired using <code><a href="../Cairo/Device.html#acquire:Status-instance-method">Device#acquire</a></code>.</p></div>
+          <div class="summary"><p>Releases a device previously acquired using <code><a href="../Cairo/Device.html#acquire%3AStatus-instance-method">Device#acquire</a></code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</a>
+        <a href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method" class="signature"><strong>#set_user_data</strong>(key : UserDataKey, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : Status</a>
         
           <div class="summary"><p>Attach user data to device.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#status:Status-instance-method" class="signature"><strong>#status</strong> : Status</a>
+        <a href="#status%3AStatus-instance-method" class="signature"><strong>#status</strong> : Status</a>
         
           <div class="summary"><p>Checks whether an error has previously occurred for this device.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PDeviceT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PDeviceT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APDeviceT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PDeviceT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#type:DeviceType-instance-method" class="signature"><strong>#type</strong> : DeviceType</a>
+        <a href="#type%3ADeviceType-instance-method" class="signature"><strong>#type</strong> : DeviceType</a>
         
           <div class="summary"><p>This function returns the type of the device.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user_data(key:UserDataKey):Pointer(Void)-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
+        <a href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method" class="signature"><strong>#user_data</strong>(key : UserDataKey) : Pointer(Void)</a>
         
           <div class="summary"><p>Return user data previously attached to device using the specified key.</p></div>
         
@@ -675,13 +669,13 @@ There are different subtypes of <code><a href="../Cairo/Device.html">Device</a><
         
         def self.<strong>new</strong>(device : LibCairo::PDeviceT)
 
-        <a class="method-permalink" href="#new(device:LibCairo::PDeviceT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28device%3ALibCairo%3A%3APDeviceT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -705,36 +699,28 @@ There are different subtypes of <code><a href="../Cairo/Device.html">Device</a><
         
         def <strong>acquire</strong> : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#acquire:Status-instance-method">#</a>
+        <a class="method-permalink" href="#acquire%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Acquires the device for the current thread. This function will block until no other thread has acquired the device.</p>
-
 <p>If the return value is <code><a href="../Cairo/Status.html#Success">Status::Success</a></code>, you successfully acquired the device.
 From now on your thread owns the device and no other thread will be able to acquire it until
 a matching call to <code><a href="../Cairo/Device.html#release-instance-method">Device#release</a></code>. It is allowed to recursively acquire the device multiple times from the same thread.</p>
-
 <p>You must never acquire two different devices at the same time unless this is explicitly allowed.
 Otherwise the possibility of deadlocks exist. As various Cairo functions can acquire devices when called,
 these functions may also cause deadlocks when you call them with an acquired device. So you must not have
 a device acquired when calling them. These functions are marked in the documentation.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> on success or an error code if the device is in an error state and could not be acquired.
-After a successful call to <code><a href="../Cairo/Device.html#acquire:Status-instance-method">Device#acquire</a></code>, a matching call to <code><a href="../Cairo/Device.html#release-instance-method">Device#release</a></code> is required.</p>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code> on success or an error code if the device is in an error state and could not be acquired.
+After a successful call to <code><a href="../Cairo/Device.html#acquire%3AStatus-instance-method">Device#acquire</a></code>, a matching call to <code><a href="../Cairo/Device.html#release-instance-method">Device#release</a></code> is required.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L81" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -750,15 +736,14 @@ After a successful call to <code><a href="../Cairo/Device.html#acquire:Status-in
         <div class="doc">
           
           <p>Decreases the reference count on device by one. If the result is zero,
-then device and all associated resources are freed. See <code><a href="../Cairo/Device.html#reference:Device-instance-method">Device#reference</a></code>.</p>
-
+then device and all associated resources are freed. See <code><a href="../Cairo/Device.html#reference%3ADevice-instance-method">Device#reference</a></code>.</p>
 <p>This function may acquire devices if the last reference was dropped.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -776,17 +761,15 @@ then device and all associated resources are freed. See <code><a href="../Cairo/
           <p>This function finishes the device and drops all references to external resources.
 All surfaces, fonts and other objects created for this device will be finished, too.
 Further operations on the device will not affect the device but will instead trigger a <code><a href="../Cairo/Status.html#DeviceFinished">Status::DeviceFinished</a></code> error.</p>
-
 <p>When the last call to <code><a href="../Cairo/Device.html#finalize-instance-method">Device#finalize</a></code> decreases the reference count to zero,
 cairo will call <code><a href="../Cairo/Device.html#finish-instance-method">Device#finish</a></code> if it hasn't been called already, before freeing the resources associated with the device.</p>
-
 <p>This function may acquire devices.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L110" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L110" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -805,14 +788,13 @@ cairo will call <code><a href="../Cairo/Device.html#finish-instance-method">Devi
 cairo has made to the device's state. This function must be called before switching from
 using the device with Cairo to operating on it directly with native APIs.
 If the device doesn't support direct access, then this function does nothing.</p>
-
 <p>This function may acquire devices.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L97" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -822,13 +804,13 @@ If the device doesn't support direct access, then this function does nothing.</p
         
         def <strong>observer_elapsed</strong> : Float64
 
-        <a class="method-permalink" href="#observer_elapsed:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#observer_elapsed%3AFloat64-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L155" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L155" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -838,13 +820,13 @@ If the device doesn't support direct access, then this function does nothing.</p
         
         def <strong>observer_fill_elapsed</strong> : Float64
 
-        <a class="method-permalink" href="#observer_fill_elapsed:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#observer_fill_elapsed%3AFloat64-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L167" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L167" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -854,13 +836,13 @@ If the device doesn't support direct access, then this function does nothing.</p
         
         def <strong>observer_glyphs_elapsed</strong> : Float64
 
-        <a class="method-permalink" href="#observer_glyphs_elapsed:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#observer_glyphs_elapsed%3AFloat64-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L175" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L175" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -870,13 +852,13 @@ If the device doesn't support direct access, then this function does nothing.</p
         
         def <strong>observer_mask_elapsed</strong> : Float64
 
-        <a class="method-permalink" href="#observer_mask_elapsed:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#observer_mask_elapsed%3AFloat64-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L163" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L163" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -886,13 +868,13 @@ If the device doesn't support direct access, then this function does nothing.</p
         
         def <strong>observer_paint_elapsed</strong> : Float64
 
-        <a class="method-permalink" href="#observer_paint_elapsed:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#observer_paint_elapsed%3AFloat64-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L159" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L159" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -902,13 +884,13 @@ If the device doesn't support direct access, then this function does nothing.</p
         
         def <strong>observer_print</strong>(write_func : LibCairo::WriteFuncT, closure : Pointer(Void)) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#observer_print(write_func:LibCairo::WriteFuncT,closure:Pointer(Void)):Status-instance-method">#</a>
+        <a class="method-permalink" href="#observer_print%28write_func%3ALibCairo%3A%3AWriteFuncT%2Cclosure%3APointer%28Void%29%29%3AStatus-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L151" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L151" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -918,13 +900,13 @@ If the device doesn't support direct access, then this function does nothing.</p
         
         def <strong>observer_stroke_elapsed</strong> : Float64
 
-        <a class="method-permalink" href="#observer_stroke_elapsed:Float64-instance-method">#</a>
+        <a class="method-permalink" href="#observer_stroke_elapsed%3AFloat64-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L171" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L171" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -934,29 +916,22 @@ If the device doesn't support direct access, then this function does nothing.</p
         
         def <strong>reference</strong> : <a href="../Cairo/Device.html">Device</a>
 
-        <a class="method-permalink" href="#reference:Device-instance-method">#</a>
+        <a class="method-permalink" href="#reference%3ADevice-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Increases the reference count on device by one. This prevents device from being destroyed until
 a matching call to <code><a href="../Cairo/Device.html#finalize-instance-method">Device#finalize</a></code> is made.</p>
-
-<p>Use <code><a href="../Cairo/Device.html#reference_count:UInt32-instance-method">Device#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/Device.html">Device</a></code>.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The referenced <code><a href="../Cairo/Device.html">Device</a></code>.</p>
+<p>Use <code><a href="../Cairo/Device.html#reference_count%3AUInt32-instance-method">Device#reference_count</a></code> to get the number of references to a <code><a href="../Cairo/Device.html">Device</a></code>.</p>
+<p>###Returns
+The referenced <code><a href="../Cairo/Device.html">Device</a></code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -966,26 +941,20 @@ a matching call to <code><a href="../Cairo/Device.html#finalize-instance-method"
         
         def <strong>reference_count</strong> : UInt32
 
-        <a class="method-permalink" href="#reference_count:UInt32-instance-method">#</a>
+        <a class="method-permalink" href="#reference_count%3AUInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Returns the current reference count of device.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The current reference count of device. If the object is a <code>nil</code> object, 0 will be returned.</p>
+<p>###Returns
+The current reference count of device. If the object is a <code>nil</code> object, 0 will be returned.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L119" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L119" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1000,13 +969,13 @@ a matching call to <code><a href="../Cairo/Device.html#finalize-instance-method"
       
         <div class="doc">
           
-          <p>Releases a device previously acquired using <code><a href="../Cairo/Device.html#acquire:Status-instance-method">Device#acquire</a></code>. See that function for details.</p>
+          <p>Releases a device previously acquired using <code><a href="../Cairo/Device.html#acquire%3AStatus-instance-method">Device#acquire</a></code>. See that function for details.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L86" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L86" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1016,36 +985,29 @@ a matching call to <code><a href="../Cairo/Device.html#finalize-instance-method"
         
         def <strong>set_user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>, user_data : Pointer(Void), destroy : LibCairo::DestroyFuncT) : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#set_user_data(key:UserDataKey,user_data:Pointer(Void),destroy:LibCairo::DestroyFuncT):Status-instance-method">#</a>
+        <a class="method-permalink" href="#set_user_data%28key%3AUserDataKey%2Cuser_data%3APointer%28Void%29%2Cdestroy%3ALibCairo%3A%3ADestroyFuncT%29%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Attach user data to device. To remove user data from a surface, call this function with
 the key that was used to set it and <code>Nil</code> for data.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li><li><strong>user_data</strong></li><li><strong>the</strong> user data to attach to the <code><a href="../Cairo/Device.html">Device</a></code></li><li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the <code><a href="../Cairo/Context.html">Context</a></code> is destroyed
-or when new user data is attached using the same key.</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of a <code><a href="../Cairo/UserDataKey.html">UserDataKey</a></code> to attach the user data to</li>
+<li><strong>user_data</strong></li>
+<li><strong>the</strong> user data to attach to the <code><a href="../Cairo/Device.html">Device</a></code></li>
+<li><strong>destroy</strong> a <code>LibCairo::DestroyFuncT</code> which will be called when the <code><a href="../Cairo/Context.html">Context</a></code> is destroyed
+or when new user data is attached using the same key.</li>
+</ul>
+<p>###Returns
+<code><a href="../Cairo/Status.html#Success">Status::Success</a></code> or <code><a href="../Cairo/Status.html#NoMemory">Status::NoMemory</a></code> if a slot could not be allocated for the user data.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L147" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L147" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1055,26 +1017,20 @@ or when new user data is attached using the same key.</li></ul>
         
         def <strong>status</strong> : <a href="../Cairo/Status.html">Status</a>
 
-        <a class="method-permalink" href="#status:Status-instance-method">#</a>
+        <a class="method-permalink" href="#status%3AStatus-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Checks whether an error has previously occurred for this device.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p><code>Status#Success</code> on success or an error code if the device is in an error state.</p>
+<p>###Returns
+<code>Status#Success</code> on success or an error code if the device is in an error state.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L63" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L63" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1084,13 +1040,13 @@ or when new user data is attached using the same key.</li></ul>
         
         def <strong>to_unsafe</strong> : LibCairo::PDeviceT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PDeviceT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APDeviceT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L179" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L179" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1100,26 +1056,20 @@ or when new user data is attached using the same key.</li></ul>
         
         def <strong>type</strong> : <a href="../Cairo/DeviceType.html">DeviceType</a>
 
-        <a class="method-permalink" href="#type:DeviceType-instance-method">#</a>
+        <a class="method-permalink" href="#type%3ADeviceType-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>This function returns the type of the device. See <code><a href="../Cairo/DeviceType.html">DeviceType</a></code> for available types.</p>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The type of device.</p>
+<p>###Returns
+The type of device.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L55" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L55" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1129,35 +1079,25 @@ or when new user data is attached using the same key.</li></ul>
         
         def <strong>user_data</strong>(key : <a href="../Cairo/UserDataKey.html">UserDataKey</a>) : Pointer(Void)
 
-        <a class="method-permalink" href="#user_data(key:UserDataKey):Pointer(Void)-instance-method">#</a>
+        <a class="method-permalink" href="#user_data%28key%3AUserDataKey%29%3APointer%28Void%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Return user data previously attached to device using the specified key.
 If no user data has been attached with the given key this function returns <code>Nil</code>.</p>
-
-<h3><a id="parameters" class="anchor" href="#parameters">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Parameters</h3>
-
-<ul><li><strong>key</strong> the address of the UserDataKey the user data was attached to</li></ul>
-
-<h3><a id="returns" class="anchor" href="#returns">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Returns</h3>
-
-<p>The user data previously attached or <code>Nil</code>.</p>
+<p>###Parameters</p>
+<ul>
+<li><strong>key</strong> the address of the UserDataKey the user data was attached to</li>
+</ul>
+<p>###Returns
+The user data previously attached or <code>Nil</code>.</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/device.cr#L131" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/device.cr#L131" target="_blank">View source</a>]
         
       </div>
     </div>

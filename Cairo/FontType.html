@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -413,23 +413,17 @@
   </h2>
 
   <p>`FontType is used to describe the type of a given font face or scaled font.
-The font types are also known as "font backends" within cairo.</p>
-
+The font types are also known as &quot;font backends&quot; within cairo.</p>
 <p>The type of a font face is determined by the function used to create it,
 which will generally be of the form <code>FontFace#initialize</code>.
-The font face type can be queried with <code><a href="../Cairo/FontFace.html#type:FontType-instance-method">FontFace#type</a></code>.</p>
-
+The font face type can be queried with <code><a href="../Cairo/FontFace.html#type%3AFontType-instance-method">FontFace#type</a></code>.</p>
 <p>The various <code><a href="../Cairo/FontFace.html">FontFace</a></code> functions can be used with a font face of any type.</p>
-
 <p>The type of a scaled font is determined by the type of the font face passed to
-<code><a href="../Cairo/FontFace.html#create_scaled_font(font_matrix:Matrix,ctm:Matrix,options:FontOptions):ScaledFont-instance-method">FontFace#create_scaled_font</a></code>. The scaled font type can be queried with <code>scaledFont#type</code>.</p>
-
+<code><a href="../Cairo/FontFace.html#create_scaled_font%28font_matrix%3AMatrix%2Cctm%3AMatrix%2Coptions%3AFontOptions%29%3AScaledFont-instance-method">FontFace#create_scaled_font</a></code>. The scaled font type can be queried with <code>scaledFont#type</code>.</p>
 <p>The various <code><a href="../Cairo/ScaledFont.html">ScaledFont</a></code> functions can be used with scaled fonts of any type,
 but some font backends also provide type-specific functions that must only be
 called with a scaled font of the appropriate type.</p>
-
 <p>The behavior of calling a type-specific function with a scaled font of the wrong type is undefined.</p>
-
 <p>New entries may be added in future versions.</p>
 
 
@@ -455,7 +449,7 @@ called with a scaled font of the appropriate type.</p>
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_type.cr#L21" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_type.cr#L21" target="_blank">
         cairo/font_type.cr
       </a>
     
@@ -540,27 +534,27 @@ called with a scaled font of the appropriate type.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#ft?-instance-method" class="signature"><strong>#ft?</strong></a>
+        <a href="#ft%3F-instance-method" class="signature"><strong>#ft?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#quartz?-instance-method" class="signature"><strong>#quartz?</strong></a>
+        <a href="#quartz%3F-instance-method" class="signature"><strong>#quartz?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#toy?-instance-method" class="signature"><strong>#toy?</strong></a>
+        <a href="#toy%3F-instance-method" class="signature"><strong>#toy?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#user?-instance-method" class="signature"><strong>#user?</strong></a>
+        <a href="#user%3F-instance-method" class="signature"><strong>#user?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#win32?-instance-method" class="signature"><strong>#win32?</strong></a>
+        <a href="#win32%3F-instance-method" class="signature"><strong>#win32?</strong></a>
         
       </li>
     
@@ -633,13 +627,13 @@ called with a scaled font of the appropriate type.</p>
         
         def <strong>ft?</strong>
 
-        <a class="method-permalink" href="#ft?-instance-method">#</a>
+        <a class="method-permalink" href="#ft%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_type.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_type.cr#L26" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -649,13 +643,13 @@ called with a scaled font of the appropriate type.</p>
         
         def <strong>quartz?</strong>
 
-        <a class="method-permalink" href="#quartz?-instance-method">#</a>
+        <a class="method-permalink" href="#quartz%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_type.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_type.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -665,13 +659,13 @@ called with a scaled font of the appropriate type.</p>
         
         def <strong>toy?</strong>
 
-        <a class="method-permalink" href="#toy?-instance-method">#</a>
+        <a class="method-permalink" href="#toy%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_type.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_type.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -681,13 +675,13 @@ called with a scaled font of the appropriate type.</p>
         
         def <strong>user?</strong>
 
-        <a class="method-permalink" href="#user?-instance-method">#</a>
+        <a class="method-permalink" href="#user%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_type.cr#L35" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_type.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -697,13 +691,13 @@ called with a scaled font of the appropriate type.</p>
         
         def <strong>win32?</strong>
 
-        <a class="method-permalink" href="#win32?-instance-method">#</a>
+        <a class="method-permalink" href="#win32%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/font_type.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/font_type.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>

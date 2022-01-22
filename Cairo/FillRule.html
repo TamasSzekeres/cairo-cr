@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -417,9 +417,7 @@ whether or not a point is included in the fill is determined by taking a ray fro
 and looking at intersections with the path. The ray can be in any direction,
 as long as it doesn't pass through the end point of a segment or have a tricky intersection such as intersecting tangent to the path.
 (NOTE that filling is not actually implemented in this way. This is just a description of the rule that is applied.)</p>
-
 <p>The default fill rule is <code><a href="../Cairo/FillRule.html#Winding">FillRule::Winding</a></code>.</p>
-
 <p>New entries may be added in future versions.</p>
 
 
@@ -445,7 +443,7 @@ as long as it doesn't pass through the end point of a segment or have a tricky i
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/fill_rule.cr#L11" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/fill_rule.cr#L11" target="_blank">
         cairo/fill_rule.cr
       </a>
     
@@ -506,12 +504,12 @@ If the total number of intersections is odd, the point will be filled.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#even_odd?-instance-method" class="signature"><strong>#even_odd?</strong></a>
+        <a href="#even_odd%3F-instance-method" class="signature"><strong>#even_odd?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#winding?-instance-method" class="signature"><strong>#winding?</strong></a>
+        <a href="#winding%3F-instance-method" class="signature"><strong>#winding?</strong></a>
         
       </li>
     
@@ -584,13 +582,13 @@ If the total number of intersections is odd, the point will be filled.</p>
         
         def <strong>even_odd?</strong>
 
-        <a class="method-permalink" href="#even_odd?-instance-method">#</a>
+        <a class="method-permalink" href="#even_odd%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/fill_rule.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/fill_rule.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -600,13 +598,13 @@ If the total number of intersections is odd, the point will be filled.</p>
         
         def <strong>winding?</strong>
 
-        <a class="method-permalink" href="#winding?-instance-method">#</a>
+        <a class="method-permalink" href="#winding%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/fill_rule.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/fill_rule.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>

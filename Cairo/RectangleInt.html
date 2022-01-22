@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -415,7 +415,6 @@
   </h2>
 
   <p>A data structure for holding a rectangle.</p>
-
 <p>Wrapper for LibCairo::RectangleIntT</p>
 
 
@@ -441,7 +440,7 @@
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L9" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L9" target="_blank">
         cairo/rectangle_int.cr
       </a>
     
@@ -463,14 +462,14 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(x:Int32,y:Int32,width:Int32,height:Int32)-class-method" class="signature"><strong>.new</strong>(x : Int32, y : Int32, width : Int32, height : Int32)</a>
+        <a href="#new%28x%3AInt32%2Cy%3AInt32%2Cwidth%3AInt32%2Cheight%3AInt32%29-class-method" class="signature"><strong>.new</strong>(x : Int32, y : Int32, width : Int32, height : Int32)</a>
         
           <div class="summary"><p>Creates new rectangle using specified coordinates of top left corner (x, y), width and height.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(rect:LibCairo::RectangleIntT)-class-method" class="signature"><strong>.new</strong>(rect : LibCairo::RectangleIntT)</a>
+        <a href="#new%28rect%3ALibCairo%3A%3ARectangleIntT%29-class-method" class="signature"><strong>.new</strong>(rect : LibCairo::RectangleIntT)</a>
         
           <div class="summary"><p>Creates new rectangle from <code>LibCairo::RectangleT</code>.</p></div>
         
@@ -500,70 +499,70 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#height:Int32-instance-method" class="signature"><strong>#height</strong> : Int32</a>
+        <a href="#height%3AInt32-instance-method" class="signature"><strong>#height</strong> : Int32</a>
         
           <div class="summary"><p>Height of the rectangle.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#height=(height:Int32)-instance-method" class="signature"><strong>#height=</strong>(height : Int32)</a>
+        <a href="#height%3D%28height%3AInt32%29-instance-method" class="signature"><strong>#height=</strong>(height : Int32)</a>
         
           <div class="summary"><p>Setter for height.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_cairo_rectangle:LibCairo::RectangleIntT-instance-method" class="signature"><strong>#to_cairo_rectangle</strong> : LibCairo::RectangleIntT</a>
+        <a href="#to_cairo_rectangle%3ALibCairo%3A%3ARectangleIntT-instance-method" class="signature"><strong>#to_cairo_rectangle</strong> : LibCairo::RectangleIntT</a>
         
           <div class="summary"><p>Returns underlying <code>LibCairo::RectangleIntT</code> structure.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PRectangleIntT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PRectangleIntT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APRectangleIntT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PRectangleIntT</a>
         
           <div class="summary"><p>Pointer of underlying <code>LibCairo::RectangleIntT</code> structure.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width:Int32-instance-method" class="signature"><strong>#width</strong> : Int32</a>
+        <a href="#width%3AInt32-instance-method" class="signature"><strong>#width</strong> : Int32</a>
         
           <div class="summary"><p>Width of the rectangle.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#width=(width:Int32)-instance-method" class="signature"><strong>#width=</strong>(width : Int32)</a>
+        <a href="#width%3D%28width%3AInt32%29-instance-method" class="signature"><strong>#width=</strong>(width : Int32)</a>
         
           <div class="summary"><p>Setter for width.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#x:Int32-instance-method" class="signature"><strong>#x</strong> : Int32</a>
+        <a href="#x%3AInt32-instance-method" class="signature"><strong>#x</strong> : Int32</a>
         
           <div class="summary"><p>X coordinate of the left side of the rectangle.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#x=(x:Int32)-instance-method" class="signature"><strong>#x=</strong>(x : Int32)</a>
+        <a href="#x%3D%28x%3AInt32%29-instance-method" class="signature"><strong>#x=</strong>(x : Int32)</a>
         
           <div class="summary"><p>Setter for X coordinate.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#y:Int32-instance-method" class="signature"><strong>#y</strong> : Int32</a>
+        <a href="#y%3AInt32-instance-method" class="signature"><strong>#y</strong> : Int32</a>
         
           <div class="summary"><p>Y coordinate of the the top side of the rectangle.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#y=(y:Int32)-instance-method" class="signature"><strong>#y=</strong>(y : Int32)</a>
+        <a href="#y%3D%28y%3AInt32%29-instance-method" class="signature"><strong>#y=</strong>(y : Int32)</a>
         
           <div class="summary"><p>Setter for Y coordinate.</p></div>
         
@@ -624,7 +623,7 @@
         
         def self.<strong>new</strong>(x : Int32, y : Int32, width : Int32, height : Int32)
 
-        <a class="method-permalink" href="#new(x:Int32,y:Int32,width:Int32,height:Int32)-class-method">#</a>
+        <a class="method-permalink" href="#new%28x%3AInt32%2Cy%3AInt32%2Cwidth%3AInt32%2Cheight%3AInt32%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -635,7 +634,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -645,7 +644,7 @@
         
         def self.<strong>new</strong>(rect : LibCairo::RectangleIntT)
 
-        <a class="method-permalink" href="#new(rect:LibCairo::RectangleIntT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28rect%3ALibCairo%3A%3ARectangleIntT%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -656,7 +655,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -677,7 +676,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -701,7 +700,7 @@
         
         def <strong>height</strong> : Int32
 
-        <a class="method-permalink" href="#height:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#height%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -712,7 +711,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -722,7 +721,7 @@
         
         def <strong>height=</strong>(height : Int32)
 
-        <a class="method-permalink" href="#height=(height:Int32)-instance-method">#</a>
+        <a class="method-permalink" href="#height%3D%28height%3AInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -733,7 +732,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -743,7 +742,7 @@
         
         def <strong>to_cairo_rectangle</strong> : LibCairo::RectangleIntT
 
-        <a class="method-permalink" href="#to_cairo_rectangle:LibCairo::RectangleIntT-instance-method">#</a>
+        <a class="method-permalink" href="#to_cairo_rectangle%3ALibCairo%3A%3ARectangleIntT-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -754,7 +753,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -764,7 +763,7 @@
         
         def <strong>to_unsafe</strong> : LibCairo::PRectangleIntT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PRectangleIntT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APRectangleIntT-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -775,7 +774,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L74" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -785,7 +784,7 @@
         
         def <strong>width</strong> : Int32
 
-        <a class="method-permalink" href="#width:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#width%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -796,7 +795,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -806,7 +805,7 @@
         
         def <strong>width=</strong>(width : Int32)
 
-        <a class="method-permalink" href="#width=(width:Int32)-instance-method">#</a>
+        <a class="method-permalink" href="#width%3D%28width%3AInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -817,7 +816,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -827,7 +826,7 @@
         
         def <strong>x</strong> : Int32
 
-        <a class="method-permalink" href="#x:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#x%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -838,7 +837,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -848,7 +847,7 @@
         
         def <strong>x=</strong>(x : Int32)
 
-        <a class="method-permalink" href="#x=(x:Int32)-instance-method">#</a>
+        <a class="method-permalink" href="#x%3D%28x%3AInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -859,7 +858,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -869,7 +868,7 @@
         
         def <strong>y</strong> : Int32
 
-        <a class="method-permalink" href="#y:Int32-instance-method">#</a>
+        <a class="method-permalink" href="#y%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -880,7 +879,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L39" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -890,7 +889,7 @@
         
         def <strong>y=</strong>(y : Int32)
 
-        <a class="method-permalink" href="#y=(y:Int32)-instance-method">#</a>
+        <a class="method-permalink" href="#y%3D%28y%3AInt32%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -901,7 +900,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/rectangle_int.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/rectangle_int.cr#L44" target="_blank">View source</a>]
         
       </div>
     </div>

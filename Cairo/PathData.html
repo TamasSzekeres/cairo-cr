@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -415,23 +415,21 @@
   </h2>
 
   <p>Wrapper for LibCairo::PathDataT</p>
-
 <p><code><a href="../Cairo/PathData.html">PathData</a></code> is used to represent the path data inside a <code><a href="../Cairo/Path.html">Path</a></code>.</p>
-
 <p>The data structure is designed to try to balance the demands of efficiency and ease-of-use.
 A path is represented as an array of <code><a href="../Cairo/PathData.html">PathData</a></code>, which is a union of headers and points.</p>
-
 <p>Each portion of the path is represented by one or more elements in the array, (one header followed by 0 or more points).
 The length value of the header is the number of array elements for the current portion including the header,
 (ie. length == 1 + # of points), and where the number of points for each element type is as follows:</p>
-
-<ul><li><code><a href="../Cairo/PathDataType.html#MoveTo">PathDataType::MoveTo</a></code>:     1 point</li><li><code><a href="../Cairo/PathDataType.html#LineTo">PathDataType::LineTo</a></code>:     1 point</li><li><code><a href="../Cairo/PathDataType.html#CurveTo">PathDataType::CurveTo</a></code>:    3 points</li><li><code><a href="../Cairo/PathDataType.html#ClosePath">PathDataType::ClosePath</a></code>:  0 points</li></ul>
-
-<p>The semantics and ordering of the coordinate values are consistent with <code><a href="../Cairo/Context.html#move_to(x:Float64,y:Float64)-instance-method">Context#move_to</a></code>,
-<code><a href="../Cairo/Context.html#line_to(p:Point)-instance-method">Context#line_to</a></code>, <code><a href="../Cairo/Context.html#curve_to(x1:Float64,y1:Float64,x2:Float64,y2:Float64,x3:Float64,y3:Float64)-instance-method">Context#curve_to</a></code>, and <code><a href="../Cairo/Context.html#close_path-instance-method">Context#close_path</a></code>.</p>
-
+<ul>
+<li><code><a href="../Cairo/PathDataType.html#MoveTo">PathDataType::MoveTo</a></code>:     1 point</li>
+<li><code><a href="../Cairo/PathDataType.html#LineTo">PathDataType::LineTo</a></code>:     1 point</li>
+<li><code><a href="../Cairo/PathDataType.html#CurveTo">PathDataType::CurveTo</a></code>:    3 points</li>
+<li><code><a href="../Cairo/PathDataType.html#ClosePath">PathDataType::ClosePath</a></code>:  0 points</li>
+</ul>
+<p>The semantics and ordering of the coordinate values are consistent with <code><a href="../Cairo/Context.html#move_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Context#move_to</a></code>,
+<code><a href="../Cairo/Context.html#line_to%28x%3AFloat64%2Cy%3AFloat64%29-instance-method">Context#line_to</a></code>, <code><a href="../Cairo/Context.html#curve_to%28x1%3AFloat64%2Cy1%3AFloat64%2Cx2%3AFloat64%2Cy2%3AFloat64%2Cx3%3AFloat64%2Cy3%3AFloat64%29-instance-method">Context#curve_to</a></code>, and <code><a href="../Cairo/Context.html#close_path-instance-method">Context#close_path</a></code>.</p>
 <p>Here is sample code for iterating through a <code><a href="../Cairo/Path.html">Path</a></code>:</p>
-
 <pre><code class="language-crystal">i <span class="o">=</span> <span class="n">0</span>
 path <span class="o">=</span> ctx.copy_path
 <span class="k">while</span> i <span class="o">&lt;</span> path.num_data
@@ -479,7 +477,7 @@ path <span class="o">=</span> ctx.copy_path
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L50" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L50" target="_blank">
         cairo/path_data.cr
       </a>
     
@@ -501,17 +499,17 @@ path <span class="o">=</span> ctx.copy_path
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(point:Point)-class-method" class="signature"><strong>.new</strong>(point : Point)</a>
+        <a href="#new%28point%3APoint%29-class-method" class="signature"><strong>.new</strong>(point : Point)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(data:LibCairo::PathDataT)-class-method" class="signature"><strong>.new</strong>(data : LibCairo::PathDataT)</a>
+        <a href="#new%28data%3ALibCairo%3A%3APathDataT%29-class-method" class="signature"><strong>.new</strong>(data : LibCairo::PathDataT)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(header:PathDataHeader)-class-method" class="signature"><strong>.new</strong>(header : PathDataHeader)</a>
+        <a href="#new%28header%3APathDataHeader%29-class-method" class="signature"><strong>.new</strong>(header : PathDataHeader)</a>
         
       </li>
     
@@ -532,32 +530,32 @@ path <span class="o">=</span> ctx.copy_path
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#header:PathDataHeader-instance-method" class="signature"><strong>#header</strong> : PathDataHeader</a>
+        <a href="#header%3APathDataHeader-instance-method" class="signature"><strong>#header</strong> : PathDataHeader</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#header=(header:PathDataHeader)-instance-method" class="signature"><strong>#header=</strong>(header : PathDataHeader)</a>
+        <a href="#header%3D%28header%3APathDataHeader%29-instance-method" class="signature"><strong>#header=</strong>(header : PathDataHeader)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#point:Point-instance-method" class="signature"><strong>#point</strong> : Point</a>
+        <a href="#point%3APoint-instance-method" class="signature"><strong>#point</strong> : Point</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#point=(point:Point)-instance-method" class="signature"><strong>#point=</strong>(point : Point)</a>
+        <a href="#point%3D%28point%3APoint%29-instance-method" class="signature"><strong>#point=</strong>(point : Point)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_cairo_path_data:LibCairo::PathDataT-instance-method" class="signature"><strong>#to_cairo_path_data</strong> : LibCairo::PathDataT</a>
+        <a href="#to_cairo_path_data%3ALibCairo%3A%3APathDataT-instance-method" class="signature"><strong>#to_cairo_path_data</strong> : LibCairo::PathDataT</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#to_unsafe:LibCairo::PPathDataT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PPathDataT</a>
+        <a href="#to_unsafe%3ALibCairo%3A%3APPathDataT-instance-method" class="signature"><strong>#to_unsafe</strong> : LibCairo::PPathDataT</a>
         
       </li>
     
@@ -616,13 +614,13 @@ path <span class="o">=</span> ctx.copy_path
         
         def self.<strong>new</strong>(point : <a href="../Cairo/Point.html">Point</a>)
 
-        <a class="method-permalink" href="#new(point:Point)-class-method">#</a>
+        <a class="method-permalink" href="#new%28point%3APoint%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L56" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -632,13 +630,13 @@ path <span class="o">=</span> ctx.copy_path
         
         def self.<strong>new</strong>(data : LibCairo::PathDataT)
 
-        <a class="method-permalink" href="#new(data:LibCairo::PathDataT)-class-method">#</a>
+        <a class="method-permalink" href="#new%28data%3ALibCairo%3A%3APathDataT%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L61" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L61" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -648,13 +646,13 @@ path <span class="o">=</span> ctx.copy_path
         
         def self.<strong>new</strong>(header : <a href="../Cairo/PathDataHeader.html">PathDataHeader</a>)
 
-        <a class="method-permalink" href="#new(header:PathDataHeader)-class-method">#</a>
+        <a class="method-permalink" href="#new%28header%3APathDataHeader%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -678,13 +676,13 @@ path <span class="o">=</span> ctx.copy_path
         
         def <strong>header</strong> : <a href="../Cairo/PathDataHeader.html">PathDataHeader</a>
 
-        <a class="method-permalink" href="#header:PathDataHeader-instance-method">#</a>
+        <a class="method-permalink" href="#header%3APathDataHeader-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L64" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L64" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -694,13 +692,13 @@ path <span class="o">=</span> ctx.copy_path
         
         def <strong>header=</strong>(header : <a href="../Cairo/PathDataHeader.html">PathDataHeader</a>)
 
-        <a class="method-permalink" href="#header=(header:PathDataHeader)-instance-method">#</a>
+        <a class="method-permalink" href="#header%3D%28header%3APathDataHeader%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -710,13 +708,13 @@ path <span class="o">=</span> ctx.copy_path
         
         def <strong>point</strong> : <a href="../Cairo/Point.html">Point</a>
 
-        <a class="method-permalink" href="#point:Point-instance-method">#</a>
+        <a class="method-permalink" href="#point%3APoint-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -726,13 +724,13 @@ path <span class="o">=</span> ctx.copy_path
         
         def <strong>point=</strong>(point : <a href="../Cairo/Point.html">Point</a>)
 
-        <a class="method-permalink" href="#point=(point:Point)-instance-method">#</a>
+        <a class="method-permalink" href="#point%3D%28point%3APoint%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L76" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L76" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -742,13 +740,13 @@ path <span class="o">=</span> ctx.copy_path
         
         def <strong>to_cairo_path_data</strong> : LibCairo::PathDataT
 
-        <a class="method-permalink" href="#to_cairo_path_data:LibCairo::PathDataT-instance-method">#</a>
+        <a class="method-permalink" href="#to_cairo_path_data%3ALibCairo%3A%3APathDataT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L80" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L80" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -758,13 +756,13 @@ path <span class="o">=</span> ctx.copy_path
         
         def <strong>to_unsafe</strong> : LibCairo::PPathDataT
 
-        <a class="method-permalink" href="#to_unsafe:LibCairo::PPathDataT-instance-method">#</a>
+        <a class="method-permalink" href="#to_unsafe%3ALibCairo%3A%3APPathDataT-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/path_data.cr#L84" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/path_data.cr#L84" target="_blank">View source</a>]
         
       </div>
     </div>

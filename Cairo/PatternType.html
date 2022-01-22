@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -413,17 +413,13 @@
   </h2>
 
   <p><code><a href="../Cairo/PatternType.html">PatternType</a></code> is used to describe the type of a given pattern.</p>
-
 <p>The type of a pattern is determined by the function used to create it.
-The <code><a href="../Cairo/Pattern.html#create_rgb(red:Float64,green:Float64,blue:Float64):Pattern-class-method">Pattern#create_rgb</a></code> and <code><a href="../Cairo/Pattern.html#create_rgba(red:Float64,green:Float64,blue:Float64,alpha:Float64):Pattern-instance-method">Pattern#create_rgba</a></code> functions create <code><a href="../Cairo/PatternType.html#Solid">PatternType::Solid</a></code> patterns.</p>
-
-<p>The pattern type can be queried with <code><a href="../Cairo/Pattern.html#type:PatternType-instance-method">Pattern#type</a></code>.</p>
-
+The <code><a href="../Cairo/Pattern.html#create_rgb%28red%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%29%3APattern-class-method">Pattern#create_rgb</a></code> and <code><a href="../Cairo/Pattern.html#create_rgba%28red%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29%3APattern-instance-method">Pattern#create_rgba</a></code> functions create <code><a href="../Cairo/PatternType.html#Solid">PatternType::Solid</a></code> patterns.</p>
+<p>The pattern type can be queried with <code><a href="../Cairo/Pattern.html#type%3APatternType-instance-method">Pattern#type</a></code>.</p>
 <p>Most <code><a href="../Cairo/Pattern.html">Pattern</a></code> functions can be called with a pattern of any type,
 (though trying to change the extend or filter for a solid pattern will have no effect).
-A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop(offset:Float64,red:Float64,green:Float64,blue:Float64)-instance-method">Pattern#add_color_stop</a></code> which must only be called with gradient patterns
+A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop%28offset%3AFloat64%2Cred%3AFloat64%2Cgreen%3AFloat64%2Cblue%3AFloat64%2Calpha%3AFloat64%29-instance-method">Pattern#add_color_stop</a></code> which must only be called with gradient patterns
 (either <code><a href="../Cairo/PatternType.html#Linear">PatternType::Linear</a></code> or <code><a href="../Cairo/PatternType.html#Radial">PatternType::Radial</a></code>). Otherwise the pattern will be shutdown and put into an error state.</p>
-
 <p>New entries may be added in future versions.</p>
 
 
@@ -449,7 +445,7 @@ A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop(offse
   </h2>
   
     
-      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern_type.cr#L15" target="_blank">
+      <a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern_type.cr#L15" target="_blank">
         cairo/pattern_type.cr
       </a>
     
@@ -543,32 +539,32 @@ A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop(offse
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#linear?-instance-method" class="signature"><strong>#linear?</strong></a>
+        <a href="#linear%3F-instance-method" class="signature"><strong>#linear?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#mesh?-instance-method" class="signature"><strong>#mesh?</strong></a>
+        <a href="#mesh%3F-instance-method" class="signature"><strong>#mesh?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#radial?-instance-method" class="signature"><strong>#radial?</strong></a>
+        <a href="#radial%3F-instance-method" class="signature"><strong>#radial?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#raster_source?-instance-method" class="signature"><strong>#raster_source?</strong></a>
+        <a href="#raster_source%3F-instance-method" class="signature"><strong>#raster_source?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#solid?-instance-method" class="signature"><strong>#solid?</strong></a>
+        <a href="#solid%3F-instance-method" class="signature"><strong>#solid?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#surface?-instance-method" class="signature"><strong>#surface?</strong></a>
+        <a href="#surface%3F-instance-method" class="signature"><strong>#surface?</strong></a>
         
       </li>
     
@@ -641,13 +637,13 @@ A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop(offse
         
         def <strong>linear?</strong>
 
-        <a class="method-permalink" href="#linear?-instance-method">#</a>
+        <a class="method-permalink" href="#linear%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern_type.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern_type.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -657,13 +653,13 @@ A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop(offse
         
         def <strong>mesh?</strong>
 
-        <a class="method-permalink" href="#mesh?-instance-method">#</a>
+        <a class="method-permalink" href="#mesh%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern_type.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern_type.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -673,13 +669,13 @@ A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop(offse
         
         def <strong>radial?</strong>
 
-        <a class="method-permalink" href="#radial?-instance-method">#</a>
+        <a class="method-permalink" href="#radial%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern_type.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern_type.cr#L26" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -689,13 +685,13 @@ A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop(offse
         
         def <strong>raster_source?</strong>
 
-        <a class="method-permalink" href="#raster_source?-instance-method">#</a>
+        <a class="method-permalink" href="#raster_source%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern_type.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern_type.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -705,13 +701,13 @@ A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop(offse
         
         def <strong>solid?</strong>
 
-        <a class="method-permalink" href="#solid?-instance-method">#</a>
+        <a class="method-permalink" href="#solid%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern_type.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern_type.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -721,13 +717,13 @@ A notable exception is <code><a href="../Cairo/Pattern.html#add_color_stop(offse
         
         def <strong>surface?</strong>
 
-        <a class="method-permalink" href="#surface?-instance-method">#</a>
+        <a class="method-permalink" href="#surface%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/6c77a4118a083d1d9bc0bd3e85477715422f1919/src/cairo/pattern_type.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/TamasSzekeres/cairo-cr/blob/859d95b2751711f05edb2c5eba30b9fd6905f9dc/src/cairo/pattern_type.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
