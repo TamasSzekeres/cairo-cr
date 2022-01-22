@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.2.2">
+<meta name="generator" content="Crystal Docs 1.2.1">
 <meta name="crystal_docs.project_version" content="master">
 <meta name="crystal_docs.project_name" content="cairo">
 
@@ -4480,11 +4480,11 @@ line join, line cap, and dash settings. Unlike <code><a href="../Cairo/Context.h
           
           <p>Marks the beginning of the <em>tag_name</em> structure.
 Call <code><a href="../Cairo/Context.html#tag_end%28tag_name%3AString%29-instance-method">Context#tag_end</a></code> with the same <em>tag_name</em> to mark the end of the structure.</p>
-<p>The attributes string is of the form <code>&quot;key1=value2 key2=value2 ...&quot;</code>.
+<p>The attributes string is of the form <code>"key1=value2 key2=value2 ..."</code>.
 Values may be boolean (true/false or 1/0), integer, float, string, or an array.</p>
 <p>String values are enclosed in single quotes ('). Single quotes and backslashes inside the string should be escaped with a backslash.</p>
-<p>Boolean values may be set to true by only specifying the key. eg the attribute string <code>&quot;key&quot;</code> is the equivalent to <code>&quot;key=true&quot;</code>.</p>
-<p>Arrays are enclosed in <code>'[]'</code>. eg <code>&quot;rect=[1.2 4.3 2.0 3.0]&quot;</code>.</p>
+<p>Boolean values may be set to true by only specifying the key. eg the attribute string <code>"key"</code> is the equivalent to <code>"key=true"</code>.</p>
+<p>Arrays are enclosed in <code>'[]'</code>. eg <code>"rect=[1.2 4.3 2.0 3.0]"</code>.</p>
 <p>If no attributes are required, attributes can be an empty string.</p>
 <p>Invalid nesting of tags or invalid attributes will cause <code><a href="../Cairo/Context.html">Context</a></code> to shutdown with a status of <code><a href="../Cairo/Status.html#TagError">Status::TagError</a></code>.</p>
 <p>See <code><a href="../Cairo/Context.html#tag_end%28tag_name%3AString%29-instance-method">Context#tag_end</a></code>.</p>
