@@ -644,9 +644,9 @@ module Cairo
     # by different amounts in the X and Y directions. For example, to draw an ellipse in the box given by *x*, *y*, *width*, *height*:
     # ```
     # context.save
-    # context.translate(x + width / 20., y + height / 2.0)
+    # context.translate(x + width / 2.0, y + height / 2.0)
     # context.scale(width / 2.0, height / 2.0)
-    # context.arc(0.0, 0.0, 1.0, 0.0, 2.0 * Math.PI)
+    # context.arc(0.0, 0.0, 1.0, 0.0, 2.0 * Math::PI)
     # context.restore
     # ```
     #
