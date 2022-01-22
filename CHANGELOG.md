@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.1] - 2022-01-22
+### Fixed
+- wrong code in documentation (thanks, @aravindavk)
+
 ## [1.0.0] - 2021-04-13
 - Updated to Crystal 1.0.0
 ### Added
