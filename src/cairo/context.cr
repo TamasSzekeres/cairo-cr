@@ -279,7 +279,7 @@ module Cairo
     # - **x** User-space X coordinate for surface origin
     # - **y** User-space Y coordinate for surface origin
     def set_source_surface(surface : Surface, x : Float64, y : Float64)
-      LibCairo.set_source_surface(surface.to_unsafe, x, y)
+      LibCairo.set_source_surface(@cairo, surface.to_unsafe, x, y)
       self
     end
 
