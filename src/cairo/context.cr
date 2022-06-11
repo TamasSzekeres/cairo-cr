@@ -197,7 +197,8 @@ module Cairo
     # The `Context#pop_group` function calls `Context#restore`, (balancing a call to `Context#save` by the `Context#push_group` function),
     # so that any changes to the graphics state will not be visible outside the group.
     def pop_group_to_source : Context
-      Context.new(LibCairo.pop_group_to_source(@cairo))
+      LibCairo.pop_group_to_source(@cairo)
+      self
     end
 
     # Sets the compositing operator to be used for all drawing operations.
