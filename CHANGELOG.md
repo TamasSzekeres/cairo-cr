@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.3] - 2022-06-12
+### Fixed
+- change return type of `LibCairo::pop_group_to_source` to `Void`
+- invalid function call in `Context::pop_group_to_source` (thanks, @aravindavk)
+
 ## [1.0.2] - 2022-05-02
 ### Fixed
 - missing argument in `Context::set_source_surface` (thanks, @aravindavk)
