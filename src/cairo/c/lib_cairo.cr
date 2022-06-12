@@ -167,7 +167,7 @@ module Cairo::C
 
     fun pop_group = cairo_pop_group(cr : PCairoT) : PPatternT
 
-    fun pop_group_to_source = cairo_pop_group_to_source(cr : PCairoT) : PCairoT
+    fun pop_group_to_source = cairo_pop_group_to_source(cr : PCairoT) : Void
 
     # Modify state
 
